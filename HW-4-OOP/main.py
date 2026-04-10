@@ -73,7 +73,7 @@ class Customer:
         else:
             orders_info = "; ".join(str(order) for order in self.list_of_orders)
 
-        return f"Customer: {self.name} | {orders_info}"
+        return f"Customer: {self.name} | {self.email} | {orders_info}"
 
     def __repr__(self):
         return self.__str__()
@@ -112,6 +112,7 @@ class Customer:
 # print(customer_Kate)
 
 # Завдання 2: Взаємодія між класами
+# Створюємо функцію для роботи з даними продуктів
 def read_products_file():
     all_products = []
     try:
@@ -141,5 +142,33 @@ def read_products_file():
 
     return all_products
 
+# print(read_products_file())
 
-print(read_products_file())
+# Створюємо фунцію, для роботи з даними клієнтів
+def read_customers_file():
+    all_customers = []
+    try:
+        with open("customers.txt", "r", encoding="utf-8") as file:
+            for line in file:
+                line = line.strip()
+                if not line:
+                    continue
+
+                data = line.split(",")
+                if len(data) == 2:
+                    name = data[0]
+                    email = data[1]
+
+                    customer = Customer(name, email)
+                    all_customers.append(customer)
+                else:
+                    print(f"Skipping invalid line: {line}")
+
+    except FileNotFoundError:
+        print("Error: File 'customers.txt' was not found.")
+    except ValueError:
+        print("Error: Invalid data format in file. All data must be in text format.")
+
+    return all_customers
+
+print(read_customers_file())
