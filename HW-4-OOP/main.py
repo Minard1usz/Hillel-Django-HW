@@ -82,32 +82,64 @@ class Customer:
 
 
 # 1. Create the list of gadgets available in our shop
-iPhone17Pro = Product("iPhone 17 Pro", "Smartphones", 1099, 30)
-iPhoneAir = Product("iPhone Air", "Smartphones", 999, 50)
-iPadMini = Product("iPad Mini", "Tablets", 499, 40)
-MacBookNeo = Product("MacBook Neo", "Laptops", 599, 45)
-AppleWatch11 = Product("Apple Watch 11", "Smart Watch", 399, 100)
+# iPhone17Pro = Product("iPhone 17 Pro", "Smartphones", 1099, 30)
+# iPhoneAir = Product("iPhone Air", "Smartphones", 999, 50)
+# iPadMini = Product("iPad Mini", "Tablets", 499, 40)
+# MacBookNeo = Product("MacBook Neo", "Laptops", 599, 45)
+# AppleWatch11 = Product("Apple Watch 11", "Smart Watch", 399, 100)
 
 
 # 2. Create several customers
-customer_Max = Customer("Max", "email11111@gmail.com")
-customer_Kate = Customer("Kate", "email2222222@gmail.com")
+# customer_Max = Customer("Max", "email11111@gmail.com")
+# customer_Kate = Customer("Kate", "email2222222@gmail.com")
 
 
 # 3. Create some orders
-order_1 = Order()
-order_2 = Order()
+# order_1 = Order()
+# order_2 = Order()
 
 
 # 4. Add the gadgets into orders
-order_1.add_product(iPhone17Pro, 2)
-order_2.add_product(iPhoneAir, 1)
-order_2.add_product(MacBookNeo, 1)
+# order_1.add_product(iPhone17Pro, 2)
+# order_2.add_product(iPhoneAir, 1)
+# order_2.add_product(MacBookNeo, 1)
 
 
 # 5. Add the orders for customers
-customer_Max.add_order(order_1)
-customer_Kate.add_order(order_2)
-print(customer_Max)
-print(customer_Kate)
+# customer_Max.add_order(order_1)
+# customer_Kate.add_order(order_2)
+# print(customer_Max)
+# print(customer_Kate)
 
+# Завдання 2: Взаємодія між класами
+def read_products_file():
+    all_products = []
+    try:
+        with open("products.txt", "r", encoding="utf-8") as file:
+            for line in file:
+                line = line.strip()
+                if not line:
+                    continue
+
+                data = line.split(",")
+                if len(data) == 4:
+                    name = data[0]
+                    category = data[1]
+                    price = float(data[2])
+                    quantity = int(data[3])
+
+                    product = Product(name, category, price, quantity)
+                    all_products.append(product)
+                else:
+                    print(f"Skipping invalid line: {line}")
+
+    except FileNotFoundError:
+        print("Error: File 'products.txt' was not found.")
+    except ValueError:
+        print("Error: Invalid data format in file (price or quantity is not a number).")
+
+
+    return all_products
+
+
+print(read_products_file())

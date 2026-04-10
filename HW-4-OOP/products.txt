@@ -1,0 +1,5 @@
+iPhone 17 Pro,Smartphones,1099,30
+iPhone Air,Smartphones,999,50
+iPad Mini,Tablets,499,40
+MacBook Neo,Laptops,599,45
+Apple Watch 11,SmartWatch,399,100
