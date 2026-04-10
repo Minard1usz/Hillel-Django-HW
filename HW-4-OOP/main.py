@@ -78,9 +78,8 @@ class Customer:
     def __repr__(self):
         return self.__str__()
 
-
-
-
+#--------------------------------------------------------------------------------------------
+# Task 1: test
 # 1. Create the list of gadgets available in our shop
 # iPhone17Pro = Product("iPhone 17 Pro", "Smartphones", 1099, 30)
 # iPhoneAir = Product("iPhone Air", "Smartphones", 999, 50)
@@ -110,6 +109,7 @@ class Customer:
 # customer_Kate.add_order(order_2)
 # print(customer_Max)
 # print(customer_Kate)
+#--------------------------------------------------------------------------------------------
 
 # Завдання 2: Взаємодія між класами
 # Створюємо функцію для роботи з даними продуктів
@@ -171,4 +171,34 @@ def read_customers_file():
 
     return all_customers
 
-print(read_customers_file())
+# print(read_customers_file())
+
+
+#--------------------------------------------------------------------------------------------
+# Task 2: test
+# Поєднуємо все в один магазин
+# 1. Створюємо наш функціонал
+available_products = read_products_file()
+active_customers = read_customers_file()
+
+print("--- Welcome to our Gadget shop ---")
+
+# 2. Виводимо товари
+print(f"Available products: {len(available_products)}")
+for product in available_products:
+    print(product)
+
+# 3. Виводимо клієнтів
+print("Registered customers: ")
+for customer in active_customers:
+    print(customer)
+
+# 4. Імітуємо покупку:
+if available_products and active_customers:
+    first_order = Order()
+    first_order.add_product(available_products[0], 2)
+    active_customers[0].add_order(first_order)
+
+    print("\n --- Check the first customer's status ---")
+    print(active_customers[0])
+#--------------------------------------------------------------------------------------------
