@@ -16,8 +16,8 @@ courses_list = [{'name': 'English', 'flag': 'gb'},
 
 @app.route('/')
 def index():
-    name = "Dear Student"
-    return render_template("index.html", user_name=name, courses=courses)
+    name = "Student"
+    return render_template("index.html", user_name=name)
 
 @app.route('/courses')
 def courses():
@@ -25,7 +25,11 @@ def courses():
 
 @app.route('/contact')
 def contact():
-    pass
+    return render_template("contact.html")
+
+@app.route('/about')
+def about():
+    return render_template("about.html")
 
 
 

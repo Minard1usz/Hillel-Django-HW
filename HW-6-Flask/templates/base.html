@@ -5,11 +5,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/lipis/flag-icons@7.2.3/css/flag-icons.min.css">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Lora:ital,wght@0,400..700;1,400..700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
     <title>{% block title %} Study languages 24/7 {% endblock %}</title>
 </head>
 <body>
     <header>
         <h3><i>"A different language is a different vision of life..."</i></h3>
+        <nav class="nav-font">
+            <a href="{{ url_for('index') }}" class="nav-menu-font">Main</a>
+            <a href="{{ url_for('courses') }}" class="nav-menu-font">Courses</a>
+            <a href="{{ url_for('contact') }}" class="nav-menu-font">Contacts</a>
+            <a href="{{ url_for('about') }}" class="nav-menu-font">About us</a>
+        </nav>
     </header>
 
     <hr>
