@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/lipis/flag-icons@7.2.3/css/flag-icons.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <title>{% block title %} Study languages 24/7 {% endblock %}</title>
+</head>
+<body>
+    <header>
+        <h3><i>"A different language is a different vision of life..."</i></h3>
+    </header>
+
+    <hr>
+    {% block content %}
+    {% endblock %}
+    <hr>
+
+    <footer>
+        <h3><i> Study languages 24/7, © 2026 </i></h3>
+    </footer>
+</body>
+</html>

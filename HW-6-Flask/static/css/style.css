@@ -1,0 +1,17 @@
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+li {
+    margin-bottom: 10px;
+    font-size: 1.2rem;
+}
+.fi {
+    margin-right: 10px;
+    border-radius: 2px;
+    box-shadow: 0 0 2px rgba(0,0,0,0.2);
+}
+
+.languages_list_text {
+    margin-left: 20px;
+}
