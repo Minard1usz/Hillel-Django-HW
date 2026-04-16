@@ -9,8 +9,31 @@
 <body>
     {% block content %}
     <main>
-        <ul class="contact-list">
+        <section class="contact_me">
+            <h1>Contact us</h1>
+            <p>For further information, please, contact us!</p>
 
+            <form method="POST" action="{{ url_for('contact') }}" class="contact-form">
+                <div>
+                    <label>Your name:</label><br>
+                    <input type="text" name="username" required>
+                </div>
+                <br>
+                <div>
+                    <label>Your email:</label><br>
+                    <input type="email" name="email" required>
+                </div>
+                <br>
+                <div>
+                    <label>Message:</label><br>
+                    <textarea name="message" rows="5"></textarea>
+                </div>
+                <br>
+                <button type="submit">Send the message</button>
+            </form>
+        </section>
+
+        <ul class="contact-list">
           <li>
             <strong>Archi Blackwood</strong>
             <address>
@@ -50,7 +73,8 @@
             </address>
           </li>
         </ul>
-    </main>
+
+            </main>
     {% endblock %}
 </body>
 </html>

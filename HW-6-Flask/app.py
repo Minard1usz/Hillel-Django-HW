@@ -1,4 +1,4 @@
-from flask import Flask, render_template
+from flask import Flask, render_template, request
 
 app = Flask(__name__)
 
@@ -23,14 +23,21 @@ def index():
 def courses():
     return render_template("courses.html", courses=courses_list)
 
-@app.route('/contact')
+@app.route('/contact', methods=["GET", "POST"])
 def contact():
+    if request.method == "POST":
+        user_name = request.form.get("username")
+        user_email = request.form.get("email")
+        message = request.form.get("message")
+
+        print(f"The message from {user_name} ({user_email}): {message}")
+        return f"<h3>Thank you, {user_name}! Your message has been sent! We will contact you soon! </h3><a href='/'>Return to main page</a>"
+
     return render_template("contact.html")
 
 @app.route('/about')
 def about():
     return render_template("about.html")
-
 
 
 if __name__ == '__main__':
