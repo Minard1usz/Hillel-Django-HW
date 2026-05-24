@@ -1,0 +1,66 @@
+{% extends 'shop_app/base.html' %}
+
+{% block content %}
+<h2 class="mb-4">📚 Каталог книг (Class-Based View)</h2>
+
+<div class="row g-4">
+  {% for book in books %}
+    <div class="col-md-4">
+
+      <div class="card h-100 shadow-sm">
+        <div class="card-body">
+          <h5 class="card-title"><a href="{% url 'shop_app:book_detail' pk=book.pk %}">{{ book.title }}</a></h5>
+          <h6 class="sub-title mb-2 text-muted">Автор: {{ book.author }}</h6>
+          <p class="card-text">{{ book.description|truncatewords:15 }}</p>
+          <div class="d-flex justify-content-between align-items-center mt-3">
+            <span class="badge bg-success fs-6">{{ book.price }} грн.</span>
+            <small class="text-muted">В наявності: {{ book.stock }} шт.</small>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  {% empty %}
+    <div class="col-12">
+        <p class="alert alert-info">Книг у каталозі поки що немає.</p>
+    </div>
+  {% endfor %}
+</div>
+{% if is_paginated %}
+    <nav aria-label="Навігація по сторінках" class="mt-5">
+        <ul class="pagination justify-content-center">
+
+            {% if page_obj.has_previous %}
+                <li class="page-item">
+                    <a class="page-link" href="?page={{ page_obj.previous_page_number }}" aria-label="Попередня">
+                        <span aria-hidden="true">&laquo; Назад</span>
+                    </a>
+                </li>
+            {% else %}
+                <li class="page-item disabled">
+                    <span class="page-link">&laquo; Назад</span>
+                </li>
+            {% endif %}
+
+            <li class="page-item active" aria-current="page">
+                <span class="page-link">
+                    Сторінка {{ page_obj.number }} з {{ page_obj.paginator.num_pages }}
+                </span>
+            </li>
+
+            {% if page_obj.has_next %}
+                <li class="page-item">
+                    <a class="page-link" href="?page={{ page_obj.next_page_number }}" aria-label="Наступна">
+                        <span aria-hidden="true">Вперед &raquo;</span>
+                    </a>
+                </li>
+            {% else %}
+                <li class="page-item disabled">
+                    <span class="page-link">Вперед &raquo;</span>
+                </li>
+            {% endif %}
+        </ul>
+    </nav>
+{% endif %}
+
+{% endblock %}
