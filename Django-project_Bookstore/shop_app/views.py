@@ -32,12 +32,14 @@ class BookDetailView(DetailView):
     model = Book
     template_name = 'shop_app/book_detail.html'
 
-
 class BookCreateView(CreateView):
     model = Book
     template_name = 'shop_app/book_form.html'
     fields = ['title', 'author', 'category', 'description', 'price', 'stock', 'cover']
     success_url = reverse_lazy('shop_app:book_list')
+
+    def test_func(self):
+        return self.request.user.is_staff or self.request.user.is_superuser
 
 class BookUpdateView(LoginRequiredMixin, UserPassesTestMixin, UpdateView):
     model = Book
@@ -48,12 +50,14 @@ class BookUpdateView(LoginRequiredMixin, UserPassesTestMixin, UpdateView):
     raise_exception = True
 
     def test_func(self):
-        return self.request.user.is_staff
+        return self.request.user.is_staff or self.request.user.is_superuser
 
 class BookDeleteView(LoginRequiredMixin, UserPassesTestMixin, DeleteView):
     model = Book
     template_name = 'shop_app/book_delete.html'
     success_url = reverse_lazy('shop_app:book_list')
+
     raise_exception = True
+
     def test_func(self):
-        return self.request.user.is_staff
+        return self.request.user.is_staff or self.request.user.is_superuser

@@ -1,0 +1,51 @@
+INFO 2026-05-31 07:42:47,496 autoreload Watching for file changes with StatReloader
+INFO 2026-05-31 07:43:22,158 autoreload /Users/yevhen21/PycharmProjects/Hillel-Django-HW/Django-project_Bookstore/bookstore_project/settings.py changed, reloading.
+INFO 2026-05-31 07:43:22,380 autoreload Watching for file changes with StatReloader
+INFO 2026-05-31 07:51:23,224 autoreload Watching for file changes with StatReloader
+INFO 2026-05-31 07:51:34,777 autoreload Watching for file changes with StatReloader
+INFO 2026-05-31 07:51:36,598 middleware Запит до / зайняв 0.0424 секунд.
+INFO 2026-05-31 07:51:36,609 log "GET / HTTP/1.1" 200 21950
+INFO 2026-05-31 07:51:36,624 log "GET /static/debug_toolbar/js/toolbar.js HTTP/1.1" 304 0
+INFO 2026-05-31 07:51:36,624 log "GET /static/debug_toolbar/css/toolbar.css HTTP/1.1" 304 0
+INFO 2026-05-31 07:51:36,631 log "GET /static/debug_toolbar/css/print.css HTTP/1.1" 304 0
+INFO 2026-05-31 07:51:36,632 log "GET /static/debug_toolbar/js/utils.js HTTP/1.1" 304 0
+INFO 2026-05-31 07:51:37,294 middleware Запит до / зайняв 0.0061 секунд.
+INFO 2026-05-31 07:51:37,304 log "GET / HTTP/1.1" 200 21950
+INFO 2026-05-31 07:51:37,929 middleware Запит до / зайняв 0.0078 секунд.
+INFO 2026-05-31 07:51:37,942 log "GET / HTTP/1.1" 200 21950
+INFO 2026-05-31 07:51:38,563 middleware Запит до /catalog/ зайняв 0.0092 секунд.
+INFO 2026-05-31 07:51:38,574 log "GET /catalog/ HTTP/1.1" 200 20670
+INFO 2026-05-31 07:51:39,462 middleware Запит до / зайняв 0.0061 секунд.
+INFO 2026-05-31 07:51:39,473 log "GET / HTTP/1.1" 200 21950
+INFO 2026-05-31 07:51:40,226 middleware Запит до /catalog/ зайняв 0.0050 секунд.
+INFO 2026-05-31 07:51:40,236 log "GET /catalog/ HTTP/1.1" 200 20670
+INFO 2026-05-31 07:51:45,621 middleware Запит до /1/ зайняв 0.0078 секунд.
+INFO 2026-05-31 07:51:45,632 log "GET /1/ HTTP/1.1" 200 18141
+INFO 2026-05-31 07:51:47,902 middleware Запит до /catalog/ зайняв 0.0056 секунд.
+INFO 2026-05-31 07:51:47,913 log "GET /catalog/ HTTP/1.1" 200 20670
+INFO 2026-05-31 07:51:48,637 middleware Запит до /2/ зайняв 0.0043 секунд.
+INFO 2026-05-31 07:51:48,645 log "GET /2/ HTTP/1.1" 200 18162
+INFO 2026-05-31 07:51:49,519 middleware Запит до /catalog/ зайняв 0.0057 секунд.
+INFO 2026-05-31 07:51:49,532 log "GET /catalog/ HTTP/1.1" 200 20670
+INFO 2026-05-31 07:51:50,602 middleware Запит до /5/ зайняв 0.0062 секунд.
+INFO 2026-05-31 07:51:50,611 log "GET /5/ HTTP/1.1" 200 18852
+INFO 2026-05-31 07:51:50,642 middleware Запит до /images/covers/Elon_Musk.webp зайняв 0.0005 секунд.
+INFO 2026-05-31 07:51:50,652 log "GET /images/covers/Elon_Musk.webp HTTP/1.1" 200 65110
+INFO 2026-05-31 07:51:51,655 middleware Запит до /catalog/ зайняв 0.0054 секунд.
+INFO 2026-05-31 07:51:51,667 log "GET /catalog/ HTTP/1.1" 200 20670
+INFO 2026-05-31 07:51:53,362 middleware Запит до /4/ зайняв 0.0059 секунд.
+INFO 2026-05-31 07:51:53,372 log "GET /4/ HTTP/1.1" 200 19580
+INFO 2026-05-31 07:51:54,262 middleware Запит до /catalog/ зайняв 0.0059 секунд.
+INFO 2026-05-31 07:51:54,273 log "GET /catalog/ HTTP/1.1" 200 20670
+INFO 2026-05-31 07:51:55,210 middleware Запит до /3/ зайняв 0.0056 секунд.
+INFO 2026-05-31 07:51:55,220 log "GET /3/ HTTP/1.1" 200 18177
+INFO 2026-05-31 07:51:55,236 middleware Запит до /images/covers/Charlie_and_the_Chocolate_Factory.jpg зайняв 0.0004 секунд.
+INFO 2026-05-31 07:51:55,245 log "GET /images/covers/Charlie_and_the_Chocolate_Factory.jpg HTTP/1.1" 200 201838
+INFO 2026-05-31 07:51:56,097 middleware Запит до /catalog/ зайняв 0.0054 секунд.
+INFO 2026-05-31 07:51:56,108 log "GET /catalog/ HTTP/1.1" 200 20670
+INFO 2026-05-31 07:51:56,689 middleware Запит до / зайняв 0.0054 секунд.
+INFO 2026-05-31 07:51:56,700 log "GET / HTTP/1.1" 200 21950
+INFO 2026-05-31 07:51:57,395 middleware Запит до /catalog/ зайняв 0.0053 секунд.
+INFO 2026-05-31 07:51:57,404 log "GET /catalog/ HTTP/1.1" 200 20670
+INFO 2026-05-31 07:51:58,011 middleware Запит до / зайняв 0.0063 секунд.
+INFO 2026-05-31 07:51:58,021 log "GET / HTTP/1.1" 200 21950

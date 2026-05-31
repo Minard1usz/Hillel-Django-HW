@@ -1,0 +1,182 @@
+[
+{
+  "model": "shop_app.category",
+  "pk": 1,
+  "fields": {
+    "name": "Fiction",
+    "slug": "fiction"
+  }
+},
+{
+  "model": "shop_app.category",
+  "pk": 2,
+  "fields": {
+    "name": "Biography",
+    "slug": "biography"
+  }
+},
+{
+  "model": "shop_app.category",
+  "pk": 4,
+  "fields": {
+    "name": "Fantasy",
+    "slug": "fantasy"
+  }
+},
+{
+  "model": "shop_app.book",
+  "pk": 1,
+  "fields": {
+    "title": "Pride and Prejudice",
+    "author": "Jane Austen",
+    "description": "Published in 1813, Jane Austen's Pride and Prejudice is a classic romantic novel of manners. It follows the spirited Elizabeth Bennet and the wealthy, aristocratic Mr. Darcy. As they navigate societal expectations, the two must overcome their titular flaws of pride and prejudice before finally falling in love.",
+    "price": "320.00",
+    "stock": 10,
+    "category": 1,
+    "cover": "covers/Pride_and_prejudice.webp"
+  }
+},
+{
+  "model": "shop_app.book",
+  "pk": 2,
+  "fields": {
+    "title": "The Master and Margarita",
+    "author": "Mikhail Bulgakov",
+    "description": "The Master and Margarita is a masterpiece of 20th-century Russian literature. It interweaves two storylines: the Devil (Woland) visiting 1930s Moscow to wreak satirical havoc on corrupt Soviet elites, and an incarcerated author (the Master) writing a novel about the trial of Jesus (Yeshua Ha-Nozri) and Pontius Pilate.",
+    "price": "360.00",
+    "stock": 5,
+    "category": 1,
+    "cover": "covers/The_Master_and_Margarita_.jpg"
+  }
+},
+{
+  "model": "shop_app.book",
+  "pk": 3,
+  "fields": {
+    "title": "Charlie and the Chocolate Factory",
+    "author": "Roald Dahl",
+    "description": "Charlie and the Chocolate Factory is a 1964 children's novel by Roald Dahl. It follows Charlie Bucket, a poor boy who wins a \"Golden Ticket\" to tour the magical, secretive chocolate factory of eccentric candy maker Willy Wonka, outlasting four other spoiled children to inherit the entire business.",
+    "price": "250.00",
+    "stock": 3,
+    "category": 1,
+    "cover": "covers/Charlie_and_the_Chocolate_Factory.jpg"
+  }
+},
+{
+  "model": "shop_app.book",
+  "pk": 4,
+  "fields": {
+    "title": "Steve Jobs",
+    "author": "Walter Isaacson",
+    "description": "Walter Isaacson's worldwide bestselling biography of Apple cofounder Steve Jobs. Based on more than forty interviews with Steve Jobs conducted over two years--as well as interviews with more than 100 family members, friends, adversaries, competitors, and colleagues--Walter Isaacson has written a riveting story of the roller-coaster life and searingly intense personality of a creative entrepreneur whose passion for perfection and ferocious drive revolutionized six industries: personal computers, animated movies, music, phones, tablet computing, and digital publishing. Isaacson's portrait touched millions of readers. At a time when America is seeking ways to sustain its innovative edge, Jobs stands as the ultimate icon of inventiveness and applied imagination. He knew that the best way to create value in the twenty-first century was to connect creativity with technology. He built a company where leaps of the imagination were combined with remarkable feats of engineering. Although Jobs cooperated with the author, he asked for no control over what was written. He put nothing off-limits. He encouraged the people he knew to speak honestly. He himself spoke candidly about the people he worked with and competed against. His friends, foes, and colleagues offer an unvarnished view of the passions, perfectionism, obsessions, artistry, devilry, and compulsion for control that shaped his approach to business and the innovative products that resulted. His tale is instructive and cautionary, filled with lessons about innovation, character, leadership, and values. Steve Jobs is the inspiration for the movie of the same name starring Michael Fassbender, Kate Winslet, Seth Rogen, and Jeff Daniels, directed by Danny Boyle with a screenplay by Aaron Sorkin.",
+    "price": "160.00",
+    "stock": 2,
+    "category": 2,
+    "cover": "covers/Steve_Jobs.webp"
+  }
+},
+{
+  "model": "shop_app.book",
+  "pk": 5,
+  "fields": {
+    "title": "Elon Musk: Tesla, SpaceX, and the Quest for a Fantastic Future",
+    "author": "Ashlee Vance",
+    "description": "Elon Musk, the entrepreneur and innovator behind SpaceX, Tesla, and SolarCity, sold one of his internet companies, PayPal, for $1.5 billion. Ashlee Vance captures the full spectacle and arc of the genius's life and work, from his tumultuous upbringing in South Africa and flight to the United States to his dramatic technical innovations and entrepreneurial pursuits. Vance uses Musk's story to explore one of the pressing questions of our age: can the nation of inventors and creators who led the modern world for a century still compete in an age of fierce global competition? He argues that Musk is an amalgam of legendary inventors and industrialists including Thomas Edison, Henry Ford, Howard Hughes, and Steve Jobs. More than any other entrepreneur today, Musk has dedicated his energies and his own vast fortune to inventing a future that is as rich and far-reaching as the visionaries of the golden age of science-fiction fantasy.",
+    "price": "210.00",
+    "stock": 4,
+    "category": 2,
+    "cover": "covers/Elon_Musk.webp"
+  }
+},
+{
+  "model": "shop_app.book",
+  "pk": 6,
+  "fields": {
+    "title": "Tesla: Inventor of the Modern",
+    "author": "Richard Munson",
+    "description": "Nikola Tesla invented radio, robots, and remote control. His electric induction motors run our appliances and factories. In the early 1900s, he designed plans for cell phones, the Internet, death-ray weapons, and interstellar communication. His ideas have lived on to shape the modern economy, yet he has been largely overlooked by history. In Tesla, Richard Munson presents a comprehensive portrait of this farsighted and underappreciated mastermind. Drawing on letters, technological notebooks, and other primary sources, Munson pieces together the magnificently bizarre personal life and mental habits of the enigmatic inventor whose most famous inventions were the product of a mind fueled by both the humanities and sciences—Tesla conceived the induction motor while walking through a park and reciting Goethe’s Faust. Clear, authoritative, and highly readable, Tesla takes into account all the phases of Tesla’s remarkable life and career.",
+    "price": "80.00",
+    "stock": 1,
+    "category": 2,
+    "cover": "covers/Nikola_Tesla.jpg"
+  }
+},
+{
+  "model": "shop_app.book",
+  "pk": 10,
+  "fields": {
+    "title": "The Hobbit",
+    "author": "J.R.R. Tolkien",
+    "description": "The journey through Middle-earth begins here with J.R.R. Tolkien's classic prelude to his epic fantasy Lord of the Rings trilogy.\r\n\r\n“A glorious account of a magnificent adventure, filled with suspense and seasoned with a quiet humor that is irresistible... All those, young or old, who love a fine adventurous tale, beautifully told, will take The Hobbit to their hearts.”—The New York Times Book Review. discount",
+    "price": "210.00",
+    "stock": 3,
+    "category": 4,
+    "cover": "covers/The_hobbit.jpg"
+  }
+},
+{
+  "model": "shop_app.book",
+  "pk": 11,
+  "fields": {
+    "title": "The Raven Tower",
+    "author": "Ann Leckie",
+    "description": "Gods meddle in the fates of men, men play with the fates of gods, and a pretender must be cast down from the throne in this masterful first fantasy novel from Ann Leckie, New York Times bestselling author and winner of the Hugo, Nebula, and Arthur C. Clarke Awards.\r\n\r\n\"Absolutely wonderful. . .utterly brilliant.\" -- The New York Times Book Review\r\n\r\nFor centuries, the kingdom of Iraden has been protected by the god known as the Raven. discount",
+    "price": "199.00",
+    "stock": 0,
+    "category": 4,
+    "cover": "covers/The_Raven_Tower.jpg"
+  }
+},
+{
+  "model": "shop_app.book",
+  "pk": 12,
+  "fields": {
+    "title": "Frida: A Biography of Frida Kahlo",
+    "author": "Hayden Herrera",
+    "description": "Hailed by readers and critics across the country, this engrossing biography of Mexican painter Frida Kahlo reveals a woman of extreme magnetism and originality, an artist whose sensual vibrancy came straight from her own experiences: her childhood near Mexico City during the Mexican Revolution; a devastating accident at age eighteen that left her crippled and unable to bear children; her tempestuous marriage to muralist Diego Rivera and intermittent love affairs with men as diverse as Isamu Noguchi and Leon Trotsky; her association with the Communist Party; her absorption in Mexican folklore and culture; and her dramatic love of spectacle.",
+    "price": "245.00",
+    "stock": 20,
+    "category": 2,
+    "cover": "covers/Frida_Kahlo.jpg"
+  }
+},
+{
+  "model": "shop_app.book",
+  "pk": 13,
+  "fields": {
+    "title": "Frida: A Biography of Frida Kahlo",
+    "author": "Hayden Herrera",
+    "description": "Hailed by readers and critics across the country, this engrossing biography of Mexican painter Frida Kahlo reveals a woman of extreme magnetism and originality, an artist whose sensual vibrancy came straight from her own experiences: her childhood near Mexico City during the Mexican Revolution; a devastating accident at age eighteen that left her crippled and unable to bear children; her tempestuous marriage to muralist Diego Rivera and intermittent love affairs with men as diverse as Isamu Noguchi and Leon Trotsky; her association with the Communist Party; her absorption in Mexican folklore and culture; and her dramatic love of spectacle.",
+    "price": "245.00",
+    "stock": 20,
+    "category": 2,
+    "cover": "covers/Frida_Kahlo_Id85I6s.jpg"
+  }
+},
+{
+  "model": "shop_app.book",
+  "pk": 14,
+  "fields": {
+    "title": "A Game of Thrones (A Song of Ice and Fire, Book 1)",
+    "author": "George R. R. Martin",
+    "description": "In a land where summers can last decades and winters a lifetime, trouble is brewing. The cold is returning, and in the frozen wastes to the North of Winterfell, sinister and supernatural forces are massing beyond the kingdom’s protective Wall. At the center of the conflict lie the Starks of Winterfell, a family as harsh and unyielding as the land they were born to. Sweeping from a land of brutal cold to a distant summertime kingdom of epicurean plenty, here is a tale of lords and ladies, soldiers and sorcerers, assassins and bastards, who come together in a time of grim omens. Amid plots and counterplots, tragedy and betrayal, victory and terror, the fate of the Starks, their allies, and their enemies hangs perilously in the balance, as each endeavors to win that deadliest of conflicts: the game of thrones.",
+    "price": "310.00",
+    "stock": 5,
+    "category": 4,
+    "cover": "covers/game_of_thrones.jpg"
+  }
+},
+{
+  "model": "shop_app.book",
+  "pk": 15,
+  "fields": {
+    "title": "Warbreaker",
+    "author": "Brandon Sanderson",
+    "description": "Warbreaker by Brandon Sanderson is a standalone epic fantasy novel centered around two Idrian princesses, a magical system powered by Breath and color, and a tense political standoff between rival nations on the brink of war.",
+    "price": "195.00",
+    "stock": 0,
+    "category": 4,
+    "cover": "covers/warbreaker.jpg"
+  }
+}
+]
