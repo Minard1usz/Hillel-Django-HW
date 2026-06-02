@@ -4,6 +4,41 @@
 <h2 class="mb-4">📚 Каталог книг (Class-Based View)</h2>
 
 <div class="row g-4">
+    <div class="container mb-4">
+    <div class="row">
+        <div class="col-md-6 mb-3">
+            <form method="get" action="" class="d-flex">
+                {% if request.GET.category %}
+                    <input type="hidden" name="category" value="{{ request.GET.category }}">
+                {% endif %}
+
+                <input type="text" name="search" class="form-control me-2" placeholder="Пошук книги за назвою..." value="{{ request.GET.search|default:'' }}">
+                <button type="submit" class="btn btn-primary">Шукати</button>
+
+                {% if request.GET.search or request.GET.category %}
+                    <a href="{% url 'shop_app:book_list' %}" class="btn btn-outline-secondary ms-2">Скинути</a>
+                {% endif %}
+            </form>
+        </div>
+
+        <div class="col-md-6 mb-3">
+            <div class="d-flex flex-wrap gap-2">
+                <a href="{% url 'shop_app:book_list' %}{% if request.GET.search %}?search={{ request.GET.search }}{% endif %}"
+                   class="btn {% if not request.GET.category %}btn-dark{% else %}btn-outline-dark{% endif %}">
+                    Всі книги
+                </a>
+
+                {% for cat in categories %}
+                    <a href="?category={{ cat.id }}{% if request.GET.search %}&search={{ request.GET.search }}{% endif %}"
+                       class="btn {% if request.GET.category == cat.id|slugify %}btn-dark{% else %}btn-outline-dark{% endif %}">
+                        {{ cat.name }}
+                    </a>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+</div>
+<hr>
   {% for book in books %}
     <div class="col-md-4">
 
