@@ -197,3 +197,136 @@ INFO 2026-06-02 10:43:58,908 middleware Запит до /3/ зайняв 0.0060 
 INFO 2026-06-02 10:43:58,917 log "GET /3/ HTTP/1.1" 200 18177
 INFO 2026-06-02 10:43:58,933 middleware Запит до /images/covers/Charlie_and_the_Chocolate_Factory.jpg зайняв 0.0004 секунд.
 INFO 2026-06-02 10:43:58,941 log "GET /images/covers/Charlie_and_the_Chocolate_Factory.jpg HTTP/1.1" 304 0
+INFO 2026-06-02 10:47:05,498 autoreload Watching for file changes with StatReloader
+INFO 2026-06-02 10:47:21,699 autoreload Watching for file changes with StatReloader
+INFO 2026-06-02 10:47:24,146 middleware Запит до / зайняв 0.0381 секунд.
+INFO 2026-06-02 10:47:24,154 log "GET / HTTP/1.1" 200 21950
+INFO 2026-06-02 10:47:25,746 middleware Запит до / зайняв 0.0064 секунд.
+INFO 2026-06-02 10:47:25,756 log "GET / HTTP/1.1" 200 21950
+INFO 2026-06-02 10:47:26,792 middleware Запит до /catalog/ зайняв 0.0112 секунд.
+INFO 2026-06-02 10:47:26,802 log "GET /catalog/ HTTP/1.1" 200 21921
+INFO 2026-06-02 10:47:27,646 middleware Запит до / зайняв 0.0064 секунд.
+INFO 2026-06-02 10:47:27,656 log "GET / HTTP/1.1" 200 21950
+INFO 2026-06-02 10:47:31,479 middleware Запит до /catalog/ зайняв 0.0061 секунд.
+INFO 2026-06-02 10:47:31,488 log "GET /catalog/ HTTP/1.1" 200 21921
+INFO 2026-06-02 10:47:32,732 middleware Запит до /catalog/ зайняв 0.0060 секунд.
+INFO 2026-06-02 10:47:32,742 log "GET /catalog/ HTTP/1.1" 200 21921
+INFO 2026-06-02 10:47:34,067 middleware Запит до /catalog/ зайняв 0.0066 секунд.
+INFO 2026-06-02 10:47:34,077 log "GET /catalog/ HTTP/1.1" 200 21921
+INFO 2026-06-02 10:47:34,783 middleware Запит до / зайняв 0.0065 секунд.
+INFO 2026-06-02 10:47:34,793 log "GET / HTTP/1.1" 200 21950
+INFO 2026-06-02 10:47:35,469 middleware Запит до /catalog/ зайняв 0.0047 секунд.
+INFO 2026-06-02 10:47:35,479 log "GET /catalog/ HTTP/1.1" 200 21921
+INFO 2026-06-02 10:47:39,350 middleware Запит до /catalog/ зайняв 0.0056 секунд.
+INFO 2026-06-02 10:47:39,359 log "GET /catalog/?category=1 HTTP/1.1" 200 19935
+INFO 2026-06-02 10:47:40,216 middleware Запит до /catalog/ зайняв 0.0067 секунд.
+INFO 2026-06-02 10:47:40,225 log "GET /catalog/?category=2 HTTP/1.1" 200 21373
+INFO 2026-06-02 10:47:41,067 middleware Запит до /catalog/ зайняв 0.0059 секунд.
+INFO 2026-06-02 10:47:41,076 log "GET /catalog/?category=4 HTTP/1.1" 200 20589
+INFO 2026-06-02 10:47:42,640 middleware Запит до /catalog/ зайняв 0.0066 секунд.
+INFO 2026-06-02 10:47:42,650 log "GET /catalog/ HTTP/1.1" 200 21921
+INFO 2026-06-02 10:47:49,815 middleware Запит до /catalog/ зайняв 0.0059 секунд.
+INFO 2026-06-02 10:47:49,824 log "GET /catalog/?search=elon HTTP/1.1" 200 18561
+INFO 2026-06-02 10:47:50,917 middleware Запит до /5/ зайняв 0.0070 секунд.
+INFO 2026-06-02 10:47:50,926 log "GET /5/ HTTP/1.1" 200 18852
+INFO 2026-06-02 10:47:50,944 middleware Запит до /images/covers/Elon_Musk.webp зайняв 0.0004 секунд.
+INFO 2026-06-02 10:47:50,952 log "GET /images/covers/Elon_Musk.webp HTTP/1.1" 304 0
+INFO 2026-06-02 10:47:55,222 middleware Запит до / зайняв 0.0069 секунд.
+INFO 2026-06-02 10:47:55,231 log "GET / HTTP/1.1" 200 21950
+INFO 2026-06-02 11:01:36,780 autoreload Watching for file changes with StatReloader
+INFO 2026-06-02 11:01:49,542 middleware Запит до / зайняв 0.0428 секунд.
+INFO 2026-06-02 11:01:49,551 log "GET / HTTP/1.1" 200 21950
+INFO 2026-06-02 11:01:50,927 middleware Запит до /catalog/ зайняв 0.0111 секунд.
+INFO 2026-06-02 11:01:50,937 log "GET /catalog/ HTTP/1.1" 200 21921
+INFO 2026-06-02 11:01:51,578 middleware Запит до / зайняв 0.0058 секунд.
+INFO 2026-06-02 11:01:51,587 log "GET / HTTP/1.1" 200 21950
+INFO 2026-06-02 11:01:52,949 middleware Запит до /catalog/ зайняв 0.0076 секунд.
+INFO 2026-06-02 11:01:52,959 log "GET /catalog/ HTTP/1.1" 200 21921
+INFO 2026-06-02 11:01:54,564 middleware Запит до /catalog/ зайняв 0.0061 секунд.
+INFO 2026-06-02 11:01:54,574 log "GET /catalog/ HTTP/1.1" 200 21921
+INFO 2026-06-02 11:02:00,887 middleware Запит до /catalog/ зайняв 0.0064 секунд.
+INFO 2026-06-02 11:02:00,896 log "GET /catalog/ HTTP/1.1" 200 21921
+INFO 2026-06-02 11:02:01,399 middleware Запит до / зайняв 0.0066 секунд.
+INFO 2026-06-02 11:02:01,409 log "GET / HTTP/1.1" 200 21950
+INFO 2026-06-02 11:02:02,194 middleware Запит до /catalog/ зайняв 0.0075 секунд.
+INFO 2026-06-02 11:02:02,203 log "GET /catalog/ HTTP/1.1" 200 21921
+INFO 2026-06-02 11:02:34,351 middleware Запит до /catalog/ зайняв 0.0130 секунд.
+INFO 2026-06-02 11:02:34,365 log "GET /catalog/ HTTP/1.1" 200 21921
+INFO 2026-06-02 11:02:43,320 middleware Запит до /catalog/ зайняв 0.0079 секунд.
+INFO 2026-06-02 11:02:43,333 log "GET /catalog/ HTTP/1.1" 200 21922
+INFO 2026-06-02 11:02:48,643 middleware Запит до /catalog/ зайняв 0.0129 секунд.
+INFO 2026-06-02 11:02:48,654 log "GET /catalog/ HTTP/1.1" 200 21921
+INFO 2026-06-02 11:02:55,901 middleware Запит до /catalog/ зайняв 0.0064 секунд.
+INFO 2026-06-02 11:02:55,911 log "GET /catalog/?page=2 HTTP/1.1" 200 21997
+INFO 2026-06-02 11:02:59,956 middleware Запит до /catalog/ зайняв 0.0056 секунд.
+INFO 2026-06-02 11:02:59,966 log "GET /catalog/?page=3 HTTP/1.1" 200 19854
+INFO 2026-06-02 11:03:01,348 middleware Запит до /catalog/ зайняв 0.0057 секунд.
+INFO 2026-06-02 11:03:01,358 log "GET /catalog/?page=2 HTTP/1.1" 200 21997
+INFO 2026-06-02 11:03:12,893 middleware Запит до /catalog/ зайняв 0.0137 секунд.
+INFO 2026-06-02 11:03:12,906 log "GET /catalog/?page=2 HTTP/1.1" 200 22004
+INFO 2026-06-02 11:03:18,038 middleware Запит до /catalog/ зайняв 0.0079 секунд.
+INFO 2026-06-02 11:03:18,050 log "GET /catalog/?page=2 HTTP/1.1" 200 21997
+INFO 2026-06-02 11:03:58,050 middleware Запит до /catalog/ зайняв 0.0101 секунд.
+INFO 2026-06-02 11:03:58,063 log "GET /catalog/?page=2 HTTP/1.1" 200 21987
+INFO 2026-06-02 11:04:00,775 middleware Запит до /catalog/ зайняв 0.0027 секунд.
+INFO 2026-06-02 11:04:00,779 log "GET /catalog/?page=2 HTTP/1.1" 200 21985
+INFO 2026-06-02 11:04:02,709 middleware Запит до / зайняв 0.0092 секунд.
+INFO 2026-06-02 11:04:02,718 log "GET / HTTP/1.1" 200 21950
+INFO 2026-06-02 11:04:03,212 middleware Запит до /catalog/ зайняв 0.0070 секунд.
+INFO 2026-06-02 11:04:03,221 log "GET /catalog/ HTTP/1.1" 200 21911
+INFO 2026-06-02 11:04:32,685 middleware Запит до /catalog/ зайняв 0.0112 секунд.
+INFO 2026-06-02 11:04:32,697 log "GET /catalog/ HTTP/1.1" 200 21910
+INFO 2026-06-02 11:04:34,510 middleware Запит до /catalog/ зайняв 0.0064 секунд.
+INFO 2026-06-02 11:04:34,519 log "GET /catalog/?category=1 HTTP/1.1" 200 19926
+INFO 2026-06-02 11:04:35,017 middleware Запит до /catalog/ зайняв 0.0061 секунд.
+INFO 2026-06-02 11:04:35,027 log "GET /catalog/?category=2 HTTP/1.1" 200 21362
+INFO 2026-06-02 11:04:35,552 middleware Запит до /catalog/ зайняв 0.0061 секунд.
+INFO 2026-06-02 11:04:35,562 log "GET /catalog/?category=2 HTTP/1.1" 200 21362
+INFO 2026-06-02 11:04:36,111 middleware Запит до /catalog/ зайняв 0.0073 секунд.
+INFO 2026-06-02 11:04:36,121 log "GET /catalog/?category=2 HTTP/1.1" 200 21362
+INFO 2026-06-02 11:04:36,684 middleware Запит до /catalog/ зайняв 0.0058 секунд.
+INFO 2026-06-02 11:04:36,694 log "GET /catalog/?category=4 HTTP/1.1" 200 20579
+INFO 2026-06-02 11:04:38,082 middleware Запит до /catalog/ зайняв 0.0058 секунд.
+INFO 2026-06-02 11:04:38,092 log "GET /catalog/ HTTP/1.1" 200 21910
+INFO 2026-06-02 11:05:12,468 middleware Запит до /.well-known/appspecific/com.chrome.devtools.json зайняв 0.0035 секунд.
+WARNING 2026-06-02 11:05:12,482 log Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2026-06-02 11:05:12,482 log "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 18624
+INFO 2026-06-02 11:07:39,351 middleware Запит до /catalog/ зайняв 0.0121 секунд.
+INFO 2026-06-02 11:07:39,365 log "GET /catalog/ HTTP/1.1" 200 23789
+INFO 2026-06-02 11:07:39,394 middleware Запит до /.well-known/appspecific/com.chrome.devtools.json зайняв 0.0025 секунд.
+WARNING 2026-06-02 11:07:39,405 log Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2026-06-02 11:07:39,405 log "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 18624
+INFO 2026-06-02 11:07:53,647 middleware Запит до /catalog/ зайняв 0.0081 секунд.
+INFO 2026-06-02 11:07:53,659 log "GET /catalog/ HTTP/1.1" 200 21910
+INFO 2026-06-02 11:07:53,683 middleware Запит до /.well-known/appspecific/com.chrome.devtools.json зайняв 0.0034 секунд.
+WARNING 2026-06-02 11:07:53,694 log Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2026-06-02 11:07:53,694 log "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 18624
+INFO 2026-06-02 11:09:06,822 middleware Запит до /catalog/ зайняв 0.0078 секунд.
+INFO 2026-06-02 11:09:06,835 log "GET /catalog/ HTTP/1.1" 200 22988
+INFO 2026-06-02 11:09:06,874 middleware Запит до /.well-known/appspecific/com.chrome.devtools.json зайняв 0.0038 секунд.
+WARNING 2026-06-02 11:09:06,890 log Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2026-06-02 11:09:06,891 log "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 18624
+INFO 2026-06-02 11:09:29,783 middleware Запит до /catalog/ зайняв 0.0141 секунд.
+INFO 2026-06-02 11:09:29,795 log "GET /catalog/ HTTP/1.1" 200 21939
+INFO 2026-06-02 11:09:34,473 middleware Запит до /1/ зайняв 0.0068 секунд.
+INFO 2026-06-02 11:09:34,482 log "GET /1/ HTTP/1.1" 200 18141
+INFO 2026-06-02 11:09:35,948 middleware Запит до /2/ зайняв 0.0060 секунд.
+INFO 2026-06-02 11:09:35,957 log "GET /2/ HTTP/1.1" 200 18163
+INFO 2026-06-02 11:09:37,220 middleware Запит до /3/ зайняв 0.0061 секунд.
+INFO 2026-06-02 11:09:37,229 log "GET /3/ HTTP/1.1" 200 18177
+INFO 2026-06-02 11:09:48,596 middleware Запит до /catalog/ зайняв 0.0072 секунд.
+INFO 2026-06-02 11:09:48,609 log "GET /catalog/ HTTP/1.1" 200 21910
+INFO 2026-06-02 11:14:08,579 middleware Запит до /catalog/ зайняв 0.0079 секунд.
+INFO 2026-06-02 11:14:08,592 log "GET /catalog/ HTTP/1.1" 200 21915
+INFO 2026-06-02 11:14:13,921 middleware Запит до /catalog/ зайняв 0.0056 секунд.
+INFO 2026-06-02 11:14:13,931 log "GET /catalog/?category=1 HTTP/1.1" 200 19931
+INFO 2026-06-02 11:14:14,413 middleware Запит до /catalog/ зайняв 0.0065 секунд.
+INFO 2026-06-02 11:14:14,423 log "GET /catalog/?category=2 HTTP/1.1" 200 21367
+INFO 2026-06-02 11:14:14,883 middleware Запит до /catalog/ зайняв 0.0063 секунд.
+INFO 2026-06-02 11:14:14,892 log "GET /catalog/?category=4 HTTP/1.1" 200 20584
+INFO 2026-06-02 11:14:16,342 middleware Запит до / зайняв 0.0132 секунд.
+INFO 2026-06-02 11:14:16,351 log "GET / HTTP/1.1" 200 21950
+INFO 2026-06-02 11:14:16,848 middleware Запит до /catalog/ зайняв 0.0060 секунд.
+INFO 2026-06-02 11:14:16,858 log "GET /catalog/ HTTP/1.1" 200 21915
+INFO 2026-06-02 11:15:24,544 middleware Запит до /catalog/ зайняв 0.0087 секунд.
+INFO 2026-06-02 11:15:24,556 log "GET /catalog/ HTTP/1.1" 200 21915
