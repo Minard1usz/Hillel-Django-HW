@@ -330,3 +330,14 @@ INFO 2026-06-02 11:14:16,848 middleware Запит до /catalog/ зайняв 0
 INFO 2026-06-02 11:14:16,858 log "GET /catalog/ HTTP/1.1" 200 21915
 INFO 2026-06-02 11:15:24,544 middleware Запит до /catalog/ зайняв 0.0087 секунд.
 INFO 2026-06-02 11:15:24,556 log "GET /catalog/ HTTP/1.1" 200 21915
+INFO 2026-06-02 11:21:39,075 autoreload Watching for file changes with StatReloader
+INFO 2026-06-02 11:21:42,475 middleware Запит до /catalog/ зайняв 0.0448 секунд.
+INFO 2026-06-02 11:21:42,482 log "GET /catalog/ HTTP/1.1" 200 21915
+INFO 2026-06-02 11:21:43,458 middleware Запит до /catalog/ зайняв 0.0065 секунд.
+INFO 2026-06-02 11:21:43,467 log "GET /catalog/?category=1 HTTP/1.1" 200 19931
+INFO 2026-06-02 11:21:44,009 middleware Запит до /catalog/ зайняв 0.0058 секунд.
+INFO 2026-06-02 11:21:44,018 log "GET /catalog/?category=2 HTTP/1.1" 200 21367
+INFO 2026-06-02 11:21:44,481 middleware Запит до /catalog/ зайняв 0.0062 секунд.
+INFO 2026-06-02 11:21:44,490 log "GET /catalog/?category=4 HTTP/1.1" 200 20584
+INFO 2026-06-02 11:21:45,377 middleware Запит до /catalog/ зайняв 0.0057 секунд.
+INFO 2026-06-02 11:21:45,386 log "GET /catalog/ HTTP/1.1" 200 21915
