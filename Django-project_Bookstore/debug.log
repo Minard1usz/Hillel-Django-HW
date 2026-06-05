@@ -341,3 +341,107 @@ INFO 2026-06-02 11:21:44,481 middleware Запит до /catalog/ зайняв 0
 INFO 2026-06-02 11:21:44,490 log "GET /catalog/?category=4 HTTP/1.1" 200 20584
 INFO 2026-06-02 11:21:45,377 middleware Запит до /catalog/ зайняв 0.0057 секунд.
 INFO 2026-06-02 11:21:45,386 log "GET /catalog/ HTTP/1.1" 200 21915
+INFO 2026-06-05 11:27:06,844 autoreload Watching for file changes with StatReloader
+ERROR 2026-06-05 11:27:37,442 log Invalid HTTP_HOST header: '0.0.0.0:8000'. You may need to add '0.0.0.0' to ALLOWED_HOSTS.
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/django/utils/deprecation.py", line 308, in __call__
+    response = self.process_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/django/middleware/common.py", line 48, in process_request
+    host = request.get_host()
+           ^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/django/http/request.py", line 206, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: '0.0.0.0:8000'. You may need to add '0.0.0.0' to ALLOWED_HOSTS.
+WARNING 2026-06-05 11:27:37,444 log "GET / HTTP/1.1" 400 62351
+ERROR 2026-06-05 11:27:37,499 log Invalid HTTP_HOST header: '0.0.0.0:8000'. You may need to add '0.0.0.0' to ALLOWED_HOSTS.
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/django/utils/deprecation.py", line 308, in __call__
+    response = self.process_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/django/middleware/common.py", line 48, in process_request
+    host = request.get_host()
+           ^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/django/http/request.py", line 206, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: '0.0.0.0:8000'. You may need to add '0.0.0.0' to ALLOWED_HOSTS.
+WARNING 2026-06-05 11:27:37,500 log "GET /favicon.ico HTTP/1.1" 400 62304
+INFO 2026-06-05 11:29:56,496 autoreload /app/bookstore_project/settings.py changed, reloading.
+INFO 2026-06-05 11:29:56,891 autoreload Watching for file changes with StatReloader
+INFO 2026-06-05 11:30:18,527 autoreload Watching for file changes with StatReloader
+INFO 2026-06-05 11:30:23,087 middleware Запит до / зайняв 0.0170 секунд.
+INFO 2026-06-05 11:30:23,089 log "GET / HTTP/1.1" 200 3227
+INFO 2026-06-05 11:30:23,276 middleware Запит до /favicon.ico зайняв 0.0029 секунд.
+WARNING 2026-06-05 11:30:23,277 log Not Found: /favicon.ico
+WARNING 2026-06-05 11:30:23,277 log "GET /favicon.ico HTTP/1.1" 404 4288
+INFO 2026-06-05 11:30:26,094 middleware Запит до / зайняв 0.0122 секунд.
+INFO 2026-06-05 11:30:26,094 log "GET / HTTP/1.1" 200 3227
+INFO 2026-06-05 11:30:26,637 middleware Запит до /catalog/ зайняв 0.0104 секунд.
+INFO 2026-06-05 11:30:26,637 log "GET /catalog/ HTTP/1.1" 200 2763
+INFO 2026-06-05 11:30:28,561 middleware Запит до / зайняв 0.0128 секунд.
+INFO 2026-06-05 11:30:28,562 log "GET / HTTP/1.1" 200 3227
+INFO 2026-06-05 11:30:29,105 middleware Запит до /catalog/ зайняв 0.0107 секунд.
+INFO 2026-06-05 11:30:29,105 log "GET /catalog/ HTTP/1.1" 200 2763
+INFO 2026-06-05 11:30:29,891 middleware Запит до / зайняв 0.0116 секунд.
+INFO 2026-06-05 11:30:29,892 log "GET / HTTP/1.1" 200 3227
+INFO 2026-06-05 11:30:50,866 middleware Запит до / зайняв 0.0122 секунд.
+INFO 2026-06-05 11:30:50,866 log "GET / HTTP/1.1" 200 3227
+INFO 2026-06-05 11:30:50,912 middleware Запит до /favicon.ico зайняв 0.0026 секунд.
+WARNING 2026-06-05 11:30:50,912 log Not Found: /favicon.ico
+WARNING 2026-06-05 11:30:50,913 log "GET /favicon.ico HTTP/1.1" 404 4290
+INFO 2026-06-05 11:34:49,680 middleware Запит до / зайняв 0.0161 секунд.
+INFO 2026-06-05 11:34:49,680 log "GET / HTTP/1.1" 200 7444
+INFO 2026-06-05 11:34:52,127 middleware Запит до / зайняв 0.0129 секунд.
+INFO 2026-06-05 11:34:52,128 log "GET / HTTP/1.1" 200 7444
+INFO 2026-06-05 11:34:52,610 middleware Запит до /catalog/ зайняв 0.0121 секунд.
+INFO 2026-06-05 11:34:52,611 log "GET /catalog/ HTTP/1.1" 200 7390
+INFO 2026-06-05 11:34:53,795 middleware Запит до /2/ зайняв 0.0140 секунд.
+INFO 2026-06-05 11:34:53,795 log "GET /2/ HTTP/1.1" 200 3640
+INFO 2026-06-05 11:34:53,812 middleware Запит до /images/covers/The_Master_and_Margarita_.jpg зайняв 0.0008 секунд.
+INFO 2026-06-05 11:34:53,813 log "GET /images/covers/The_Master_and_Margarita_.jpg HTTP/1.1" 200 23201
+INFO 2026-06-05 11:52:27,752 middleware Запит до /3/ зайняв 0.0103 секунд.
+INFO 2026-06-05 11:52:27,755 log "GET /3/ HTTP/1.1" 200 3654
+INFO 2026-06-05 11:52:27,767 middleware Запит до /images/covers/Charlie_and_the_Chocolate_Factory.jpg зайняв 0.0008 секунд.
+INFO 2026-06-05 11:52:27,770 log "GET /images/covers/Charlie_and_the_Chocolate_Factory.jpg HTTP/1.1" 200 201838
+INFO 2026-06-05 11:52:28,952 middleware Запит до /catalog/ зайняв 0.0119 секунд.
+INFO 2026-06-05 11:52:28,952 log "GET /catalog/ HTTP/1.1" 200 7390
+INFO 2026-06-05 11:52:29,727 middleware Запит до /catalog/ зайняв 0.0117 секунд.
+INFO 2026-06-05 11:52:29,728 log "GET /catalog/?category=1 HTTP/1.1" 200 5395
+INFO 2026-06-05 11:52:30,242 middleware Запит до /catalog/ зайняв 0.0127 секунд.
+INFO 2026-06-05 11:52:30,243 log "GET /catalog/?category=2 HTTP/1.1" 200 6831
+INFO 2026-06-05 11:52:31,710 middleware Запит до /catalog/ зайняв 0.0122 секунд.
+INFO 2026-06-05 11:52:31,710 log "GET /catalog/?category=4 HTTP/1.1" 200 6048
+INFO 2026-06-05 11:52:33,077 middleware Запит до /catalog/ зайняв 0.0119 секунд.
+INFO 2026-06-05 11:52:33,077 log "GET /catalog/ HTTP/1.1" 200 7390
+INFO 2026-06-05 11:52:35,162 middleware Запит до / зайняв 0.0137 секунд.
+INFO 2026-06-05 11:52:35,162 log "GET / HTTP/1.1" 200 7444
+INFO 2026-06-05 11:52:37,544 middleware Запит до /catalog/ зайняв 0.0118 секунд.
+INFO 2026-06-05 11:52:37,545 log "GET /catalog/ HTTP/1.1" 200 7390
+INFO 2026-06-05 11:52:38,259 middleware Запит до /catalog/ зайняв 0.0113 секунд.
+INFO 2026-06-05 11:52:38,259 log "GET /catalog/ HTTP/1.1" 200 7390
+INFO 2026-06-05 11:52:39,212 middleware Запит до / зайняв 0.0134 секунд.
+INFO 2026-06-05 11:52:39,212 log "GET / HTTP/1.1" 200 7444
+INFO 2026-06-05 11:52:40,702 middleware Запит до /catalog/ зайняв 0.0117 секунд.
+INFO 2026-06-05 11:52:40,703 log "GET /catalog/ HTTP/1.1" 200 7390
+INFO 2026-06-05 11:52:43,003 middleware Запит до /catalog/ зайняв 0.0124 секунд.
+INFO 2026-06-05 11:52:43,004 log "GET /catalog/ HTTP/1.1" 200 7390
+INFO 2026-06-05 11:52:43,550 middleware Запит до / зайняв 0.0132 секунд.
+INFO 2026-06-05 11:52:43,551 log "GET / HTTP/1.1" 200 7444
+INFO 2026-06-05 11:52:46,619 middleware Запит до /catalog/ зайняв 0.0115 секунд.
+INFO 2026-06-05 11:52:46,619 log "GET /catalog/ HTTP/1.1" 200 7390
+INFO 2026-06-05 11:52:47,754 middleware Запит до /2/ зайняв 0.0123 секунд.
+INFO 2026-06-05 11:52:47,755 log "GET /2/ HTTP/1.1" 200 3640
+INFO 2026-06-05 11:52:48,998 middleware Запит до /catalog/ зайняв 0.0099 секунд.
+INFO 2026-06-05 11:52:48,998 log "GET /catalog/ HTTP/1.1" 200 7390
+INFO 2026-06-05 11:52:50,292 middleware Запит до /1/ зайняв 0.0115 секунд.
+INFO 2026-06-05 11:52:50,292 log "GET /1/ HTTP/1.1" 200 3618
+INFO 2026-06-05 11:52:50,305 middleware Запит до /images/covers/Pride_and_prejudice.webp зайняв 0.0007 секунд.
+INFO 2026-06-05 11:52:50,307 log "GET /images/covers/Pride_and_prejudice.webp HTTP/1.1" 200 120978
+INFO 2026-06-05 11:52:52,620 middleware Запит до /catalog/ зайняв 0.0111 секунд.
+INFO 2026-06-05 11:52:52,621 log "GET /catalog/ HTTP/1.1" 200 7390
