@@ -1,0 +1,103 @@
+{% extends 'shop_app/base.html' %}
+{% load static %}
+
+
+{% block title %}Ваш кошик товарів{% endblock %}
+
+{% block content %}
+<div class="container my-5">
+    <h1 class="mb-4">Ваш кошик</h1>
+    {% if cart %}
+        <div class="row">
+            <div class="col-lg-8">
+                <div class="card shadow-sm mb-4">
+                    <div class="card-body p-0">
+                        <div class="table-responsive">
+                            <table class="table table-hover align-middle mb-0">
+                                <thead class="table-light">
+                                    <tr>
+                                        <th scope="col" class="ps-4">Книга</th>
+                                        <th scope="col">Кількість</th>
+                                        <th scope="col">Ціна</th>
+                                        <th scope="col">Сума</th>
+                                        <th scope="col" class="text-end pe-4">Видалити</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    {% for item in cart %}
+                                        {% with book=item.book %}
+                                        <tr>
+                                            <td class="ps-4">
+                                                <div class="d-flex align-items-center">
+                                                    {% if book.cover %}
+                                                        <img src="{{ book.cover.url }}" alt="{{ book.title }}" class="img-thumbnail me-3" style="width: 50px; height: 75px; object-fit: cover;">
+                                                    {% endif %}
+                                                    <div>
+                                                        <h6 class="mb-0">{{ book.title }}</h6>
+                                                        <small class="text-muted">{{ book.author }}</small>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <form action="{% url 'orders:cart_add' book.id %}" method="post" class="d-flex align-items-center gap-2">
+                                                    {% csrf_token %}
+                                                    <div style="width: 70px;">
+                                                        {{ item.update_quantity_form.quantity }}
+                                                    </div>
+                                                    {{ item.update_quantity_form.override }}
+                                                    <button type="submit" class="btn btn-sm btn-outline-secondary">Оновити</button>
+                                                </form>
+                                            </td>
+                                            <td>{{ item.price }} грн</td>
+                                            <td>{{ item.total_price }} грн</td>
+                                            <td class="text-end pe-4">
+                                                <form action="{% url 'orders:cart_remove' book.id %}" method="post" class="d-inline">
+                                                    {% csrf_token %}
+                                                    <button type="submit" class="btn btn-sm btn-outline-danger">
+                                                        <i class="bi bi-trash"></i> Видалити
+                                                    </button>
+                                                </form>
+                                            </td>
+                                        </tr>
+                                        {% endwith %}
+                                    {% endfor %}
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4">
+                <div class="card shadow-sm">
+                    <div class="card-body">
+                        <h5 class="card-title mb-4">Разом</h5>
+                        <div class="d-flex justify-content-between mb-3">
+                            <span>Кількість книг:</span>
+                            <strong>{{ cart|length }} шт.</strong>
+                        </div>
+                        <div class="d-flex justify-content-between mb-4">
+                            <span class="fs-5">Загальна вартість:</span>
+                            <strong class="fs-5 text-primary">{{ cart.get_total_price }} грн</strong>
+                        </div>
+                        <hr>
+                        <div class="d-grid gap-2">
+                            <a href="{% url 'orders:order_create' %}" class="btn btn-success btn-lg">Оформити замовлення</a>
+                            <a href="{% url 'shop_app:book_list' %}" class="btn btn-link btn-sm text-muted">Продовжити покупки</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    {% else %}
+        <div class="text-center py-5">
+            <div class="mb-4">
+                <i class="bi bi-cart-x text-muted" style="font-size: 4rem;"></i>
+            </div>
+            <h3>Ваш кошик порожній</h3>
+            <p class="text-muted">Але це легко виправити — у нас багато цікавих книг!</p>
+            <a href="{% url 'shop_app:book_list' %}" class="btn btn-primary mt-3">Перейти до каталогу</a>
+        </div>
+    {% endif %}
+</div>
+{% endblock %}

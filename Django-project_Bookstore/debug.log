@@ -445,3 +445,1420 @@ INFO 2026-06-05 11:52:50,305 middleware Запит до /images/covers/Pride_and
 INFO 2026-06-05 11:52:50,307 log "GET /images/covers/Pride_and_prejudice.webp HTTP/1.1" 200 120978
 INFO 2026-06-05 11:52:52,620 middleware Запит до /catalog/ зайняв 0.0111 секунд.
 INFO 2026-06-05 11:52:52,621 log "GET /catalog/ HTTP/1.1" 200 7390
+INFO 2026-06-17 14:14:06,026 autoreload Watching for file changes with StatReloader
+INFO 2026-06-17 14:21:01,666 autoreload Watching for file changes with StatReloader
+INFO 2026-06-17 14:32:32,413 autoreload Watching for file changes with StatReloader
+INFO 2026-06-17 14:35:11,618 middleware Запит до / зайняв 0.0263 секунд.
+INFO 2026-06-17 14:35:11,620 log "GET / HTTP/1.1" 200 7444
+INFO 2026-06-17 14:35:15,413 middleware Запит до /catalog/ зайняв 0.0165 секунд.
+INFO 2026-06-17 14:35:15,414 log "GET /catalog/ HTTP/1.1" 200 7390
+INFO 2026-06-17 14:35:17,250 middleware Запит до /1/ зайняв 0.0128 секунд.
+INFO 2026-06-17 14:35:17,250 log "GET /1/ HTTP/1.1" 200 3618
+INFO 2026-06-17 14:35:17,266 middleware Запит до /images/covers/Pride_and_prejudice.webp зайняв 0.0009 секунд.
+INFO 2026-06-17 14:35:17,269 log "GET /images/covers/Pride_and_prejudice.webp HTTP/1.1" 200 120978
+INFO 2026-06-17 14:35:21,121 middleware Запит до /1/ зайняв 0.0112 секунд.
+INFO 2026-06-17 14:35:21,122 log "GET /1/ HTTP/1.1" 200 3618
+INFO 2026-06-17 14:35:22,953 middleware Запит до / зайняв 0.0140 секунд.
+INFO 2026-06-17 14:35:22,954 log "GET / HTTP/1.1" 200 7444
+INFO 2026-06-17 14:45:07,065 middleware Запит до /admin зайняв 0.0038 секунд.
+INFO 2026-06-17 14:45:07,065 log "GET /admin HTTP/1.1" 301 0
+INFO 2026-06-17 14:45:07,069 middleware Запит до /admin/ зайняв 0.0029 секунд.
+INFO 2026-06-17 14:45:07,070 log "GET /admin/ HTTP/1.1" 302 0
+INFO 2026-06-17 14:45:07,082 middleware Запит до /admin/login/ зайняв 0.0108 секунд.
+INFO 2026-06-17 14:45:07,082 log "GET /admin/login/?next=/admin/ HTTP/1.1" 200 4080
+INFO 2026-06-17 14:45:07,094 log "GET /static/admin/css/dark_mode.css HTTP/1.1" 200 3538
+INFO 2026-06-17 14:45:07,094 log "GET /static/admin/css/nav_sidebar.css HTTP/1.1" 200 2810
+INFO 2026-06-17 14:45:07,097 log "GET /static/admin/css/base.css HTTP/1.1" 200 23100
+INFO 2026-06-17 14:45:07,097 log "GET /static/admin/css/responsive.css HTTP/1.1" 200 16273
+INFO 2026-06-17 14:45:07,098 log "GET /static/admin/css/login.css HTTP/1.1" 200 951
+INFO 2026-06-17 14:45:07,098 log "GET /static/admin/js/theme.js HTTP/1.1" 200 1653
+INFO 2026-06-17 14:45:07,101 log "GET /static/admin/js/nav_sidebar.js HTTP/1.1" 200 3063
+INFO 2026-06-17 14:45:31,013 middleware Запит до /admin/login/ зайняв 0.1856 секунд.
+INFO 2026-06-17 14:45:31,014 log "POST /admin/login/?next=/admin/ HTTP/1.1" 302 0
+INFO 2026-06-17 14:45:31,024 middleware Запит до /admin/ зайняв 0.0088 секунд.
+INFO 2026-06-17 14:45:31,024 log "GET /admin/ HTTP/1.1" 200 8198
+INFO 2026-06-17 14:45:31,034 log "GET /static/admin/css/dashboard.css HTTP/1.1" 200 441
+INFO 2026-06-17 14:45:31,047 log "GET /static/admin/img/icon-changelink.svg HTTP/1.1" 200 978
+INFO 2026-06-17 14:45:31,047 log "GET /static/admin/img/icon-addlink.svg HTTP/1.1" 200 593
+INFO 2026-06-17 14:45:41,495 middleware Запит до /admin/shop_app/book/ зайняв 0.0367 секунд.
+INFO 2026-06-17 14:45:41,495 log "GET /admin/shop_app/book/ HTTP/1.1" 200 22977
+INFO 2026-06-17 14:45:41,509 log "GET /static/admin/css/changelists.css HTTP/1.1" 200 7498
+INFO 2026-06-17 14:45:41,510 log "GET /static/admin/js/jquery.init.js HTTP/1.1" 200 347
+INFO 2026-06-17 14:45:41,511 log "GET /static/admin/css/forms.css HTTP/1.1" 200 8831
+INFO 2026-06-17 14:45:41,511 log "GET /static/admin/js/core.js HTTP/1.1" 200 6208
+INFO 2026-06-17 14:45:41,513 log "GET /static/admin/js/actions.js HTTP/1.1" 200 8076
+INFO 2026-06-17 14:45:41,514 log "GET /static/admin/js/prepopulate.js HTTP/1.1" 200 1531
+INFO 2026-06-17 14:45:41,515 log "GET /static/admin/js/vendor/jquery/jquery.js HTTP/1.1" 200 285314
+INFO 2026-06-17 14:45:41,515 log "GET /static/admin/js/urlify.js HTTP/1.1" 200 7887
+INFO 2026-06-17 14:45:41,516 log "GET /static/admin/js/admin/RelatedObjectLookups.js HTTP/1.1" 200 9777
+INFO 2026-06-17 14:45:41,519 log "GET /static/admin/img/search.svg HTTP/1.1" 200 607
+INFO 2026-06-17 14:45:41,520 middleware Запит до /admin/jsi18n/ зайняв 0.0154 секунд.
+INFO 2026-06-17 14:45:41,521 log "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2026-06-17 14:45:41,521 log "GET /static/admin/css/widgets.css HTTP/1.1" 200 11811
+INFO 2026-06-17 14:45:41,522 log "GET /static/admin/js/filters.js HTTP/1.1" 200 978
+INFO 2026-06-17 14:45:41,526 log "GET /static/admin/js/vendor/xregexp/xregexp.js HTTP/1.1" 200 325171
+INFO 2026-06-17 14:45:41,532 log "GET /static/admin/img/tooltag-add.svg HTTP/1.1" 200 593
+INFO 2026-06-17 14:45:41,532 log "GET /static/admin/img/icon-viewlink.svg HTTP/1.1" 200 928
+INFO 2026-06-17 14:48:08,018 middleware Запит до /admin/shop_app/book/add/ зайняв 0.0312 секунд.
+INFO 2026-06-17 14:48:08,018 log "GET /admin/shop_app/book/add/ HTTP/1.1" 200 15054
+INFO 2026-06-17 14:48:08,044 log "GET /static/admin/js/prepopulate_init.js HTTP/1.1" 200 586
+INFO 2026-06-17 14:48:08,051 middleware Запит до /admin/jsi18n/ зайняв 0.0132 секунд.
+INFO 2026-06-17 14:48:08,052 log "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2026-06-17 14:48:08,053 log "GET /static/admin/js/change_form.js HTTP/1.1" 200 606
+INFO 2026-06-17 14:48:12,708 middleware Запит до /admin/shop_app/category/ зайняв 0.0211 секунд.
+INFO 2026-06-17 14:48:12,709 log "GET /admin/shop_app/category/ HTTP/1.1" 200 11454
+INFO 2026-06-17 14:48:12,733 middleware Запит до /admin/jsi18n/ зайняв 0.0096 секунд.
+INFO 2026-06-17 14:48:12,734 log "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2026-06-17 14:48:17,454 middleware Запит до /admin/shop_app/category/2/change/ зайняв 0.0372 секунд.
+INFO 2026-06-17 14:48:17,455 log "GET /admin/shop_app/category/2/change/ HTTP/1.1" 200 34297
+INFO 2026-06-17 14:48:17,474 log "GET /static/admin/js/inlines.js HTTP/1.1" 200 15628
+INFO 2026-06-17 14:48:17,482 middleware Запит до /admin/jsi18n/ зайняв 0.0102 секунд.
+INFO 2026-06-17 14:48:17,483 log "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2026-06-17 14:48:17,500 log "GET /static/admin/img/inline-delete.svg HTTP/1.1" 200 651
+INFO 2026-06-17 14:48:19,722 middleware Запит до /admin/shop_app/category/ зайняв 0.0191 секунд.
+INFO 2026-06-17 14:48:19,723 log "GET /admin/shop_app/category/ HTTP/1.1" 200 11454
+INFO 2026-06-17 14:48:21,116 middleware Запит до /admin/shop_app/category/add/ зайняв 0.0234 секунд.
+INFO 2026-06-17 14:48:21,117 log "GET /admin/shop_app/category/add/ HTTP/1.1" 200 16437
+INFO 2026-06-17 14:48:21,142 middleware Запит до /admin/jsi18n/ зайняв 0.0106 секунд.
+INFO 2026-06-17 14:48:21,143 log "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2026-06-17 14:48:28,780 middleware Запит до /admin/shop_app/category/add/ зайняв 0.0231 секунд.
+INFO 2026-06-17 14:48:28,781 log "POST /admin/shop_app/category/add/ HTTP/1.1" 302 0
+INFO 2026-06-17 14:48:28,798 middleware Запит до /admin/shop_app/category/ зайняв 0.0136 секунд.
+INFO 2026-06-17 14:48:28,798 log "GET /admin/shop_app/category/ HTTP/1.1" 200 11950
+INFO 2026-06-17 14:48:28,818 middleware Запит до /admin/jsi18n/ зайняв 0.0086 секунд.
+INFO 2026-06-17 14:48:28,818 log "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2026-06-17 14:48:28,825 log "GET /static/admin/img/icon-yes-dark.svg HTTP/1.1" 200 558
+INFO 2026-06-17 14:48:30,505 middleware Запит до /admin/shop_app/category/ зайняв 0.0184 секунд.
+INFO 2026-06-17 14:48:30,505 log "GET /admin/shop_app/category/ HTTP/1.1" 200 11747
+INFO 2026-06-17 14:48:30,524 middleware Запит до /admin/jsi18n/ зайняв 0.0081 секунд.
+INFO 2026-06-17 14:48:30,524 log "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2026-06-17 14:48:31,688 middleware Запит до /admin/shop_app/category/5/change/ зайняв 0.0254 секунд.
+INFO 2026-06-17 14:48:31,689 log "GET /admin/shop_app/category/5/change/ HTTP/1.1" 200 16705
+INFO 2026-06-17 14:48:31,718 middleware Запит до /admin/jsi18n/ зайняв 0.0105 секунд.
+INFO 2026-06-17 14:48:31,718 log "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2026-06-17 14:48:32,992 middleware Запит до /admin/shop_app/category/ зайняв 0.0200 секунд.
+INFO 2026-06-17 14:48:32,993 log "GET /admin/shop_app/category/ HTTP/1.1" 200 11747
+INFO 2026-06-17 14:48:34,252 middleware Запит до /admin/shop_app/book/add/ зайняв 0.0157 секунд.
+INFO 2026-06-17 14:48:34,253 log "GET /admin/shop_app/book/add/ HTTP/1.1" 200 15090
+INFO 2026-06-17 14:48:34,275 middleware Запит до /admin/jsi18n/ зайняв 0.0089 секунд.
+INFO 2026-06-17 14:48:34,275 log "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2026-06-17 14:50:40,252 middleware Запит до /admin/shop_app/category/ зайняв 0.0169 секунд.
+INFO 2026-06-17 14:50:40,253 log "GET /admin/shop_app/category/ HTTP/1.1" 200 11747
+INFO 2026-06-17 14:50:40,273 middleware Запит до /admin/jsi18n/ зайняв 0.0114 секунд.
+INFO 2026-06-17 14:50:40,274 log "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2026-06-17 14:50:41,144 middleware Запит до /admin/shop_app/category/5/change/ зайняв 0.0190 секунд.
+INFO 2026-06-17 14:50:41,144 log "GET /admin/shop_app/category/5/change/ HTTP/1.1" 200 16705
+INFO 2026-06-17 14:50:41,160 middleware Запит до /admin/jsi18n/ зайняв 0.0088 секунд.
+INFO 2026-06-17 14:50:41,161 log "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2026-06-17 14:50:46,100 middleware Запит до /admin/shop_app/category/5/change/ зайняв 0.0150 секунд.
+INFO 2026-06-17 14:50:46,100 log "POST /admin/shop_app/category/5/change/ HTTP/1.1" 302 0
+INFO 2026-06-17 14:50:46,109 middleware Запит до /admin/shop_app/category/ зайняв 0.0073 секунд.
+INFO 2026-06-17 14:50:46,109 log "GET /admin/shop_app/category/ HTTP/1.1" 200 11956
+INFO 2026-06-17 14:50:46,123 middleware Запит до /admin/jsi18n/ зайняв 0.0060 секунд.
+INFO 2026-06-17 14:50:46,123 log "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2026-06-17 14:50:47,362 middleware Запит до /admin/shop_app/category/ зайняв 0.0156 секунд.
+INFO 2026-06-17 14:50:47,362 log "GET /admin/shop_app/category/ HTTP/1.1" 200 11750
+INFO 2026-06-17 14:50:47,375 middleware Запит до /admin/jsi18n/ зайняв 0.0063 секунд.
+INFO 2026-06-17 14:50:47,375 log "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2026-06-17 14:50:48,298 middleware Запит до /admin/shop_app/category/5/change/ зайняв 0.0194 секунд.
+INFO 2026-06-17 14:50:48,298 log "GET /admin/shop_app/category/5/change/ HTTP/1.1" 200 16710
+INFO 2026-06-17 14:50:48,313 middleware Запит до /admin/jsi18n/ зайняв 0.0073 секунд.
+INFO 2026-06-17 14:50:48,313 log "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2026-06-17 14:50:49,451 middleware Запит до /admin/shop_app/book/ зайняв 0.0223 секунд.
+INFO 2026-06-17 14:50:49,451 log "GET /admin/shop_app/book/ HTTP/1.1" 200 23042
+INFO 2026-06-17 14:50:49,468 middleware Запит до /admin/jsi18n/ зайняв 0.0083 секунд.
+INFO 2026-06-17 14:50:49,468 log "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2026-06-17 14:50:50,713 middleware Запит до /admin/shop_app/book/add/ зайняв 0.0174 секунд.
+INFO 2026-06-17 14:50:50,713 log "GET /admin/shop_app/book/add/ HTTP/1.1" 200 15091
+INFO 2026-06-17 14:50:50,728 middleware Запит до /admin/jsi18n/ зайняв 0.0071 секунд.
+INFO 2026-06-17 14:50:50,728 log "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2026-06-17 14:52:34,449 middleware Запит до /admin/shop_app/book/add/ зайняв 0.0584 секунд.
+INFO 2026-06-17 14:52:34,449 log "POST /admin/shop_app/book/add/ HTTP/1.1" 302 0
+INFO 2026-06-17 14:52:34,459 middleware Запит до /admin/shop_app/book/add/ зайняв 0.0087 секунд.
+INFO 2026-06-17 14:52:34,460 log "GET /admin/shop_app/book/add/ HTTP/1.1" 200 15345
+INFO 2026-06-17 14:52:34,476 middleware Запит до /admin/jsi18n/ зайняв 0.0074 секунд.
+INFO 2026-06-17 14:52:34,476 log "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2026-06-17 14:53:41,268 middleware Запит до /admin/shop_app/book/add/ зайняв 0.0179 секунд.
+INFO 2026-06-17 14:53:41,269 log "POST /admin/shop_app/book/add/ HTTP/1.1" 302 0
+INFO 2026-06-17 14:53:41,286 middleware Запит до /admin/shop_app/book/add/ зайняв 0.0148 секунд.
+INFO 2026-06-17 14:53:41,286 log "GET /admin/shop_app/book/add/ HTTP/1.1" 200 15349
+INFO 2026-06-17 14:53:41,307 middleware Запит до /admin/jsi18n/ зайняв 0.0085 секунд.
+INFO 2026-06-17 14:53:41,307 log "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2026-06-17 14:55:53,955 middleware Запит до /admin/shop_app/book/add/ зайняв 0.0151 секунд.
+INFO 2026-06-17 14:55:53,955 log "POST /admin/shop_app/book/add/ HTTP/1.1" 302 0
+INFO 2026-06-17 14:55:53,970 middleware Запит до /admin/shop_app/book/add/ зайняв 0.0133 секунд.
+INFO 2026-06-17 14:55:53,970 log "GET /admin/shop_app/book/add/ HTTP/1.1" 200 15353
+INFO 2026-06-17 14:55:53,992 middleware Запит до /admin/jsi18n/ зайняв 0.0103 секунд.
+INFO 2026-06-17 14:55:53,992 log "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2026-06-17 14:56:53,269 middleware Запит до /admin/shop_app/category/ зайняв 0.0249 секунд.
+INFO 2026-06-17 14:56:53,270 log "GET /admin/shop_app/category/ HTTP/1.1" 200 11750
+INFO 2026-06-17 14:56:53,297 middleware Запит до /admin/jsi18n/ зайняв 0.0111 секунд.
+INFO 2026-06-17 14:56:53,298 log "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2026-06-17 14:57:06,256 middleware Запит до /admin/shop_app/category/add/ зайняв 0.0213 секунд.
+INFO 2026-06-17 14:57:06,257 log "GET /admin/shop_app/category/add/ HTTP/1.1" 200 16437
+INFO 2026-06-17 14:57:06,279 middleware Запит до /admin/jsi18n/ зайняв 0.0102 секунд.
+INFO 2026-06-17 14:57:06,279 log "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2026-06-17 14:57:09,984 middleware Запит до /admin/shop_app/category/add/ зайняв 0.0211 секунд.
+INFO 2026-06-17 14:57:09,985 log "POST /admin/shop_app/category/add/ HTTP/1.1" 302 0
+INFO 2026-06-17 14:57:10,001 middleware Запит до /admin/shop_app/category/ зайняв 0.0133 секунд.
+INFO 2026-06-17 14:57:10,001 log "GET /admin/shop_app/category/ HTTP/1.1" 200 12254
+INFO 2026-06-17 14:57:10,023 middleware Запит до /admin/jsi18n/ зайняв 0.0082 секунд.
+INFO 2026-06-17 14:57:10,023 log "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2026-06-17 14:57:11,486 middleware Запит до /admin/shop_app/book/add/ зайняв 0.0188 секунд.
+INFO 2026-06-17 14:57:11,487 log "GET /admin/shop_app/book/add/ HTTP/1.1" 200 15129
+INFO 2026-06-17 14:57:11,507 middleware Запит до /admin/jsi18n/ зайняв 0.0106 секунд.
+INFO 2026-06-17 14:57:11,508 log "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2026-06-17 14:58:20,014 middleware Запит до / зайняв 0.0183 секунд.
+INFO 2026-06-17 14:58:20,014 log "GET / HTTP/1.1" 200 9366
+INFO 2026-06-17 14:58:21,717 middleware Запит до /catalog/ зайняв 0.0169 секунд.
+INFO 2026-06-17 14:58:21,718 log "GET /catalog/ HTTP/1.1" 200 8208
+INFO 2026-06-17 14:58:23,459 middleware Запит до /1/ зайняв 0.0146 секунд.
+INFO 2026-06-17 14:58:23,460 log "GET /1/ HTTP/1.1" 200 4363
+INFO 2026-06-17 14:58:37,386 middleware Запит до /1/ зайняв 0.0138 секунд.
+INFO 2026-06-17 14:58:37,387 log "GET /1/ HTTP/1.1" 200 4363
+INFO 2026-06-17 14:58:41,298 middleware Запит до /catalog/ зайняв 0.0146 секунд.
+INFO 2026-06-17 14:58:41,299 log "GET /catalog/ HTTP/1.1" 200 8208
+INFO 2026-06-17 14:58:42,016 middleware Запит до / зайняв 0.0163 секунд.
+INFO 2026-06-17 14:58:42,017 log "GET / HTTP/1.1" 200 9366
+INFO 2026-06-17 14:58:42,553 middleware Запит до /book/create/ зайняв 0.0198 секунд.
+INFO 2026-06-17 14:58:42,553 log "GET /book/create/ HTTP/1.1" 200 5636
+INFO 2026-06-17 14:58:45,490 middleware Запит до / зайняв 0.0154 секунд.
+INFO 2026-06-17 14:58:45,490 log "GET / HTTP/1.1" 200 9366
+INFO 2026-06-17 14:58:46,139 middleware Запит до /catalog/ зайняв 0.0161 секунд.
+INFO 2026-06-17 14:58:46,139 log "GET /catalog/ HTTP/1.1" 200 8208
+INFO 2026-06-17 14:58:49,691 middleware Запит до /catalog/ зайняв 0.0150 секунд.
+INFO 2026-06-17 14:58:49,692 log "GET /catalog/?category=5 HTTP/1.1" 200 6210
+INFO 2026-06-17 14:58:50,245 middleware Запит до /catalog/ зайняв 0.0141 секунд.
+INFO 2026-06-17 14:58:50,245 log "GET /catalog/?category=6 HTTP/1.1" 200 4290
+INFO 2026-06-17 14:58:52,568 middleware Запит до /catalog/ зайняв 0.0170 секунд.
+INFO 2026-06-17 14:58:52,568 log "GET /catalog/?category=5 HTTP/1.1" 200 6210
+INFO 2026-06-17 14:58:53,559 middleware Запит до /catalog/ зайняв 0.0153 секунд.
+INFO 2026-06-17 14:58:53,560 log "GET /catalog/?category=4 HTTP/1.1" 200 6866
+INFO 2026-06-17 14:58:54,675 middleware Запит до /catalog/ зайняв 0.0144 секунд.
+INFO 2026-06-17 14:58:54,676 log "GET /catalog/?category=2 HTTP/1.1" 200 7649
+INFO 2026-06-17 14:58:55,902 middleware Запит до /catalog/ зайняв 0.0150 секунд.
+INFO 2026-06-17 14:58:55,902 log "GET /catalog/?category=1 HTTP/1.1" 200 6213
+INFO 2026-06-17 14:58:57,251 middleware Запит до /catalog/ зайняв 0.0158 секунд.
+INFO 2026-06-17 14:58:57,252 log "GET /catalog/ HTTP/1.1" 200 8208
+INFO 2026-06-17 14:58:58,672 middleware Запит до /catalog/ зайняв 0.0142 секунд.
+INFO 2026-06-17 14:58:58,672 log "GET /catalog/?category=1 HTTP/1.1" 200 6213
+INFO 2026-06-17 14:58:59,387 middleware Запит до /catalog/ зайняв 0.0141 секунд.
+INFO 2026-06-17 14:58:59,388 log "GET /catalog/ HTTP/1.1" 200 8208
+INFO 2026-06-17 15:01:20,099 middleware Запит до /admin/shop_app/book/add/ зайняв 0.0159 секунд.
+INFO 2026-06-17 15:01:20,099 log "POST /admin/shop_app/book/add/ HTTP/1.1" 302 0
+INFO 2026-06-17 15:01:20,115 middleware Запит до /admin/shop_app/book/add/ зайняв 0.0141 секунд.
+INFO 2026-06-17 15:01:20,116 log "GET /admin/shop_app/book/add/ HTTP/1.1" 200 15386
+INFO 2026-06-17 15:01:20,139 middleware Запит до /admin/jsi18n/ зайняв 0.0113 секунд.
+INFO 2026-06-17 15:01:20,139 log "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2026-06-17 15:01:24,903 middleware Запит до /catalog/ зайняв 0.0160 секунд.
+INFO 2026-06-17 15:01:24,903 log "GET /catalog/ HTTP/1.1" 200 8208
+INFO 2026-06-17 15:01:26,060 middleware Запит до /catalog/ зайняв 0.0144 секунд.
+INFO 2026-06-17 15:01:26,061 log "GET /catalog/?category=6 HTTP/1.1" 200 4847
+INFO 2026-06-17 15:01:29,385 middleware Запит до /19/ зайняв 0.0148 секунд.
+INFO 2026-06-17 15:01:29,386 log "GET /19/ HTTP/1.1" 200 5011
+INFO 2026-06-17 15:01:29,401 middleware Запит до /images/covers/Fifty_shades_of_grey.jpg зайняв 0.0006 секунд.
+INFO 2026-06-17 15:01:29,402 log "GET /images/covers/Fifty_shades_of_grey.jpg HTTP/1.1" 200 24303
+INFO 2026-06-17 15:03:19,425 middleware Запит до /admin/shop_app/book/add/ зайняв 0.0187 секунд.
+INFO 2026-06-17 15:03:19,426 log "POST /admin/shop_app/book/add/ HTTP/1.1" 302 0
+INFO 2026-06-17 15:03:19,440 middleware Запит до /admin/shop_app/book/add/ зайняв 0.0132 секунд.
+INFO 2026-06-17 15:03:19,441 log "GET /admin/shop_app/book/add/ HTTP/1.1" 200 15393
+INFO 2026-06-17 15:03:19,463 middleware Запит до /admin/jsi18n/ зайняв 0.0120 секунд.
+INFO 2026-06-17 15:03:19,464 log "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2026-06-17 15:03:22,342 middleware Запит до /catalog/ зайняв 0.0144 секунд.
+INFO 2026-06-17 15:03:22,342 log "GET /catalog/?category=6 HTTP/1.1" 200 5537
+INFO 2026-06-17 15:03:23,336 middleware Запит до /20/ зайняв 0.0136 секунд.
+INFO 2026-06-17 15:03:23,336 log "GET /20/ HTTP/1.1" 200 4919
+INFO 2026-06-17 15:03:23,352 middleware Запит до /images/covers/The_Spanish_love_deception.jpg зайняв 0.0005 секунд.
+INFO 2026-06-17 15:03:23,360 log "GET /images/covers/The_Spanish_love_deception.jpg HTTP/1.1" 200 631244
+INFO 2026-06-17 15:03:25,340 middleware Запит до /19/ зайняв 0.0154 секунд.
+INFO 2026-06-17 15:03:25,340 log "GET /19/ HTTP/1.1" 200 5011
+INFO 2026-06-17 15:03:25,348 middleware Запит до /images/covers/Fifty_shades_of_grey.jpg зайняв 0.0004 секунд.
+INFO 2026-06-17 15:03:25,348 log "GET /images/covers/Fifty_shades_of_grey.jpg HTTP/1.1" 304 0
+INFO 2026-06-17 15:04:34,653 middleware Запит до /admin/shop_app/book/add/ зайняв 0.0249 секунд.
+INFO 2026-06-17 15:04:34,653 log "POST /admin/shop_app/book/add/ HTTP/1.1" 302 0
+INFO 2026-06-17 15:04:34,668 middleware Запит до /admin/shop_app/book/add/ зайняв 0.0130 секунд.
+INFO 2026-06-17 15:04:34,668 log "GET /admin/shop_app/book/add/ HTTP/1.1" 200 15379
+INFO 2026-06-17 15:04:34,693 middleware Запит до /admin/jsi18n/ зайняв 0.0088 секунд.
+INFO 2026-06-17 15:04:34,693 log "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2026-06-17 15:05:35,841 middleware Запит до /admin/shop_app/book/add/ зайняв 0.0152 секунд.
+INFO 2026-06-17 15:05:35,842 log "POST /admin/shop_app/book/add/ HTTP/1.1" 302 0
+INFO 2026-06-17 15:05:35,866 middleware Запит до /admin/shop_app/book/ зайняв 0.0224 секунд.
+INFO 2026-06-17 15:05:35,866 log "GET /admin/shop_app/book/ HTTP/1.1" 200 28921
+INFO 2026-06-17 15:05:35,887 middleware Запит до /admin/jsi18n/ зайняв 0.0092 секунд.
+INFO 2026-06-17 15:05:35,887 log "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2026-06-17 15:05:38,922 middleware Запит до /catalog/ зайняв 0.0160 секунд.
+INFO 2026-06-17 15:05:38,923 log "GET /catalog/?category=6 HTTP/1.1" 200 6869
+INFO 2026-06-17 15:05:40,305 middleware Запит до /21/ зайняв 0.0142 секунд.
+INFO 2026-06-17 15:05:40,305 log "GET /21/ HTTP/1.1" 200 4288
+INFO 2026-06-17 15:05:40,319 middleware Запит до /images/covers/twilight.jpg зайняв 0.0006 секунд.
+INFO 2026-06-17 15:05:40,332 log "GET /images/covers/twilight.jpg HTTP/1.1" 200 940873
+INFO 2026-06-17 15:05:42,064 middleware Запит до /22/ зайняв 0.0132 секунд.
+INFO 2026-06-17 15:05:42,064 log "GET /22/ HTTP/1.1" 200 5268
+INFO 2026-06-17 15:05:42,078 middleware Запит до /images/covers/People_we_meet_on_vacation.jpg зайняв 0.0006 секунд.
+INFO 2026-06-17 15:05:42,081 log "GET /images/covers/People_we_meet_on_vacation.jpg HTTP/1.1" 200 159523
+INFO 2026-06-17 15:05:44,201 middleware Запит до /19/ зайняв 0.0146 секунд.
+INFO 2026-06-17 15:05:44,202 log "GET /19/ HTTP/1.1" 200 5011
+INFO 2026-06-17 15:05:44,219 middleware Запит до /images/covers/Fifty_shades_of_grey.jpg зайняв 0.0002 секунд.
+INFO 2026-06-17 15:05:44,219 log "GET /images/covers/Fifty_shades_of_grey.jpg HTTP/1.1" 304 0
+INFO 2026-06-17 15:05:47,445 middleware Запит до /20/ зайняв 0.0147 секунд.
+INFO 2026-06-17 15:05:47,445 log "GET /20/ HTTP/1.1" 200 4919
+INFO 2026-06-17 15:05:47,460 middleware Запит до /images/covers/The_Spanish_love_deception.jpg зайняв 0.0001 секунд.
+INFO 2026-06-17 15:05:47,460 log "GET /images/covers/The_Spanish_love_deception.jpg HTTP/1.1" 304 0
+INFO 2026-06-17 15:05:49,860 middleware Запит до /catalog/ зайняв 0.0148 секунд.
+INFO 2026-06-17 15:05:49,861 log "GET /catalog/?category=1 HTTP/1.1" 200 6213
+INFO 2026-06-17 15:05:51,353 middleware Запит до /3/ зайняв 0.0143 секунд.
+INFO 2026-06-17 15:05:51,353 log "GET /3/ HTTP/1.1" 200 4399
+INFO 2026-06-17 15:05:51,368 middleware Запит до /images/covers/Charlie_and_the_Chocolate_Factory.jpg зайняв 0.0007 секунд.
+INFO 2026-06-17 15:05:51,371 log "GET /images/covers/Charlie_and_the_Chocolate_Factory.jpg HTTP/1.1" 200 201838
+INFO 2026-06-17 15:05:52,792 middleware Запит до /catalog/ зайняв 0.0161 секунд.
+INFO 2026-06-17 15:05:52,792 log "GET /catalog/?category=2 HTTP/1.1" 200 7649
+INFO 2026-06-17 15:05:54,626 middleware Запит до /catalog/ зайняв 0.0149 секунд.
+INFO 2026-06-17 15:05:54,626 log "GET /catalog/?category=4 HTTP/1.1" 200 6866
+INFO 2026-06-17 15:05:56,180 middleware Запит до /catalog/ зайняв 0.0150 секунд.
+INFO 2026-06-17 15:05:56,181 log "GET /catalog/?category=5 HTTP/1.1" 200 6210
+INFO 2026-06-17 15:05:57,681 middleware Запит до /17/ зайняв 0.0140 секунд.
+INFO 2026-06-17 15:05:57,681 log "GET /17/ HTTP/1.1" 200 4685
+INFO 2026-06-17 15:05:57,697 middleware Запит до /images/covers/The_sweet_science.jpg зайняв 0.0005 секунд.
+INFO 2026-06-17 15:05:57,698 log "GET /images/covers/The_sweet_science.jpg HTTP/1.1" 200 28716
+INFO 2026-06-17 15:05:59,920 middleware Запит до /catalog/ зайняв 0.0151 секунд.
+INFO 2026-06-17 15:05:59,921 log "GET /catalog/ HTTP/1.1" 200 8208
+INFO 2026-06-17 15:06:02,160 middleware Запит до / зайняв 0.0168 секунд.
+INFO 2026-06-17 15:06:02,160 log "GET / HTTP/1.1" 200 9366
+INFO 2026-06-17 15:07:52,848 middleware Запит до /catalog/ зайняв 0.0152 секунд.
+INFO 2026-06-17 15:07:52,848 log "GET /catalog/ HTTP/1.1" 200 8208
+INFO 2026-06-17 15:07:53,696 middleware Запит до / зайняв 0.0165 секунд.
+INFO 2026-06-17 15:07:53,697 log "GET / HTTP/1.1" 200 9366
+INFO 2026-06-17 15:08:04,398 middleware Запит до /catalog/ зайняв 0.0159 секунд.
+INFO 2026-06-17 15:08:04,399 log "GET /catalog/ HTTP/1.1" 200 8208
+INFO 2026-06-17 15:08:10,577 middleware Запит до /catalog/ зайняв 0.0167 секунд.
+INFO 2026-06-17 15:08:10,577 log "GET /catalog/?page=2 HTTP/1.1" 200 8277
+INFO 2026-06-17 15:08:11,617 middleware Запит до /catalog/ зайняв 0.0155 секунд.
+INFO 2026-06-17 15:08:11,618 log "GET /catalog/?page=3 HTTP/1.1" 200 8299
+INFO 2026-06-17 15:08:12,388 middleware Запит до /catalog/ зайняв 0.0146 секунд.
+INFO 2026-06-17 15:08:12,389 log "GET /catalog/?page=4 HTTP/1.1" 200 7465
+INFO 2026-06-17 15:08:16,861 middleware Запит до /catalog/ зайняв 0.0156 секунд.
+INFO 2026-06-17 15:08:16,862 log "GET /catalog/?page=3 HTTP/1.1" 200 8299
+INFO 2026-06-17 15:08:17,380 middleware Запит до /catalog/ зайняв 0.0147 секунд.
+INFO 2026-06-17 15:08:17,380 log "GET /catalog/?page=2 HTTP/1.1" 200 8277
+INFO 2026-06-17 15:08:17,936 middleware Запит до /catalog/ зайняв 0.0153 секунд.
+INFO 2026-06-17 15:08:17,936 log "GET /catalog/?page=1 HTTP/1.1" 200 8208
+INFO 2026-06-17 15:08:20,336 middleware Запит до /catalog/ зайняв 0.0168 секунд.
+INFO 2026-06-17 15:08:20,337 log "GET /catalog/?page=2 HTTP/1.1" 200 8277
+INFO 2026-06-17 15:08:21,058 middleware Запит до /catalog/ зайняв 0.0150 секунд.
+INFO 2026-06-17 15:08:21,058 log "GET /catalog/?page=3 HTTP/1.1" 200 8299
+INFO 2026-06-17 15:08:21,575 middleware Запит до /catalog/ зайняв 0.0153 секунд.
+INFO 2026-06-17 15:08:21,576 log "GET /catalog/?page=4 HTTP/1.1" 200 7465
+INFO 2026-06-17 15:08:22,406 middleware Запит до /20/ зайняв 0.0151 секунд.
+INFO 2026-06-17 15:08:22,406 log "GET /20/ HTTP/1.1" 200 4919
+INFO 2026-06-17 15:08:22,420 middleware Запит до /images/covers/The_Spanish_love_deception.jpg зайняв 0.0003 секунд.
+INFO 2026-06-17 15:08:22,421 log "GET /images/covers/The_Spanish_love_deception.jpg HTTP/1.1" 304 0
+INFO 2026-06-17 15:08:27,122 middleware Запит до /catalog/ зайняв 0.0157 секунд.
+INFO 2026-06-17 15:08:27,123 log "GET /catalog/?page=3 HTTP/1.1" 200 8299
+INFO 2026-06-17 15:08:28,784 middleware Запит до /18/ зайняв 0.0147 секунд.
+INFO 2026-06-17 15:08:28,784 log "GET /18/ HTTP/1.1" 200 5192
+INFO 2026-06-17 15:08:28,800 middleware Запит до /images/covers/Heaven_is_a_playground.jpg зайняв 0.0006 секунд.
+INFO 2026-06-17 15:08:28,803 log "GET /images/covers/Heaven_is_a_playground.jpg HTTP/1.1" 200 295111
+INFO 2026-06-17 15:08:31,084 middleware Запит до /15/ зайняв 0.0156 секунд.
+INFO 2026-06-17 15:08:31,084 log "GET /15/ HTTP/1.1" 200 3986
+INFO 2026-06-17 15:08:31,100 middleware Запит до /images/covers/warbreaker.jpg зайняв 0.0010 секунд.
+INFO 2026-06-17 15:08:31,103 log "GET /images/covers/warbreaker.jpg HTTP/1.1" 200 118538
+INFO 2026-06-17 15:08:34,349 middleware Запит до /catalog/ зайняв 0.0161 секунд.
+INFO 2026-06-17 15:08:34,350 log "GET /catalog/?page=2 HTTP/1.1" 200 8277
+INFO 2026-06-17 15:08:35,609 middleware Запит до /catalog/ зайняв 0.0156 секунд.
+INFO 2026-06-17 15:08:35,610 log "GET /catalog/?page=1 HTTP/1.1" 200 8208
+INFO 2026-06-17 15:10:24,479 middleware Запит до /catalog/ зайняв 0.0151 секунд.
+INFO 2026-06-17 15:10:24,480 log "GET /catalog/?category=1 HTTP/1.1" 200 6213
+INFO 2026-06-17 15:10:25,428 middleware Запит до /catalog/ зайняв 0.0173 секунд.
+INFO 2026-06-17 15:10:25,429 log "GET /catalog/?category=2 HTTP/1.1" 200 7649
+INFO 2026-06-17 15:10:25,995 middleware Запит до /catalog/ зайняв 0.0154 секунд.
+INFO 2026-06-17 15:10:25,995 log "GET /catalog/?category=4 HTTP/1.1" 200 6866
+INFO 2026-06-17 15:10:26,625 middleware Запит до /catalog/ зайняв 0.0136 секунд.
+INFO 2026-06-17 15:10:26,626 log "GET /catalog/?category=5 HTTP/1.1" 200 6210
+INFO 2026-06-17 15:10:27,089 middleware Запит до /catalog/ зайняв 0.0158 секунд.
+INFO 2026-06-17 15:10:27,089 log "GET /catalog/?category=6 HTTP/1.1" 200 6869
+INFO 2026-06-17 15:10:27,863 middleware Запит до /catalog/ зайняв 0.0410 секунд.
+INFO 2026-06-17 15:10:27,864 log "GET /catalog/ HTTP/1.1" 200 8208
+INFO 2026-06-17 15:10:30,295 middleware Запит до /catalog/ зайняв 0.0156 секунд.
+INFO 2026-06-17 15:10:30,296 log "GET /catalog/ HTTP/1.1" 200 8208
+INFO 2026-06-17 15:10:30,838 middleware Запит до / зайняв 0.0160 секунд.
+INFO 2026-06-17 15:10:30,839 log "GET / HTTP/1.1" 200 9366
+INFO 2026-06-17 16:46:11,398 autoreload Watching for file changes with StatReloader
+INFO 2026-06-17 16:46:16,153 middleware Запит до /admin/shop_app/book/ зайняв 0.0492 секунд.
+INFO 2026-06-17 16:46:16,154 log "GET /admin/shop_app/book/ HTTP/1.1" 200 28689
+INFO 2026-06-17 16:46:16,174 middleware Запит до /admin/jsi18n/ зайняв 0.0096 секунд.
+INFO 2026-06-17 16:46:16,174 log "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2026-06-17 16:46:18,745 middleware Запит до / зайняв 0.0218 секунд.
+INFO 2026-06-17 16:46:18,746 log "GET / HTTP/1.1" 200 9366
+INFO 2026-06-17 16:46:21,140 middleware Запит до /catalog/ зайняв 0.0182 секунд.
+INFO 2026-06-17 16:46:21,141 log "GET /catalog/ HTTP/1.1" 200 8208
+INFO 2026-06-17 16:46:22,954 middleware Запит до /catalog/ зайняв 0.0154 секунд.
+INFO 2026-06-17 16:46:22,954 log "GET /catalog/?category=1 HTTP/1.1" 200 6213
+INFO 2026-06-17 16:46:23,538 middleware Запит до /catalog/ зайняв 0.0161 секунд.
+INFO 2026-06-17 16:46:23,539 log "GET /catalog/?category=2 HTTP/1.1" 200 7649
+INFO 2026-06-17 16:46:24,265 middleware Запит до /catalog/ зайняв 0.0150 секунд.
+INFO 2026-06-17 16:46:24,266 log "GET /catalog/?category=4 HTTP/1.1" 200 6866
+INFO 2026-06-17 16:46:24,770 middleware Запит до /catalog/ зайняв 0.0158 секунд.
+INFO 2026-06-17 16:46:24,771 log "GET /catalog/?category=5 HTTP/1.1" 200 6210
+INFO 2026-06-17 16:46:25,221 middleware Запит до /catalog/ зайняв 0.0157 секунд.
+INFO 2026-06-17 16:46:25,222 log "GET /catalog/?category=6 HTTP/1.1" 200 6869
+INFO 2026-06-17 16:46:26,859 middleware Запит до /catalog/ зайняв 0.0079 секунд.
+INFO 2026-06-17 16:46:26,860 log "GET /catalog/ HTTP/1.1" 200 8208
+INFO 2026-06-17 16:46:27,687 middleware Запит до /catalog/ зайняв 0.0159 секунд.
+INFO 2026-06-17 16:46:27,688 log "GET /catalog/ HTTP/1.1" 200 8208
+INFO 2026-06-17 16:46:28,422 middleware Запит до / зайняв 0.0177 секунд.
+INFO 2026-06-17 16:46:28,423 log "GET / HTTP/1.1" 200 9366
+INFO 2026-06-17 16:46:31,078 middleware Запит до /catalog/ зайняв 0.0155 секунд.
+INFO 2026-06-17 16:46:31,079 log "GET /catalog/ HTTP/1.1" 200 8208
+INFO 2026-06-17 16:46:33,079 middleware Запит до /1/ зайняв 0.0162 секунд.
+INFO 2026-06-17 16:46:33,080 log "GET /1/ HTTP/1.1" 200 4363
+INFO 2026-06-17 16:46:38,955 middleware Запит до /catalog/ зайняв 0.0171 секунд.
+INFO 2026-06-17 16:46:38,955 log "GET /catalog/ HTTP/1.1" 200 8208
+INFO 2026-06-17 16:46:39,620 middleware Запит до / зайняв 0.0145 секунд.
+INFO 2026-06-17 16:46:39,620 log "GET / HTTP/1.1" 200 9366
+INFO 2026-06-17 16:46:55,405 middleware Запит до /orders зайняв 0.0030 секунд.
+WARNING 2026-06-17 16:46:55,405 log Not Found: /orders
+WARNING 2026-06-17 16:46:55,406 log "GET /orders HTTP/1.1" 404 4423
+INFO 2026-06-17 16:46:59,252 middleware Запит до /orders/cart зайняв 0.0027 секунд.
+INFO 2026-06-17 16:46:59,252 log "GET /orders/cart HTTP/1.1" 301 0
+ERROR 2026-06-17 16:46:59,273 log Internal Server Error: /orders/cart/
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/django/core/handlers/base.py", line 198, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/orders/views.py", line 34, in cart_detail
+    cart = Cart(request)
+           ^^^^^^^^^^^^^
+  File "/app/orders/cart.py", line 9, in __init__
+    cart = self.session.get(settings.CART_SESSION_ID)
+                            ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/django/conf/__init__.py", line 77, in __getattr__
+    val = getattr(_wrapped, name)
+          ^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'Settings' object has no attribute 'CART_SESSION_ID'
+INFO 2026-06-17 16:46:59,277 middleware Запит до /orders/cart/ зайняв 0.0236 секунд.
+ERROR 2026-06-17 16:46:59,278 log "GET /orders/cart/ HTTP/1.1" 500 66744
+ERROR 2026-06-17 16:47:25,004 log Internal Server Error: /orders/cart/
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/django/core/handlers/base.py", line 198, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/orders/views.py", line 34, in cart_detail
+    cart = Cart(request)
+           ^^^^^^^^^^^^^
+  File "/app/orders/cart.py", line 9, in __init__
+    cart = self.session.get(settings.CART_SESSION_ID)
+                            ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/django/conf/__init__.py", line 77, in __getattr__
+    val = getattr(_wrapped, name)
+          ^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'Settings' object has no attribute 'CART_SESSION_ID'
+INFO 2026-06-17 16:47:25,007 middleware Запит до /orders/cart/ зайняв 0.0144 секунд.
+ERROR 2026-06-17 16:47:25,007 log "GET /orders/cart/ HTTP/1.1" 500 67687
+INFO 2026-06-17 16:49:01,858 autoreload /app/bookstore_project/settings.py changed, reloading.
+INFO 2026-06-17 16:49:02,267 autoreload Watching for file changes with StatReloader
+ERROR 2026-06-17 16:49:27,147 log Internal Server Error: /orders/cart/
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.12/site-packages/django/template/backends/django.py", line 107, in render
+    return self.template.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/django/template/base.py", line 174, in render
+    return self._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/django/test/utils.py", line 114, in instrumented_test_render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/django/template/base.py", line 1091, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/django/template/base.py", line 1052, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/django/template/loader_tags.py", line 135, in render
+    compiled_parent = self.get_parent(context)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/django/template/loader_tags.py", line 132, in get_parent
+    return self.find_template(parent, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/django/template/loader_tags.py", line 110, in find_template
+    template, origin = context.template.engine.find_template(
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/django/template/engine.py", line 163, in find_template
+    raise TemplateDoesNotExist(name, tried=tried)
+django.template.exceptions.TemplateDoesNotExist: base.html
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/django/core/handlers/base.py", line 198, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/orders/views.py", line 40, in cart_detail
+    return render(request, 'orders/cart_detail.html', {'cart': cart})
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/django/shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/django/template/loader.py", line 62, in render_to_string
+    return template.render(context, request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/django/template/backends/django.py", line 109, in render
+    reraise(exc, self.backend)
+  File "/usr/local/lib/python3.12/site-packages/django/template/backends/django.py", line 130, in reraise
+    raise new from exc
+django.template.exceptions.TemplateDoesNotExist: base.html
+INFO 2026-06-17 16:49:27,149 middleware Запит до /orders/cart/ зайняв 0.0247 секунд.
+ERROR 2026-06-17 16:49:27,149 log "GET /orders/cart/ HTTP/1.1" 500 121442
+ERROR 2026-06-17 16:51:09,568 log Internal Server Error: /orders/cart/
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.12/site-packages/django/template/backends/django.py", line 107, in render
+    return self.template.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/django/template/base.py", line 174, in render
+    return self._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/django/test/utils.py", line 114, in instrumented_test_render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/django/template/base.py", line 1091, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/django/template/base.py", line 1052, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/django/template/loader_tags.py", line 135, in render
+    compiled_parent = self.get_parent(context)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/django/template/loader_tags.py", line 132, in get_parent
+    return self.find_template(parent, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/django/template/loader_tags.py", line 110, in find_template
+    template, origin = context.template.engine.find_template(
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/django/template/engine.py", line 163, in find_template
+    raise TemplateDoesNotExist(name, tried=tried)
+django.template.exceptions.TemplateDoesNotExist: base.html
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/django/core/handlers/base.py", line 198, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/orders/views.py", line 40, in cart_detail
+    return render(request, 'orders/cart_detail.html', {'cart': cart})
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/django/shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/django/template/loader.py", line 62, in render_to_string
+    return template.render(context, request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/django/template/backends/django.py", line 109, in render
+    reraise(exc, self.backend)
+  File "/usr/local/lib/python3.12/site-packages/django/template/backends/django.py", line 130, in reraise
+    raise new from exc
+django.template.exceptions.TemplateDoesNotExist: base.html
+INFO 2026-06-17 16:51:09,572 middleware Запит до /orders/cart/ зайняв 0.0276 секунд.
+ERROR 2026-06-17 16:51:09,572 log "GET /orders/cart/ HTTP/1.1" 500 121442
+INFO 2026-06-17 16:57:08,195 autoreload Watching for file changes with StatReloader
+INFO 2026-06-17 16:57:15,302 middleware Запит до / зайняв 0.0211 секунд.
+INFO 2026-06-17 16:57:15,303 log "GET / HTTP/1.1" 200 9366
+INFO 2026-06-17 16:57:17,014 middleware Запит до /catalog/ зайняв 0.0196 секунд.
+INFO 2026-06-17 16:57:17,014 log "GET /catalog/ HTTP/1.1" 200 8208
+INFO 2026-06-17 16:57:17,813 middleware Запит до / зайняв 0.0176 секунд.
+INFO 2026-06-17 16:57:17,814 log "GET / HTTP/1.1" 200 9366
+ERROR 2026-06-17 16:57:20,086 log Internal Server Error: /orders/cart/
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.12/site-packages/django/template/backends/django.py", line 107, in render
+    return self.template.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/django/template/base.py", line 174, in render
+    return self._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/django/test/utils.py", line 114, in instrumented_test_render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/django/template/base.py", line 1091, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/django/template/base.py", line 1052, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/django/template/loader_tags.py", line 135, in render
+    compiled_parent = self.get_parent(context)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/django/template/loader_tags.py", line 132, in get_parent
+    return self.find_template(parent, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/django/template/loader_tags.py", line 110, in find_template
+    template, origin = context.template.engine.find_template(
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/django/template/engine.py", line 163, in find_template
+    raise TemplateDoesNotExist(name, tried=tried)
+django.template.exceptions.TemplateDoesNotExist: base.html
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/django/core/handlers/base.py", line 198, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/orders/views.py", line 40, in cart_detail
+    return render(request, 'orders/cart_detail.html', {'cart': cart})
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/django/shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/django/template/loader.py", line 62, in render_to_string
+    return template.render(context, request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/django/template/backends/django.py", line 109, in render
+    reraise(exc, self.backend)
+  File "/usr/local/lib/python3.12/site-packages/django/template/backends/django.py", line 130, in reraise
+    raise new from exc
+django.template.exceptions.TemplateDoesNotExist: base.html
+INFO 2026-06-17 16:57:20,088 middleware Запит до /orders/cart/ зайняв 0.0241 секунд.
+ERROR 2026-06-17 16:57:20,088 log "GET /orders/cart/ HTTP/1.1" 500 121444
+ERROR 2026-06-17 16:57:21,200 log Internal Server Error: /orders/cart/
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.12/site-packages/django/template/backends/django.py", line 107, in render
+    return self.template.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/django/template/base.py", line 174, in render
+    return self._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/django/test/utils.py", line 114, in instrumented_test_render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/django/template/base.py", line 1091, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/django/template/base.py", line 1052, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/django/template/loader_tags.py", line 135, in render
+    compiled_parent = self.get_parent(context)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/django/template/loader_tags.py", line 132, in get_parent
+    return self.find_template(parent, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/django/template/loader_tags.py", line 110, in find_template
+    template, origin = context.template.engine.find_template(
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/django/template/engine.py", line 163, in find_template
+    raise TemplateDoesNotExist(name, tried=tried)
+django.template.exceptions.TemplateDoesNotExist: base.html
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/django/core/handlers/base.py", line 198, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/orders/views.py", line 40, in cart_detail
+    return render(request, 'orders/cart_detail.html', {'cart': cart})
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/django/shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/django/template/loader.py", line 62, in render_to_string
+    return template.render(context, request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/django/template/backends/django.py", line 109, in render
+    reraise(exc, self.backend)
+  File "/usr/local/lib/python3.12/site-packages/django/template/backends/django.py", line 130, in reraise
+    raise new from exc
+django.template.exceptions.TemplateDoesNotExist: base.html
+INFO 2026-06-17 16:57:21,201 middleware Запит до /orders/cart/ зайняв 0.0218 секунд.
+ERROR 2026-06-17 16:57:21,201 log "GET /orders/cart/ HTTP/1.1" 500 121444
+ERROR 2026-06-17 16:57:23,182 log Internal Server Error: /orders/cart/
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.12/site-packages/django/template/backends/django.py", line 107, in render
+    return self.template.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/django/template/base.py", line 174, in render
+    return self._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/django/test/utils.py", line 114, in instrumented_test_render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/django/template/base.py", line 1091, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/django/template/base.py", line 1052, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/django/template/loader_tags.py", line 135, in render
+    compiled_parent = self.get_parent(context)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/django/template/loader_tags.py", line 132, in get_parent
+    return self.find_template(parent, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/django/template/loader_tags.py", line 110, in find_template
+    template, origin = context.template.engine.find_template(
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/django/template/engine.py", line 163, in find_template
+    raise TemplateDoesNotExist(name, tried=tried)
+django.template.exceptions.TemplateDoesNotExist: base.html
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/django/core/handlers/base.py", line 198, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/orders/views.py", line 40, in cart_detail
+    return render(request, 'orders/cart_detail.html', {'cart': cart})
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/django/shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/django/template/loader.py", line 62, in render_to_string
+    return template.render(context, request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/django/template/backends/django.py", line 109, in render
+    reraise(exc, self.backend)
+  File "/usr/local/lib/python3.12/site-packages/django/template/backends/django.py", line 130, in reraise
+    raise new from exc
+django.template.exceptions.TemplateDoesNotExist: base.html
+INFO 2026-06-17 16:57:23,184 middleware Запит до /orders/cart/ зайняв 0.0213 секунд.
+ERROR 2026-06-17 16:57:23,184 log "GET /orders/cart/ HTTP/1.1" 500 121444
+ERROR 2026-06-17 16:57:24,400 log Internal Server Error: /orders/cart/
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.12/site-packages/django/template/backends/django.py", line 107, in render
+    return self.template.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/django/template/base.py", line 174, in render
+    return self._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/django/test/utils.py", line 114, in instrumented_test_render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/django/template/base.py", line 1091, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/django/template/base.py", line 1052, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/django/template/loader_tags.py", line 135, in render
+    compiled_parent = self.get_parent(context)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/django/template/loader_tags.py", line 132, in get_parent
+    return self.find_template(parent, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/django/template/loader_tags.py", line 110, in find_template
+    template, origin = context.template.engine.find_template(
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/django/template/engine.py", line 163, in find_template
+    raise TemplateDoesNotExist(name, tried=tried)
+django.template.exceptions.TemplateDoesNotExist: base.html
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/django/core/handlers/base.py", line 198, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/orders/views.py", line 40, in cart_detail
+    return render(request, 'orders/cart_detail.html', {'cart': cart})
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/django/shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/django/template/loader.py", line 62, in render_to_string
+    return template.render(context, request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/django/template/backends/django.py", line 109, in render
+    reraise(exc, self.backend)
+  File "/usr/local/lib/python3.12/site-packages/django/template/backends/django.py", line 130, in reraise
+    raise new from exc
+django.template.exceptions.TemplateDoesNotExist: base.html
+INFO 2026-06-17 16:57:24,402 middleware Запит до /orders/cart/ зайняв 0.0209 секунд.
+ERROR 2026-06-17 16:57:24,402 log "GET /orders/cart/ HTTP/1.1" 500 121444
+INFO 2026-06-17 17:03:22,576 middleware Запит до /orders/cart/ зайняв 0.0038 секунд.
+INFO 2026-06-17 17:03:22,588 log "GET /orders/cart/ HTTP/1.1" 200 2347
+INFO 2026-06-17 17:03:24,585 middleware Запит до /catalog/ зайняв 0.0168 секунд.
+INFO 2026-06-17 17:03:24,586 log "GET /catalog/ HTTP/1.1" 200 7727
+INFO 2026-06-17 17:03:53,996 middleware Запит до /orders/cart/ зайняв 0.0119 секунд.
+INFO 2026-06-17 17:03:53,999 log "GET /orders/cart/ HTTP/1.1" 200 2347
+INFO 2026-06-17 17:03:58,559 middleware Запит до /catalog/ зайняв 0.0157 секунд.
+INFO 2026-06-17 17:03:58,560 log "GET /catalog/ HTTP/1.1" 200 7727
+INFO 2026-06-19 17:50:54,280 autoreload Watching for file changes with StatReloader
+INFO 2026-06-19 17:51:01,476 middleware Запит до / зайняв 0.0146 секунд.
+INFO 2026-06-19 17:51:01,477 log "GET / HTTP/1.1" 200 9366
+INFO 2026-06-19 17:51:04,477 middleware Запит до / зайняв 0.0130 секунд.
+INFO 2026-06-19 17:51:04,477 log "GET / HTTP/1.1" 200 9366
+INFO 2026-06-19 17:51:08,326 middleware Запит до /catalog/ зайняв 0.0212 секунд.
+INFO 2026-06-19 17:51:08,327 log "GET /catalog/ HTTP/1.1" 200 8208
+INFO 2026-06-19 17:51:09,355 middleware Запит до / зайняв 0.0170 секунд.
+INFO 2026-06-19 17:51:09,355 log "GET / HTTP/1.1" 200 9366
+INFO 2026-06-19 17:51:10,283 middleware Запит до /catalog/ зайняв 0.0146 секунд.
+INFO 2026-06-19 17:51:10,284 log "GET /catalog/ HTTP/1.1" 200 8208
+INFO 2026-06-19 17:51:11,152 middleware Запит до / зайняв 0.0158 секунд.
+INFO 2026-06-19 17:51:11,152 log "GET / HTTP/1.1" 200 9366
+INFO 2026-06-19 17:53:06,199 middleware Запит до /orders/cart/ зайняв 0.0124 секунд.
+INFO 2026-06-19 17:53:06,203 log "GET /orders/cart/ HTTP/1.1" 200 2347
+INFO 2026-06-19 17:53:10,636 middleware Запит до /orders/cart_detail зайняв 0.0040 секунд.
+WARNING 2026-06-19 17:53:10,637 log Not Found: /orders/cart_detail
+WARNING 2026-06-19 17:53:10,637 log "GET /orders/cart_detail HTTP/1.1" 404 5154
+INFO 2026-06-19 17:53:14,969 middleware Запит до /orders/cart/ зайняв 0.0112 секунд.
+INFO 2026-06-19 17:53:14,971 log "GET /orders/cart/ HTTP/1.1" 200 2347
+INFO 2026-06-19 17:53:16,672 middleware Запит до /catalog/ зайняв 0.0147 секунд.
+INFO 2026-06-19 17:53:16,673 log "GET /catalog/ HTTP/1.1" 200 7727
+INFO 2026-06-19 18:03:21,501 autoreload /app/orders/models.py changed, reloading.
+INFO 2026-06-19 18:03:21,922 autoreload Watching for file changes with StatReloader
+INFO 2026-06-19 18:05:32,929 autoreload /app/orders/models.py changed, reloading.
+INFO 2026-06-19 18:05:33,326 autoreload Watching for file changes with StatReloader
+INFO 2026-06-19 18:08:24,906 autoreload /app/orders/models.py changed, reloading.
+INFO 2026-06-19 18:08:25,306 autoreload Watching for file changes with StatReloader
+INFO 2026-06-19 18:08:47,687 autoreload /app/orders/models.py changed, reloading.
+INFO 2026-06-19 18:08:48,118 autoreload Watching for file changes with StatReloader
+INFO 2026-06-19 18:17:32,288 autoreload /app/orders/models.py changed, reloading.
+INFO 2026-06-19 18:17:32,671 autoreload Watching for file changes with StatReloader
+INFO 2026-06-20 10:20:22,095 autoreload Watching for file changes with StatReloader
+INFO 2026-06-20 10:20:34,966 middleware Запит до / зайняв 0.0289 секунд.
+INFO 2026-06-20 10:20:34,967 log "GET / HTTP/1.1" 200 9366
+INFO 2026-06-20 10:20:38,283 middleware Запит до /catalog/ зайняв 0.0185 секунд.
+INFO 2026-06-20 10:20:38,284 log "GET /catalog/ HTTP/1.1" 200 7727
+INFO 2026-06-20 10:20:42,357 middleware Запит до /catalog/ зайняв 0.0149 секунд.
+INFO 2026-06-20 10:20:42,358 log "GET /catalog/ HTTP/1.1" 200 7727
+INFO 2026-06-20 10:20:43,158 middleware Запит до / зайняв 0.0150 секунд.
+INFO 2026-06-20 10:20:43,158 log "GET / HTTP/1.1" 200 8885
+INFO 2026-06-20 10:20:44,200 middleware Запит до /catalog/ зайняв 0.0142 секунд.
+INFO 2026-06-20 10:20:44,201 log "GET /catalog/ HTTP/1.1" 200 7727
+INFO 2026-06-20 10:20:45,132 middleware Запит до / зайняв 0.0161 секунд.
+INFO 2026-06-20 10:20:45,133 log "GET / HTTP/1.1" 200 8885
+INFO 2026-06-20 10:38:52,265 middleware Запит до / зайняв 0.0164 секунд.
+INFO 2026-06-20 10:38:52,266 log "GET / HTTP/1.1" 200 8885
+INFO 2026-06-20 10:38:54,610 middleware Запит до / зайняв 0.0153 секунд.
+INFO 2026-06-20 10:38:54,610 log "GET / HTTP/1.1" 200 9366
+INFO 2026-06-20 10:39:06,121 middleware Запит до /catalog/ зайняв 0.0159 секунд.
+INFO 2026-06-20 10:39:06,121 log "GET /catalog/ HTTP/1.1" 200 8208
+INFO 2026-06-20 10:39:07,539 middleware Запит до / зайняв 0.0166 секунд.
+INFO 2026-06-20 10:39:07,539 log "GET / HTTP/1.1" 200 9366
+INFO 2026-06-20 10:39:09,355 middleware Запит до /catalog/ зайняв 0.0155 секунд.
+INFO 2026-06-20 10:39:09,355 log "GET /catalog/ HTTP/1.1" 200 8208
+INFO 2026-06-20 10:39:10,491 middleware Запит до /1/ зайняв 0.0181 секунд.
+INFO 2026-06-20 10:39:10,492 log "GET /1/ HTTP/1.1" 200 4363
+INFO 2026-06-20 10:39:10,513 middleware Запит до /images/covers/Pride_and_prejudice.webp зайняв 0.0009 секунд.
+INFO 2026-06-20 10:39:10,513 log "GET /images/covers/Pride_and_prejudice.webp HTTP/1.1" 304 0
+INFO 2026-06-20 10:49:12,635 autoreload /app/orders/forms.py changed, reloading.
+INFO 2026-06-20 10:49:13,032 autoreload Watching for file changes with StatReloader
+INFO 2026-06-20 10:49:24,253 autoreload /app/orders/forms.py changed, reloading.
+INFO 2026-06-20 10:49:24,646 autoreload Watching for file changes with StatReloader
+INFO 2026-06-20 10:50:49,954 autoreload /app/orders/forms.py changed, reloading.
+INFO 2026-06-20 10:50:50,347 autoreload Watching for file changes with StatReloader
+INFO 2026-06-20 11:05:39,338 autoreload Watching for file changes with StatReloader
+INFO 2026-06-20 11:07:05,606 autoreload /app/orders/forms.py changed, reloading.
+INFO 2026-06-20 11:07:05,990 autoreload Watching for file changes with StatReloader
+INFO 2026-06-20 11:07:11,353 middleware Запит до /admin/shop_app/book/ зайняв 0.0532 секунд.
+INFO 2026-06-20 11:07:11,354 log "GET /admin/shop_app/book/ HTTP/1.1" 200 28689
+INFO 2026-06-20 11:07:11,366 log "GET /static/admin/css/dark_mode.css HTTP/1.1" 200 3538
+INFO 2026-06-20 11:07:11,367 log "GET /static/admin/css/nav_sidebar.css HTTP/1.1" 200 2810
+INFO 2026-06-20 11:07:11,367 log "GET /static/admin/css/base.css HTTP/1.1" 200 23100
+INFO 2026-06-20 11:07:11,368 log "GET /static/admin/css/responsive.css HTTP/1.1" 200 16273
+INFO 2026-06-20 11:07:11,368 log "GET /static/admin/css/changelists.css HTTP/1.1" 200 7498
+INFO 2026-06-20 11:07:11,372 log "GET /static/admin/js/theme.js HTTP/1.1" 200 1653
+INFO 2026-06-20 11:07:11,372 log "GET /static/admin/js/jquery.init.js HTTP/1.1" 200 347
+INFO 2026-06-20 11:07:11,373 log "GET /static/admin/css/forms.css HTTP/1.1" 200 8831
+INFO 2026-06-20 11:07:11,374 log "GET /static/admin/js/core.js HTTP/1.1" 200 6208
+INFO 2026-06-20 11:07:11,377 log "GET /static/admin/js/urlify.js HTTP/1.1" 200 7887
+INFO 2026-06-20 11:07:11,378 log "GET /static/admin/js/actions.js HTTP/1.1" 200 8076
+INFO 2026-06-20 11:07:11,379 log "GET /static/admin/js/prepopulate.js HTTP/1.1" 200 1531
+INFO 2026-06-20 11:07:11,380 log "GET /static/admin/css/widgets.css HTTP/1.1" 200 11811
+INFO 2026-06-20 11:07:11,381 log "GET /static/admin/js/vendor/jquery/jquery.js HTTP/1.1" 200 285314
+INFO 2026-06-20 11:07:11,382 log "GET /static/admin/js/admin/RelatedObjectLookups.js HTTP/1.1" 200 9777
+INFO 2026-06-20 11:07:11,383 middleware Запит до /admin/jsi18n/ зайняв 0.0211 секунд.
+INFO 2026-06-20 11:07:11,383 log "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2026-06-20 11:07:11,384 log "GET /static/admin/img/search.svg HTTP/1.1" 200 607
+INFO 2026-06-20 11:07:11,385 log "GET /static/admin/js/vendor/xregexp/xregexp.js HTTP/1.1" 200 325171
+INFO 2026-06-20 11:07:11,391 log "GET /static/admin/js/nav_sidebar.js HTTP/1.1" 200 3063
+INFO 2026-06-20 11:07:11,392 log "GET /static/admin/js/filters.js HTTP/1.1" 200 978
+INFO 2026-06-20 11:07:11,399 log "GET /static/admin/img/tooltag-add.svg HTTP/1.1" 200 593
+INFO 2026-06-20 11:07:11,399 log "GET /static/admin/img/icon-viewlink.svg HTTP/1.1" 200 928
+INFO 2026-06-20 11:07:11,399 log "GET /static/admin/img/icon-addlink.svg HTTP/1.1" 200 593
+INFO 2026-06-20 11:07:15,968 middleware Запит до / зайняв 0.0219 секунд.
+INFO 2026-06-20 11:07:15,968 log "GET / HTTP/1.1" 200 9366
+INFO 2026-06-20 11:10:00,071 middleware Запит до / зайняв 0.0176 секунд.
+INFO 2026-06-20 11:10:00,071 log "GET / HTTP/1.1" 200 9366
+INFO 2026-06-20 11:10:01,023 middleware Запит до /catalog/ зайняв 0.0206 секунд.
+INFO 2026-06-20 11:10:01,024 log "GET /catalog/ HTTP/1.1" 200 8208
+INFO 2026-06-20 11:10:03,635 middleware Запит до /1/ зайняв 0.0169 секунд.
+INFO 2026-06-20 11:10:03,636 log "GET /1/ HTTP/1.1" 200 4363
+INFO 2026-06-20 11:10:07,434 middleware Запит до /catalog/ зайняв 0.0163 секунд.
+INFO 2026-06-20 11:10:07,435 log "GET /catalog/ HTTP/1.1" 200 8208
+INFO 2026-06-20 11:10:29,861 middleware Запит до /catalog/ зайняв 0.0162 секунд.
+INFO 2026-06-20 11:10:29,861 log "GET /catalog/?category=1 HTTP/1.1" 200 6213
+INFO 2026-06-20 11:10:30,810 middleware Запит до /catalog/ зайняв 0.0160 секунд.
+INFO 2026-06-20 11:10:30,811 log "GET /catalog/?category=6 HTTP/1.1" 200 6869
+INFO 2026-06-20 11:10:31,860 middleware Запит до / зайняв 0.0169 секунд.
+INFO 2026-06-20 11:10:31,861 log "GET / HTTP/1.1" 200 9366
+INFO 2026-06-20 11:10:33,259 middleware Запит до /catalog/ зайняв 0.0155 секунд.
+INFO 2026-06-20 11:10:33,259 log "GET /catalog/ HTTP/1.1" 200 8208
+INFO 2026-06-20 11:10:34,691 middleware Запит до /catalog/ зайняв 0.0150 секунд.
+INFO 2026-06-20 11:10:34,691 log "GET /catalog/?category=1 HTTP/1.1" 200 6213
+INFO 2026-06-20 11:10:36,825 middleware Запит до /2/ зайняв 0.0143 секунд.
+INFO 2026-06-20 11:10:36,825 log "GET /2/ HTTP/1.1" 200 4385
+INFO 2026-06-20 11:10:36,838 middleware Запит до /images/covers/The_Master_and_Margarita_.jpg зайняв 0.0008 секунд.
+INFO 2026-06-20 11:10:36,839 log "GET /images/covers/The_Master_and_Margarita_.jpg HTTP/1.1" 200 23201
+INFO 2026-06-20 11:10:40,984 middleware Запит до /catalog/ зайняв 0.0161 секунд.
+INFO 2026-06-20 11:10:40,985 log "GET /catalog/ HTTP/1.1" 200 8208
+INFO 2026-06-20 12:35:38,027 autoreload Watching for file changes with StatReloader
+INFO 2026-06-20 12:36:35,274 middleware Запит до /admin/shop_app/book/ зайняв 0.0469 секунд.
+INFO 2026-06-20 12:36:35,275 log "GET /admin/shop_app/book/ HTTP/1.1" 200 28689
+INFO 2026-06-20 12:36:35,305 middleware Запит до /admin/jsi18n/ зайняв 0.0106 секунд.
+INFO 2026-06-20 12:36:35,305 log "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2026-06-20 12:36:37,710 middleware Запит до /catalog/ зайняв 0.0203 секунд.
+INFO 2026-06-20 12:36:37,710 log "GET /catalog/ HTTP/1.1" 200 8208
+INFO 2026-06-20 12:40:08,102 middleware Запит до /orders/cart/ зайняв 0.0155 секунд.
+INFO 2026-06-20 12:40:08,106 log "GET /orders/cart/ HTTP/1.1" 200 2828
+INFO 2026-06-20 12:40:33,171 middleware Запит до /orders/cart/add/1 зайняв 0.0044 секунд.
+INFO 2026-06-20 12:40:33,172 log "GET /orders/cart/add/1 HTTP/1.1" 301 0
+WARNING 2026-06-20 12:40:33,177 log Method Not Allowed (GET): /orders/cart/add/1/
+INFO 2026-06-20 12:40:33,177 middleware Запит до /orders/cart/add/1/ зайняв 0.0004 секунд.
+WARNING 2026-06-20 12:40:33,177 log "GET /orders/cart/add/1/ HTTP/1.1" 405 0
+INFO 2026-06-20 12:41:06,791 middleware Запит до /orders/create зайняв 0.0031 секунд.
+INFO 2026-06-20 12:41:06,792 log "GET /orders/create HTTP/1.1" 301 0
+INFO 2026-06-20 12:41:06,810 middleware Запит до /orders/create/ зайняв 0.0147 секунд.
+INFO 2026-06-20 12:41:06,813 log "GET /orders/create/ HTTP/1.1" 200 5470
+INFO 2026-06-20 12:42:25,283 middleware Запит до /orders/create/ зайняв 0.0455 секунд.
+INFO 2026-06-20 12:42:25,284 log "POST /orders/create/ HTTP/1.1" 200 2895
+INFO 2026-06-20 12:44:59,564 middleware Запит до /catalog/ зайняв 0.0152 секунд.
+INFO 2026-06-20 12:44:59,564 log "GET /catalog/ HTTP/1.1" 200 8208
+INFO 2026-06-20 12:45:07,994 middleware Запит до /orders/add/1 зайняв 0.0046 секунд.
+WARNING 2026-06-20 12:45:07,995 log Not Found: /orders/add/1
+WARNING 2026-06-20 12:45:07,995 log "GET /orders/add/1 HTTP/1.1" 404 5402
+WARNING 2026-06-20 12:45:21,409 log Method Not Allowed (GET): /orders/cart/add/1/
+INFO 2026-06-20 12:45:21,410 middleware Запит до /orders/cart/add/1/ зайняв 0.0004 секунд.
+WARNING 2026-06-20 12:45:21,410 log "GET /orders/cart/add/1/ HTTP/1.1" 405 0
+INFO 2026-06-20 12:50:14,398 middleware Запит до / зайняв 0.0175 секунд.
+INFO 2026-06-20 12:50:14,399 log "GET / HTTP/1.1" 200 9366
+INFO 2026-06-20 12:50:26,911 middleware Запит до / зайняв 0.0172 секунд.
+INFO 2026-06-20 12:50:26,911 log "GET / HTTP/1.1" 200 9366
+INFO 2026-06-20 12:50:27,647 middleware Запит до /catalog/ зайняв 0.0159 секунд.
+INFO 2026-06-20 12:50:27,648 log "GET /catalog/ HTTP/1.1" 200 8208
+INFO 2026-06-20 12:50:29,198 middleware Запит до / зайняв 0.0181 секунд.
+INFO 2026-06-20 12:50:29,198 log "GET / HTTP/1.1" 200 9366
+INFO 2026-06-20 12:51:51,684 autoreload /app/shop_app/views.py changed, reloading.
+INFO 2026-06-20 12:51:52,077 autoreload Watching for file changes with StatReloader
+INFO 2026-06-20 12:54:59,931 autoreload /app/shop_app/views.py changed, reloading.
+INFO 2026-06-20 12:55:00,349 autoreload Watching for file changes with StatReloader
+INFO 2026-06-20 12:56:33,607 middleware Запит до / зайняв 0.0253 секунд.
+INFO 2026-06-20 12:56:33,608 log "GET / HTTP/1.1" 200 9366
+INFO 2026-06-20 12:56:34,626 middleware Запит до / зайняв 0.0170 секунд.
+INFO 2026-06-20 12:56:34,626 log "GET / HTTP/1.1" 200 9366
+INFO 2026-06-20 12:56:35,597 middleware Запит до /catalog/ зайняв 0.0222 секунд.
+INFO 2026-06-20 12:56:35,597 log "GET /catalog/ HTTP/1.1" 200 8208
+INFO 2026-06-20 12:56:37,032 middleware Запит до /1/ зайняв 0.0165 секунд.
+INFO 2026-06-20 12:56:37,033 log "GET /1/ HTTP/1.1" 200 4363
+INFO 2026-06-20 12:57:22,261 middleware Запит до /orders/create/ зайняв 0.0179 секунд.
+INFO 2026-06-20 12:57:22,264 log "GET /orders/create/ HTTP/1.1" 200 5470
+INFO 2026-06-20 12:57:27,702 middleware Запит до /orders/cart/ зайняв 0.0145 секунд.
+INFO 2026-06-20 12:57:27,705 log "GET /orders/cart/ HTTP/1.1" 200 2828
+INFO 2026-06-20 12:57:29,740 middleware Запит до /catalog/ зайняв 0.0161 секунд.
+INFO 2026-06-20 12:57:29,741 log "GET /catalog/ HTTP/1.1" 200 8208
+INFO 2026-06-20 12:57:57,132 middleware Запит до /catalog/ зайняв 0.0160 секунд.
+INFO 2026-06-20 12:57:57,133 log "GET /catalog/?category=1 HTTP/1.1" 200 6213
+INFO 2026-06-20 12:57:58,381 middleware Запит до /3/ зайняв 0.0161 секунд.
+INFO 2026-06-20 12:57:58,382 log "GET /3/ HTTP/1.1" 200 4399
+INFO 2026-06-20 12:57:58,399 middleware Запит до /images/covers/Charlie_and_the_Chocolate_Factory.jpg зайняв 0.0014 секунд.
+INFO 2026-06-20 12:57:58,400 log "GET /images/covers/Charlie_and_the_Chocolate_Factory.jpg HTTP/1.1" 304 0
+INFO 2026-06-20 12:58:02,456 middleware Запит до /book/create/ зайняв 0.0243 секунд.
+INFO 2026-06-20 12:58:02,457 log "GET /book/create/ HTTP/1.1" 200 5636
+INFO 2026-06-20 12:58:03,397 middleware Запит до /catalog/ зайняв 0.0154 секунд.
+INFO 2026-06-20 12:58:03,398 log "GET /catalog/ HTTP/1.1" 200 8208
+INFO 2026-06-20 12:58:04,014 middleware Запит до / зайняв 0.0164 секунд.
+INFO 2026-06-20 12:58:04,014 log "GET / HTTP/1.1" 200 9366
+INFO 2026-06-20 12:58:04,843 middleware Запит до /catalog/ зайняв 0.0160 секунд.
+INFO 2026-06-20 12:58:04,844 log "GET /catalog/ HTTP/1.1" 200 8208
+INFO 2026-06-20 12:59:07,657 middleware Запит до / зайняв 0.0170 секунд.
+INFO 2026-06-20 12:59:07,658 log "GET / HTTP/1.1" 200 9366
+INFO 2026-06-20 12:59:09,406 middleware Запит до /catalog/ зайняв 0.0160 секунд.
+INFO 2026-06-20 12:59:09,407 log "GET /catalog/ HTTP/1.1" 200 8208
+INFO 2026-06-20 12:59:12,940 middleware Запит до /2/ зайняв 0.0144 секунд.
+INFO 2026-06-20 12:59:12,940 log "GET /2/ HTTP/1.1" 200 4385
+INFO 2026-06-20 12:59:15,405 middleware Запит до /catalog/ зайняв 0.0161 секунд.
+INFO 2026-06-20 12:59:15,406 log "GET /catalog/ HTTP/1.1" 200 8208
+INFO 2026-06-20 12:59:16,348 middleware Запит до / зайняв 0.0165 секунд.
+INFO 2026-06-20 12:59:16,348 log "GET / HTTP/1.1" 200 9366
+INFO 2026-06-20 12:59:50,162 middleware Запит до / зайняв 0.0074 секунд.
+INFO 2026-06-20 12:59:50,162 log "GET / HTTP/1.1" 200 9366
+INFO 2026-06-20 12:59:50,821 middleware Запит до /catalog/ зайняв 0.0162 секунд.
+INFO 2026-06-20 12:59:50,822 log "GET /catalog/ HTTP/1.1" 200 8208
+INFO 2026-06-20 12:59:53,704 middleware Запит до /2/ зайняв 0.0148 секунд.
+INFO 2026-06-20 12:59:53,704 log "GET /2/ HTTP/1.1" 200 4385
+INFO 2026-06-20 13:10:38,678 middleware Запит до /2/ зайняв 0.0174 секунд.
+INFO 2026-06-20 13:10:38,679 log "GET /2/ HTTP/1.1" 200 4833
+INFO 2026-06-20 13:10:40,056 middleware Запит до /2/ зайняв 0.0147 секунд.
+INFO 2026-06-20 13:10:40,057 log "GET /2/ HTTP/1.1" 200 4833
+INFO 2026-06-20 13:10:41,484 middleware Запит до /orders/cart/add/2/ зайняв 0.0100 секунд.
+INFO 2026-06-20 13:10:41,486 log "POST /orders/cart/add/2/ HTTP/1.1" 302 0
+INFO 2026-06-20 13:10:41,502 middleware Запит до /orders/cart/ зайняв 0.0135 секунд.
+INFO 2026-06-20 13:10:41,502 log "GET /orders/cart/ HTTP/1.1" 200 8320
+INFO 2026-06-20 13:10:44,313 middleware Запит до /orders/create/ зайняв 0.0186 секунд.
+INFO 2026-06-20 13:10:44,314 log "GET /orders/create/ HTTP/1.1" 200 5963
+INFO 2026-06-20 13:11:12,356 middleware Запит до /orders/create/ зайняв 0.0449 секунд.
+INFO 2026-06-20 13:11:12,357 log "POST /orders/create/ HTTP/1.1" 200 2895
+INFO 2026-06-20 13:11:14,939 middleware Запит до /catalog/ зайняв 0.0211 секунд.
+INFO 2026-06-20 13:11:14,939 log "GET /catalog/ HTTP/1.1" 200 8208
+INFO 2026-06-20 13:11:40,910 middleware Запит до /catalog/ зайняв 0.0170 секунд.
+INFO 2026-06-20 13:11:40,910 log "GET /catalog/ HTTP/1.1" 200 8208
+INFO 2026-06-20 13:11:42,175 middleware Запит до /2/ зайняв 0.0147 секунд.
+INFO 2026-06-20 13:11:42,176 log "GET /2/ HTTP/1.1" 200 4833
+INFO 2026-06-20 13:11:43,381 middleware Запит до /book/2/update/ зайняв 0.0215 секунд.
+INFO 2026-06-20 13:11:43,382 log "GET /book/2/update/ HTTP/1.1" 200 6252
+INFO 2026-06-20 13:11:48,167 middleware Запит до /catalog/ зайняв 0.0154 секунд.
+INFO 2026-06-20 13:11:48,168 log "GET /catalog/ HTTP/1.1" 200 8208
+INFO 2026-06-20 13:11:49,382 middleware Запит до /2/ зайняв 0.0143 секунд.
+INFO 2026-06-20 13:11:49,383 log "GET /2/ HTTP/1.1" 200 4833
+INFO 2026-06-20 13:11:52,519 middleware Запит до /catalog/ зайняв 0.0172 секунд.
+INFO 2026-06-20 13:11:52,520 log "GET /catalog/ HTTP/1.1" 200 8208
+INFO 2026-06-20 13:11:58,392 middleware Запит до /catalog/ зайняв 0.0161 секунд.
+INFO 2026-06-20 13:11:58,393 log "GET /catalog/ HTTP/1.1" 200 8208
+INFO 2026-06-20 13:11:59,909 middleware Запит до /catalog/ зайняв 0.0163 секунд.
+INFO 2026-06-20 13:11:59,910 log "GET /catalog/ HTTP/1.1" 200 8208
+INFO 2026-06-20 13:12:00,832 middleware Запит до / зайняв 0.0218 секунд.
+INFO 2026-06-20 13:12:00,833 log "GET / HTTP/1.1" 200 9366
+INFO 2026-06-20 13:12:01,408 middleware Запит до /catalog/ зайняв 0.0154 секунд.
+INFO 2026-06-20 13:12:01,408 log "GET /catalog/ HTTP/1.1" 200 8208
+INFO 2026-06-20 13:12:04,774 middleware Запит до /1/ зайняв 0.0149 секунд.
+INFO 2026-06-20 13:12:04,775 log "GET /1/ HTTP/1.1" 200 4811
+INFO 2026-06-20 13:12:08,395 middleware Запит до /orders/cart/add/1/ зайняв 0.0126 секунд.
+INFO 2026-06-20 13:12:08,397 log "POST /orders/cart/add/1/ HTTP/1.1" 302 0
+INFO 2026-06-20 13:12:08,412 middleware Запит до /orders/cart/ зайняв 0.0123 секунд.
+INFO 2026-06-20 13:12:08,413 log "GET /orders/cart/ HTTP/1.1" 200 8300
+INFO 2026-06-20 13:12:10,384 middleware Запит до /catalog/ зайняв 0.0156 секунд.
+INFO 2026-06-20 13:12:10,385 log "GET /catalog/ HTTP/1.1" 200 8208
+INFO 2026-06-20 13:12:11,633 middleware Запит до /2/ зайняв 0.0153 секунд.
+INFO 2026-06-20 13:12:11,633 log "GET /2/ HTTP/1.1" 200 4833
+INFO 2026-06-20 13:12:12,599 middleware Запит до /orders/cart/add/2/ зайняв 0.0137 секунд.
+INFO 2026-06-20 13:12:12,601 log "POST /orders/cart/add/2/ HTTP/1.1" 302 0
+INFO 2026-06-20 13:12:12,619 middleware Запит до /orders/cart/ зайняв 0.0147 секунд.
+INFO 2026-06-20 13:12:12,619 log "GET /orders/cart/ HTTP/1.1" 200 11980
+INFO 2026-06-20 13:12:13,683 middleware Запит до /catalog/ зайняв 0.0153 секунд.
+INFO 2026-06-20 13:12:13,684 log "GET /catalog/ HTTP/1.1" 200 8208
+INFO 2026-06-20 13:12:14,715 middleware Запит до /3/ зайняв 0.0144 секунд.
+INFO 2026-06-20 13:12:14,716 log "GET /3/ HTTP/1.1" 200 4847
+INFO 2026-06-20 13:12:15,769 middleware Запит до /orders/cart/add/3/ зайняв 0.0132 секунд.
+INFO 2026-06-20 13:12:15,772 log "POST /orders/cart/add/3/ HTTP/1.1" 302 0
+INFO 2026-06-20 13:12:15,795 middleware Запит до /orders/cart/ зайняв 0.0147 секунд.
+INFO 2026-06-20 13:12:15,795 log "GET /orders/cart/ HTTP/1.1" 200 15680
+INFO 2026-06-20 13:12:17,136 middleware Запит до /orders/create/ зайняв 0.0106 секунд.
+INFO 2026-06-20 13:12:17,136 log "GET /orders/create/ HTTP/1.1" 200 6943
+INFO 2026-06-20 13:12:39,462 middleware Запит до /orders/create/ зайняв 0.0161 секунд.
+INFO 2026-06-20 13:12:39,464 log "POST /orders/create/ HTTP/1.1" 200 2895
+INFO 2026-06-20 13:12:43,759 middleware Запит до / зайняв 0.0168 секунд.
+INFO 2026-06-20 13:12:43,760 log "GET / HTTP/1.1" 200 9366
+INFO 2026-06-21 17:19:42,088 autoreload Watching for file changes with StatReloader
+INFO 2026-06-21 17:20:00,176 middleware Запит до / зайняв 0.0195 секунд.
+INFO 2026-06-21 17:20:00,177 log "GET / HTTP/1.1" 200 9366
+INFO 2026-06-21 17:35:27,131 middleware Запит до /catalog/ зайняв 0.0248 секунд.
+INFO 2026-06-21 17:35:27,132 log "GET /catalog/ HTTP/1.1" 200 8208
+INFO 2026-06-21 17:35:28,218 middleware Запит до / зайняв 0.0176 секунд.
+INFO 2026-06-21 17:35:28,219 log "GET / HTTP/1.1" 200 9366
+INFO 2026-06-21 17:35:29,067 middleware Запит до /catalog/ зайняв 0.0160 секунд.
+INFO 2026-06-21 17:35:29,068 log "GET /catalog/ HTTP/1.1" 200 8208
+INFO 2026-06-21 17:35:30,752 middleware Запит до / зайняв 0.0170 секунд.
+INFO 2026-06-21 17:35:30,753 log "GET / HTTP/1.1" 200 9366
+INFO 2026-06-21 17:35:57,971 middleware Запит до /catalog/ зайняв 0.0155 секунд.
+INFO 2026-06-21 17:35:57,974 log "GET /catalog/ HTTP/1.1" 200 8208
+INFO 2026-06-21 17:36:00,156 middleware Запит до /1/ зайняв 0.0177 секунд.
+INFO 2026-06-21 17:36:00,157 log "GET /1/ HTTP/1.1" 200 4811
+INFO 2026-06-21 17:36:02,579 middleware Запит до /orders/cart/add/1/ зайняв 0.0070 секунд.
+INFO 2026-06-21 17:36:02,581 log "POST /orders/cart/add/1/ HTTP/1.1" 302 0
+INFO 2026-06-21 17:36:02,592 middleware Запит до /orders/cart/ зайняв 0.0096 секунд.
+INFO 2026-06-21 17:36:02,592 log "GET /orders/cart/ HTTP/1.1" 200 8300
+INFO 2026-06-21 17:36:05,941 middleware Запит до /orders/cart/remove/1/ зайняв 0.0121 секунд.
+INFO 2026-06-21 17:36:05,944 log "POST /orders/cart/remove/1/ HTTP/1.1" 302 0
+INFO 2026-06-21 17:36:05,957 middleware Запит до /orders/cart/ зайняв 0.0106 секунд.
+INFO 2026-06-21 17:36:05,959 log "GET /orders/cart/ HTTP/1.1" 200 2828
+INFO 2026-06-21 17:36:08,163 middleware Запит до / зайняв 0.0168 секунд.
+INFO 2026-06-21 17:36:08,164 log "GET / HTTP/1.1" 200 9366
+INFO 2026-06-21 17:59:39,614 autoreload /app/bookstore_project/settings.py changed, reloading.
+INFO 2026-06-21 17:59:40,029 autoreload Watching for file changes with StatReloader
+INFO 2026-06-21 18:12:10,494 autoreload /app/orders/views.py changed, reloading.
+INFO 2026-06-21 18:12:10,885 autoreload Watching for file changes with StatReloader
+INFO 2026-06-21 18:12:20,083 autoreload /app/orders/views.py changed, reloading.
+INFO 2026-06-21 18:12:20,470 autoreload Watching for file changes with StatReloader
+INFO 2026-06-21 18:14:26,443 autoreload /app/orders/views.py changed, reloading.
+INFO 2026-06-21 18:14:26,966 autoreload Watching for file changes with StatReloader
+INFO 2026-06-21 18:20:07,130 autoreload /app/orders/views.py changed, reloading.
+INFO 2026-06-21 18:20:07,539 autoreload Watching for file changes with StatReloader
+INFO 2026-06-21 18:21:36,889 autoreload /app/orders/views.py changed, reloading.
+INFO 2026-06-21 18:21:37,278 autoreload Watching for file changes with StatReloader
+INFO 2026-06-21 18:22:21,981 autoreload /app/orders/views.py changed, reloading.
+INFO 2026-06-21 18:22:22,369 autoreload Watching for file changes with StatReloader
+INFO 2026-06-21 18:26:42,206 autoreload /app/orders/views.py changed, reloading.
+INFO 2026-06-21 18:26:42,597 autoreload Watching for file changes with StatReloader
+INFO 2026-06-21 18:27:20,181 autoreload /app/orders/views.py changed, reloading.
+INFO 2026-06-21 18:27:20,603 autoreload Watching for file changes with StatReloader
+INFO 2026-06-21 18:30:29,311 autoreload Watching for file changes with StatReloader
+INFO 2026-06-21 18:34:13,601 autoreload Watching for file changes with StatReloader
+INFO 2026-06-21 18:34:15,789 middleware Запит до / зайняв 0.0227 секунд.
+INFO 2026-06-21 18:34:15,790 log "GET / HTTP/1.1" 200 9366
+INFO 2026-06-21 18:34:17,377 middleware Запит до /catalog/ зайняв 0.0189 секунд.
+INFO 2026-06-21 18:34:17,378 log "GET /catalog/ HTTP/1.1" 200 8208
+INFO 2026-06-21 18:34:18,490 middleware Запит до / зайняв 0.0153 секунд.
+INFO 2026-06-21 18:34:18,490 log "GET / HTTP/1.1" 200 9366
+INFO 2026-06-21 18:34:19,277 middleware Запит до /catalog/ зайняв 0.0152 секунд.
+INFO 2026-06-21 18:34:19,278 log "GET /catalog/ HTTP/1.1" 200 8208
+INFO 2026-06-21 18:34:20,463 middleware Запит до / зайняв 0.0156 секунд.
+INFO 2026-06-21 18:34:20,464 log "GET / HTTP/1.1" 200 9366
+INFO 2026-06-21 18:34:20,966 middleware Запит до /catalog/ зайняв 0.0155 секунд.
+INFO 2026-06-21 18:34:20,967 log "GET /catalog/ HTTP/1.1" 200 8208
+INFO 2026-06-21 18:39:40,187 autoreload /app/orders/urls.py changed, reloading.
+INFO 2026-06-21 18:39:40,594 autoreload Watching for file changes with StatReloader
+INFO 2026-06-21 18:41:43,562 autoreload /app/orders/views.py changed, reloading.
+INFO 2026-06-21 18:41:43,951 autoreload Watching for file changes with StatReloader
+INFO 2026-06-21 18:42:15,391 middleware Запит до /catalog/ зайняв 0.0239 секунд.
+INFO 2026-06-21 18:42:15,392 log "GET /catalog/ HTTP/1.1" 200 8208
+INFO 2026-06-21 18:42:17,016 middleware Запит до / зайняв 0.0192 секунд.
+INFO 2026-06-21 18:42:17,017 log "GET / HTTP/1.1" 200 9366
+INFO 2026-06-21 18:42:37,397 middleware Запит до /catalog/ зайняв 0.0162 секунд.
+INFO 2026-06-21 18:42:37,398 log "GET /catalog/ HTTP/1.1" 200 8208
+INFO 2026-06-21 18:42:39,283 middleware Запит до /1/ зайняв 0.0177 секунд.
+INFO 2026-06-21 18:42:39,283 log "GET /1/ HTTP/1.1" 200 4811
+INFO 2026-06-21 18:42:41,360 middleware Запит до /orders/cart/add/1/ зайняв 0.0119 секунд.
+INFO 2026-06-21 18:42:41,364 log "POST /orders/cart/add/1/ HTTP/1.1" 302 0
+INFO 2026-06-21 18:42:41,380 middleware Запит до /orders/cart/ зайняв 0.0128 секунд.
+INFO 2026-06-21 18:42:41,380 log "GET /orders/cart/ HTTP/1.1" 200 8300
+INFO 2026-06-21 18:42:54,837 middleware Запит до /orders/create/ зайняв 0.0158 секунд.
+INFO 2026-06-21 18:42:54,838 log "GET /orders/create/ HTTP/1.1" 200 5958
+INFO 2026-06-21 18:43:54,369 middleware Запит до /orders/create/ зайняв 0.0437 секунд.
+INFO 2026-06-21 18:43:54,370 log "POST /orders/create/ HTTP/1.1" 302 0
+INFO 2026-06-21 18:43:54,381 middleware Запит до /orders/payment/process/ зайняв 0.0078 секунд.
+INFO 2026-06-21 18:43:54,381 log "GET /orders/payment/process/ HTTP/1.1" 200 3677
+INFO 2026-06-21 18:44:00,287 middleware Запит до /orders/payment/process/ зайняв 1.2907 секунд.
+INFO 2026-06-21 18:44:00,287 log "POST /orders/payment/process/ HTTP/1.1" 302 0
+ERROR 2026-06-21 18:45:37,835 log Internal Server Error: /orders/payment/completed/
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/django/core/handlers/base.py", line 198, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/orders/views.py", line 119, in payment_completed
+    return render(request, 'orders/completed.html')
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/django/shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/django/template/loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/django/template/loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: orders/completed.html
+INFO 2026-06-21 18:45:37,836 middleware Запит до /orders/payment/completed/ зайняв 0.0274 секунд.
+ERROR 2026-06-21 18:45:37,837 log "GET /orders/payment/completed/ HTTP/1.1" 500 75934
+INFO 2026-06-21 18:48:12,652 autoreload /app/orders/views.py changed, reloading.
+INFO 2026-06-21 18:48:13,084 autoreload Watching for file changes with StatReloader
+INFO 2026-06-21 18:48:36,015 middleware Запит до / зайняв 0.0197 секунд.
+INFO 2026-06-21 18:48:36,017 log "GET / HTTP/1.1" 200 9366
+INFO 2026-06-21 18:48:39,350 middleware Запит до /catalog/ зайняв 0.0198 секунд.
+INFO 2026-06-21 18:48:39,351 log "GET /catalog/ HTTP/1.1" 200 8208
+INFO 2026-06-21 18:48:40,623 middleware Запит до /2/ зайняв 0.0135 секунд.
+INFO 2026-06-21 18:48:40,624 log "GET /2/ HTTP/1.1" 200 4833
+INFO 2026-06-21 18:48:41,860 middleware Запит до /orders/cart/add/2/ зайняв 0.0123 секунд.
+INFO 2026-06-21 18:48:41,862 log "POST /orders/cart/add/2/ HTTP/1.1" 302 0
+INFO 2026-06-21 18:48:41,883 middleware Запит до /orders/cart/ зайняв 0.0173 секунд.
+INFO 2026-06-21 18:48:41,883 log "GET /orders/cart/ HTTP/1.1" 200 8320
+INFO 2026-06-21 18:48:43,246 middleware Запит до /orders/create/ зайняв 0.0162 секунд.
+INFO 2026-06-21 18:48:43,247 log "GET /orders/create/ HTTP/1.1" 200 5963
+INFO 2026-06-21 18:49:13,135 middleware Запит до /orders/create/ зайняв 0.0455 секунд.
+INFO 2026-06-21 18:49:13,137 log "POST /orders/create/ HTTP/1.1" 302 0
+INFO 2026-06-21 18:49:13,149 middleware Запит до /orders/payment/process/ зайняв 0.0070 секунд.
+INFO 2026-06-21 18:49:13,149 log "GET /orders/payment/process/ HTTP/1.1" 200 3676
+INFO 2026-06-21 18:49:15,088 middleware Запит до /orders/payment/process/ зайняв 0.9165 секунд.
+INFO 2026-06-21 18:49:15,089 log "POST /orders/payment/process/ HTTP/1.1" 302 0
+INFO 2026-06-21 18:50:07,976 middleware Запит до /orders/payment/completed/ зайняв 0.0150 секунд.
+INFO 2026-06-21 18:50:07,977 log "GET /orders/payment/completed/ HTTP/1.1" 200 2894
+INFO 2026-06-21 18:50:12,140 middleware Запит до /catalog/ зайняв 0.0194 секунд.
+INFO 2026-06-21 18:50:12,141 log "GET /catalog/ HTTP/1.1" 200 8208
+INFO 2026-06-22 10:01:22,529 autoreload Watching for file changes with StatReloader
+INFO 2026-06-22 10:01:44,311 middleware Запит до /catalog/ зайняв 0.0298 секунд.
+INFO 2026-06-22 10:01:44,314 log "GET /catalog/ HTTP/1.1" 200 8208
+INFO 2026-06-22 10:02:07,922 middleware Запит до /catalog/ зайняв 0.0153 секунд.
+INFO 2026-06-22 10:02:07,922 log "GET /catalog/ HTTP/1.1" 200 8208
+INFO 2026-06-22 10:02:09,161 middleware Запит до / зайняв 0.0206 секунд.
+INFO 2026-06-22 10:02:09,162 log "GET / HTTP/1.1" 200 9366
+INFO 2026-06-22 10:02:09,887 middleware Запит до /catalog/ зайняв 0.0156 секунд.
+INFO 2026-06-22 10:02:09,888 log "GET /catalog/ HTTP/1.1" 200 8208
+INFO 2026-06-22 10:10:41,777 autoreload /app/bookstore_project/settings.py changed, reloading.
+INFO 2026-06-22 10:10:42,192 autoreload Watching for file changes with StatReloader
+INFO 2026-06-22 10:13:18,581 autoreload /app/orders/views.py changed, reloading.
+INFO 2026-06-22 10:13:18,976 autoreload Watching for file changes with StatReloader
+INFO 2026-06-22 10:16:34,029 autoreload Watching for file changes with StatReloader
+INFO 2026-06-22 10:17:29,862 middleware Запит до /catalog/ зайняв 0.0229 секунд.
+INFO 2026-06-22 10:17:29,863 log "GET /catalog/ HTTP/1.1" 200 8208
+INFO 2026-06-22 10:17:31,914 middleware Запит до /3/ зайняв 0.0166 секунд.
+INFO 2026-06-22 10:17:31,915 log "GET /3/ HTTP/1.1" 200 4847
+INFO 2026-06-22 10:17:33,283 middleware Запит до /orders/cart/add/3/ зайняв 0.0126 секунд.
+INFO 2026-06-22 10:17:33,286 log "POST /orders/cart/add/3/ HTTP/1.1" 302 0
+INFO 2026-06-22 10:17:33,306 middleware Запит до /orders/cart/ зайняв 0.0169 секунд.
+INFO 2026-06-22 10:17:33,306 log "GET /orders/cart/ HTTP/1.1" 200 8340
+INFO 2026-06-22 10:17:34,890 middleware Запит до /orders/create/ зайняв 0.0155 секунд.
+INFO 2026-06-22 10:17:34,890 log "GET /orders/create/ HTTP/1.1" 200 5972
+INFO 2026-06-22 10:18:01,889 middleware Запит до /orders/create/ зайняв 0.0448 секунд.
+INFO 2026-06-22 10:18:01,890 log "POST /orders/create/ HTTP/1.1" 302 0
+INFO 2026-06-22 10:18:01,900 middleware Запит до /orders/payment/process/ зайняв 0.0081 секунд.
+INFO 2026-06-22 10:18:01,901 log "GET /orders/payment/process/ HTTP/1.1" 200 3677
+INFO 2026-06-22 10:18:03,928 middleware Запит до /orders/payment/process/ зайняв 0.8982 секунд.
+INFO 2026-06-22 10:18:03,928 log "POST /orders/payment/process/ HTTP/1.1" 302 0
+INFO 2026-06-22 10:18:59,008 middleware Запит до /orders/payment/completed/ зайняв 0.0205 секунд.
+INFO 2026-06-22 10:18:59,009 log "GET /orders/payment/completed/ HTTP/1.1" 200 2894
+INFO 2026-06-22 10:39:32,036 middleware Запит до /admin/ зайняв 0.0377 секунд.
+INFO 2026-06-22 10:39:32,037 log "GET /admin/ HTTP/1.1" 200 11893
+INFO 2026-06-22 10:39:32,053 log "GET /static/admin/css/nav_sidebar.css HTTP/1.1" 200 2810
+INFO 2026-06-22 10:39:32,053 log "GET /static/admin/css/dark_mode.css HTTP/1.1" 200 3538
+INFO 2026-06-22 10:39:32,054 log "GET /static/admin/css/dashboard.css HTTP/1.1" 200 441
+INFO 2026-06-22 10:39:32,057 log "GET /static/admin/js/theme.js HTTP/1.1" 200 1653
+INFO 2026-06-22 10:39:32,057 log "GET /static/admin/css/responsive.css HTTP/1.1" 200 16273
+INFO 2026-06-22 10:39:32,057 log "GET /static/admin/css/base.css HTTP/1.1" 200 23100
+INFO 2026-06-22 10:39:32,060 log "GET /static/admin/js/nav_sidebar.js HTTP/1.1" 200 3063
+INFO 2026-06-22 10:39:32,066 log "GET /static/admin/img/icon-addlink.svg HTTP/1.1" 200 593
+INFO 2026-06-22 10:39:32,066 log "GET /static/admin/img/icon-changelink.svg HTTP/1.1" 200 978
+INFO 2026-06-22 10:39:39,623 middleware Запит до /admin/shop_app/book/22/change/ зайняв 0.0339 секунд.
+INFO 2026-06-22 10:39:39,624 log "GET /admin/shop_app/book/22/change/ HTTP/1.1" 200 17025
+INFO 2026-06-22 10:39:39,649 log "GET /static/admin/js/prepopulate.js HTTP/1.1" 200 1531
+INFO 2026-06-22 10:39:39,650 log "GET /static/admin/css/forms.css HTTP/1.1" 200 8831
+INFO 2026-06-22 10:39:39,651 log "GET /static/admin/js/core.js HTTP/1.1" 200 6208
+INFO 2026-06-22 10:39:39,651 log "GET /static/admin/js/actions.js HTTP/1.1" 200 8076
+INFO 2026-06-22 10:39:39,654 log "GET /static/admin/js/urlify.js HTTP/1.1" 200 7887
+INFO 2026-06-22 10:39:39,655 log "GET /static/admin/js/jquery.init.js HTTP/1.1" 200 347
+INFO 2026-06-22 10:39:39,657 log "GET /static/admin/js/admin/RelatedObjectLookups.js HTTP/1.1" 200 9777
+INFO 2026-06-22 10:39:39,658 log "GET /static/admin/css/widgets.css HTTP/1.1" 200 11811
+INFO 2026-06-22 10:39:39,659 log "GET /static/admin/js/prepopulate_init.js HTTP/1.1" 200 586
+INFO 2026-06-22 10:39:39,662 log "GET /static/admin/js/vendor/xregexp/xregexp.js HTTP/1.1" 200 325171
+INFO 2026-06-22 10:39:39,667 log "GET /static/admin/js/vendor/jquery/jquery.js HTTP/1.1" 200 285314
+INFO 2026-06-22 10:39:39,667 middleware Запит до /admin/jsi18n/ зайняв 0.0232 секунд.
+INFO 2026-06-22 10:39:39,668 log "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2026-06-22 10:39:39,673 log "GET /static/admin/js/change_form.js HTTP/1.1" 200 606
+INFO 2026-06-22 10:39:39,674 log "GET /static/admin/img/icon-viewlink.svg HTTP/1.1" 200 928
+INFO 2026-06-22 10:39:40,988 middleware Запит до /admin/ зайняв 0.0195 секунд.
+INFO 2026-06-22 10:39:40,989 log "GET /admin/ HTTP/1.1" 200 11893
+INFO 2026-06-22 10:39:45,072 middleware Запит до /admin/users/customuser/ зайняв 0.0328 секунд.
+INFO 2026-06-22 10:39:45,072 log "GET /admin/users/customuser/ HTTP/1.1" 200 13902
+INFO 2026-06-22 10:39:45,087 log "GET /static/admin/img/search.svg HTTP/1.1" 200 607
+INFO 2026-06-22 10:39:45,088 log "GET /static/admin/img/icon-yes.svg HTTP/1.1" 200 558
+INFO 2026-06-22 10:39:45,088 log "GET /static/admin/css/changelists.css HTTP/1.1" 200 7498
+INFO 2026-06-22 10:39:45,094 log "GET /static/admin/img/icon-no.svg HTTP/1.1" 200 645
+INFO 2026-06-22 10:39:45,097 middleware Запит до /admin/jsi18n/ зайняв 0.0122 секунд.
+INFO 2026-06-22 10:39:45,097 log "GET /static/admin/js/filters.js HTTP/1.1" 200 978
+INFO 2026-06-22 10:39:45,098 log "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2026-06-22 10:39:45,106 log "GET /static/admin/img/tooltag-add.svg HTTP/1.1" 200 593
+INFO 2026-06-22 10:39:45,107 log "GET /static/admin/img/sorting-icons.svg HTTP/1.1" 200 1761
+INFO 2026-06-22 10:39:48,093 middleware Запит до /admin/ зайняв 0.0191 секунд.
+INFO 2026-06-22 10:39:48,094 log "GET /admin/ HTTP/1.1" 200 11893
+INFO 2026-06-22 10:40:27,048 middleware Запит до /admin/auth/group/ зайняв 0.0210 секунд.
+INFO 2026-06-22 10:40:27,048 log "GET /admin/auth/group/ HTTP/1.1" 200 9832
+INFO 2026-06-22 10:40:27,076 middleware Запит до /admin/jsi18n/ зайняв 0.0116 секунд.
+INFO 2026-06-22 10:40:27,077 log "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2026-06-22 10:40:28,858 middleware Запит до /admin/ зайняв 0.0192 секунд.
+INFO 2026-06-22 10:40:28,858 log "GET /admin/ HTTP/1.1" 200 11893
+INFO 2026-06-22 10:40:29,772 middleware Запит до /admin/shop_app/book/ зайняв 0.0315 секунд.
+INFO 2026-06-22 10:40:29,772 log "GET /admin/shop_app/book/ HTTP/1.1" 200 28689
+INFO 2026-06-22 10:40:29,787 middleware Запит до /admin/jsi18n/ зайняв 0.0073 секунд.
+INFO 2026-06-22 10:40:29,788 log "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2026-06-22 10:40:30,911 middleware Запит до /admin/ зайняв 0.0185 секунд.
+INFO 2026-06-22 10:40:30,912 log "GET /admin/ HTTP/1.1" 200 11893
+INFO 2026-06-22 10:40:31,866 middleware Запит до /admin/shop_app/category/ зайняв 0.0216 секунд.
+INFO 2026-06-22 10:40:31,866 log "GET /admin/shop_app/category/ HTTP/1.1" 200 12049
+INFO 2026-06-22 10:40:31,886 middleware Запит до /admin/jsi18n/ зайняв 0.0089 секунд.
+INFO 2026-06-22 10:40:31,887 log "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2026-06-22 10:40:33,913 middleware Запит до /admin/ зайняв 0.0188 секунд.
+INFO 2026-06-22 10:40:33,914 log "GET /admin/ HTTP/1.1" 200 11893
+INFO 2026-06-22 10:40:35,678 middleware Запит до /admin/users/customuser/ зайняв 0.0213 секунд.
+INFO 2026-06-22 10:40:35,679 log "GET /admin/users/customuser/ HTTP/1.1" 200 13902
+INFO 2026-06-22 10:40:35,705 middleware Запит до /admin/jsi18n/ зайняв 0.0111 секунд.
+INFO 2026-06-22 10:40:35,706 log "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2026-06-22 10:40:36,534 middleware Запит до /admin/ зайняв 0.0196 секунд.
+INFO 2026-06-22 10:40:36,535 log "GET /admin/ HTTP/1.1" 200 11893
+INFO 2026-06-22 10:45:05,174 autoreload /app/orders/admin.py changed, reloading.
+INFO 2026-06-22 10:45:05,623 autoreload Watching for file changes with StatReloader
+INFO 2026-06-22 10:45:48,324 autoreload /app/orders/admin.py changed, reloading.
+INFO 2026-06-22 10:45:48,721 autoreload Watching for file changes with StatReloader
+INFO 2026-06-22 10:46:05,352 autoreload Watching for file changes with StatReloader
+INFO 2026-06-22 10:46:11,035 middleware Запит до /admin/ зайняв 0.0300 секунд.
+INFO 2026-06-22 10:46:11,037 log "GET /admin/ HTTP/1.1" 200 12948
+INFO 2026-06-22 10:46:14,084 middleware Запит до /admin/orders/order/ зайняв 0.0356 секунд.
+INFO 2026-06-22 10:46:14,085 log "GET /admin/orders/order/ HTTP/1.1" 200 20390
+INFO 2026-06-22 10:46:14,112 middleware Запит до /admin/jsi18n/ зайняв 0.0110 секунд.
+INFO 2026-06-22 10:46:14,113 log "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2026-06-22 10:46:18,796 middleware Запит до /admin/ зайняв 0.0205 секунд.
+INFO 2026-06-22 10:46:18,797 log "GET /admin/ HTTP/1.1" 200 12948
+INFO 2026-06-22 10:54:46,255 middleware Запит до /admin/orders/order/ зайняв 0.0259 секунд.
+INFO 2026-06-22 10:54:46,256 log "GET /admin/orders/order/ HTTP/1.1" 200 20390
+INFO 2026-06-22 10:54:46,281 middleware Запит до /admin/jsi18n/ зайняв 0.0120 секунд.
+INFO 2026-06-22 10:54:46,282 log "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2026-06-22 10:55:51,693 middleware Запит до /admin/orders/order/7/change/ зайняв 0.0305 секунд.
+INFO 2026-06-22 10:55:51,694 log "GET /admin/orders/order/7/change/ HTTP/1.1" 200 15871
+INFO 2026-06-22 10:55:51,721 middleware Запит до /admin/jsi18n/ зайняв 0.0123 секунд.
+INFO 2026-06-22 10:55:51,721 log "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2026-06-22 10:55:58,336 middleware Запит до /admin/orders/order/ зайняв 0.0239 секунд.
+INFO 2026-06-22 10:55:58,337 log "GET /admin/orders/order/ HTTP/1.1" 200 20390
+INFO 2026-06-22 10:56:11,151 middleware Запит до /admin/orders/order/6/change/ зайняв 0.0211 секунд.
+INFO 2026-06-22 10:56:11,152 log "GET /admin/orders/order/6/change/ HTTP/1.1" 200 15877
+INFO 2026-06-22 10:56:11,180 middleware Запит до /admin/jsi18n/ зайняв 0.0110 секунд.
+INFO 2026-06-22 10:56:11,180 log "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2026-06-22 10:56:14,523 middleware Запит до /admin/orders/order/ зайняв 0.0235 секунд.
+INFO 2026-06-22 10:56:14,524 log "GET /admin/orders/order/ HTTP/1.1" 200 20390
+INFO 2026-06-22 10:57:26,985 middleware Запит до /admin/orders/order/7/change/ зайняв 0.0212 секунд.
+INFO 2026-06-22 10:57:26,986 log "GET /admin/orders/order/7/change/ HTTP/1.1" 200 15871
+INFO 2026-06-22 10:57:27,018 middleware Запит до /admin/jsi18n/ зайняв 0.0126 секунд.
+INFO 2026-06-22 10:57:27,018 log "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2026-06-22 10:57:29,036 middleware Запит до /admin/orders/order/ зайняв 0.0235 секунд.
+INFO 2026-06-22 10:57:29,037 log "GET /admin/orders/order/ HTTP/1.1" 200 20390
+INFO 2026-06-22 10:57:34,027 middleware Запит до /admin/shop_app/book/ зайняв 0.0382 секунд.
+INFO 2026-06-22 10:57:34,027 log "GET /admin/shop_app/book/ HTTP/1.1" 200 29575
+INFO 2026-06-22 10:57:34,055 middleware Запит до /admin/jsi18n/ зайняв 0.0101 секунд.
+INFO 2026-06-22 10:57:34,055 log "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2026-06-22 10:57:34,747 middleware Запит до /admin/orders/order/ зайняв 0.0242 секунд.
+INFO 2026-06-22 10:57:34,748 log "GET /admin/orders/order/ HTTP/1.1" 200 20390
+INFO 2026-06-22 10:57:34,779 middleware Запит до /admin/jsi18n/ зайняв 0.0098 секунд.
+INFO 2026-06-22 10:57:34,780 log "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2026-06-22 10:57:37,014 middleware Запит до /admin/orders/order/ зайняв 0.0245 секунд.
+INFO 2026-06-22 10:57:37,014 log "GET /admin/orders/order/ HTTP/1.1" 200 20390
+INFO 2026-06-22 10:57:37,038 middleware Запит до /admin/jsi18n/ зайняв 0.0093 секунд.
+INFO 2026-06-22 10:57:37,038 log "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2026-06-22 10:57:41,859 middleware Запит до /admin/orders/order/7/change/ зайняв 0.0206 секунд.
+INFO 2026-06-22 10:57:41,859 log "GET /admin/orders/order/7/change/ HTTP/1.1" 200 15871
+INFO 2026-06-22 10:57:41,884 middleware Запит до /admin/jsi18n/ зайняв 0.0099 секунд.
+INFO 2026-06-22 10:57:41,884 log "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2026-06-22 10:57:45,550 middleware Запит до /admin/orders/order/ зайняв 0.0247 секунд.
+INFO 2026-06-22 10:57:45,551 log "GET /admin/orders/order/ HTTP/1.1" 200 20390
+INFO 2026-06-22 10:58:16,260 middleware Запит до /admin/auth/group/ зайняв 0.0221 секунд.
+INFO 2026-06-22 10:58:16,260 log "GET /admin/auth/group/ HTTP/1.1" 200 10718
+INFO 2026-06-22 10:58:16,291 middleware Запит до /admin/jsi18n/ зайняв 0.0121 секунд.
+INFO 2026-06-22 10:58:16,291 log "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2026-06-22 10:58:17,062 middleware Запит до /admin/orders/order/ зайняв 0.0239 секунд.
+INFO 2026-06-22 10:58:17,063 log "GET /admin/orders/order/ HTTP/1.1" 200 20390
+INFO 2026-06-22 10:58:17,084 middleware Запит до /admin/jsi18n/ зайняв 0.0089 секунд.
+INFO 2026-06-22 10:58:17,084 log "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2026-06-22 10:58:22,478 middleware Запит до /admin/orders/order/5/change/ зайняв 0.0204 секунд.
+INFO 2026-06-22 10:58:22,479 log "GET /admin/orders/order/5/change/ HTTP/1.1" 200 15877
+INFO 2026-06-22 10:58:22,502 middleware Запит до /admin/jsi18n/ зайняв 0.0100 секунд.
+INFO 2026-06-22 10:58:22,502 log "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2026-06-22 10:58:34,297 middleware Запит до /admin/orders/order/ зайняв 0.0241 секунд.
+INFO 2026-06-22 10:58:34,298 log "GET /admin/orders/order/ HTTP/1.1" 200 20390
+INFO 2026-06-22 10:58:34,323 middleware Запит до /admin/jsi18n/ зайняв 0.0109 секунд.
+INFO 2026-06-22 10:58:34,323 log "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2026-06-22 10:58:36,191 middleware Запит до /admin/orders/order/3/change/ зайняв 0.0182 секунд.
+INFO 2026-06-22 10:58:36,191 log "GET /admin/orders/order/3/change/ HTTP/1.1" 200 15861
+INFO 2026-06-22 10:58:36,217 middleware Запит до /admin/jsi18n/ зайняв 0.0092 секунд.
+INFO 2026-06-22 10:58:36,218 log "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2026-06-22 10:58:37,210 middleware Запит до /admin/orders/order/ зайняв 0.0244 секунд.
+INFO 2026-06-22 10:58:37,211 log "GET /admin/orders/order/ HTTP/1.1" 200 20390
+INFO 2026-06-22 10:58:38,511 middleware Запит до /admin/orders/order/7/change/ зайняв 0.0219 секунд.
+INFO 2026-06-22 10:58:38,511 log "GET /admin/orders/order/7/change/ HTTP/1.1" 200 15871
+INFO 2026-06-22 10:58:38,542 middleware Запит до /admin/jsi18n/ зайняв 0.0120 секунд.
+INFO 2026-06-22 10:58:38,542 log "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2026-06-22 10:58:39,766 middleware Запит до /admin/orders/order/ зайняв 0.0213 секунд.
+INFO 2026-06-22 10:58:39,767 log "GET /admin/orders/order/ HTTP/1.1" 200 20390
+INFO 2026-06-22 10:59:26,434 middleware Запит до /admin/shop_app/book/ зайняв 0.0348 секунд.
+INFO 2026-06-22 10:59:26,435 log "GET /admin/shop_app/book/ HTTP/1.1" 200 29575
+INFO 2026-06-22 10:59:26,468 middleware Запит до /admin/jsi18n/ зайняв 0.0122 секунд.
+INFO 2026-06-22 10:59:26,468 log "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2026-06-22 10:59:29,291 middleware Запит до /admin/orders/order/ зайняв 0.0257 секунд.
+INFO 2026-06-22 10:59:29,291 log "GET /admin/orders/order/ HTTP/1.1" 200 20390
+INFO 2026-06-22 10:59:29,315 middleware Запит до /admin/jsi18n/ зайняв 0.0100 секунд.
+INFO 2026-06-22 10:59:29,315 log "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2026-06-22 10:59:32,686 middleware Запит до /admin/orders/order/7/change/ зайняв 0.0221 секунд.
+INFO 2026-06-22 10:59:32,686 log "GET /admin/orders/order/7/change/ HTTP/1.1" 200 15871
+INFO 2026-06-22 10:59:32,716 middleware Запит до /admin/jsi18n/ зайняв 0.0109 секунд.
+INFO 2026-06-22 10:59:32,716 log "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2026-06-22 10:59:34,576 middleware Запит до /admin/orders/order/ зайняв 0.0240 секунд.
+INFO 2026-06-22 10:59:34,577 log "GET /admin/orders/order/ HTTP/1.1" 200 20390
+INFO 2026-06-22 11:07:17,567 autoreload Watching for file changes with StatReloader
+INFO 2026-06-22 11:07:21,790 middleware Запит до /admin/orders/order/ зайняв 0.0413 секунд.
+INFO 2026-06-22 11:07:21,791 log "GET /admin/orders/order/ HTTP/1.1" 200 20390
+INFO 2026-06-22 11:07:21,818 middleware Запит до /admin/jsi18n/ зайняв 0.0088 секунд.
+INFO 2026-06-22 11:07:21,819 log "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2026-06-22 11:07:23,158 middleware Запит до /admin/orders/order/ зайняв 0.0260 секунд.
+INFO 2026-06-22 11:07:23,158 log "GET /admin/orders/order/ HTTP/1.1" 200 20390
+INFO 2026-06-22 11:07:23,178 middleware Запит до /admin/jsi18n/ зайняв 0.0089 секунд.
+INFO 2026-06-22 11:07:23,178 log "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2026-06-22 11:07:24,369 middleware Запит до /admin/auth/group/ зайняв 0.0207 секунд.
+INFO 2026-06-22 11:07:24,370 log "GET /admin/auth/group/ HTTP/1.1" 200 10718
+INFO 2026-06-22 11:07:24,393 middleware Запит до /admin/jsi18n/ зайняв 0.0107 секунд.
+INFO 2026-06-22 11:07:24,394 log "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2026-06-22 11:07:25,521 middleware Запит до /admin/orders/order/ зайняв 0.0232 секунд.
+INFO 2026-06-22 11:07:25,521 log "GET /admin/orders/order/ HTTP/1.1" 200 20390
+INFO 2026-06-22 11:07:25,550 middleware Запит до /admin/jsi18n/ зайняв 0.0110 секунд.
+INFO 2026-06-22 11:07:25,551 log "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2026-06-22 11:07:28,684 middleware Запит до /admin/orders/order/7/change/ зайняв 0.0288 секунд.
+INFO 2026-06-22 11:07:28,685 log "GET /admin/orders/order/7/change/ HTTP/1.1" 200 15871
+INFO 2026-06-22 11:07:28,715 middleware Запит до /admin/jsi18n/ зайняв 0.0109 секунд.
+INFO 2026-06-22 11:07:28,715 log "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2026-06-22 11:07:29,878 middleware Запит до /admin/orders/order/ зайняв 0.0237 секунд.
+INFO 2026-06-22 11:07:29,879 log "GET /admin/orders/order/ HTTP/1.1" 200 20390
+INFO 2026-06-22 11:07:37,109 middleware Запит до / зайняв 0.0200 секунд.
+INFO 2026-06-22 11:07:37,110 log "GET / HTTP/1.1" 200 9366
+INFO 2026-06-22 11:08:12,532 autoreload /app/orders/models.py changed, reloading.
+INFO 2026-06-22 11:08:12,949 autoreload Watching for file changes with StatReloader
+INFO 2026-06-22 11:08:19,757 middleware Запит до /admin/orders/order/ зайняв 0.0393 секунд.
+INFO 2026-06-22 11:08:19,758 log "GET /admin/orders/order/ HTTP/1.1" 200 20390
+INFO 2026-06-22 11:08:19,778 middleware Запит до /admin/jsi18n/ зайняв 0.0117 секунд.
+INFO 2026-06-22 11:08:19,778 log "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2026-06-22 11:08:20,982 middleware Запит до /admin/auth/group/ зайняв 0.0213 секунд.
+INFO 2026-06-22 11:08:20,983 log "GET /admin/auth/group/ HTTP/1.1" 200 10718
+INFO 2026-06-22 11:08:21,005 middleware Запит до /admin/jsi18n/ зайняв 0.0093 секунд.
+INFO 2026-06-22 11:08:21,006 log "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2026-06-22 11:08:21,845 middleware Запит до /admin/orders/order/ зайняв 0.0228 секунд.
+INFO 2026-06-22 11:08:21,845 log "GET /admin/orders/order/ HTTP/1.1" 200 20390
+INFO 2026-06-22 11:08:21,860 middleware Запит до /admin/jsi18n/ зайняв 0.0075 секунд.
+INFO 2026-06-22 11:08:21,860 log "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2026-06-22 11:08:23,376 middleware Запит до /admin/orders/order/7/change/ зайняв 0.0297 секунд.
+INFO 2026-06-22 11:08:23,377 log "GET /admin/orders/order/7/change/ HTTP/1.1" 200 15871
+INFO 2026-06-22 11:08:23,410 middleware Запит до /admin/jsi18n/ зайняв 0.0111 секунд.
+INFO 2026-06-22 11:08:23,410 log "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2026-06-22 11:08:24,312 middleware Запит до /admin/orders/order/ зайняв 0.0241 секунд.
+INFO 2026-06-22 11:08:24,312 log "GET /admin/orders/order/ HTTP/1.1" 200 20390
+INFO 2026-06-22 11:08:35,398 autoreload /app/orders/models.py changed, reloading.
+INFO 2026-06-22 11:08:35,803 autoreload Watching for file changes with StatReloader
+INFO 2026-06-22 11:10:07,254 autoreload /app/orders/admin.py changed, reloading.
+INFO 2026-06-22 11:10:07,665 autoreload Watching for file changes with StatReloader
+INFO 2026-06-22 11:10:12,976 middleware Запит до /admin/orders/order/ зайняв 0.0388 секунд.
+INFO 2026-06-22 11:10:12,977 log "GET /admin/orders/order/ HTTP/1.1" 200 20390
+INFO 2026-06-22 11:10:13,000 middleware Запит до /admin/jsi18n/ зайняв 0.0098 секунд.
+INFO 2026-06-22 11:10:13,000 log "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2026-06-22 11:10:14,294 middleware Запит до /admin/auth/group/ зайняв 0.0216 секунд.
+INFO 2026-06-22 11:10:14,294 log "GET /admin/auth/group/ HTTP/1.1" 200 10718
+INFO 2026-06-22 11:10:14,318 middleware Запит до /admin/jsi18n/ зайняв 0.0103 секунд.
+INFO 2026-06-22 11:10:14,318 log "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2026-06-22 11:10:15,109 middleware Запит до /admin/orders/order/ зайняв 0.0234 секунд.
+INFO 2026-06-22 11:10:15,110 log "GET /admin/orders/order/ HTTP/1.1" 200 20390
+INFO 2026-06-22 11:10:15,133 middleware Запит до /admin/jsi18n/ зайняв 0.0087 секунд.
+INFO 2026-06-22 11:10:15,134 log "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2026-06-22 11:10:15,954 middleware Запит до /admin/orders/order/7/change/ зайняв 0.0372 секунд.
+INFO 2026-06-22 11:10:15,954 log "GET /admin/orders/order/7/change/ HTTP/1.1" 200 20248
+INFO 2026-06-22 11:10:15,967 log "GET /static/admin/js/inlines.js HTTP/1.1" 200 15628
+INFO 2026-06-22 11:10:15,975 middleware Запит до /admin/jsi18n/ зайняв 0.0103 секунд.
+INFO 2026-06-22 11:10:15,976 log "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2026-06-22 11:10:18,944 middleware Запит до /admin/orders/order/ зайняв 0.0223 секунд.
+INFO 2026-06-22 11:10:18,945 log "GET /admin/orders/order/ HTTP/1.1" 200 20390

@@ -1,9 +1,10 @@
-from django.shortcuts import render
+from django.shortcuts import render, get_object_or_404
 from django.db.models import Q, Count
 from .models import Book, Category
 from django.views.generic import ListView, DetailView, CreateView, UpdateView, DeleteView
 from django.urls import reverse_lazy
 from django.contrib.auth.mixins import LoginRequiredMixin, UserPassesTestMixin
+from orders.forms import CartAddBookForm
 
 # Create your views here.
 def store(request):
@@ -50,6 +51,11 @@ class BookListView(ListView):
 class BookDetailView(DetailView):
     model = Book
     template_name = 'shop_app/book_detail.html'
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context['cart_book_form'] = CartAddBookForm()
+        return context
 
 class BookCreateView(CreateView):
     model = Book

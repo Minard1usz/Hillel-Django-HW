@@ -36,7 +36,13 @@
                 <div class="text-end">
                     <small class="text-muted d-block mb-2">В наявності: {{ book.stock }} шт.</small>
                     {% if book.stock > 0 %}
-                        <button class="btn btn-success px-4">🛒 Придбати</button>
+                        <form action="{% url 'orders:cart_add' book.id %}" method="post" class="d-inline">
+                            {% csrf_token %}
+                            <input type="hidden" name="quantity" value="1">
+                            <input type="hidden" name="override" value="False">
+                            <button type="submit" class="btn btn-success px-4">🛒 Придбати</button>
+                        </form>
+
                         {% if user.is_staff %}
                             <a href="{% url 'shop_app:book_update' pk=book.pk %}" class="btn btn-outline-primary px-4">✏️ Редагувати</a>
                             <a href="{% url 'shop_app:book_delete' pk=book.pk %}" class="btn btn-outline-danger px-4">🗑 Видалити</a>

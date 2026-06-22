@@ -44,6 +44,7 @@ INSTALLED_APPS = [
     'shop_app',
     'users',
     'debug_toolbar',
+    'orders',
 ]
 
 MIDDLEWARE = [
@@ -175,3 +176,11 @@ LOGGING = {
         },
     },
 }
+
+CART_SESSION_ID = 'cart'
+
+# Налаштування Stripe
+STRIPE_PUBLISHABLE_KEY = os.environ.get('STRIPE_PUBLISHABLE_KEY')
+STRIPE_SECRET_KEY = os.environ.get('STRIPE_SECRET_KEY')
+STRIPE_API_VERSION = os.environ.get('STRIPE_API_VERSION')
+EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
