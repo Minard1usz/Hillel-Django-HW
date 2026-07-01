@@ -1,19 +1,19 @@
 {% extends 'shop_app/base.html' %}
-
-{% block title %}Головна — Книгарня{% endblock %}
+{% load i18n %}
+{% block title %}{% translate "Головна — Книгарня" %}{% endblock %}
 
 {% block content %}
 <div class="row">
     <div class="col-md-4 mb-4">
         <div class="card shadow-sm">
             <div class="card-header bg-dark text-white">
-                <h5 class="mb-0">📊 Статистика категорій</h5>
+                <h5 class="mb-0">📊 {% translate "Статистика категорій" %}</h5>
             </div>
             <ul class="list-group list-group-flush">
                 {% for cat in categories %}
                 <li class="list-group-item d-flex justify-content-between align-items-center">
                     {{ cat.name }}
-                    <span class="badge bg-primary rounded-pill">{{ cat.total_books }} книг</span>
+                    <span class="badge bg-primary rounded-pill">{% blocktranslate with cat=cat.total_books %}{{ total_books }} книг{% endblocktranslate %}</span>
                 </li>
                 {% endfor %}
             </ul>
@@ -24,7 +24,7 @@
         
         <div class="card mb-4 border-warning shadow-sm">
             <div class="card-header bg-warning text-dark">
-                <h5 class="mb-0">💴 Спеціальні пропозиції (до 300 грн)</h5>
+                <h5 class="mb-0">💴 {% translate "Спеціальні пропозиції (до 300 грн)" %}</h5>
             </div>
             <div class="card-body">
                 <div class="row">
@@ -35,7 +35,7 @@
                         </div>
                     </div>
                     {% empty %}
-                    <p class="text-muted mb-0">Акційних пропозицій поки що немає.</p>
+                    <p class="text-muted mb-0">{% translate "Акційних пропозицій поки що немає." %}</p>
                     {% endfor %}
                 </div>
             </div>
@@ -43,7 +43,7 @@
 
         <div class="card border-danger shadow-sm">
             <div class="card-header bg-danger text-white">
-                <h5 class="mb-0">🔥 Гарячі знижки (Discount)</h5>
+                <h5 class="mb-0">🔥 {% translate "Гарячі знижки (Discount)" %}</h5>
             </div>
             <div class="card-body">
                 <ul class="list-style-none ps-0 mb-0">
@@ -51,10 +51,10 @@
                     <li class="mb-3 pb-3 border-bottom last-border-0">
                         <h6 class="text-danger mb-1">{{ book.title }}</h6>
                         <p class="text-muted small mb-1">{{ book.description|truncatewords:12 }}</p>
-                        <span class="badge bg-success">{{ book.price }} грн.</span>
+                        <span class="badge bg-success">{% blocktranslate with book=book.price %} {{ price }} грн. {% endblocktranslate %}</span>
                     </li>
                     {% empty %}
-                    <p class="text-muted mb-0">Книг зі знижкою наразі немає.</p>
+                    <p class="text-muted mb-0">{% translate "Книг зі знижкою наразі немає." %}</p>
                     {% endfor %}
                 </ul>
             </div>

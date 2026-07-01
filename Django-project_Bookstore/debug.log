@@ -2719,3 +2719,76 @@ INFO 2026-07-01 13:34:35,502 middleware Запит до /catalog/ зайняв 0
 INFO 2026-07-01 13:34:35,503 log "GET /catalog/?page=3 HTTP/1.1" 200 8977
 INFO 2026-07-01 13:34:36,575 middleware Запит до /catalog/ зайняв 0.0156 секунд.
 INFO 2026-07-01 13:34:36,575 log "GET /catalog/?page=2 HTTP/1.1" 200 8955
+INFO 2026-07-01 18:14:23,867 autoreload Watching for file changes with StatReloader
+INFO 2026-07-01 18:14:52,124 middleware Запит до /catalog/ зайняв 0.0295 секунд.
+INFO 2026-07-01 18:14:52,125 log "GET /catalog/?page=2 HTTP/1.1" 200 8955
+INFO 2026-07-01 18:14:53,383 middleware Запит до / зайняв 0.0234 секунд.
+INFO 2026-07-01 18:14:53,383 log "GET / HTTP/1.1" 200 10162
+INFO 2026-07-01 18:14:54,127 middleware Запит до /catalog/ зайняв 0.0176 секунд.
+INFO 2026-07-01 18:14:54,128 log "GET /catalog/ HTTP/1.1" 200 8886
+INFO 2026-07-01 18:14:56,048 middleware Запит до /i18n/setlang/ зайняв 0.0018 секунд.
+INFO 2026-07-01 18:14:56,048 log "POST /i18n/setlang/ HTTP/1.1" 302 0
+INFO 2026-07-01 18:14:56,074 middleware Запит до /catalog/ зайняв 0.0164 секунд.
+INFO 2026-07-01 18:14:56,074 log "GET /catalog/ HTTP/1.1" 200 9013
+INFO 2026-07-01 18:14:58,310 middleware Запит до /i18n/setlang/ зайняв 0.0006 секунд.
+INFO 2026-07-01 18:14:58,311 log "POST /i18n/setlang/ HTTP/1.1" 302 0
+INFO 2026-07-01 18:14:58,336 middleware Запит до /catalog/ зайняв 0.0155 секунд.
+INFO 2026-07-01 18:14:58,336 log "GET /catalog/ HTTP/1.1" 200 8886
+INFO 2026-07-01 18:15:01,615 middleware Запит до /catalog/ зайняв 0.0161 секунд.
+INFO 2026-07-01 18:15:01,616 log "GET /catalog/?page=2 HTTP/1.1" 200 8955
+INFO 2026-07-01 18:15:03,135 middleware Запит до / зайняв 0.0185 секунд.
+INFO 2026-07-01 18:15:03,139 log "GET / HTTP/1.1" 200 10162
+INFO 2026-07-01 18:15:05,033 middleware Запит до /catalog/ зайняв 0.0157 секунд.
+INFO 2026-07-01 18:15:05,033 log "GET /catalog/ HTTP/1.1" 200 8886
+INFO 2026-07-01 18:15:06,264 middleware Запит до /catalog/ зайняв 0.0156 секунд.
+INFO 2026-07-01 18:15:06,265 log "GET /catalog/ HTTP/1.1" 200 8886
+INFO 2026-07-01 18:15:07,055 middleware Запит до / зайняв 0.0174 секунд.
+INFO 2026-07-01 18:15:07,056 log "GET / HTTP/1.1" 200 10162
+INFO 2026-07-01 18:25:13,247 autoreload Watching for file changes with StatReloader
+INFO 2026-07-01 18:25:23,115 middleware Запит до / зайняв 0.0228 секунд.
+INFO 2026-07-01 18:25:23,115 log "GET / HTTP/1.1" 200 10149
+INFO 2026-07-01 18:25:27,060 middleware Запит до / зайняв 0.0177 секунд.
+INFO 2026-07-01 18:25:27,061 log "GET / HTTP/1.1" 200 10149
+INFO 2026-07-01 18:25:27,845 middleware Запит до /catalog/ зайняв 0.0192 секунд.
+INFO 2026-07-01 18:25:27,846 log "GET /catalog/ HTTP/1.1" 200 8886
+INFO 2026-07-01 18:25:28,411 middleware Запит до / зайняв 0.0181 секунд.
+INFO 2026-07-01 18:25:28,412 log "GET / HTTP/1.1" 200 10149
+INFO 2026-07-01 18:25:29,020 middleware Запит до /catalog/ зайняв 0.0147 секунд.
+INFO 2026-07-01 18:25:29,021 log "GET /catalog/ HTTP/1.1" 200 8886
+INFO 2026-07-01 18:25:30,411 middleware Запит до / зайняв 0.0176 секунд.
+INFO 2026-07-01 18:25:30,412 log "GET / HTTP/1.1" 200 10149
+INFO 2026-07-01 18:25:31,039 middleware Запит до / зайняв 0.0165 секунд.
+INFO 2026-07-01 18:25:31,039 log "GET / HTTP/1.1" 200 10149
+INFO 2026-07-01 18:25:31,644 middleware Запит до /catalog/ зайняв 0.0165 секунд.
+INFO 2026-07-01 18:25:31,644 log "GET /catalog/ HTTP/1.1" 200 8886
+INFO 2026-07-01 18:25:33,081 middleware Запит до /i18n/setlang/ зайняв 0.0006 секунд.
+INFO 2026-07-01 18:25:33,082 log "POST /i18n/setlang/ HTTP/1.1" 302 0
+INFO 2026-07-01 18:25:33,100 middleware Запит до /catalog/ зайняв 0.0124 секунд.
+INFO 2026-07-01 18:25:33,101 log "GET /catalog/ HTTP/1.1" 200 9013
+INFO 2026-07-01 18:25:35,822 middleware Запит до /i18n/setlang/ зайняв 0.0005 секунд.
+INFO 2026-07-01 18:25:35,823 log "POST /i18n/setlang/ HTTP/1.1" 302 0
+INFO 2026-07-01 18:25:35,847 middleware Запит до /catalog/ зайняв 0.0157 секунд.
+INFO 2026-07-01 18:25:35,848 log "GET /catalog/ HTTP/1.1" 200 8886
+INFO 2026-07-01 18:25:37,198 middleware Запит до /i18n/setlang/ зайняв 0.0007 секунд.
+INFO 2026-07-01 18:25:37,198 log "POST /i18n/setlang/ HTTP/1.1" 302 0
+INFO 2026-07-01 18:25:37,223 middleware Запит до /catalog/ зайняв 0.0155 секунд.
+INFO 2026-07-01 18:25:37,224 log "GET /catalog/ HTTP/1.1" 200 9013
+INFO 2026-07-01 18:25:37,933 middleware Запит до /catalog/ зайняв 0.0154 секунд.
+INFO 2026-07-01 18:25:37,934 log "GET /catalog/ HTTP/1.1" 200 9013
+INFO 2026-07-01 18:25:38,369 middleware Запит до / зайняв 0.0183 секунд.
+INFO 2026-07-01 18:25:38,370 log "GET / HTTP/1.1" 200 10204
+INFO 2026-07-01 18:25:40,421 middleware Запит до /i18n/setlang/ зайняв 0.0008 секунд.
+INFO 2026-07-01 18:25:40,422 log "POST /i18n/setlang/ HTTP/1.1" 302 0
+INFO 2026-07-01 18:25:40,449 middleware Запит до / зайняв 0.0174 секунд.
+INFO 2026-07-01 18:25:40,450 log "GET / HTTP/1.1" 200 10149
+INFO 2026-07-01 18:26:22,928 autoreload Watching for file changes with StatReloader
+INFO 2026-07-01 18:28:47,055 middleware Запит до / зайняв 0.0172 секунд.
+INFO 2026-07-01 18:28:47,056 log "GET / HTTP/1.1" 200 10149
+INFO 2026-07-01 18:28:49,066 middleware Запит до /i18n/setlang/ зайняв 0.0006 секунд.
+INFO 2026-07-01 18:28:49,067 log "POST /i18n/setlang/ HTTP/1.1" 302 0
+INFO 2026-07-01 18:28:49,089 middleware Запит до / зайняв 0.0165 секунд.
+INFO 2026-07-01 18:28:49,089 log "GET / HTTP/1.1" 200 10204
+INFO 2026-07-01 18:28:50,679 middleware Запит до /i18n/setlang/ зайняв 0.0006 секунд.
+INFO 2026-07-01 18:28:50,680 log "POST /i18n/setlang/ HTTP/1.1" 302 0
+INFO 2026-07-01 18:28:50,702 middleware Запит до / зайняв 0.0169 секунд.
+INFO 2026-07-01 18:28:50,703 log "GET / HTTP/1.1" 200 10149
