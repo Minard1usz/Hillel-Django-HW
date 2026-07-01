@@ -1862,3 +1862,860 @@ INFO 2026-06-22 11:10:15,975 middleware Запит до /admin/jsi18n/ зайн�
 INFO 2026-06-22 11:10:15,976 log "GET /admin/jsi18n/ HTTP/1.1" 200 3342
 INFO 2026-06-22 11:10:18,944 middleware Запит до /admin/orders/order/ зайняв 0.0223 секунд.
 INFO 2026-06-22 11:10:18,945 log "GET /admin/orders/order/ HTTP/1.1" 200 20390
+INFO 2026-06-29 12:29:16,631 autoreload Watching for file changes with StatReloader
+INFO 2026-06-29 12:29:19,543 middleware Запит до / зайняв 0.0341 секунд.
+INFO 2026-06-29 12:29:19,546 log "GET / HTTP/1.1" 200 9366
+INFO 2026-06-29 12:29:24,233 middleware Запит до /catalog/ зайняв 0.0198 секунд.
+INFO 2026-06-29 12:29:24,233 log "GET /catalog/ HTTP/1.1" 200 8208
+INFO 2026-06-29 12:29:28,726 middleware Запит до /catalog/ зайняв 0.0152 секунд.
+INFO 2026-06-29 12:29:28,727 log "GET /catalog/?category=1 HTTP/1.1" 200 6213
+INFO 2026-06-29 12:29:29,407 middleware Запит до /catalog/ зайняв 0.0151 секунд.
+INFO 2026-06-29 12:29:29,408 log "GET /catalog/?category=2 HTTP/1.1" 200 7649
+INFO 2026-06-29 12:29:30,093 middleware Запит до /catalog/ зайняв 0.0155 секунд.
+INFO 2026-06-29 12:29:30,093 log "GET /catalog/?category=4 HTTP/1.1" 200 6866
+INFO 2026-06-29 12:29:30,627 middleware Запит до /catalog/ зайняв 0.0176 секунд.
+INFO 2026-06-29 12:29:30,627 log "GET /catalog/?category=5 HTTP/1.1" 200 6210
+INFO 2026-06-29 12:29:31,227 middleware Запит до /catalog/ зайняв 0.0140 секунд.
+INFO 2026-06-29 12:29:31,228 log "GET /catalog/?category=6 HTTP/1.1" 200 6869
+INFO 2026-06-29 12:29:32,242 middleware Запит до /catalog/ зайняв 0.0151 секунд.
+INFO 2026-06-29 12:29:32,243 log "GET /catalog/ HTTP/1.1" 200 8208
+INFO 2026-06-29 12:29:33,651 middleware Запит до /catalog/ зайняв 0.0154 секунд.
+INFO 2026-06-29 12:29:33,651 log "GET /catalog/?category=1 HTTP/1.1" 200 6213
+INFO 2026-06-29 12:29:34,409 middleware Запит до /catalog/ зайняв 0.0151 секунд.
+INFO 2026-06-29 12:29:34,410 log "GET /catalog/ HTTP/1.1" 200 8208
+INFO 2026-06-29 12:29:35,850 middleware Запит до /catalog/ зайняв 0.0153 секунд.
+INFO 2026-06-29 12:29:35,851 log "GET /catalog/?category=2 HTTP/1.1" 200 7649
+INFO 2026-06-29 12:29:37,233 middleware Запит до /catalog/ зайняв 0.0148 секунд.
+INFO 2026-06-29 12:29:37,234 log "GET /catalog/ HTTP/1.1" 200 8208
+INFO 2026-06-29 12:29:38,598 middleware Запит до /catalog/ зайняв 0.0151 секунд.
+INFO 2026-06-29 12:29:38,599 log "GET /catalog/ HTTP/1.1" 200 8208
+INFO 2026-06-29 12:29:39,235 middleware Запит до / зайняв 0.0161 секунд.
+INFO 2026-06-29 12:29:39,235 log "GET / HTTP/1.1" 200 9366
+INFO 2026-06-29 12:29:41,082 middleware Запит до /catalog/ зайняв 0.0149 секунд.
+INFO 2026-06-29 12:29:41,082 log "GET /catalog/ HTTP/1.1" 200 8208
+INFO 2026-06-29 12:31:02,463 autoreload /app/bookstore_project/settings.py changed, reloading.
+INFO 2026-06-29 12:31:02,853 autoreload Watching for file changes with StatReloader
+INFO 2026-06-29 12:35:40,935 autoreload /app/bookstore_project/settings.py changed, reloading.
+INFO 2026-06-29 12:35:41,339 autoreload Watching for file changes with StatReloader
+INFO 2026-06-29 12:37:49,357 autoreload /app/bookstore_project/settings.py changed, reloading.
+INFO 2026-06-29 12:37:49,764 autoreload Watching for file changes with StatReloader
+INFO 2026-06-29 12:38:35,535 autoreload /app/bookstore_project/settings.py changed, reloading.
+INFO 2026-06-29 12:38:35,927 autoreload Watching for file changes with StatReloader
+INFO 2026-06-29 12:49:06,697 autoreload /app/shop_app/models.py changed, reloading.
+INFO 2026-06-29 12:49:07,155 autoreload Watching for file changes with StatReloader
+INFO 2026-06-29 12:50:23,437 autoreload /app/shop_app/models.py changed, reloading.
+INFO 2026-06-29 12:50:23,835 autoreload Watching for file changes with StatReloader
+INFO 2026-06-29 12:50:39,149 autoreload /app/shop_app/models.py changed, reloading.
+INFO 2026-06-29 12:50:39,549 autoreload Watching for file changes with StatReloader
+INFO 2026-06-29 12:52:03,970 autoreload /app/shop_app/models.py changed, reloading.
+INFO 2026-06-29 12:52:04,363 autoreload Watching for file changes with StatReloader
+INFO 2026-06-29 12:53:36,867 autoreload /app/shop_app/models.py changed, reloading.
+INFO 2026-06-29 12:53:37,265 autoreload Watching for file changes with StatReloader
+INFO 2026-06-29 12:54:06,791 autoreload /app/shop_app/models.py changed, reloading.
+INFO 2026-06-29 12:54:07,194 autoreload Watching for file changes with StatReloader
+INFO 2026-06-29 12:54:12,335 autoreload /app/shop_app/models.py changed, reloading.
+INFO 2026-06-29 12:54:12,732 autoreload Watching for file changes with StatReloader
+INFO 2026-06-29 12:55:25,983 autoreload /app/orders/models.py changed, reloading.
+INFO 2026-06-29 12:55:26,387 autoreload Watching for file changes with StatReloader
+INFO 2026-06-29 13:01:09,941 autoreload /app/orders/models.py changed, reloading.
+INFO 2026-06-29 13:01:10,345 autoreload Watching for file changes with StatReloader
+INFO 2026-06-29 13:02:36,767 autoreload /app/orders/models.py changed, reloading.
+INFO 2026-06-29 13:02:37,175 autoreload Watching for file changes with StatReloader
+INFO 2026-06-29 13:04:24,933 autoreload /app/orders/models.py changed, reloading.
+INFO 2026-06-29 13:04:25,332 autoreload Watching for file changes with StatReloader
+INFO 2026-06-29 13:09:58,827 autoreload /app/orders/models.py changed, reloading.
+INFO 2026-06-29 13:09:59,251 autoreload Watching for file changes with StatReloader
+INFO 2026-06-29 13:11:09,421 autoreload /app/orders/models.py changed, reloading.
+INFO 2026-06-29 13:11:09,822 autoreload Watching for file changes with StatReloader
+INFO 2026-06-29 13:12:40,338 autoreload /app/orders/models.py changed, reloading.
+INFO 2026-06-29 13:12:40,733 autoreload Watching for file changes with StatReloader
+INFO 2026-06-29 13:20:27,149 autoreload /app/shop_app/models.py changed, reloading.
+INFO 2026-06-29 13:20:27,647 autoreload Watching for file changes with StatReloader
+INFO 2026-06-29 13:24:26,739 autoreload /app/shop_app/models.py changed, reloading.
+INFO 2026-06-29 13:24:27,144 autoreload Watching for file changes with StatReloader
+INFO 2026-06-29 13:33:28,852 autoreload /app/users/models.py changed, reloading.
+INFO 2026-06-29 13:33:29,242 autoreload Watching for file changes with StatReloader
+INFO 2026-06-29 13:34:00,668 autoreload /app/users/models.py changed, reloading.
+INFO 2026-06-29 13:34:01,047 autoreload Watching for file changes with StatReloader
+INFO 2026-06-29 13:35:27,956 autoreload /app/users/models.py changed, reloading.
+INFO 2026-06-29 13:35:28,353 autoreload Watching for file changes with StatReloader
+INFO 2026-07-01 09:55:34,076 autoreload Watching for file changes with StatReloader
+INFO 2026-07-01 09:56:22,622 middleware Запит до / зайняв 0.0406 секунд.
+INFO 2026-07-01 09:56:22,625 log "GET / HTTP/1.1" 200 9366
+INFO 2026-07-01 09:56:24,447 middleware Запит до /catalog/ зайняв 0.0213 секунд.
+INFO 2026-07-01 09:56:24,447 log "GET /catalog/ HTTP/1.1" 200 8208
+INFO 2026-07-01 09:56:25,659 middleware Запит до / зайняв 0.0169 секунд.
+INFO 2026-07-01 09:56:25,660 log "GET / HTTP/1.1" 200 9366
+INFO 2026-07-01 09:56:26,674 middleware Запит до /catalog/ зайняв 0.0161 секунд.
+INFO 2026-07-01 09:56:26,675 log "GET /catalog/ HTTP/1.1" 200 8208
+INFO 2026-07-01 09:56:28,177 middleware Запит до / зайняв 0.0182 секунд.
+INFO 2026-07-01 09:56:28,178 log "GET / HTTP/1.1" 200 9366
+INFO 2026-07-01 10:14:44,830 middleware Запит до / зайняв 0.0213 секунд.
+INFO 2026-07-01 10:14:44,832 log "GET / HTTP/1.1" 200 9407
+INFO 2026-07-01 10:14:46,041 middleware Запит до / зайняв 0.0183 секунд.
+INFO 2026-07-01 10:14:46,042 log "GET / HTTP/1.1" 200 9407
+INFO 2026-07-01 10:14:46,809 middleware Запит до /catalog/ зайняв 0.0197 секунд.
+INFO 2026-07-01 10:14:46,810 log "GET /catalog/ HTTP/1.1" 200 8249
+INFO 2026-07-01 10:14:47,827 middleware Запит до / зайняв 0.0205 секунд.
+INFO 2026-07-01 10:14:47,828 log "GET / HTTP/1.1" 200 9407
+INFO 2026-07-01 10:14:49,055 middleware Запит до /catalog/ зайняв 0.0163 секунд.
+INFO 2026-07-01 10:14:49,056 log "GET /catalog/ HTTP/1.1" 200 8249
+INFO 2026-07-01 10:14:52,221 middleware Запит до / зайняв 0.0173 секунд.
+INFO 2026-07-01 10:14:52,221 log "GET / HTTP/1.1" 200 9407
+INFO 2026-07-01 10:14:53,402 middleware Запит до /catalog/ зайняв 0.0155 секунд.
+INFO 2026-07-01 10:14:53,402 log "GET /catalog/ HTTP/1.1" 200 8249
+INFO 2026-07-01 10:14:53,974 middleware Запит до / зайняв 0.0186 секунд.
+INFO 2026-07-01 10:14:53,975 log "GET / HTTP/1.1" 200 9407
+INFO 2026-07-01 10:14:55,381 middleware Запит до /catalog/ зайняв 0.0156 секунд.
+INFO 2026-07-01 10:14:55,382 log "GET /catalog/ HTTP/1.1" 200 8249
+INFO 2026-07-01 10:14:57,167 middleware Запит до / зайняв 0.0183 секунд.
+INFO 2026-07-01 10:14:57,168 log "GET / HTTP/1.1" 200 9407
+INFO 2026-07-01 10:19:26,756 autoreload Watching for file changes with StatReloader
+INFO 2026-07-01 10:20:22,845 middleware Запит до / зайняв 0.0251 секунд.
+INFO 2026-07-01 10:20:22,847 log "GET / HTTP/1.1" 200 9407
+INFO 2026-07-01 10:20:23,808 middleware Запит до / зайняв 0.0171 секунд.
+INFO 2026-07-01 10:20:23,808 log "GET / HTTP/1.1" 200 9407
+INFO 2026-07-01 10:20:24,595 middleware Запит до /catalog/ зайняв 0.0199 секунд.
+INFO 2026-07-01 10:20:24,595 log "GET /catalog/ HTTP/1.1" 200 8249
+INFO 2026-07-01 10:20:26,151 middleware Запит до / зайняв 0.0180 секунд.
+INFO 2026-07-01 10:20:26,152 log "GET / HTTP/1.1" 200 9407
+INFO 2026-07-01 10:23:41,931 middleware Запит до / зайняв 0.0187 секунд.
+INFO 2026-07-01 10:23:41,933 log "GET / HTTP/1.1" 200 9407
+INFO 2026-07-01 10:23:42,942 middleware Запит до /catalog/ зайняв 0.0181 секунд.
+INFO 2026-07-01 10:23:42,942 log "GET /catalog/ HTTP/1.1" 200 8249
+INFO 2026-07-01 10:23:43,808 middleware Запит до / зайняв 0.0179 секунд.
+INFO 2026-07-01 10:23:43,809 log "GET / HTTP/1.1" 200 9407
+INFO 2026-07-01 10:25:24,586 autoreload Watching for file changes with StatReloader
+INFO 2026-07-01 10:26:56,280 middleware Запит до / зайняв 0.0231 секунд.
+INFO 2026-07-01 10:26:56,282 log "GET / HTTP/1.1" 200 9407
+INFO 2026-07-01 10:26:57,143 middleware Запит до /catalog/ зайняв 0.0201 секунд.
+INFO 2026-07-01 10:26:57,144 log "GET /catalog/ HTTP/1.1" 200 8249
+INFO 2026-07-01 10:26:58,009 middleware Запит до / зайняв 0.0189 секунд.
+INFO 2026-07-01 10:26:58,009 log "GET / HTTP/1.1" 200 9407
+INFO 2026-07-01 10:27:41,043 autoreload Watching for file changes with StatReloader
+INFO 2026-07-01 10:27:45,354 middleware Запит до / зайняв 0.0232 секунд.
+INFO 2026-07-01 10:27:45,355 log "GET / HTTP/1.1" 200 9407
+INFO 2026-07-01 10:27:45,992 middleware Запит до /catalog/ зайняв 0.0196 секунд.
+INFO 2026-07-01 10:27:45,993 log "GET /catalog/ HTTP/1.1" 200 8249
+INFO 2026-07-01 10:27:46,816 middleware Запит до / зайняв 0.0181 секунд.
+INFO 2026-07-01 10:27:46,817 log "GET / HTTP/1.1" 200 9407
+INFO 2026-07-01 10:50:19,805 middleware Запит до / зайняв 0.0210 секунд.
+INFO 2026-07-01 10:50:19,806 log "GET / HTTP/1.1" 200 9407
+INFO 2026-07-01 10:50:20,716 middleware Запит до /catalog/ зайняв 0.0161 секунд.
+INFO 2026-07-01 10:50:20,717 log "GET /catalog/ HTTP/1.1" 200 8249
+INFO 2026-07-01 10:50:21,467 middleware Запит до / зайняв 0.0172 секунд.
+INFO 2026-07-01 10:50:21,468 log "GET / HTTP/1.1" 200 9407
+INFO 2026-07-01 10:50:23,204 middleware Запит до /catalog/ зайняв 0.0173 секунд.
+INFO 2026-07-01 10:50:23,205 log "GET /catalog/ HTTP/1.1" 200 8249
+INFO 2026-07-01 10:50:24,121 middleware Запит до / зайняв 0.0179 секунд.
+INFO 2026-07-01 10:50:24,122 log "GET / HTTP/1.1" 200 9407
+INFO 2026-07-01 11:05:40,243 autoreload Watching for file changes with StatReloader
+INFO 2026-07-01 11:10:10,148 autoreload Watching for file changes with StatReloader
+INFO 2026-07-01 11:32:57,976 middleware Запит до / зайняв 0.0277 секунд.
+INFO 2026-07-01 11:32:57,978 log "GET / HTTP/1.1" 200 9323
+INFO 2026-07-01 11:33:01,485 middleware Запит до /catalog/ зайняв 0.0188 секунд.
+INFO 2026-07-01 11:33:01,486 log "GET /catalog/ HTTP/1.1" 200 8141
+INFO 2026-07-01 11:33:02,166 middleware Запит до / зайняв 0.0190 секунд.
+INFO 2026-07-01 11:33:02,167 log "GET / HTTP/1.1" 200 9323
+INFO 2026-07-01 11:33:02,895 middleware Запит до /catalog/ зайняв 0.0156 секунд.
+INFO 2026-07-01 11:33:02,896 log "GET /catalog/ HTTP/1.1" 200 8141
+INFO 2026-07-01 11:33:03,575 middleware Запит до / зайняв 0.0156 секунд.
+INFO 2026-07-01 11:33:03,576 log "GET / HTTP/1.1" 200 9323
+INFO 2026-07-01 11:33:04,347 middleware Запит до /catalog/ зайняв 0.0164 секунд.
+INFO 2026-07-01 11:33:04,347 log "GET /catalog/ HTTP/1.1" 200 8141
+INFO 2026-07-01 11:33:06,310 middleware Запит до / зайняв 0.0170 секунд.
+INFO 2026-07-01 11:33:06,310 log "GET / HTTP/1.1" 200 9323
+ERROR 2026-07-01 11:36:50,065 log Internal Server Error: /
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/django/core/handlers/base.py", line 198, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/shop_app/views.py", line 24, in store
+    return render(request, 'shop_app/store.html', context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/django/shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/django/template/loader.py", line 62, in render_to_string
+    return template.render(context, request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/django/template/backends/django.py", line 107, in render
+    return self.template.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/django/template/base.py", line 174, in render
+    return self._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/django/test/utils.py", line 114, in instrumented_test_render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/django/template/base.py", line 1091, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/django/template/base.py", line 1052, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/django/template/loader_tags.py", line 160, in render
+    return compiled_parent._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/django/test/utils.py", line 114, in instrumented_test_render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/django/template/base.py", line 1091, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/django/template/base.py", line 1052, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/django/template/defaulttags.py", line 511, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/django/urls/base.py", line 98, in reverse
+    resolved_url = resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/django/urls/resolvers.py", line 842, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'set_language' not found. 'set_language' is not a valid view function or pattern name.
+INFO 2026-07-01 11:36:50,067 middleware Запит до / зайняв 0.0620 секунд.
+ERROR 2026-07-01 11:36:50,067 log "GET / HTTP/1.1" 500 163959
+INFO 2026-07-01 11:39:52,529 autoreload /app/bookstore_project/urls.py changed, reloading.
+INFO 2026-07-01 11:39:52,955 autoreload Watching for file changes with StatReloader
+INFO 2026-07-01 11:39:55,726 middleware Запит до / зайняв 0.0243 секунд.
+INFO 2026-07-01 11:39:55,727 log "GET / HTTP/1.1" 200 10174
+INFO 2026-07-01 11:39:59,744 middleware Запит до /i18n/setlang/ зайняв 0.0015 секунд.
+INFO 2026-07-01 11:39:59,745 log "POST /i18n/setlang/ HTTP/1.1" 302 0
+INFO 2026-07-01 11:39:59,763 middleware Запит до / зайняв 0.0158 секунд.
+INFO 2026-07-01 11:39:59,764 log "GET / HTTP/1.1" 200 10217
+INFO 2026-07-01 11:40:02,103 middleware Запит до /i18n/setlang/ зайняв 0.0007 секунд.
+INFO 2026-07-01 11:40:02,103 log "POST /i18n/setlang/ HTTP/1.1" 302 0
+INFO 2026-07-01 11:40:02,128 middleware Запит до / зайняв 0.0165 секунд.
+INFO 2026-07-01 11:40:02,129 log "GET / HTTP/1.1" 200 10174
+INFO 2026-07-01 11:40:07,836 middleware Запит до /i18n/setlang/ зайняв 0.0005 секунд.
+INFO 2026-07-01 11:40:07,837 log "POST /i18n/setlang/ HTTP/1.1" 302 0
+INFO 2026-07-01 11:40:07,859 middleware Запит до / зайняв 0.0165 секунд.
+INFO 2026-07-01 11:40:07,859 log "GET / HTTP/1.1" 200 10217
+INFO 2026-07-01 11:40:11,077 middleware Запит до /i18n/setlang/ зайняв 0.0005 секунд.
+INFO 2026-07-01 11:40:11,077 log "POST /i18n/setlang/ HTTP/1.1" 302 0
+INFO 2026-07-01 11:40:11,103 middleware Запит до / зайняв 0.0165 секунд.
+INFO 2026-07-01 11:40:11,104 log "GET / HTTP/1.1" 200 10174
+INFO 2026-07-01 11:40:14,494 middleware Запит до /i18n/setlang/ зайняв 0.0006 секунд.
+INFO 2026-07-01 11:40:14,494 log "POST /i18n/setlang/ HTTP/1.1" 302 0
+INFO 2026-07-01 11:40:14,522 middleware Запит до / зайняв 0.0174 секунд.
+INFO 2026-07-01 11:40:14,523 log "GET / HTTP/1.1" 200 10217
+INFO 2026-07-01 11:40:16,768 middleware Запит до /i18n/setlang/ зайняв 0.0006 секунд.
+INFO 2026-07-01 11:40:16,768 log "POST /i18n/setlang/ HTTP/1.1" 302 0
+INFO 2026-07-01 11:40:16,793 middleware Запит до / зайняв 0.0175 секунд.
+INFO 2026-07-01 11:40:16,794 log "GET / HTTP/1.1" 200 10174
+INFO 2026-07-01 11:40:20,200 middleware Запит до /i18n/setlang/ зайняв 0.0006 секунд.
+INFO 2026-07-01 11:40:20,201 log "POST /i18n/setlang/ HTTP/1.1" 302 0
+INFO 2026-07-01 11:40:20,225 middleware Запит до / зайняв 0.0165 секунд.
+INFO 2026-07-01 11:40:20,226 log "GET / HTTP/1.1" 200 10217
+INFO 2026-07-01 11:40:26,990 middleware Запит до /i18n/setlang/ зайняв 0.0006 секунд.
+INFO 2026-07-01 11:40:26,991 log "POST /i18n/setlang/ HTTP/1.1" 302 0
+INFO 2026-07-01 11:40:27,017 middleware Запит до / зайняв 0.0167 секунд.
+INFO 2026-07-01 11:40:27,018 log "GET / HTTP/1.1" 200 10174
+INFO 2026-07-01 11:45:19,700 middleware Запит до / зайняв 0.0193 секунд.
+INFO 2026-07-01 11:45:19,702 log "GET / HTTP/1.1" 200 10174
+INFO 2026-07-01 11:45:22,265 middleware Запит до /i18n/setlang/ зайняв 0.0006 секунд.
+INFO 2026-07-01 11:45:22,265 log "POST /i18n/setlang/ HTTP/1.1" 302 0
+INFO 2026-07-01 11:45:22,290 middleware Запит до / зайняв 0.0179 секунд.
+INFO 2026-07-01 11:45:22,291 log "GET / HTTP/1.1" 200 10217
+INFO 2026-07-01 11:45:24,772 middleware Запит до /i18n/setlang/ зайняв 0.0007 секунд.
+INFO 2026-07-01 11:45:24,773 log "POST /i18n/setlang/ HTTP/1.1" 302 0
+INFO 2026-07-01 11:45:24,795 middleware Запит до / зайняв 0.0162 секунд.
+INFO 2026-07-01 11:45:24,795 log "GET / HTTP/1.1" 200 10174
+INFO 2026-07-01 11:46:04,058 middleware Запит до / зайняв 0.0219 секунд.
+INFO 2026-07-01 11:46:04,059 log "GET / HTTP/1.1" 200 10162
+INFO 2026-07-01 11:46:07,353 middleware Запит до /i18n/setlang/ зайняв 0.0005 секунд.
+INFO 2026-07-01 11:46:07,354 log "POST /i18n/setlang/ HTTP/1.1" 302 0
+INFO 2026-07-01 11:46:07,381 middleware Запит до / зайняв 0.0173 секунд.
+INFO 2026-07-01 11:46:07,381 log "GET / HTTP/1.1" 200 10217
+INFO 2026-07-01 11:46:09,770 middleware Запит до /i18n/setlang/ зайняв 0.0006 секунд.
+INFO 2026-07-01 11:46:09,771 log "POST /i18n/setlang/ HTTP/1.1" 302 0
+INFO 2026-07-01 11:46:09,798 middleware Запит до / зайняв 0.0169 секунд.
+INFO 2026-07-01 11:46:09,799 log "GET / HTTP/1.1" 200 10162
+INFO 2026-07-01 12:01:57,710 middleware Запит до /catalog/ зайняв 0.0283 секунд.
+INFO 2026-07-01 12:01:57,711 log "GET /catalog/ HTTP/1.1" 200 8962
+INFO 2026-07-01 12:02:47,256 middleware Запит до /catalog/ зайняв 0.0169 секунд.
+INFO 2026-07-01 12:02:47,257 log "GET /catalog/?category=1 HTTP/1.1" 200 6967
+INFO 2026-07-01 12:02:48,508 middleware Запит до /catalog/ зайняв 0.0222 секунд.
+INFO 2026-07-01 12:02:48,508 log "GET /catalog/ HTTP/1.1" 200 8962
+INFO 2026-07-01 12:03:43,910 middleware Запит до /1/ зайняв 0.0221 секунд.
+INFO 2026-07-01 12:03:43,911 log "GET /1/ HTTP/1.1" 200 5583
+INFO 2026-07-01 12:03:43,932 middleware Запит до /images/covers/Pride_and_prejudice.webp зайняв 0.0009 секунд.
+INFO 2026-07-01 12:03:43,935 log "GET /images/covers/Pride_and_prejudice.webp HTTP/1.1" 200 120978
+INFO 2026-07-01 12:18:19,351 autoreload Watching for file changes with StatReloader
+INFO 2026-07-01 12:20:08,550 autoreload Watching for file changes with StatReloader
+INFO 2026-07-01 12:21:38,889 autoreload Watching for file changes with StatReloader
+ERROR 2026-07-01 12:21:42,385 log Internal Server Error: /catalog/
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/django/core/handlers/base.py", line 221, in _get_response
+    response = response.render()
+               ^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/django/template/response.py", line 114, in render
+    self.content = self.rendered_content
+                   ^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/django/template/response.py", line 90, in rendered_content
+    template = self.resolve_template(self.template_name)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/django/template/response.py", line 72, in resolve_template
+    return select_template(template, using=self.using)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/django/template/loader.py", line 42, in select_template
+    return engine.get_template(template_name)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/django/template/backends/django.py", line 79, in get_template
+    return Template(self.engine.get_template(template_name), self)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/django/template/engine.py", line 186, in get_template
+    template, origin = self.find_template(template_name)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/django/template/engine.py", line 159, in find_template
+    template = loader.get_template(name, skip=skip)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/django/template/loaders/cached.py", line 57, in get_template
+    template = super().get_template(template_name, skip)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/django/template/loaders/base.py", line 28, in get_template
+    return Template(
+           ^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/django/template/base.py", line 157, in __init__
+    self.nodelist = self.compile_nodelist()
+                    ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/django/template/base.py", line 199, in compile_nodelist
+    nodelist = parser.parse()
+               ^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/django/template/base.py", line 585, in parse
+    raise self.error(token, e)
+  File "/usr/local/lib/python3.12/site-packages/django/template/base.py", line 583, in parse
+    compiled_result = compile_func(self, token)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/django/template/loader_tags.py", line 307, in do_extends
+    nodelist = parser.parse()
+               ^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/django/template/base.py", line 585, in parse
+    raise self.error(token, e)
+  File "/usr/local/lib/python3.12/site-packages/django/template/base.py", line 583, in parse
+    compiled_result = compile_func(self, token)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/django/template/loader_tags.py", line 235, in do_block
+    nodelist = parser.parse(("endblock",))
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/django/template/base.py", line 585, in parse
+    raise self.error(token, e)
+  File "/usr/local/lib/python3.12/site-packages/django/template/base.py", line 583, in parse
+    compiled_result = compile_func(self, token)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/django/template/defaulttags.py", line 894, in do_for
+    nodelist_loop = parser.parse(
+                    ^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/django/template/base.py", line 585, in parse
+    raise self.error(token, e)
+  File "/usr/local/lib/python3.12/site-packages/django/template/base.py", line 583, in parse
+    compiled_result = compile_func(self, token)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/django/templatetags/i18n.py", line 581, in do_block_translate
+    raise TemplateSyntaxError(
+django.template.exceptions.TemplateSyntaxError: Template: /app/shop_app/templates/shop_app/book_list.html, 'blocktranslate' doesn't allow other block tags (seen 'blocktranslate') inside it
+INFO 2026-07-01 12:21:42,387 middleware Запит до /catalog/ зайняв 0.0381 секунд.
+ERROR 2026-07-01 12:21:42,387 log "GET /catalog/ HTTP/1.1" 500 235313
+ERROR 2026-07-01 12:24:03,946 log Internal Server Error: /catalog/
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.12/site-packages/django/template/base.py", line 577, in parse
+    compile_func = self.tags[command]
+                   ~~~~~~~~~^^^^^^^^^
+KeyError: 'endblocktranslate'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/django/core/handlers/base.py", line 221, in _get_response
+    response = response.render()
+               ^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/django/template/response.py", line 114, in render
+    self.content = self.rendered_content
+                   ^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/django/template/response.py", line 90, in rendered_content
+    template = self.resolve_template(self.template_name)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/django/template/response.py", line 72, in resolve_template
+    return select_template(template, using=self.using)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/django/template/loader.py", line 42, in select_template
+    return engine.get_template(template_name)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/django/template/backends/django.py", line 79, in get_template
+    return Template(self.engine.get_template(template_name), self)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/django/template/engine.py", line 186, in get_template
+    template, origin = self.find_template(template_name)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/django/template/engine.py", line 159, in find_template
+    template = loader.get_template(name, skip=skip)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/django/template/loaders/cached.py", line 57, in get_template
+    template = super().get_template(template_name, skip)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/django/template/loaders/base.py", line 28, in get_template
+    return Template(
+           ^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/django/template/base.py", line 157, in __init__
+    self.nodelist = self.compile_nodelist()
+                    ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/django/template/base.py", line 199, in compile_nodelist
+    nodelist = parser.parse()
+               ^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/django/template/base.py", line 585, in parse
+    raise self.error(token, e)
+  File "/usr/local/lib/python3.12/site-packages/django/template/base.py", line 583, in parse
+    compiled_result = compile_func(self, token)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/django/template/loader_tags.py", line 307, in do_extends
+    nodelist = parser.parse()
+               ^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/django/template/base.py", line 585, in parse
+    raise self.error(token, e)
+  File "/usr/local/lib/python3.12/site-packages/django/template/base.py", line 583, in parse
+    compiled_result = compile_func(self, token)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/django/template/loader_tags.py", line 235, in do_block
+    nodelist = parser.parse(("endblock",))
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/django/template/base.py", line 585, in parse
+    raise self.error(token, e)
+  File "/usr/local/lib/python3.12/site-packages/django/template/base.py", line 583, in parse
+    compiled_result = compile_func(self, token)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/django/template/defaulttags.py", line 894, in do_for
+    nodelist_loop = parser.parse(
+                    ^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/django/template/base.py", line 579, in parse
+    self.invalid_block_tag(token, command, parse_until)
+  File "/usr/local/lib/python3.12/site-packages/django/template/base.py", line 634, in invalid_block_tag
+    raise self.error(
+django.template.exceptions.TemplateSyntaxError: Template: /app/shop_app/templates/shop_app/book_list.html, Invalid block tag on line 47: 'endblocktranslate', expected 'empty' or 'endfor'. Did you forget to register or load this tag?
+INFO 2026-07-01 12:24:03,948 middleware Запит до /catalog/ зайняв 0.0376 секунд.
+ERROR 2026-07-01 12:24:03,948 log "GET /catalog/ HTTP/1.1" 500 227769
+ERROR 2026-07-01 12:24:51,210 log Internal Server Error: /catalog/
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.12/site-packages/django/template/base.py", line 577, in parse
+    compile_func = self.tags[command]
+                   ~~~~~~~~~^^^^^^^^^
+KeyError: 'endblocktranslate'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/django/core/handlers/base.py", line 221, in _get_response
+    response = response.render()
+               ^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/django/template/response.py", line 114, in render
+    self.content = self.rendered_content
+                   ^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/django/template/response.py", line 90, in rendered_content
+    template = self.resolve_template(self.template_name)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/django/template/response.py", line 72, in resolve_template
+    return select_template(template, using=self.using)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/django/template/loader.py", line 42, in select_template
+    return engine.get_template(template_name)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/django/template/backends/django.py", line 79, in get_template
+    return Template(self.engine.get_template(template_name), self)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/django/template/engine.py", line 186, in get_template
+    template, origin = self.find_template(template_name)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/django/template/engine.py", line 159, in find_template
+    template = loader.get_template(name, skip=skip)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/django/template/loaders/cached.py", line 57, in get_template
+    template = super().get_template(template_name, skip)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/django/template/loaders/base.py", line 28, in get_template
+    return Template(
+           ^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/django/template/base.py", line 157, in __init__
+    self.nodelist = self.compile_nodelist()
+                    ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/django/template/base.py", line 199, in compile_nodelist
+    nodelist = parser.parse()
+               ^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/django/template/base.py", line 585, in parse
+    raise self.error(token, e)
+  File "/usr/local/lib/python3.12/site-packages/django/template/base.py", line 583, in parse
+    compiled_result = compile_func(self, token)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/django/template/loader_tags.py", line 307, in do_extends
+    nodelist = parser.parse()
+               ^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/django/template/base.py", line 585, in parse
+    raise self.error(token, e)
+  File "/usr/local/lib/python3.12/site-packages/django/template/base.py", line 583, in parse
+    compiled_result = compile_func(self, token)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/django/template/loader_tags.py", line 235, in do_block
+    nodelist = parser.parse(("endblock",))
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/django/template/base.py", line 585, in parse
+    raise self.error(token, e)
+  File "/usr/local/lib/python3.12/site-packages/django/template/base.py", line 583, in parse
+    compiled_result = compile_func(self, token)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/django/template/defaulttags.py", line 894, in do_for
+    nodelist_loop = parser.parse(
+                    ^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/django/template/base.py", line 579, in parse
+    self.invalid_block_tag(token, command, parse_until)
+  File "/usr/local/lib/python3.12/site-packages/django/template/base.py", line 634, in invalid_block_tag
+    raise self.error(
+django.template.exceptions.TemplateSyntaxError: Template: /app/shop_app/templates/shop_app/book_list.html, Invalid block tag on line 47: 'endblocktranslate', expected 'empty' or 'endfor'. Did you forget to register or load this tag?
+INFO 2026-07-01 12:24:51,211 middleware Запит до /catalog/ зайняв 0.0379 секунд.
+ERROR 2026-07-01 12:24:51,211 log "GET /catalog/ HTTP/1.1" 500 227815
+ERROR 2026-07-01 12:25:12,825 log Internal Server Error: /catalog/
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.12/site-packages/django/template/base.py", line 577, in parse
+    compile_func = self.tags[command]
+                   ~~~~~~~~~^^^^^^^^^
+KeyError: 'endblocktranslate'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/django/core/handlers/base.py", line 221, in _get_response
+    response = response.render()
+               ^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/django/template/response.py", line 114, in render
+    self.content = self.rendered_content
+                   ^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/django/template/response.py", line 90, in rendered_content
+    template = self.resolve_template(self.template_name)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/django/template/response.py", line 72, in resolve_template
+    return select_template(template, using=self.using)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/django/template/loader.py", line 42, in select_template
+    return engine.get_template(template_name)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/django/template/backends/django.py", line 79, in get_template
+    return Template(self.engine.get_template(template_name), self)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/django/template/engine.py", line 186, in get_template
+    template, origin = self.find_template(template_name)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/django/template/engine.py", line 159, in find_template
+    template = loader.get_template(name, skip=skip)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/django/template/loaders/cached.py", line 57, in get_template
+    template = super().get_template(template_name, skip)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/django/template/loaders/base.py", line 28, in get_template
+    return Template(
+           ^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/django/template/base.py", line 157, in __init__
+    self.nodelist = self.compile_nodelist()
+                    ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/django/template/base.py", line 199, in compile_nodelist
+    nodelist = parser.parse()
+               ^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/django/template/base.py", line 585, in parse
+    raise self.error(token, e)
+  File "/usr/local/lib/python3.12/site-packages/django/template/base.py", line 583, in parse
+    compiled_result = compile_func(self, token)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/django/template/loader_tags.py", line 307, in do_extends
+    nodelist = parser.parse()
+               ^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/django/template/base.py", line 585, in parse
+    raise self.error(token, e)
+  File "/usr/local/lib/python3.12/site-packages/django/template/base.py", line 583, in parse
+    compiled_result = compile_func(self, token)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/django/template/loader_tags.py", line 235, in do_block
+    nodelist = parser.parse(("endblock",))
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/django/template/base.py", line 585, in parse
+    raise self.error(token, e)
+  File "/usr/local/lib/python3.12/site-packages/django/template/base.py", line 583, in parse
+    compiled_result = compile_func(self, token)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/django/template/defaulttags.py", line 894, in do_for
+    nodelist_loop = parser.parse(
+                    ^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/django/template/base.py", line 579, in parse
+    self.invalid_block_tag(token, command, parse_until)
+  File "/usr/local/lib/python3.12/site-packages/django/template/base.py", line 634, in invalid_block_tag
+    raise self.error(
+django.template.exceptions.TemplateSyntaxError: Template: /app/shop_app/templates/shop_app/book_list.html, Invalid block tag on line 47: 'endblocktranslate', expected 'empty' or 'endfor'. Did you forget to register or load this tag?
+INFO 2026-07-01 12:25:12,826 middleware Запит до /catalog/ зайняв 0.0366 секунд.
+ERROR 2026-07-01 12:25:12,826 log "GET /catalog/ HTTP/1.1" 500 227804
+INFO 2026-07-01 12:27:45,203 middleware Запит до /catalog/ зайняв 0.0224 секунд.
+INFO 2026-07-01 12:27:45,204 log "GET /catalog/ HTTP/1.1" 200 8935
+INFO 2026-07-01 12:27:49,086 middleware Запит до /i18n/setlang/ зайняв 0.0007 секунд.
+INFO 2026-07-01 12:27:49,086 log "POST /i18n/setlang/ HTTP/1.1" 302 0
+INFO 2026-07-01 12:27:49,106 middleware Запит до /catalog/ зайняв 0.0164 секунд.
+INFO 2026-07-01 12:27:49,107 log "GET /catalog/ HTTP/1.1" 200 9014
+INFO 2026-07-01 12:27:51,659 middleware Запит до /i18n/setlang/ зайняв 0.0007 секунд.
+INFO 2026-07-01 12:27:51,660 log "POST /i18n/setlang/ HTTP/1.1" 302 0
+INFO 2026-07-01 12:27:51,678 middleware Запит до /catalog/ зайняв 0.0152 секунд.
+INFO 2026-07-01 12:27:51,679 log "GET /catalog/ HTTP/1.1" 200 8935
+INFO 2026-07-01 12:37:47,915 autoreload Watching for file changes with StatReloader
+INFO 2026-07-01 12:46:18,215 middleware Запит до /catalog/ зайняв 0.0228 секунд.
+INFO 2026-07-01 12:46:18,217 log "GET /catalog/ HTTP/1.1" 200 8935
+INFO 2026-07-01 12:46:22,797 middleware Запит до /i18n/setlang/ зайняв 0.0007 секунд.
+INFO 2026-07-01 12:46:22,797 log "POST /i18n/setlang/ HTTP/1.1" 302 0
+INFO 2026-07-01 12:46:22,819 middleware Запит до /catalog/ зайняв 0.0169 секунд.
+INFO 2026-07-01 12:46:22,820 log "GET /catalog/ HTTP/1.1" 200 9014
+INFO 2026-07-01 12:46:24,839 middleware Запит до /i18n/setlang/ зайняв 0.0010 секунд.
+INFO 2026-07-01 12:46:24,840 log "POST /i18n/setlang/ HTTP/1.1" 302 0
+INFO 2026-07-01 12:46:24,867 middleware Запит до /catalog/ зайняв 0.0167 секунд.
+INFO 2026-07-01 12:46:24,867 log "GET /catalog/ HTTP/1.1" 200 8935
+INFO 2026-07-01 12:46:56,983 middleware Запит до /i18n/setlang/ зайняв 0.0007 секунд.
+INFO 2026-07-01 12:46:56,984 log "POST /i18n/setlang/ HTTP/1.1" 302 0
+INFO 2026-07-01 12:46:57,005 middleware Запит до /catalog/ зайняв 0.0174 секунд.
+INFO 2026-07-01 12:46:57,006 log "GET /catalog/ HTTP/1.1" 200 9014
+INFO 2026-07-01 13:02:40,727 middleware Запит до /catalog/ зайняв 0.0196 секунд.
+INFO 2026-07-01 13:02:40,728 log "GET /catalog/ HTTP/1.1" 200 9014
+INFO 2026-07-01 13:02:43,037 middleware Запит до /i18n/setlang/ зайняв 0.0007 секунд.
+INFO 2026-07-01 13:02:43,037 log "POST /i18n/setlang/ HTTP/1.1" 302 0
+INFO 2026-07-01 13:02:43,061 middleware Запит до /catalog/ зайняв 0.0160 секунд.
+INFO 2026-07-01 13:02:43,061 log "GET /catalog/ HTTP/1.1" 200 8935
+INFO 2026-07-01 13:02:45,010 middleware Запит до /i18n/setlang/ зайняв 0.0005 секунд.
+INFO 2026-07-01 13:02:45,011 log "POST /i18n/setlang/ HTTP/1.1" 302 0
+INFO 2026-07-01 13:02:45,032 middleware Запит до /catalog/ зайняв 0.0151 секунд.
+INFO 2026-07-01 13:02:45,033 log "GET /catalog/ HTTP/1.1" 200 9014
+INFO 2026-07-01 13:03:12,735 middleware Запит до /i18n/setlang/ зайняв 0.0008 секунд.
+INFO 2026-07-01 13:03:12,736 log "POST /i18n/setlang/ HTTP/1.1" 302 0
+INFO 2026-07-01 13:03:12,763 middleware Запит до /catalog/ зайняв 0.0220 секунд.
+INFO 2026-07-01 13:03:12,763 log "GET /catalog/ HTTP/1.1" 200 8935
+INFO 2026-07-01 13:03:14,649 middleware Запит до /catalog/ зайняв 0.0177 секунд.
+INFO 2026-07-01 13:03:14,649 log "GET /catalog/ HTTP/1.1" 200 8935
+INFO 2026-07-01 13:03:17,645 middleware Запит до /i18n/setlang/ зайняв 0.0006 секунд.
+INFO 2026-07-01 13:03:17,645 log "POST /i18n/setlang/ HTTP/1.1" 302 0
+INFO 2026-07-01 13:03:17,669 middleware Запит до /catalog/ зайняв 0.0168 секунд.
+INFO 2026-07-01 13:03:17,670 log "GET /catalog/ HTTP/1.1" 200 9014
+INFO 2026-07-01 13:03:19,532 middleware Запит до /i18n/setlang/ зайняв 0.0006 секунд.
+INFO 2026-07-01 13:03:19,532 log "POST /i18n/setlang/ HTTP/1.1" 302 0
+INFO 2026-07-01 13:03:19,551 middleware Запит до /catalog/ зайняв 0.0161 секунд.
+INFO 2026-07-01 13:03:19,552 log "GET /catalog/ HTTP/1.1" 200 8935
+INFO 2026-07-01 13:03:23,613 middleware Запит до /i18n/setlang/ зайняв 0.0005 секунд.
+INFO 2026-07-01 13:03:23,614 log "POST /i18n/setlang/ HTTP/1.1" 302 0
+INFO 2026-07-01 13:03:23,637 middleware Запит до /catalog/ зайняв 0.0165 секунд.
+INFO 2026-07-01 13:03:23,637 log "GET /catalog/ HTTP/1.1" 200 9014
+INFO 2026-07-01 13:03:25,586 middleware Запит до /i18n/setlang/ зайняв 0.0007 секунд.
+INFO 2026-07-01 13:03:25,587 log "POST /i18n/setlang/ HTTP/1.1" 302 0
+INFO 2026-07-01 13:03:25,611 middleware Запит до /catalog/ зайняв 0.0190 секунд.
+INFO 2026-07-01 13:03:25,612 log "GET /catalog/ HTTP/1.1" 200 8935
+INFO 2026-07-01 13:03:30,284 middleware Запит до /1/ зайняв 0.0194 секунд.
+INFO 2026-07-01 13:03:30,285 log "GET /1/ HTTP/1.1" 200 5583
+INFO 2026-07-01 13:03:33,469 middleware Запит до /i18n/setlang/ зайняв 0.0006 секунд.
+INFO 2026-07-01 13:03:33,470 log "POST /i18n/setlang/ HTTP/1.1" 302 0
+INFO 2026-07-01 13:03:33,492 middleware Запит до /1/ зайняв 0.0141 секунд.
+INFO 2026-07-01 13:03:33,492 log "GET /1/ HTTP/1.1" 200 5662
+INFO 2026-07-01 13:03:36,331 middleware Запит до /i18n/setlang/ зайняв 0.0006 секунд.
+INFO 2026-07-01 13:03:36,331 log "POST /i18n/setlang/ HTTP/1.1" 302 0
+INFO 2026-07-01 13:03:36,353 middleware Запит до /1/ зайняв 0.0124 секунд.
+INFO 2026-07-01 13:03:36,353 log "GET /1/ HTTP/1.1" 200 5583
+INFO 2026-07-01 13:03:48,392 middleware Запит до / зайняв 0.0196 секунд.
+INFO 2026-07-01 13:03:48,393 log "GET / HTTP/1.1" 200 10162
+INFO 2026-07-01 13:03:49,525 middleware Запит до /catalog/ зайняв 0.0149 секунд.
+INFO 2026-07-01 13:03:49,526 log "GET /catalog/ HTTP/1.1" 200 8935
+INFO 2026-07-01 13:04:06,409 middleware Запит до /catalog/ зайняв 0.0162 секунд.
+INFO 2026-07-01 13:04:06,409 log "GET /catalog/ HTTP/1.1" 200 8935
+INFO 2026-07-01 13:04:08,169 middleware Запит до /catalog/ зайняв 0.0186 секунд.
+INFO 2026-07-01 13:04:08,170 log "GET /catalog/ HTTP/1.1" 200 8935
+INFO 2026-07-01 13:04:12,804 middleware Запит до /i18n/setlang/ зайняв 0.0006 секунд.
+INFO 2026-07-01 13:04:12,804 log "POST /i18n/setlang/ HTTP/1.1" 302 0
+INFO 2026-07-01 13:04:12,826 middleware Запит до /catalog/ зайняв 0.0130 секунд.
+INFO 2026-07-01 13:04:12,826 log "GET /catalog/ HTTP/1.1" 200 9014
+INFO 2026-07-01 13:04:14,200 middleware Запит до /i18n/setlang/ зайняв 0.0007 секунд.
+INFO 2026-07-01 13:04:14,201 log "POST /i18n/setlang/ HTTP/1.1" 302 0
+INFO 2026-07-01 13:04:14,224 middleware Запит до /catalog/ зайняв 0.0162 секунд.
+INFO 2026-07-01 13:04:14,225 log "GET /catalog/ HTTP/1.1" 200 8935
+INFO 2026-07-01 13:07:57,125 middleware Запит до /catalog/ зайняв 0.0209 секунд.
+INFO 2026-07-01 13:07:57,126 log "GET /catalog/ HTTP/1.1" 200 8918
+INFO 2026-07-01 13:07:59,941 middleware Запит до /i18n/setlang/ зайняв 0.0006 секунд.
+INFO 2026-07-01 13:07:59,942 log "POST /i18n/setlang/ HTTP/1.1" 302 0
+INFO 2026-07-01 13:07:59,965 middleware Запит до /catalog/ зайняв 0.0156 секунд.
+INFO 2026-07-01 13:07:59,966 log "GET /catalog/ HTTP/1.1" 200 9014
+INFO 2026-07-01 13:08:02,676 middleware Запит до /i18n/setlang/ зайняв 0.0006 секунд.
+INFO 2026-07-01 13:08:02,677 log "POST /i18n/setlang/ HTTP/1.1" 302 0
+INFO 2026-07-01 13:08:02,695 middleware Запит до /catalog/ зайняв 0.0157 секунд.
+INFO 2026-07-01 13:08:02,696 log "GET /catalog/ HTTP/1.1" 200 8918
+INFO 2026-07-01 13:08:08,740 middleware Запит до /catalog/ зайняв 0.0185 секунд.
+INFO 2026-07-01 13:08:08,741 log "GET /catalog/?page=2 HTTP/1.1" 200 8987
+INFO 2026-07-01 13:08:10,140 middleware Запит до /catalog/ зайняв 0.0175 секунд.
+INFO 2026-07-01 13:08:10,141 log "GET /catalog/?page=3 HTTP/1.1" 200 9009
+INFO 2026-07-01 13:08:10,764 middleware Запит до /catalog/ зайняв 0.0178 секунд.
+INFO 2026-07-01 13:08:10,765 log "GET /catalog/?page=4 HTTP/1.1" 200 8173
+INFO 2026-07-01 13:08:11,893 middleware Запит до /catalog/ зайняв 0.0161 секунд.
+INFO 2026-07-01 13:08:11,894 log "GET /catalog/?page=3 HTTP/1.1" 200 9009
+INFO 2026-07-01 13:08:13,032 middleware Запит до /catalog/ зайняв 0.0195 секунд.
+INFO 2026-07-01 13:08:13,033 log "GET /catalog/?page=2 HTTP/1.1" 200 8987
+INFO 2026-07-01 13:08:13,470 middleware Запит до /catalog/ зайняв 0.0113 секунд.
+INFO 2026-07-01 13:08:13,471 log "GET /catalog/?page=1 HTTP/1.1" 200 8918
+INFO 2026-07-01 13:08:14,727 middleware Запит до /1/ зайняв 0.0148 секунд.
+INFO 2026-07-01 13:08:14,728 log "GET /1/ HTTP/1.1" 200 5583
+INFO 2026-07-01 13:08:22,336 middleware Запит до /catalog/ зайняв 0.0160 секунд.
+INFO 2026-07-01 13:08:22,337 log "GET /catalog/ HTTP/1.1" 200 8918
+INFO 2026-07-01 13:08:23,287 middleware Запит до /catalog/ зайняв 0.0164 секунд.
+INFO 2026-07-01 13:08:23,287 log "GET /catalog/ HTTP/1.1" 200 8918
+INFO 2026-07-01 13:10:29,630 middleware Запит до / зайняв 0.0182 секунд.
+INFO 2026-07-01 13:10:29,631 log "GET / HTTP/1.1" 200 10162
+INFO 2026-07-01 13:10:30,313 middleware Запит до /catalog/ зайняв 0.0179 секунд.
+INFO 2026-07-01 13:10:30,314 log "GET /catalog/ HTTP/1.1" 200 8918
+INFO 2026-07-01 13:10:42,503 middleware Запит до /catalog/ зайняв 0.0181 секунд.
+INFO 2026-07-01 13:10:42,503 log "GET /catalog/ HTTP/1.1" 200 8918
+INFO 2026-07-01 13:10:43,606 middleware Запит до /catalog/ зайняв 0.0164 секунд.
+INFO 2026-07-01 13:10:43,607 log "GET /catalog/ HTTP/1.1" 200 8918
+INFO 2026-07-01 13:10:45,250 middleware Запит до /i18n/setlang/ зайняв 0.0005 секунд.
+INFO 2026-07-01 13:10:45,251 log "POST /i18n/setlang/ HTTP/1.1" 302 0
+INFO 2026-07-01 13:10:45,271 middleware Запит до /catalog/ зайняв 0.0155 секунд.
+INFO 2026-07-01 13:10:45,272 log "GET /catalog/ HTTP/1.1" 200 9014
+INFO 2026-07-01 13:10:46,842 middleware Запит до /i18n/setlang/ зайняв 0.0006 секунд.
+INFO 2026-07-01 13:10:46,843 log "POST /i18n/setlang/ HTTP/1.1" 302 0
+INFO 2026-07-01 13:10:46,862 middleware Запит до /catalog/ зайняв 0.0157 секунд.
+INFO 2026-07-01 13:10:46,863 log "GET /catalog/ HTTP/1.1" 200 8918
+INFO 2026-07-01 13:10:48,885 middleware Запит до /2/ зайняв 0.0154 секунд.
+INFO 2026-07-01 13:10:48,886 log "GET /2/ HTTP/1.1" 200 5605
+INFO 2026-07-01 13:10:48,900 middleware Запит до /images/covers/The_Master_and_Margarita_.jpg зайняв 0.0007 секунд.
+INFO 2026-07-01 13:10:48,900 log "GET /images/covers/The_Master_and_Margarita_.jpg HTTP/1.1" 304 0
+INFO 2026-07-01 13:10:53,677 middleware Запит до /catalog/ зайняв 0.0167 секунд.
+INFO 2026-07-01 13:10:53,678 log "GET /catalog/ HTTP/1.1" 200 8918
+INFO 2026-07-01 13:10:54,830 middleware Запит до / зайняв 0.0187 секунд.
+INFO 2026-07-01 13:10:54,831 log "GET / HTTP/1.1" 200 10162
+INFO 2026-07-01 13:10:58,762 middleware Запит до /catalog/ зайняв 0.0174 секунд.
+INFO 2026-07-01 13:10:58,763 log "GET /catalog/ HTTP/1.1" 200 8918
+INFO 2026-07-01 13:11:00,749 middleware Запит до / зайняв 0.0171 секунд.
+INFO 2026-07-01 13:11:00,750 log "GET / HTTP/1.1" 200 10162
+INFO 2026-07-01 13:11:01,463 middleware Запит до /catalog/ зайняв 0.0148 секунд.
+INFO 2026-07-01 13:11:01,464 log "GET /catalog/ HTTP/1.1" 200 8918
+INFO 2026-07-01 13:11:04,471 middleware Запит до /catalog/ зайняв 0.0175 секунд.
+INFO 2026-07-01 13:11:04,472 log "GET /catalog/?category=6 HTTP/1.1" 200 7578
+INFO 2026-07-01 13:11:06,287 middleware Запит до /catalog/ зайняв 0.0169 секунд.
+INFO 2026-07-01 13:11:06,287 log "GET /catalog/ HTTP/1.1" 200 8918
+INFO 2026-07-01 13:11:07,137 middleware Запит до /catalog/ зайняв 0.0156 секунд.
+INFO 2026-07-01 13:11:07,138 log "GET /catalog/?search= HTTP/1.1" 200 8918
+INFO 2026-07-01 13:11:08,220 middleware Запит до /catalog/ зайняв 0.0162 секунд.
+INFO 2026-07-01 13:11:08,221 log "GET /catalog/ HTTP/1.1" 200 8918
+INFO 2026-07-01 13:11:09,088 middleware Запит до / зайняв 0.0182 секунд.
+INFO 2026-07-01 13:11:09,089 log "GET / HTTP/1.1" 200 10162
+INFO 2026-07-01 13:11:11,830 middleware Запит до /catalog/ зайняв 0.0178 секунд.
+INFO 2026-07-01 13:11:11,831 log "GET /catalog/ HTTP/1.1" 200 8918
+INFO 2026-07-01 13:15:32,291 middleware Запит до /catalog/ зайняв 0.0205 секунд.
+INFO 2026-07-01 13:15:32,292 log "GET /catalog/ HTTP/1.1" 200 8918
+INFO 2026-07-01 13:15:36,376 middleware Запит до /catalog/ зайняв 0.0162 секунд.
+INFO 2026-07-01 13:15:36,377 log "GET /catalog/ HTTP/1.1" 200 8918
+INFO 2026-07-01 13:15:37,061 middleware Запит до / зайняв 0.0174 секунд.
+INFO 2026-07-01 13:15:37,062 log "GET / HTTP/1.1" 200 10162
+INFO 2026-07-01 13:15:37,693 middleware Запит до /catalog/ зайняв 0.0167 секунд.
+INFO 2026-07-01 13:15:37,694 log "GET /catalog/ HTTP/1.1" 200 8918
+INFO 2026-07-01 13:15:40,207 middleware Запит до /i18n/setlang/ зайняв 0.0006 секунд.
+INFO 2026-07-01 13:15:40,208 log "POST /i18n/setlang/ HTTP/1.1" 302 0
+INFO 2026-07-01 13:15:40,227 middleware Запит до /catalog/ зайняв 0.0166 секунд.
+INFO 2026-07-01 13:15:40,228 log "GET /catalog/ HTTP/1.1" 200 9014
+INFO 2026-07-01 13:15:41,869 middleware Запит до /i18n/setlang/ зайняв 0.0006 секунд.
+INFO 2026-07-01 13:15:41,870 log "POST /i18n/setlang/ HTTP/1.1" 302 0
+INFO 2026-07-01 13:15:41,890 middleware Запит до /catalog/ зайняв 0.0161 секунд.
+INFO 2026-07-01 13:15:41,891 log "GET /catalog/ HTTP/1.1" 200 8918
+INFO 2026-07-01 13:16:21,921 middleware Запит до /catalog/ зайняв 0.0174 секунд.
+INFO 2026-07-01 13:16:21,922 log "GET /catalog/?category=1 HTTP/1.1" 200 6920
+INFO 2026-07-01 13:16:22,561 middleware Запит до /catalog/ зайняв 0.0140 секунд.
+INFO 2026-07-01 13:16:22,562 log "GET /catalog/?category=6 HTTP/1.1" 200 7578
+INFO 2026-07-01 13:16:23,703 middleware Запит до /catalog/ зайняв 0.0172 секунд.
+INFO 2026-07-01 13:16:23,704 log "GET /catalog/ HTTP/1.1" 200 8918
+INFO 2026-07-01 13:16:24,869 middleware Запит до / зайняв 0.0168 секунд.
+INFO 2026-07-01 13:16:24,870 log "GET / HTTP/1.1" 200 10162
+INFO 2026-07-01 13:16:27,836 middleware Запит до /catalog/ зайняв 0.0162 секунд.
+INFO 2026-07-01 13:16:27,836 log "GET /catalog/ HTTP/1.1" 200 8918
+INFO 2026-07-01 13:17:32,001 middleware Запит до /catalog/ зайняв 0.0194 секунд.
+INFO 2026-07-01 13:17:32,004 log "GET /catalog/ HTTP/1.1" 200 8907
+INFO 2026-07-01 13:17:34,930 middleware Запит до /i18n/setlang/ зайняв 0.0008 секунд.
+INFO 2026-07-01 13:17:34,931 log "POST /i18n/setlang/ HTTP/1.1" 302 0
+INFO 2026-07-01 13:17:34,955 middleware Запит до /catalog/ зайняв 0.0165 секунд.
+INFO 2026-07-01 13:17:34,956 log "GET /catalog/ HTTP/1.1" 200 9014
+INFO 2026-07-01 13:17:38,912 middleware Запит до /i18n/setlang/ зайняв 0.0005 секунд.
+INFO 2026-07-01 13:17:38,913 log "POST /i18n/setlang/ HTTP/1.1" 302 0
+INFO 2026-07-01 13:17:38,938 middleware Запит до /catalog/ зайняв 0.0123 секунд.
+INFO 2026-07-01 13:17:38,939 log "GET /catalog/ HTTP/1.1" 200 8907
+INFO 2026-07-01 13:25:38,994 middleware Запит до /catalog/ зайняв 0.0234 секунд.
+INFO 2026-07-01 13:25:38,995 log "GET /catalog/ HTTP/1.1" 200 8894
+INFO 2026-07-01 13:25:41,081 middleware Запит до /catalog/ зайняв 0.0164 секунд.
+INFO 2026-07-01 13:25:41,081 log "GET /catalog/?page=2 HTTP/1.1" 200 8963
+INFO 2026-07-01 13:25:42,039 middleware Запит до /catalog/ зайняв 0.0197 секунд.
+INFO 2026-07-01 13:25:42,040 log "GET /catalog/?page=3 HTTP/1.1" 200 8985
+INFO 2026-07-01 13:25:42,698 middleware Запит до /catalog/ зайняв 0.0155 секунд.
+INFO 2026-07-01 13:25:42,698 log "GET /catalog/?page=4 HTTP/1.1" 200 8149
+INFO 2026-07-01 13:25:44,106 middleware Запит до /catalog/ зайняв 0.0173 секунд.
+INFO 2026-07-01 13:25:44,107 log "GET /catalog/?page=3 HTTP/1.1" 200 8985
+INFO 2026-07-01 13:25:45,038 middleware Запит до /catalog/ зайняв 0.0180 секунд.
+INFO 2026-07-01 13:25:45,039 log "GET /catalog/?page=2 HTTP/1.1" 200 8963
+INFO 2026-07-01 13:25:45,822 middleware Запит до /catalog/ зайняв 0.0166 секунд.
+INFO 2026-07-01 13:25:45,822 log "GET /catalog/?page=1 HTTP/1.1" 200 8894
+INFO 2026-07-01 13:25:48,171 middleware Запит до /catalog/ зайняв 0.0152 секунд.
+INFO 2026-07-01 13:25:48,172 log "GET /catalog/ HTTP/1.1" 200 8894
+INFO 2026-07-01 13:25:50,914 middleware Запит до /i18n/setlang/ зайняв 0.0006 секунд.
+INFO 2026-07-01 13:25:50,914 log "POST /i18n/setlang/ HTTP/1.1" 302 0
+INFO 2026-07-01 13:25:50,935 middleware Запит до /catalog/ зайняв 0.0154 секунд.
+INFO 2026-07-01 13:25:50,936 log "GET /catalog/ HTTP/1.1" 200 9013
+INFO 2026-07-01 13:25:51,996 middleware Запит до /catalog/ зайняв 0.0171 секунд.
+INFO 2026-07-01 13:25:51,997 log "GET /catalog/?page=2 HTTP/1.1" 200 9082
+INFO 2026-07-01 13:25:53,329 middleware Запит до /catalog/ зайняв 0.0164 секунд.
+INFO 2026-07-01 13:25:53,329 log "GET /catalog/?page=3 HTTP/1.1" 200 9104
+INFO 2026-07-01 13:25:53,910 middleware Запит до /catalog/ зайняв 0.0158 секунд.
+INFO 2026-07-01 13:25:53,911 log "GET /catalog/?page=4 HTTP/1.1" 200 8268
+INFO 2026-07-01 13:25:55,110 middleware Запит до /catalog/ зайняв 0.0158 секунд.
+INFO 2026-07-01 13:25:55,111 log "GET /catalog/?page=3 HTTP/1.1" 200 9104
+INFO 2026-07-01 13:25:55,813 middleware Запит до /catalog/ зайняв 0.0171 секунд.
+INFO 2026-07-01 13:25:55,814 log "GET /catalog/?page=2 HTTP/1.1" 200 9082
+INFO 2026-07-01 13:25:56,360 middleware Запит до /catalog/ зайняв 0.0158 секунд.
+INFO 2026-07-01 13:25:56,361 log "GET /catalog/?page=1 HTTP/1.1" 200 9013
+INFO 2026-07-01 13:25:59,164 middleware Запит до /i18n/setlang/ зайняв 0.0007 секунд.
+INFO 2026-07-01 13:25:59,165 log "POST /i18n/setlang/ HTTP/1.1" 302 0
+INFO 2026-07-01 13:25:59,193 middleware Запит до /catalog/ зайняв 0.0164 секунд.
+INFO 2026-07-01 13:25:59,193 log "GET /catalog/?page=1 HTTP/1.1" 200 8894
+INFO 2026-07-01 13:26:25,771 middleware Запит до /catalog/ зайняв 0.0182 секунд.
+INFO 2026-07-01 13:26:25,772 log "GET /catalog/?page=1 HTTP/1.1" 200 8886
+INFO 2026-07-01 13:26:28,721 middleware Запит до /i18n/setlang/ зайняв 0.0006 секунд.
+INFO 2026-07-01 13:26:28,721 log "POST /i18n/setlang/ HTTP/1.1" 302 0
+INFO 2026-07-01 13:26:28,739 middleware Запит до /catalog/ зайняв 0.0154 секунд.
+INFO 2026-07-01 13:26:28,740 log "GET /catalog/?page=1 HTTP/1.1" 200 9013
+INFO 2026-07-01 13:26:30,813 middleware Запит до /i18n/setlang/ зайняв 0.0006 секунд.
+INFO 2026-07-01 13:26:30,813 log "POST /i18n/setlang/ HTTP/1.1" 302 0
+INFO 2026-07-01 13:26:30,831 middleware Запит до /catalog/ зайняв 0.0152 секунд.
+INFO 2026-07-01 13:26:30,831 log "GET /catalog/?page=1 HTTP/1.1" 200 8886
+INFO 2026-07-01 13:26:33,128 middleware Запит до /catalog/ зайняв 0.0168 секунд.
+INFO 2026-07-01 13:26:33,128 log "GET /catalog/?page=2 HTTP/1.1" 200 8955
+INFO 2026-07-01 13:26:34,094 middleware Запит до /catalog/ зайняв 0.0156 секунд.
+INFO 2026-07-01 13:26:34,095 log "GET /catalog/?page=3 HTTP/1.1" 200 8977
+INFO 2026-07-01 13:26:35,228 middleware Запит до /catalog/ зайняв 0.0167 секунд.
+INFO 2026-07-01 13:26:35,229 log "GET /catalog/?page=4 HTTP/1.1" 200 8141
+INFO 2026-07-01 13:26:36,506 middleware Запит до /catalog/ зайняв 0.0164 секунд.
+INFO 2026-07-01 13:26:36,507 log "GET /catalog/?page=3 HTTP/1.1" 200 8977
+INFO 2026-07-01 13:26:37,096 middleware Запит до /catalog/ зайняв 0.0171 секунд.
+INFO 2026-07-01 13:26:37,097 log "GET /catalog/?page=2 HTTP/1.1" 200 8955
+INFO 2026-07-01 13:26:37,676 middleware Запит до /catalog/ зайняв 0.0153 секунд.
+INFO 2026-07-01 13:26:37,677 log "GET /catalog/?page=1 HTTP/1.1" 200 8886
+INFO 2026-07-01 13:34:29,082 middleware Запит до /catalog/ зайняв 0.0194 секунд.
+INFO 2026-07-01 13:34:29,084 log "GET /catalog/?page=1 HTTP/1.1" 200 8886
+INFO 2026-07-01 13:34:34,549 middleware Запит до /catalog/ зайняв 0.0153 секунд.
+INFO 2026-07-01 13:34:34,550 log "GET /catalog/?page=2 HTTP/1.1" 200 8955
+INFO 2026-07-01 13:34:35,502 middleware Запит до /catalog/ зайняв 0.0178 секунд.
+INFO 2026-07-01 13:34:35,503 log "GET /catalog/?page=3 HTTP/1.1" 200 8977
+INFO 2026-07-01 13:34:36,575 middleware Запит до /catalog/ зайняв 0.0156 секунд.
+INFO 2026-07-01 13:34:36,575 log "GET /catalog/?page=2 HTTP/1.1" 200 8955

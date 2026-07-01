@@ -1,16 +1,16 @@
-<!DOCTYPE html>
-<html lang="uk">
+{% load i18n %}<!DOCTYPE html>
+<html lang="{{ LANGUAGE_CODE }}">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{% block title %}Книжкова крамниця{% endblock %}</title>
+    <title>{% block title %}{% translate "Книжкова крамниця" %}{% endblock %}</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body>
 
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
       <div class="container-fluid">
-        <a class="navbar-brand" href="{% url 'shop_app:book_list' %}">📚 Книгарня</a>
+        <a class="navbar-brand" href="{% url 'shop_app:book_list' %}">📚 {% translate "Книгарня" %}</a>
 
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
@@ -18,15 +18,31 @@
 
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav me-auto">
+            <form action="{% url 'set_language' %}" method="post" class="d-inline-block me-3">
+                {% csrf_token %}
+                <input name="next" type="hidden" value="{{ redirect_to }}">
+
+                <select name="language" onchange="this.form.submit()" class="form-select form-select-sm bg-dark text-light border-secondary">
+                    {% get_current_language as LANGUAGE_CODE %}
+                    {% get_available_languages as LANGUAGES %}
+                    {% get_language_info_list for LANGUAGES as langs %}
+
+                    {% for lang in langs %}
+                        <option value="{{ lang.code }}" {% if lang.code == LANGUAGE_CODE %}selected{% endif %}>
+                             {{ lang.name_local }}
+                        </option>
+                    {% endfor %}
+                </select>
+            </form>
               <li class="nav-item">
-                <a class="nav-link" href="{% url 'shop_app:store' %}">Головна</a>
+                <a class="nav-link" href="{% url 'shop_app:store' %}">{% translate "Головна" %}</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="{% url 'shop_app:book_list' %}">Каталог</a>
+                <a class="nav-link" href="{% url 'shop_app:book_list' %}">{% translate "Каталог" %}</a>
               </li>
               {% if user.is_staff %}
               <li class="nav-item">
-                <a class="nav-link text-warning" href="{% url 'shop_app:book_create' %}">➕ Додати книгу</a>
+                <a class="nav-link text-warning" href="{% url 'shop_app:book_create' %}">➕ {% translate "Додати книгу" %}</a>
               </li>
               {% endif %}
             </ul>
@@ -35,21 +51,21 @@
               {% if user.is_authenticated %}
                 <li class="nav-item">
                   <span class="navbar-text text-light me-3">
-                    Ви увійшли як: <strong>{{ user.username }}</strong>
+                      {% blocktranslate with username=user.username %}Ви увійшли як: <strong>{{ username }}</strong>{% endblocktranslate %}
                   </span>
                 </li>
                 <li class="nav-item">
                   <form method="post" action="{% url 'users:logout' %}" class="d-inline">
                     {% csrf_token %}
-                    <button type="submit" class="btn btn-outline-danger btn-sm">Вийти</button>
+                    <button type="submit" class="btn btn-outline-danger btn-sm">{% translate "Вийти" %}</button>
                   </form>
                 </li>
               {% else %}
                 <li class="nav-item">
-                  <a class="btn btn-outline-light btn-sm me-2" href="{% url 'users:login' %}">Вхід</a>
+                  <a class="btn btn-outline-light btn-sm me-2" href="{% url 'users:login' %}">{% translate "Вхід" %}</a>
                 </li>
                 <li class="nav-item">
-                  <a class="btn btn-warning btn-sm" href="{% url 'users:register' %}">Реєстрація</a>
+                  <a class="btn btn-warning btn-sm" href="{% url 'users:register' %}">{% translate "Реєстрація" %}</a>
                 </li>
               {% endif %}
             </ul>

@@ -1,0 +1,238 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-07-01 12:43+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: models.py:6
+msgid "Назва"
+msgstr "Title"
+
+#: models.py:7
+msgid "Слаг"
+msgstr "Slug"
+
+#: models.py:10 models.py:22
+msgid "Категорія"
+msgstr "Category"
+
+#: models.py:11
+msgid "Категорії"
+msgstr "Categories"
+
+#: models.py:17
+msgid "Назва книги"
+msgstr "Book title"
+
+#: models.py:18
+msgid "Автор"
+msgstr "Author"
+
+#: models.py:19
+msgid "Опис"
+msgstr "Description"
+
+#: models.py:20
+msgid "Ціна"
+msgstr "Price"
+
+#: models.py:21
+msgid "Кількість на складі"
+msgstr "Quantity in stock"
+
+#: models.py:23
+msgid "Обкладинка"
+msgstr "Cover"
+
+#: models.py:26
+msgid "Книга"
+msgstr "Book"
+
+#: models.py:27
+msgid "Книги"
+msgstr "Books"
+
+#: templates/shop_app/base.html:6
+msgid "Книжкова крамниця"
+msgstr "Bookstore"
+
+#: templates/shop_app/base.html:13
+msgid "Книгарня"
+msgstr "Bookstore"
+
+#: templates/shop_app/base.html:38
+msgid "Головна"
+msgstr "Main"
+
+#: templates/shop_app/base.html:41
+msgid "Каталог"
+msgstr "Catalog"
+
+#: templates/shop_app/base.html:45
+msgid "Додати книгу"
+msgstr "Add a book"
+
+#: templates/shop_app/base.html:54
+#, python-format
+msgid "Ви увійшли як: <strong>%(username)s</strong>"
+msgstr "Logged in as: <strong>%(username)s</strong>"
+
+#: templates/shop_app/base.html:60
+msgid "Вийти"
+msgstr "Exit"
+
+#: templates/shop_app/base.html:65
+msgid "Вхід"
+msgstr "Log in"
+
+#: templates/shop_app/base.html:68
+msgid "Реєстрація"
+msgstr "Sign up"
+
+#: templates/shop_app/book_list.html:4
+msgid "Каталог книг"
+msgstr "Book catalog"
+
+#: templates/shop_app/book_list.html:15
+msgid "Шукати"
+msgstr "Search"
+
+#: templates/shop_app/book_list.html:18
+msgid "Скинути"
+msgstr "Reset"
+
+#: templates/shop_app/book_list.html:26
+msgid "Всі книги"
+msgstr "All books"
+
+#: templates/shop_app/book_list.html:43
+#, fuzzy, python-format
+#| msgid "Автор"
+msgid "Автор: %(author)s"
+msgstr "Author"
+
+#: templates/shop_app/book_list.html:46
+#, python-format
+msgid "%(price)s грн.</span>"
+msgstr "%(price)s UAH.</span>"
+
+#: templates/shop_app/book_list.html:47
+#, python-format
+msgid "В наявності: %(stock)s шт."
+msgstr "In stock: %(stock)s"
+
+#: templates/shop_app/book_list.html:55
+msgid "Книг у каталозі поки що немає."
+msgstr "There are no books in the catalog yet."
+
+#: templates/shop_app/book_list.html:66 templates/shop_app/book_list.html:71
+msgid "Назад"
+msgstr "Back"
+
+#: templates/shop_app/book_list.html:77
+#, python-format
+msgid "Сторінка %(current_page)s з %(total_pages)s"
+msgstr "Page %(current_page)s of %(total_pages)s"
+
+#: templates/shop_app/book_list.html:84 templates/shop_app/book_list.html:89
+msgid "Вперед"
+msgstr "Forward"
+
+#----
+#base html
+msgid "Ukrainian"
+msgstr "Ukrainian"
+
+msgid "English"
+msgstr "English"
+
+msgid "Ім'я"
+msgstr "First name"
+
+msgid "Прізвище"
+msgstr "Surname"
+
+msgid "E-mail"
+msgstr "E-mail"
+
+msgid "Адреса поставки"
+msgstr "Delivery address"
+
+msgid "Поштовий індекс"
+msgstr "Zip code"
+
+msgid "Місто"
+msgstr "City"
+
+msgid "Створено"
+msgstr "Created"
+
+msgid "Оновлено"
+msgstr "Updated"
+
+
+msgid "Сплачено"
+
+msgstr "Paid"
+
+
+msgid "ID транзакції Stripe"
+
+msgstr "Stripe transaction ID"
+
+
+msgid "Замовлення"
+
+msgstr "Order"
+
+
+# python-format
+
+msgid "Замовлення № %(id)d"
+msgstr "Order № %(id)d"
+
+msgid "Ціна на момент покупки"
+msgstr "Price at time of purchase"
+
+msgid "Кількість"
+msgstr "Quantity"
+
+msgid "Елемент замовлення"
+msgstr "Order item"
+
+msgid "Елементи замовлення"
+msgstr "Order items"
+
+#, python-format
+msgid "Елемент %(id)d для замовлення № %(order_id)d"
+msgstr "Item %(id)d for order № %(order_id)d"
+
+msgid "Ім'я користувача"
+msgstr "User name"
+
+msgid "Обов'язкове поле. Не більше 150 символів."
+msgstr "Required field. Maximum 150 characters."
+
+msgid "Електронна пошта"
+msgstr "E-mail"
+
+msgid "Користувач"
+msgstr "User"
+
+msgid "Користувачі"
+msgstr "Users"
+#------

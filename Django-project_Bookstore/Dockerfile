@@ -6,7 +6,8 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
     build-essential \
     libpq-dev \
     gcc \
-    && rm -rf /var/lib/apt/lists/*
+    gettext \
+        && rm -rf /var/lib/apt/lists/*
 
 # Налаштовуємо робочу директорію всередині контейнера
 WORKDIR /app

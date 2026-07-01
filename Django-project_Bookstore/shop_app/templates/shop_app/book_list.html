@@ -1,7 +1,7 @@
 {% extends 'shop_app/base.html' %}
-
+{% load i18n %}
 {% block content %}
-<h2 class="mb-4">📚 Каталог книг (Class-Based View)</h2>
+<h2 class="mb-4">📚 {% translate "Каталог книг" %} </h2>
 <div class="row g-4">
     <div class="container mt-4 mb-3">
     <div class="row">
@@ -12,10 +12,10 @@
                 {% endif %}
 
                 <input type="text" name="search" class="form-control me-2" placeholder="Пошук книги за назвою..." value="{{ request.GET.search|default:'' }}">
-                <button type="submit" class="btn btn-primary">Шукати</button>
+                <button type="submit" class="btn btn-primary">{% translate "Шукати" %}</button>
 
                 {% if request.GET.search or request.GET.category %}
-                    <a href="{% url 'shop_app:book_list' %}" class="btn btn-outline-secondary ms-2">Скинути</a>
+                    <a href="{% url 'shop_app:book_list' %}" class="btn btn-outline-secondary ms-2">{% translate "Скинути" %}</a>
                 {% endif %}
             </form>
         </div>
@@ -23,9 +23,7 @@
         <div class="col-md-6 mb-3">
             <div class="d-flex flex-wrap gap-2">
                 <a href="{% url 'shop_app:book_list' %}{% if request.GET.search %}?search={{ request.GET.search }}{% endif %}"
-                   class="btn {% if not request.GET.category %}btn-dark{% else %}btn-outline-dark{% endif %}">
-                    Всі книги
-                </a>
+                   class="btn {% if not request.GET.category %}btn-dark{% else %}btn-outline-dark{% endif %}">{% translate "Всі книги" %}</a>
 
                 {% for cat in categories %}
                     <a href="?category={{ cat.id }}{% if request.GET.search %}&search={{ request.GET.search }}{% endif %}"
@@ -42,11 +40,11 @@
       <div class="card h-100 shadow-sm">
         <div class="card-body">
           <h5 class="card-title"><a href="{% url 'shop_app:book_detail' pk=book.pk %}">{{ book.title }}</a></h5>
-          <h6 class="sub-title mb-2 text-muted">Автор: {{ book.author }}</h6>
+          <h6 class="sub-title mb-2 text-muted">{% blocktranslate with author=book.author %}Автор: {{ author }}{% endblocktranslate %}</h6>
           <p class="card-text">{{ book.description|truncatewords:15 }}</p>
           <div class="d-flex justify-content-between align-items-center mt-3">
-            <span class="badge bg-success fs-6">{{ book.price }} грн.</span>
-            <small class="text-muted">В наявності: {{ book.stock }} шт.</small>
+            <span class="badge bg-success fs-6">{% blocktranslate with price=book.price %} {{ price }} грн.</span>{% endblocktranslate %}
+            <small class="text-muted">{% blocktranslate with stock=book.stock %} В наявності: {{ stock }} шт.{% endblocktranslate %}</small>
 
           </div>
         </div>
@@ -54,7 +52,7 @@
     </div>
   {% empty %}
     <div class="col-12">
-        <p class="alert alert-info">Книг у каталозі поки що немає.</p>
+        <p class="alert alert-info">{% translate "Книг у каталозі поки що немає." %}</p>
     </div>
   {% endfor %}
 </div>
@@ -65,30 +63,30 @@
             {% if page_obj.has_previous %}
                 <li class="page-item">
                     <a class="page-link" href="?page={{ page_obj.previous_page_number }}" aria-label="Попередня">
-                        <span aria-hidden="true">&laquo; Назад</span>
+                        <span aria-hidden="true">&laquo; {% translate "Назад" %}</span>
                     </a>
                 </li>
             {% else %}
                 <li class="page-item disabled">
-                    <span class="page-link">&laquo; Назад</span>
+                    <span class="page-link">&laquo; {% translate "Назад" %}</span>
                 </li>
             {% endif %}
 
             <li class="page-item active" aria-current="page">
                 <span class="page-link">
-                    Сторінка {{ page_obj.number }} з {{ page_obj.paginator.num_pages }}
+                    {% blocktranslate with current_page=page_obj.number total_pages=page_obj.paginator.num_pages %}Сторінка {{ current_page }} з {{ total_pages }}{% endblocktranslate %}
                 </span>
             </li>
 
             {% if page_obj.has_next %}
                 <li class="page-item">
                     <a class="page-link" href="?page={{ page_obj.next_page_number }}" aria-label="Наступна">
-                        <span aria-hidden="true">Вперед &raquo;</span>
+                        <span aria-hidden="true">{% translate "Вперед" %} &raquo;</span>
                     </a>
                 </li>
             {% else %}
                 <li class="page-item disabled">
-                    <span class="page-link">Вперед &raquo;</span>
+                    <span class="page-link">{% translate "Вперед" %} &raquo;</span>
                 </li>
             {% endif %}
         </ul>
