@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-07-01 12:43+0000\n"
+"POT-Creation-Date: 2026-07-02 14:53+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,221 +18,516 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: models.py:6
-msgid "Назва"
-msgstr "Title"
-
-#: models.py:7
-msgid "Слаг"
-msgstr "Slug"
-
-#: models.py:10 models.py:22
-msgid "Категорія"
-msgstr "Category"
-
-#: models.py:11
-msgid "Категорії"
-msgstr "Categories"
-
-#: models.py:17
-msgid "Назва книги"
-msgstr "Book title"
-
-#: models.py:18
-msgid "Автор"
-msgstr "Author"
-
-#: models.py:19
-msgid "Опис"
-msgstr "Description"
-
-#: models.py:20
-msgid "Ціна"
-msgstr "Price"
-
-#: models.py:21
-msgid "Кількість на складі"
-msgstr "Quantity in stock"
-
-#: models.py:23
-msgid "Обкладинка"
-msgstr "Cover"
-
-#: models.py:26
-msgid "Книга"
-msgstr "Book"
-
-#: models.py:27
-msgid "Книги"
-msgstr "Books"
-
-#: templates/shop_app/base.html:6
-msgid "Книжкова крамниця"
-msgstr "Bookstore"
-
-#: templates/shop_app/base.html:13
-msgid "Книгарня"
-msgstr "Bookstore"
-
-#: templates/shop_app/base.html:38
-msgid "Головна"
-msgstr "Main"
-
-#: templates/shop_app/base.html:41
-msgid "Каталог"
-msgstr "Catalog"
-
-#: templates/shop_app/base.html:45
-msgid "Додати книгу"
-msgstr "Add a book"
-
-#: templates/shop_app/base.html:54
-#, python-format
-msgid "Ви увійшли як: <strong>%(username)s</strong>"
-msgstr "Logged in as: <strong>%(username)s</strong>"
-
-#: templates/shop_app/base.html:60
-msgid "Вийти"
-msgstr "Exit"
-
-#: templates/shop_app/base.html:65
-msgid "Вхід"
-msgstr "Log in"
-
-#: templates/shop_app/base.html:68
-msgid "Реєстрація"
-msgstr "Sign up"
-
-#: templates/shop_app/book_list.html:4
-msgid "Каталог книг"
-msgstr "Book catalog"
-
-#: templates/shop_app/book_list.html:15
-msgid "Шукати"
-msgstr "Search"
-
-#: templates/shop_app/book_list.html:18
-msgid "Скинути"
-msgstr "Reset"
-
-#: templates/shop_app/book_list.html:26
-msgid "Всі книги"
-msgstr "All books"
-
-#: templates/shop_app/book_list.html:43
-#, fuzzy, python-format
-#| msgid "Автор"
-msgid "Автор: %(author)s"
-msgstr "Author"
-
-#: templates/shop_app/book_list.html:46
-#, python-format
-msgid "%(price)s грн.</span>"
-msgstr "%(price)s UAH.</span>"
-
-#: templates/shop_app/book_list.html:47
-#, python-format
-msgid "В наявності: %(stock)s шт."
-msgstr "In stock: %(stock)s"
-
-#: templates/shop_app/book_list.html:55
-msgid "Книг у каталозі поки що немає."
-msgstr "There are no books in the catalog yet."
-
-#: templates/shop_app/book_list.html:66 templates/shop_app/book_list.html:71
-msgid "Назад"
-msgstr "Back"
-
-#: templates/shop_app/book_list.html:77
-#, python-format
-msgid "Сторінка %(current_page)s з %(total_pages)s"
-msgstr "Page %(current_page)s of %(total_pages)s"
-
-#: templates/shop_app/book_list.html:84 templates/shop_app/book_list.html:89
-msgid "Вперед"
-msgstr "Forward"
-
-#----
-#base html
+# -----
+# ----
+# base html
+#: bookstore_project/settings.py:130
 msgid "Ukrainian"
 msgstr "Ukrainian"
 
+#: bookstore_project/settings.py:131
 msgid "English"
 msgstr "English"
 
+#: orders/models.py:6 orders/templates/orders/order_create.html:16
 msgid "Ім'я"
 msgstr "First name"
 
+#: orders/models.py:7 orders/templates/orders/order_create.html:20
 msgid "Прізвище"
 msgstr "Surname"
 
+#: orders/models.py:8
 msgid "E-mail"
 msgstr "E-mail"
 
+#: orders/models.py:9
 msgid "Адреса поставки"
 msgstr "Delivery address"
 
+#: orders/models.py:10 orders/templates/orders/order_create.html:36
 msgid "Поштовий індекс"
 msgstr "Zip code"
 
+#: orders/models.py:11 orders/templates/orders/order_create.html:32
 msgid "Місто"
 msgstr "City"
 
+#: orders/models.py:12
 msgid "Створено"
 msgstr "Created"
 
+#: orders/models.py:13
 msgid "Оновлено"
 msgstr "Updated"
 
-
+#: orders/models.py:14
 msgid "Сплачено"
-
 msgstr "Paid"
 
-
+#: orders/models.py:15
 msgid "ID транзакції Stripe"
-
 msgstr "Stripe transaction ID"
 
-
+#: orders/models.py:22 orders/models.py:23 orders/models.py:32
 msgid "Замовлення"
-
 msgstr "Order"
 
-
 # python-format
-
+#: orders/models.py:26
+#, python-format
 msgid "Замовлення № %(id)d"
 msgstr "Order № %(id)d"
 
+#: orders/models.py:33 orders/templates/orders/cart_detail.html:18
+#: shop_app/models.py:26
+msgid "Книга"
+msgstr "Book"
+
+#: orders/models.py:34
 msgid "Ціна на момент покупки"
 msgstr "Price at time of purchase"
 
+#: orders/models.py:35 orders/templates/orders/cart_detail.html:19
 msgid "Кількість"
 msgstr "Quantity"
 
+#: orders/models.py:38
 msgid "Елемент замовлення"
-msgstr "Order item"
+msgstr "Order items"
 
+#: orders/models.py:39
 msgid "Елементи замовлення"
 msgstr "Order items"
 
+#: orders/models.py:42
 #, python-format
 msgid "Елемент %(id)d для замовлення № %(order_id)d"
 msgstr "Item %(id)d for order № %(order_id)d"
 
+#: orders/templates/orders/cart_detail.html:4
+msgid "Ваш кошик товарів"
+msgstr "Your shopping cart"
+
+#: orders/templates/orders/cart_detail.html:8
+msgid "Ваш кошик"
+msgstr "Your cart"
+
+#: orders/templates/orders/cart_detail.html:20 shop_app/models.py:20
+msgid "Ціна"
+msgstr "Price"
+
+#: orders/templates/orders/cart_detail.html:21
+msgid "Сума"
+msgstr "Cost"
+
+#: orders/templates/orders/cart_detail.html:22
+#: orders/templates/orders/cart_detail.html:56
+#: shop_app/templates/shop_app/book_detail.html:48
+msgid "Видалити"
+msgstr "Delete"
+
+#: orders/templates/orders/cart_detail.html:47
+msgid "Оновити"
+msgstr "Update"
+
+#: orders/templates/orders/cart_detail.html:50
+#, python-format
+msgid " %(price)s грн "
+msgstr " %(price)s UAH "
+
+#: orders/templates/orders/cart_detail.html:51
+#: orders/templates/orders/order_create.html:57
+#, python-format
+msgid " %(total_price)s грн"
+msgstr " %(total_price)s UAH"
+
+#: orders/templates/orders/cart_detail.html:73
+msgid "Разом"
+msgstr "Total"
+
+#: orders/templates/orders/cart_detail.html:75
+msgid "Кількість книг:"
+msgstr "Number of books:"
+
+#: orders/templates/orders/cart_detail.html:76
+#, python-format
+msgid " %(count)s шт. "
+msgstr " %(count)s pcs. "
+
+#: orders/templates/orders/cart_detail.html:79
+msgid "Загальна вартість:"
+msgstr "Total cost:"
+
+#: orders/templates/orders/cart_detail.html:80
+#: orders/templates/orders/order_create.html:62
+#, python-format
+msgid " %(get_total_price)s грн"
+msgstr " %(get_total_price)s UAH"
+
+#: orders/templates/orders/cart_detail.html:84
+msgid "Оформити замовлення"
+msgstr "Place an order"
+
+#: orders/templates/orders/cart_detail.html:85
+msgid "Продовжити покупки"
+msgstr "Continue shopping"
+
+#: orders/templates/orders/cart_detail.html:96
+msgid "Ваш кошик порожній"
+msgstr "Your cart is empty"
+
+#: orders/templates/orders/cart_detail.html:97
+msgid "Але це легко виправити — у нас багато цікавих книг!"
+msgstr "But that's easy to fix - we have lots of interesting books!"
+
+#: orders/templates/orders/cart_detail.html:98
+msgid "Перейти до каталогу"
+msgstr "Back to catalog"
+
+#: orders/templates/orders/created.html:3
+msgid "Замовлення створено"
+msgstr "Order created"
+
+#: orders/templates/orders/created.html:10
+msgid "Дякуємо за замовлення!"
+msgstr "Thank you for your order!"
+
+#: orders/templates/orders/created.html:11
+#, python-format
+msgid " Ваше замовлення <strong>№ %(id)s</strong> успішно створено."
+msgstr " Your order <strong>№ %(id)s</strong> has been successfully created."
+
+#: orders/templates/orders/created.html:12
+msgid "Зараз ми готуємося перенаправити вас на платіжну систему Stripe..."
+msgstr "We are now preparing to redirect you to the Stripe payment system..."
+
+#: orders/templates/orders/created.html:13
+msgid "Повернутися до магазину"
+msgstr "Back to the shop"
+
+#: orders/templates/orders/order_create.html:7
+msgid "Оформлення замовлення"
+msgstr "Place an order"
+
+#: orders/templates/orders/order_create.html:24
+msgid "Email"
+msgstr "E-mail"
+
+#: orders/templates/orders/order_create.html:28
+msgid "Адреса доставки"
+msgstr "Delivery address"
+
+#: orders/templates/orders/order_create.html:40
+msgid "Підтвердити та перейти до оплати"
+msgstr "Confirm and proceed to payment"
+
+#: orders/templates/orders/order_create.html:49
+msgid "Ваше замовлення"
+msgstr "Order items"
+
+#: orders/templates/orders/order_create.html:55
+#, python-format
+msgid " Кількість: %(quantity)s"
+msgstr " Quantity: %(quantity)s"
+
+#: orders/templates/orders/order_create.html:61
+msgid "Разом (грн)"
+msgstr "Total (UAH)"
+
+#: orders/templates/orders/payment_process.html:3
+msgid "Оплата замовлення"
+msgstr "Order payment"
+
+# python-format
+#: orders/templates/orders/payment_process.html:9
+#, python-format
+msgid " Оплата замовлення № %(id)s "
+msgstr " Order payment № %(id)s "
+
+#: orders/templates/orders/payment_process.html:11
+#, python-format
+msgid ""
+"Дякуємо, %(first_name)s! Ваше замовлення успішно сформоване. Будь ласка, "
+"перевірте фінальну суму та перейдіть до безпечної оплати через Stripe."
+msgstr ""
+"Thank you, %(first_name)s! Your order has been successfully placed. Please "
+"check the final amount and proceed to secure payment via Stripe."
+
+#: orders/templates/orders/payment_process.html:14
+msgid "До сплати:"
+msgstr "Due:"
+
+#: orders/templates/orders/payment_process.html:15
+#, python-format
+msgid " %(get_total_cost)s грн."
+msgstr " %(get_total_cost)s UAH"
+
+#: orders/templates/orders/payment_process.html:20
+msgid "💳 Перейти до оплати (Stripe)"
+msgstr "💳 Proceed to payment (Stripe)"
+
+#: orders/templates/orders/payment_process.html:23
+msgid "Скасувати та повернутися"
+msgstr "Cancel and return"
+
+# shop_app
+#: shop_app/models.py:6
+msgid "Назва"
+msgstr "Title"
+
+#: shop_app/models.py:7
+msgid "Слаг"
+msgstr "Slug"
+
+#: shop_app/models.py:10 shop_app/models.py:22
+msgid "Категорія"
+msgstr "Category"
+
+#: shop_app/models.py:11
+msgid "Категорії"
+msgstr "Categories"
+
+#: shop_app/models.py:17
+msgid "Назва книги"
+msgstr "Book title"
+
+#: shop_app/models.py:18
+msgid "Автор"
+msgstr "Author"
+
+#: shop_app/models.py:19
+msgid "Опис"
+msgstr "Description"
+
+#: shop_app/models.py:21
+msgid "Кількість на складі"
+msgstr "Quantity in stock"
+
+#: shop_app/models.py:23
+msgid "Обкладинка"
+msgstr "Cover"
+
+#: shop_app/models.py:27
+msgid "Книги"
+msgstr "Books"
+
+#: shop_app/templates/shop_app/base.html:6
+msgid "Книжкова крамниця"
+msgstr "Bookstore"
+
+#: shop_app/templates/shop_app/base.html:13
+msgid "Книгарня"
+msgstr "Bookstore"
+
+#: shop_app/templates/shop_app/base.html:39
+msgid "Головна"
+msgstr "Main"
+
+#: shop_app/templates/shop_app/base.html:42
+msgid "Каталог"
+msgstr "Catalog"
+
+#: shop_app/templates/shop_app/base.html:46
+msgid "Додати книгу"
+msgstr "Add a book"
+
+#: shop_app/templates/shop_app/base.html:55
+#, python-format
+msgid "Ви увійшли як: <strong>%(username)s</strong>"
+msgstr "Logged in as: <strong>%(username)s</strong>"
+
+#: shop_app/templates/shop_app/base.html:61
+msgid "Вийти"
+msgstr "Exit"
+
+#: shop_app/templates/shop_app/base.html:66
+msgid "Вхід"
+msgstr "Log in"
+
+#: shop_app/templates/shop_app/base.html:69
+msgid "Реєстрація"
+msgstr "Sign up"
+
+#: shop_app/templates/shop_app/book_delete.html:9
+msgid "Підтвердження видалення"
+msgstr "Confirm deletion"
+
+#: shop_app/templates/shop_app/book_delete.html:12
+#, python-format
+msgid ""
+"Ви впевнені, що хочете назавжди видалити книгу <strong>\"%(title)s\"</"
+"strong>? "
+msgstr ""
+"Are you sure you want to permanently delete the book? <strong>\"%(title)s\"</"
+"strong>? "
+
+#: shop_app/templates/shop_app/book_delete.html:13
+msgid "Цю дію не можна буде скасувати."
+msgstr "This action cannot be undone."
+
+#: shop_app/templates/shop_app/book_delete.html:18
+#: shop_app/templates/shop_app/book_form.html:23
+msgid "Скасувати"
+msgstr "Cancel"
+
+#: shop_app/templates/shop_app/book_delete.html:19
+msgid "Так, видалити"
+msgstr "Yes, delete it"
+
+#: shop_app/templates/shop_app/book_detail.html:5
+msgid "Назад до каталогу"
+msgstr "Back to catalog"
+
+#: shop_app/templates/shop_app/book_detail.html:13
+msgid "Немає обкладинки"
+msgstr "No cover"
+
+#: shop_app/templates/shop_app/book_detail.html:20
+#, python-format
+msgid " Автор: <strong>%(author)s</strong> "
+msgstr "Author: <strong>%(author)s</strong>"
+
+#: shop_app/templates/shop_app/book_detail.html:22
+#, python-format
+msgid " Категорія: %(name)s "
+msgstr "Category: %(name)s"
+
+#: shop_app/templates/shop_app/book_detail.html:24
+msgid "Про книгу:"
+msgstr "About a book"
+
+#: shop_app/templates/shop_app/book_detail.html:33
+msgid "Ціна:"
+msgstr "Price"
+
+#: shop_app/templates/shop_app/book_detail.html:34
+#: shop_app/templates/shop_app/store.html:34
+#: shop_app/templates/shop_app/store.html:54
+#, python-format
+msgid " %(price)s грн. "
+msgstr "%(price)s UAH</span>"
+
+#: shop_app/templates/shop_app/book_detail.html:37
+#, python-format
+msgid " В наявності: %(stock)s шт. "
+msgstr "In stock: %(stock)s"
+
+#: shop_app/templates/shop_app/book_detail.html:43
+msgid "Придбати"
+msgstr "Buy"
+
+#: shop_app/templates/shop_app/book_detail.html:47
+msgid "Редагувати"
+msgstr "Edit"
+
+#: shop_app/templates/shop_app/book_detail.html:51
+msgid "Немає в наявності"
+msgstr "Out of stock"
+
+#: shop_app/templates/shop_app/book_form.html:9
+msgid "Додати нову книгу до каталогу"
+msgstr "Add a new book to the catalog"
+
+#: shop_app/templates/shop_app/book_form.html:24
+msgid "Зберегти книгу"
+msgstr "Save a book"
+
+#: shop_app/templates/shop_app/book_list.html:4
+msgid "Каталог книг"
+msgstr "Book catalog"
+
+#: shop_app/templates/shop_app/book_list.html:15
+msgid "Шукати"
+msgstr "Search"
+
+#: shop_app/templates/shop_app/book_list.html:18
+msgid "Скинути"
+msgstr "Reset"
+
+#: shop_app/templates/shop_app/book_list.html:26
+msgid "Всі книги"
+msgstr "All books"
+
+#: shop_app/templates/shop_app/book_list.html:43
+#, python-format
+msgid "Автор: %(author)s"
+msgstr "Author: %(author)s"
+
+#: shop_app/templates/shop_app/book_list.html:46
+#, python-format
+msgid " %(price)s грн.</span>"
+msgstr "%(price)s UAH</span>"
+
+#: shop_app/templates/shop_app/book_list.html:47
+#, python-format
+msgid " В наявності: %(stock)s шт."
+msgstr "In stock: %(stock)s"
+
+#: shop_app/templates/shop_app/book_list.html:55
+msgid "Книг у каталозі поки що немає."
+msgstr "There are no books in the catalog yet."
+
+#: shop_app/templates/shop_app/book_list.html:66
+#: shop_app/templates/shop_app/book_list.html:71
+msgid "Назад"
+msgstr "Back"
+
+#: shop_app/templates/shop_app/book_list.html:77
+#, python-format
+msgid "Сторінка %(current_page)s з %(total_pages)s"
+msgstr "Page %(current_page)s of %(total_pages)s"
+
+#: shop_app/templates/shop_app/book_list.html:84
+#: shop_app/templates/shop_app/book_list.html:89
+msgid "Вперед"
+msgstr "Forward"
+
+#: shop_app/templates/shop_app/store.html:3
+msgid "Головна — Книгарня"
+msgstr "Bookstore"
+
+#: shop_app/templates/shop_app/store.html:10
+msgid "Статистика категорій"
+msgstr "Category statistics"
+
+#: shop_app/templates/shop_app/store.html:16
+#, python-format
+msgid "%(total_books)s книг"
+msgstr "%(total_books)s books"
+
+#: shop_app/templates/shop_app/store.html:27
+msgid "Спеціальні пропозиції (до 300 грн)"
+msgstr "Special offers (from 300 UAH)"
+
+#: shop_app/templates/shop_app/store.html:38
+msgid "Акційних пропозицій поки що немає."
+msgstr "There are no books in the catalog yet."
+
+#: shop_app/templates/shop_app/store.html:46
+msgid "Гарячі знижки"
+msgstr "Hot Discounts"
+
+#: shop_app/templates/shop_app/store.html:57
+msgid "Книг зі знижкою наразі немає."
+msgstr "There are no books in the catalog yet."
+
+#: users/models.py:9
 msgid "Ім'я користувача"
 msgstr "User name"
 
+#: users/models.py:12
 msgid "Обов'язкове поле. Не більше 150 символів."
 msgstr "Required field. Maximum 150 characters."
 
+#: users/models.py:14
 msgid "Електронна пошта"
 msgstr "E-mail"
 
+#: users/models.py:17
 msgid "Користувач"
 msgstr "User"
 
+#: users/models.py:18
 msgid "Користувачі"
 msgstr "Users"
-#------

@@ -13,7 +13,7 @@
                 {% for cat in categories %}
                 <li class="list-group-item d-flex justify-content-between align-items-center">
                     {{ cat.name }}
-                    <span class="badge bg-primary rounded-pill">{% blocktranslate with cat=cat.total_books %}{{ total_books }} книг{% endblocktranslate %}</span>
+                    <span class="badge bg-primary rounded-pill">{% blocktranslate with total_books=cat.total_books %}{{ total_books }} книг{% endblocktranslate %}</span>
                 </li>
                 {% endfor %}
             </ul>
@@ -31,7 +31,7 @@
                     {% for book in special_offers %}
                     <div class="col-sm-6 mb-2">
                         <div class="p-2 bg-light rounded border">
-                            <strong>{{ book.title }}</strong> — <span class="text-success fw-bold">{{ book.price }} грн.</span>
+                            <strong>{{ book.title }}</strong> — <span class="text-success fw-bold">{% blocktranslate with price=book.price %} {{ price }} грн. {% endblocktranslate %}</span>
                         </div>
                     </div>
                     {% empty %}
@@ -43,7 +43,7 @@
 
         <div class="card border-danger shadow-sm">
             <div class="card-header bg-danger text-white">
-                <h5 class="mb-0">🔥 {% translate "Гарячі знижки (Discount)" %}</h5>
+                <h5 class="mb-0">🔥 {% translate "Гарячі знижки" %}</h5>
             </div>
             <div class="card-body">
                 <ul class="list-style-none ps-0 mb-0">
@@ -51,7 +51,7 @@
                     <li class="mb-3 pb-3 border-bottom last-border-0">
                         <h6 class="text-danger mb-1">{{ book.title }}</h6>
                         <p class="text-muted small mb-1">{{ book.description|truncatewords:12 }}</p>
-                        <span class="badge bg-success">{% blocktranslate with book=book.price %} {{ price }} грн. {% endblocktranslate %}</span>
+                        <span class="badge bg-success">{% blocktranslate with price=book.price %} {{ price }} грн. {% endblocktranslate %}</span>
                     </li>
                     {% empty %}
                     <p class="text-muted mb-0">{% translate "Книг зі знижкою наразі немає." %}</p>

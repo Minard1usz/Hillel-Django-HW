@@ -1,12 +1,11 @@
 {% extends 'shop_app/base.html' %}
 {% load static %}
-
-
-{% block title %}Ваш кошик товарів{% endblock %}
+{% load i18n %}
+{% block title %}{% translate "Ваш кошик товарів" %}{% endblock %}
 
 {% block content %}
 <div class="container my-5">
-    <h1 class="mb-4">Ваш кошик</h1>
+    <h1 class="mb-4">{% translate "Ваш кошик" %}</h1>
     {% if cart %}
         <div class="row">
             <div class="col-lg-8">
@@ -16,11 +15,11 @@
                             <table class="table table-hover align-middle mb-0">
                                 <thead class="table-light">
                                     <tr>
-                                        <th scope="col" class="ps-4">Книга</th>
-                                        <th scope="col">Кількість</th>
-                                        <th scope="col">Ціна</th>
-                                        <th scope="col">Сума</th>
-                                        <th scope="col" class="text-end pe-4">Видалити</th>
+                                        <th scope="col" class="ps-4">{% translate "Книга" %}</th>
+                                        <th scope="col">{% translate "Кількість" %}</th>
+                                        <th scope="col">{% translate "Ціна" %}</th>
+                                        <th scope="col">{% translate "Сума" %}</th>
+                                        <th scope="col" class="text-end pe-4">{% translate "Видалити" %}</th>
                                     </tr>
                                 </thead>
                                 <tbody>
@@ -45,16 +44,16 @@
                                                         {{ item.update_quantity_form.quantity }}
                                                     </div>
                                                     {{ item.update_quantity_form.override }}
-                                                    <button type="submit" class="btn btn-sm btn-outline-secondary">Оновити</button>
+                                                    <button type="submit" class="btn btn-sm btn-outline-secondary">{% translate "Оновити" %}</button>
                                                 </form>
                                             </td>
-                                            <td>{{ item.price }} грн</td>
-                                            <td>{{ item.total_price }} грн</td>
+                                            <td>{% blocktranslate with price=item.price %} {{ price }} грн {% endblocktranslate %}</td>
+                                            <td>{% blocktranslate with total_price=item.total_price %} {{ total_price }} грн{% endblocktranslate %}</td>
                                             <td class="text-end pe-4">
                                                 <form action="{% url 'orders:cart_remove' book.id %}" method="post" class="d-inline">
                                                     {% csrf_token %}
                                                     <button type="submit" class="btn btn-sm btn-outline-danger">
-                                                        <i class="bi bi-trash"></i> Видалити
+                                                        <i class="bi bi-trash"></i> {% translate "Видалити" %}
                                                     </button>
                                                 </form>
                                             </td>
@@ -71,19 +70,19 @@
             <div class="col-lg-4">
                 <div class="card shadow-sm">
                     <div class="card-body">
-                        <h5 class="card-title mb-4">Разом</h5>
+                        <h5 class="card-title mb-4">{% translate "Разом" %}</h5>
                         <div class="d-flex justify-content-between mb-3">
-                            <span>Кількість книг:</span>
-                            <strong>{{ cart|length }} шт.</strong>
+                            <span>{% translate "Кількість книг:" %}</span>
+                            <strong>{% blocktranslate with count=cart|length %} {{ count }} шт. {% endblocktranslate %}</strong>
                         </div>
                         <div class="d-flex justify-content-between mb-4">
-                            <span class="fs-5">Загальна вартість:</span>
-                            <strong class="fs-5 text-primary">{{ cart.get_total_price }} грн</strong>
+                            <span class="fs-5">{% translate "Загальна вартість:" %}</span>
+                            <strong class="fs-5 text-primary">{% blocktranslate with get_total_price=cart.get_total_price %} {{ get_total_price }} грн{% endblocktranslate %}</strong>
                         </div>
                         <hr>
                         <div class="d-grid gap-2">
-                            <a href="{% url 'orders:order_create' %}" class="btn btn-success btn-lg">Оформити замовлення</a>
-                            <a href="{% url 'shop_app:book_list' %}" class="btn btn-link btn-sm text-muted">Продовжити покупки</a>
+                            <a href="{% url 'orders:order_create' %}" class="btn btn-success btn-lg">{% translate "Оформити замовлення" %}</a>
+                            <a href="{% url 'shop_app:book_list' %}" class="btn btn-link btn-sm text-muted">{% translate "Продовжити покупки" %}</a>
                         </div>
                     </div>
                 </div>
@@ -94,9 +93,9 @@
             <div class="mb-4">
                 <i class="bi bi-cart-x text-muted" style="font-size: 4rem;"></i>
             </div>
-            <h3>Ваш кошик порожній</h3>
-            <p class="text-muted">Але це легко виправити — у нас багато цікавих книг!</p>
-            <a href="{% url 'shop_app:book_list' %}" class="btn btn-primary mt-3">Перейти до каталогу</a>
+            <h3>{% translate "Ваш кошик порожній" %}</h3>
+            <p class="text-muted">{% translate "Але це легко виправити — у нас багато цікавих книг!" %}</p>
+            <a href="{% url 'shop_app:book_list' %}" class="btn btn-primary mt-3">{% translate "Перейти до каталогу" %}</a>
         </div>
     {% endif %}
 </div>

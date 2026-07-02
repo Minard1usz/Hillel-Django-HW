@@ -1,15 +1,15 @@
 {% extends 'shop_app/base.html' %}
-
-{% block title %}Замовлення створено{% endblock %}
+{% load i18n %}
+{% block title %}{% translate "Замовлення створено" %}{% endblock %}
 
 {% block content %}
 <div class="container my-5 text-center py-5">
     <div class="mb-4">
         <i class="bi bi-check-circle-fill text-success" style="font-size: 5rem;"></i>
     </div>
-    <h1 class="display-5">Дякуємо за замовлення!</h1>
-    <p class="lead text-muted mt-3">Ваше замовлення <strong>№ {{ order.id }}</strong> успішно створено.</p>
-    <p class="text-muted">Зараз ми готуємося перенаправити вас на платіжну систему Stripe...</p>
-    <a href="{% url 'shop_app:book_list' %}" class="btn btn-primary btn-lg mt-4">Повернутися до магазину</a>
+    <h1 class="display-5">{% translate "Дякуємо за замовлення!" %}</h1>
+    <p class="lead text-muted mt-3">{% blocktranslate with id=order.id %} Ваше замовлення <strong>№ {{ id }}</strong> успішно створено.{% endblocktranslate %}</p>
+    <p class="text-muted">{% translate "Зараз ми готуємося перенаправити вас на платіжну систему Stripe..." %}</p>
+    <a href="{% url 'shop_app:book_list' %}" class="btn btn-primary btn-lg mt-4">{% translate "Повернутися до магазину" %}</a>
 </div>
 {% endblock %}

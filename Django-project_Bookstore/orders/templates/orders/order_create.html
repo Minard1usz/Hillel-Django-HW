@@ -1,10 +1,10 @@
 {% extends 'shop_app/base.html' %}
-
+{% load i18n %}
 {% block title %}Оформлення замовлення{% endblock %}
 
 {% block content %}
 <div class="container my-5">
-    <h1 class="mb-4">Оформлення замовлення</h1>
+    <h1 class="mb-4">{% translate "Оформлення замовлення" %}</h1>
     <div class="row">
         <div class="col-md-8">
             <div class="card shadow-sm mb-4">
@@ -13,31 +13,31 @@
                         {% csrf_token %}
                         <div class="row g-3">
                             <div class="col-sm-6">
-                                <label class="form-label">Ім'я</label>
+                                <label class="form-label">{% translate "Ім'я" %}</label>
                                 {{ form.first_name }}
                             </div>
                             <div class="col-sm-6">
-                                <label class="form-label">Прізвище</label>
+                                <label class="form-label">{% translate "Прізвище" %}</label>
                                 {{ form.last_name }}
                             </div>
                             <div class="col-12">
-                                <label class="form-label">Email</label>
+                                <label class="form-label">{% translate "Email" %}</label>
                                 {{ form.email }}
                             </div>
                             <div class="col-12">
-                                <label class="form-label">Адреса доставки</label>
+                                <label class="form-label">{% translate "Адреса доставки" %}</label>
                                 {{ form.address }}
                             </div>
                             <div class="col-md-6">
-                                <label class="form-label">Місто</label>
+                                <label class="form-label">{% translate "Місто" %}</label>
                                 {{ form.city }}
                             </div>
                             <div class="col-md-6">
-                                <label class="form-label">Поштовий індекс</label>
+                                <label class="form-label">{% translate "Поштовий індекс" %}</label>
                                 {{ form.postal_code }}
                             </div>
                         </div>
-                        <button type="submit" class="btn btn-primary btn-lg w-100 mt-4">Підтвердити та перейти до оплати</button>
+                        <button type="submit" class="btn btn-primary btn-lg w-100 mt-4">{% translate "Підтвердити та перейти до оплати" %}</button>
                     </form>
                 </div>
             </div>
@@ -46,20 +46,20 @@
         <div class="col-md-4">
             <div class="card shadow-sm position-sticky" style="top: 20px;">
                 <div class="card-body">
-                    <h5 class="card-title mb-3">Ваше замовлення</h5>
+                    <h5 class="card-title mb-3">{% translate "Ваше замовлення" %}</h5>
                     <ul class="list-group list-group-flush mb-3">
                         {% for item in cart %}
                             <li class="list-group-item d-flex justify-content-between lh-sm py-3">
                                 <div>
                                     <h6 class="my-0">{{ item.book.title }}</h6>
-                                    <small class="text-muted">Кількість: {{ item.quantity }}</small>
+                                    <small class="text-muted">{% blocktranslate with quantity=item.quantity %} Кількість: {{ quantity }}{% endblocktranslate %}</small>
                                 </div>
-                                <span class="text-muted">{{ item.total_price }} грн</span>
+                                <span class="text-muted">{% blocktranslate with total_price=item.total_price %} {{ total_price }} грн{% endblocktranslate %}</span>
                             </li>
                         {% endfor %}
                         <li class="list-group-item d-flex justify-content-between">
-                            <span>Разом (грн)</span>
-                            <strong>{{ cart.get_total_price }} грн</strong>
+                            <span>{% translate "Разом (грн)" %}</span>
+                            <strong>{% blocktranslate with get_total_price=cart.get_total_price %} {{ get_total_price }} грн{% endblocktranslate %}</strong>
                         </li>
                     </ul>
                 </div>
