@@ -1,26 +1,49 @@
+import asyncio
 from django.shortcuts import render, get_object_or_404
 from django.db.models import Q, Count
 from .models import Book, Category
+from asgiref.sync import sync_to_async
+from django.http import Http404
 from django.views.generic import ListView, DetailView, CreateView, UpdateView, DeleteView
 from django.urls import reverse_lazy
 from django.contrib.auth.mixins import LoginRequiredMixin, UserPassesTestMixin
 from orders.forms import CartAddBookForm
 
+
 # Create your views here.
-def store(request):
-    special_offers = Book.objects.filter(Q(price__lt=300) | Q(description__icontains='discount'))
-    premium_offers = Book.objects.filter(Q(price__gt=300))
-    categories_with_counts = Category.objects.annotate(total_books=Count('books'))
-    available_books = Book.objects.filter(stock__gt=0)
-    discount_books = Book.objects.filter(description__icontains='discount')
+async def get_as_list(queryset):
+    return [item async for item in queryset]
+
+def prefetch_user_status(user):
+    if user.is_authenticated:
+        _ = user.is_staff
+        _ = user.is_superuser
+    return user
+
+async def store(request):
+    special_offers_qs = Book.objects.filter(Q(price__lt=300) | Q(description__icontains='discount'))
+    premium_offers_qs = Book.objects.filter(Q(price__gt=300))
+    categories_with_counts_qs = Category.objects.annotate(total_books=Count('books'))
+    available_books_qs = Book.objects.filter(stock__gt=0)
+    discount_books_qs = Book.objects.filter(description__icontains='discount')
+
+    special_offers, premium_offers, categories, available_books, discount_books, _ = await asyncio.gather(
+        get_as_list(special_offers_qs),
+        get_as_list(premium_offers_qs),
+        get_as_list(categories_with_counts_qs),
+        get_as_list(available_books_qs),
+        get_as_list(discount_books_qs),
+        sync_to_async(prefetch_user_status)(request.user)
+    )
 
     context = {
         'special_offers': special_offers,
         'premium_offers': premium_offers,
-        'categories': categories_with_counts,
+        'categories': categories,
         'available_books': available_books,
         'discount_books': discount_books,
     }
+
     return render(request, 'shop_app/store.html', context)
 
 class BookListView(ListView):
@@ -30,7 +53,7 @@ class BookListView(ListView):
     paginate_by = 5
 
     def get_queryset(self):
-        queryset = super().get_queryset()
+        queryset = Book.objects.all()
         category_id = self.request.GET.get('category')
         search_query = self.request.GET.get('search')
 
@@ -42,20 +65,47 @@ class BookListView(ListView):
 
         return queryset
 
-    def get_context_data(self, **kwargs):
-        context = super().get_context_data(**kwargs)
-        context['categories'] = Category.objects.all()
-        return context
+    async def get(self, request, *args, **kwargs):
+
+        def process_context():
+            self.object_list = self.get_queryset()
+            allow_empty = self.get_allow_empty()
+
+            if not allow_empty:
+                if self.get_paginate_by(self.object_list) is not None and hasattr(self.object_list, 'exists'):
+                    is_empty = not self.object_list.exists()
+                else:
+                    is_empty = not self.object_list
+                if is_empty:
+                    raise Http404("Empty list")
+
+            return self.get_context_data()
+
+        context = await sync_to_async(process_context)()
+
+        categories_qs = Category.objects.all()
+        context['categories'] = [cat async for cat in categories_qs]
+
+        return self.render_to_response(context)
+
 
 
 class BookDetailView(DetailView):
     model = Book
     template_name = 'shop_app/book_detail.html'
 
-    def get_context_data(self, **kwargs):
-        context = super().get_context_data(**kwargs)
-        context['cart_book_form'] = CartAddBookForm()
-        return context
+    async def get(self, request, *args, **kwargs):
+        def process_context():
+            self.object = self.get_object()
+            context = self.get_context_data(object=self.object)
+
+            context['cart_book_form'] = CartAddBookForm()
+            return context
+
+        context = await sync_to_async(process_context)()
+
+        return self.render_to_response(context)
+
 
 class BookCreateView(CreateView):
     model = Book

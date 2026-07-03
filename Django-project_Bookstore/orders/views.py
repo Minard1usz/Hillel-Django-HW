@@ -4,6 +4,7 @@ from django.conf import settings
 from django.urls import reverse
 import stripe
 from django.views.decorators.http import require_POST
+from asgiref.sync import sync_to_async
 from .cart import Cart
 from .forms import CartAddBookForm, OrderCreateForm
 from .models import OrderItem, Order
@@ -40,41 +41,75 @@ def cart_remove(request, book_id):
     return redirect('orders:cart_detail')
 
 
-def cart_detail(request):
-    cart = Cart(request)
-    for item in cart:
-        item['update_quantity_form'] = CartAddBookForm(initial={
-            'quantity': item['quantity'],
-            'override': True
-        })
-    return render(request, 'orders/cart_detail.html', {'cart': cart})
+async def cart_detail(request):
+    def prepare_cart_data():
+        cart = Cart(request)
+        cart_items = []
+
+        for item in cart:
+            item['update_quantity_form'] = CartAddBookForm(initial={
+                'quantity': item['quantity'],
+                'override': True
+            })
+            cart_items.append(item)
+
+        return cart, cart_items
+
+    cart, cart_items = await sync_to_async(prepare_cart_data)()
+
+    return render(request, 'orders/cart_detail.html', {'cart': cart, 'cart_items': cart_items})
 
 
-def order_create(request):
-    cart = Cart(request)
+async def order_create(request):
     if request.method == 'POST':
-        form = OrderCreateForm(request.POST)
-        if form.is_valid():
-            with transaction.atomic():
-                order = form.save()
+        def save_order_transaction(post_data, session_items):
+            form = OrderCreateForm(post_data)
+            if form.is_valid():
+                with transaction.atomic():
+                    order = form.save()
+                    for item in session_items:
+                        OrderItem.objects.create(
+                            order=order,
+                            book=item['book'],
+                            price=item['price'],
+                            quantity=item['quantity']
+                        )
+                return order.id
+            return None
 
-                for item in cart:
-                    OrderItem.objects.create(
-                        order=order,
-                        book=item['book'],
-                        price=item['price'],
-                        quantity=item['quantity']
-                    )
+        def get_cart_data():
+            cart = Cart(request)
+            items = list(cart)
+            return cart, items
 
+        cart, session_items = await sync_to_async(get_cart_data)()
+
+        order_id = await sync_to_async(save_order_transaction)(request.POST, session_items)
+
+        if order_id:
+            def finalize_session(order_id):
                 cart.clear()
+                request.session['order_id'] = order_id
 
-            request.session['order_id'] = order.id
-
+            await sync_to_async(finalize_session)(order_id)
             return redirect('orders:payment_process')
-    else:
-        form = OrderCreateForm()
 
-    return render(request, 'orders/order_create.html', {'cart': cart, 'form': form})
+        def get_invalid_form(post_data):
+            return OrderCreateForm(post_data)
+        form = await sync_to_async(get_invalid_form)(request.POST)
+
+        cart_items = session_items
+
+    else:
+        def prepare_get_data():
+            cart = Cart(request)
+            form = OrderCreateForm()
+            return cart, list(cart), form
+
+        cart, cart_items, form = await sync_to_async(prepare_get_data)()
+
+    return render(request, 'orders/order_create.html', {'cart': cart, 'cart_items': cart_items, 'form': form})
+
 
 
 def payment_process(request):
