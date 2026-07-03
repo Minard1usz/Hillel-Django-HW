@@ -1,18 +1,18 @@
 {% extends 'shop_app/base.html' %}
-
+{% load i18n %}
 {% block content %}
 <div class="container mt-5">
     <div class="row justify-content-center">
         <div class="col-md-6">
             <div class="card shadow">
                 <div class="card-body">
-                    <h2 class="card-title text-center mb-4">Реєстрація</h2>
+                    <h2 class="card-title text-center mb-4">{% translate "Реєстрація" %}</h2>
                     <form method="post">
                         {% csrf_token %}
                         {{ form.as_p }}
-                        <button type="submit" class="btn btn-success w-100">Створити акаунт</button>
+                        <button type="submit" class="btn btn-success w-100">{% translate "Створити акаунт" %}</button>
                     </form>
-                    <p class="mt-3 text-center">У вас вже є акаунт? <a href="{% url 'users:login' %}">Увійти</a></p>
+                    <p class="mt-3 text-center">{% translate "У вас вже є акаунт?" %}<a href="{% url 'users:login' %}">{% translate "Увійти" %}</a></p>
                 </div>
             </div>
         </div>

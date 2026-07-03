@@ -3582,3 +3582,46 @@ INFO 2026-07-02 14:48:59,324 middleware Запит до /orders/payment/complete
 INFO 2026-07-02 14:48:59,325 log "GET /orders/payment/completed/ HTTP/1.1" 200 3708
 INFO 2026-07-02 14:56:23,758 middleware Запит до /orders/payment/completed/ зайняв 0.0236 секунд.
 INFO 2026-07-02 14:56:23,758 log "GET /orders/payment/completed/ HTTP/1.1" 200 3573
+INFO 2026-07-03 14:05:15,144 autoreload Watching for file changes with StatReloader
+INFO 2026-07-03 14:06:06,209 middleware Запит до /catalog/ зайняв 0.0294 секунд.
+INFO 2026-07-03 14:06:06,211 log "GET /catalog/ HTTP/1.1" 200 8759
+INFO 2026-07-03 14:06:42,966 middleware Запит до /users/logout/ зайняв 0.0158 секунд.
+INFO 2026-07-03 14:06:42,967 log "POST /users/logout/ HTTP/1.1" 302 0
+INFO 2026-07-03 14:06:42,984 middleware Запит до / зайняв 0.0143 секунд.
+INFO 2026-07-03 14:06:42,984 log "GET / HTTP/1.1" 200 9641
+INFO 2026-07-03 14:06:44,793 middleware Запит до /users/login/ зайняв 0.0105 секунд.
+INFO 2026-07-03 14:06:44,794 log "GET /users/login/ HTTP/1.1" 200 3819
+INFO 2026-07-03 14:10:12,290 middleware Запит до /users/login/ зайняв 0.0080 секунд.
+INFO 2026-07-03 14:10:12,293 log "GET /users/login/ HTTP/1.1" 200 3797
+INFO 2026-07-03 14:12:30,550 middleware Запит до /users/login/ зайняв 0.0077 секунд.
+INFO 2026-07-03 14:12:30,553 log "GET /users/login/ HTTP/1.1" 200 3826
+INFO 2026-07-03 14:14:40,876 middleware Запит до /users/login/ зайняв 0.0105 секунд.
+INFO 2026-07-03 14:14:40,877 log "GET /users/login/ HTTP/1.1" 200 3769
+INFO 2026-07-03 14:14:51,840 middleware Запит до /users/register/ зайняв 0.0134 секунд.
+INFO 2026-07-03 14:14:51,841 log "GET /users/register/ HTTP/1.1" 200 4817
+INFO 2026-07-03 14:16:00,684 middleware Запит до /i18n/setlang/ зайняв 0.0021 секунд.
+INFO 2026-07-03 14:16:00,685 log "POST /i18n/setlang/ HTTP/1.1" 302 0
+INFO 2026-07-03 14:16:00,700 middleware Запит до /users/register/ зайняв 0.0082 секунд.
+INFO 2026-07-03 14:16:00,700 log "GET /users/register/ HTTP/1.1" 200 5165
+INFO 2026-07-03 14:16:08,917 middleware Запит до /i18n/setlang/ зайняв 0.0005 секунд.
+INFO 2026-07-03 14:16:08,918 log "POST /i18n/setlang/ HTTP/1.1" 302 0
+INFO 2026-07-03 14:16:08,934 middleware Запит до /users/register/ зайняв 0.0029 секунд.
+INFO 2026-07-03 14:16:08,935 log "GET /users/register/ HTTP/1.1" 200 4797
+INFO 2026-07-03 14:17:35,726 middleware Запит до /users/register/ зайняв 0.0110 секунд.
+INFO 2026-07-03 14:17:35,727 log "GET /users/register/ HTTP/1.1" 200 4783
+INFO 2026-07-03 14:17:38,228 middleware Запит до /i18n/setlang/ зайняв 0.0008 секунд.
+INFO 2026-07-03 14:17:38,229 log "POST /i18n/setlang/ HTTP/1.1" 302 0
+INFO 2026-07-03 14:17:38,241 middleware Запит до /users/register/ зайняв 0.0031 секунд.
+INFO 2026-07-03 14:17:38,241 log "GET /users/register/ HTTP/1.1" 200 5165
+INFO 2026-07-03 14:17:40,445 middleware Запит до /i18n/setlang/ зайняв 0.0008 секунд.
+INFO 2026-07-03 14:17:40,446 log "POST /i18n/setlang/ HTTP/1.1" 302 0
+INFO 2026-07-03 14:17:40,460 middleware Запит до /users/register/ зайняв 0.0032 секунд.
+INFO 2026-07-03 14:17:40,461 log "GET /users/register/ HTTP/1.1" 200 4783
+INFO 2026-07-03 14:41:15,831 middleware Запит до /catalog/ зайняв 0.0174 секунд.
+INFO 2026-07-03 14:41:15,831 log "GET /catalog/ HTTP/1.1" 200 8292
+INFO 2026-07-03 14:41:18,795 middleware Запит до / зайняв 0.0180 секунд.
+INFO 2026-07-03 14:41:18,796 log "GET / HTTP/1.1" 200 9641
+INFO 2026-07-03 14:41:20,007 middleware Запит до / зайняв 0.0139 секунд.
+INFO 2026-07-03 14:41:20,007 log "GET / HTTP/1.1" 200 9641
+INFO 2026-07-03 14:42:45,985 middleware Запит до /catalog/ зайняв 0.0109 секунд.
+INFO 2026-07-03 14:42:45,985 log "GET /catalog/ HTTP/1.1" 200 8292

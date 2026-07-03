@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-07-02 14:53+0000\n"
+"POT-Creation-Date: 2026-07-03 14:16+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -345,7 +345,8 @@ msgstr "Exit"
 msgid "Вхід"
 msgstr "Log in"
 
-#: shop_app/templates/shop_app/base.html:69
+#: shop_app/templates/shop_app/base.html:69 users/templates/users/login.html:15
+#: users/templates/users/register.html:9
 msgid "Реєстрація"
 msgstr "Sign up"
 
@@ -531,3 +532,23 @@ msgstr "User"
 #: users/models.py:18
 msgid "Користувачі"
 msgstr "Users"
+
+#: users/templates/users/login.html:9
+msgid "Увійдіть до облікового запису"
+msgstr "Log in to your account"
+
+#: users/templates/users/login.html:13 users/templates/users/register.html:15
+msgid "Увійти"
+msgstr "Log in"
+
+#: users/templates/users/login.html:15
+msgid "Ще не зареєстровані?"
+msgstr "Not registered yet?"
+
+#: users/templates/users/register.html:13
+msgid "Створити акаунт"
+msgstr "Create an account"
+
+#: users/templates/users/register.html:15
+msgid "У вас вже є акаунт?"
+msgstr "Do you already have an account?"
