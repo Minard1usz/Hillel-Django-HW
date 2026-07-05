@@ -6,3 +6,6 @@ sqlparse==0.5.5
 psycopg[binary]
 python-dotenv>=1.0.0
 stripe==15.2.1
+pytest-django
+factory-boy
+pytest-cov
