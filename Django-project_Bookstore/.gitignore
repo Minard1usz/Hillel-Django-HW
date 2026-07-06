@@ -24,3 +24,7 @@ __pycache__/
 
 # Статичні файли, які збирає Docker
 staticfiles/
+
+# Тестування та покриття
+.coverage
+htmlcov/
