@@ -4763,3 +4763,27 @@ INFO 2026-07-06 14:02:23,547 middleware Запит до /orders/cart/ зайня
 INFO 2026-07-06 14:02:23,596 middleware Запит до /9999/ зайняв 0.0013 секунд.
 WARNING 2026-07-06 14:02:23,596 log Not Found: /9999/
 INFO 2026-07-06 14:02:23,646 middleware Запит до /catalog/ зайняв 0.0018 секунд.
+INFO 2026-07-06 14:14:04,532 middleware Запит до /catalog/ зайняв 0.0254 секунд.
+INFO 2026-07-06 14:14:04,533 log "GET /catalog/ HTTP/1.1" 200 8292
+INFO 2026-07-06 14:14:05,143 middleware Запит до / зайняв 0.0197 секунд.
+INFO 2026-07-06 14:14:05,144 log "GET / HTTP/1.1" 200 9641
+INFO 2026-07-06 14:14:06,353 middleware Запит до /catalog/ зайняв 0.0174 секунд.
+INFO 2026-07-06 14:14:06,354 log "GET /catalog/ HTTP/1.1" 200 8292
+INFO 2026-07-06 14:14:09,554 middleware Запит до / зайняв 0.0188 секунд.
+INFO 2026-07-06 14:14:09,554 log "GET / HTTP/1.1" 200 9641
+INFO 2026-07-06 14:14:10,201 middleware Запит до /catalog/ зайняв 0.0157 секунд.
+INFO 2026-07-06 14:14:10,202 log "GET /catalog/ HTTP/1.1" 200 8292
+INFO 2026-07-06 14:14:10,737 middleware Запит до / зайняв 0.0191 секунд.
+INFO 2026-07-06 14:14:10,738 log "GET / HTTP/1.1" 200 9641
+INFO 2026-07-06 14:14:11,414 middleware Запит до /catalog/ зайняв 0.0126 секунд.
+INFO 2026-07-06 14:14:11,414 log "GET /catalog/ HTTP/1.1" 200 8292
+INFO 2026-07-06 14:20:28,080 middleware Запит до /catalog/ зайняв 0.0230 секунд.
+INFO 2026-07-06 14:20:28,080 log "GET /catalog/ HTTP/1.1" 200 8273
+INFO 2026-07-06 14:20:31,012 middleware Запит до /i18n/setlang/ зайняв 0.0010 секунд.
+INFO 2026-07-06 14:20:31,013 log "POST /i18n/setlang/ HTTP/1.1" 302 0
+INFO 2026-07-06 14:20:31,036 middleware Запит до /catalog/ зайняв 0.0120 секунд.
+INFO 2026-07-06 14:20:31,037 log "GET /catalog/ HTTP/1.1" 200 8548
+INFO 2026-07-06 14:20:33,345 middleware Запит до /i18n/setlang/ зайняв 0.0006 секунд.
+INFO 2026-07-06 14:20:33,346 log "POST /i18n/setlang/ HTTP/1.1" 302 0
+INFO 2026-07-06 14:20:33,376 middleware Запит до /catalog/ зайняв 0.0171 секунд.
+INFO 2026-07-06 14:20:33,377 log "GET /catalog/ HTTP/1.1" 200 8273

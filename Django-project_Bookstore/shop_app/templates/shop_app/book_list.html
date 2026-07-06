@@ -11,7 +11,7 @@
                     <input type="hidden" name="category" value="{{ request.GET.category }}">
                 {% endif %}
 
-                <input type="text" name="search" class="form-control me-2" placeholder="Пошук книги за назвою..." value="{{ request.GET.search|default:'' }}">
+                <input type="text" name="search" class="form-control me-2" placeholder="{% translate 'Пошук книги за назвою...' %}" value="{{ request.GET.search|default:'' }}">
                 <button type="submit" class="btn btn-primary">{% translate "Шукати" %}</button>
 
                 {% if request.GET.search or request.GET.category %}
