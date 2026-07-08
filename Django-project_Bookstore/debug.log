@@ -4787,3 +4787,644 @@ INFO 2026-07-06 14:20:33,345 middleware Запит до /i18n/setlang/ зайн�
 INFO 2026-07-06 14:20:33,346 log "POST /i18n/setlang/ HTTP/1.1" 302 0
 INFO 2026-07-06 14:20:33,376 middleware Запит до /catalog/ зайняв 0.0171 секунд.
 INFO 2026-07-06 14:20:33,377 log "GET /catalog/ HTTP/1.1" 200 8273
+INFO 2026-07-08 13:17:01,124 middleware Запит до /catalog/ зайняв 0.0247 секунд.
+INFO 2026-07-08 13:17:01,125 log "GET /catalog/ HTTP/1.1" 200 8273
+INFO 2026-07-08 13:17:03,345 middleware Запит до /catalog/ зайняв 0.0192 секунд.
+INFO 2026-07-08 13:17:03,346 log "GET /catalog/?category=1 HTTP/1.1" 200 6346
+INFO 2026-07-08 13:17:04,387 middleware Запит до /catalog/ зайняв 0.0170 секунд.
+INFO 2026-07-08 13:17:04,388 log "GET /catalog/ HTTP/1.1" 200 8273
+INFO 2026-07-08 13:17:04,874 middleware Запит до / зайняв 0.0231 секунд.
+INFO 2026-07-08 13:17:04,875 log "GET / HTTP/1.1" 200 9641
+INFO 2026-07-08 13:17:05,529 middleware Запит до /catalog/ зайняв 0.0151 секунд.
+INFO 2026-07-08 13:17:05,530 log "GET /catalog/ HTTP/1.1" 200 8273
+INFO 2026-07-08 13:17:06,559 middleware Запит до / зайняв 0.0213 секунд.
+INFO 2026-07-08 13:17:06,559 log "GET / HTTP/1.1" 200 9641
+INFO 2026-07-08 14:23:57,741 autoreload /app/shop_app/views.py changed, reloading.
+INFO 2026-07-08 14:23:58,156 autoreload Watching for file changes with StatReloader
+INFO 2026-07-08 14:24:21,622 autoreload /app/shop_app/views.py changed, reloading.
+INFO 2026-07-08 14:24:22,038 autoreload Watching for file changes with StatReloader
+INFO 2026-07-08 14:25:01,766 autoreload /app/shop_app/views.py changed, reloading.
+INFO 2026-07-08 14:25:02,166 autoreload Watching for file changes with StatReloader
+INFO 2026-07-08 14:25:11,168 middleware Запит до / зайняв 0.0244 секунд.
+INFO 2026-07-08 14:25:11,169 log "GET / HTTP/1.1" 200 9641
+INFO 2026-07-08 14:25:14,686 middleware Запит до / зайняв 0.0225 секунд.
+INFO 2026-07-08 14:25:14,687 log "GET / HTTP/1.1" 200 9641
+ERROR 2026-07-08 14:25:15,815 log Internal Server Error: /catalog/
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/django/core/handlers/base.py", line 221, in _get_response
+    response = response.render()
+               ^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/django/template/response.py", line 114, in render
+    self.content = self.rendered_content
+                   ^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/django/template/response.py", line 92, in rendered_content
+    return template.render(context, self._request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/django/template/backends/django.py", line 107, in render
+    return self.template.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/django/template/base.py", line 174, in render
+    return self._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/django/test/utils.py", line 114, in instrumented_test_render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/django/template/base.py", line 1091, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/django/template/base.py", line 1052, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/django/template/loader_tags.py", line 160, in render
+    return compiled_parent._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/django/test/utils.py", line 114, in instrumented_test_render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/django/template/base.py", line 1091, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/django/template/base.py", line 1052, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/django/template/loader_tags.py", line 66, in render
+    result = block.nodelist.render(context)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/django/template/base.py", line 1091, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/django/template/base.py", line 1052, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/django/template/defaulttags.py", line 202, in render
+    len_values = len(values)
+                 ^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/django/db/models/query.py", line 372, in __len__
+    self._fetch_all()
+  File "/usr/local/lib/python3.12/site-packages/django/db/models/query.py", line 2002, in _fetch_all
+    self._prefetch_related_objects()
+  File "/usr/local/lib/python3.12/site-packages/django/db/models/query.py", line 1369, in _prefetch_related_objects
+    prefetch_related_objects(self._result_cache, *self._prefetch_related_lookups)
+  File "/usr/local/lib/python3.12/site-packages/django/db/models/query.py", line 2426, in prefetch_related_objects
+    raise AttributeError(
+AttributeError: Cannot find 'authors' on Book object, 'authors' is an invalid parameter to prefetch_related()
+INFO 2026-07-08 14:25:15,817 middleware Запит до /catalog/ зайняв 0.0432 секунд.
+ERROR 2026-07-08 14:25:15,817 log "GET /catalog/ HTTP/1.1" 500 173293
+INFO 2026-07-08 14:28:06,805 autoreload /app/shop_app/views.py changed, reloading.
+INFO 2026-07-08 14:28:07,205 autoreload Watching for file changes with StatReloader
+ERROR 2026-07-08 14:28:08,962 log Internal Server Error: /catalog/
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/django/core/handlers/base.py", line 221, in _get_response
+    response = response.render()
+               ^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/django/template/response.py", line 114, in render
+    self.content = self.rendered_content
+                   ^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/django/template/response.py", line 92, in rendered_content
+    return template.render(context, self._request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/django/template/backends/django.py", line 107, in render
+    return self.template.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/django/template/base.py", line 174, in render
+    return self._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/django/test/utils.py", line 114, in instrumented_test_render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/django/template/base.py", line 1091, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/django/template/base.py", line 1052, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/django/template/loader_tags.py", line 160, in render
+    return compiled_parent._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/django/test/utils.py", line 114, in instrumented_test_render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/django/template/base.py", line 1091, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/django/template/base.py", line 1052, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/django/template/loader_tags.py", line 66, in render
+    result = block.nodelist.render(context)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/django/template/base.py", line 1091, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/django/template/base.py", line 1052, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/django/template/defaulttags.py", line 202, in render
+    len_values = len(values)
+                 ^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/django/db/models/query.py", line 372, in __len__
+    self._fetch_all()
+  File "/usr/local/lib/python3.12/site-packages/django/db/models/query.py", line 2002, in _fetch_all
+    self._prefetch_related_objects()
+  File "/usr/local/lib/python3.12/site-packages/django/db/models/query.py", line 1369, in _prefetch_related_objects
+    prefetch_related_objects(self._result_cache, *self._prefetch_related_lookups)
+  File "/usr/local/lib/python3.12/site-packages/django/db/models/query.py", line 2426, in prefetch_related_objects
+    raise AttributeError(
+AttributeError: Cannot find 'authors' on Book object, 'authors' is an invalid parameter to prefetch_related()
+INFO 2026-07-08 14:28:08,964 middleware Запит до /catalog/ зайняв 0.0410 секунд.
+ERROR 2026-07-08 14:28:08,964 log "GET /catalog/ HTTP/1.1" 500 173430
+INFO 2026-07-08 14:28:17,473 autoreload /app/shop_app/views.py changed, reloading.
+INFO 2026-07-08 14:28:17,874 autoreload Watching for file changes with StatReloader
+INFO 2026-07-08 14:28:56,597 autoreload /app/shop_app/views.py changed, reloading.
+INFO 2026-07-08 14:28:57,014 autoreload Watching for file changes with StatReloader
+INFO 2026-07-08 14:28:59,111 middleware Запит до /catalog/ зайняв 0.0275 секунд.
+INFO 2026-07-08 14:28:59,112 log "GET /catalog/ HTTP/1.1" 200 8307
+INFO 2026-07-08 14:29:01,370 middleware Запит до / зайняв 0.0218 секунд.
+INFO 2026-07-08 14:29:01,371 log "GET / HTTP/1.1" 200 9641
+INFO 2026-07-08 14:29:01,975 middleware Запит до /catalog/ зайняв 0.0156 секунд.
+INFO 2026-07-08 14:29:01,975 log "GET /catalog/ HTTP/1.1" 200 8307
+INFO 2026-07-08 14:29:02,658 middleware Запит до / зайняв 0.0196 секунд.
+INFO 2026-07-08 14:29:02,659 log "GET / HTTP/1.1" 200 9641
+INFO 2026-07-08 14:29:03,407 middleware Запит до /catalog/ зайняв 0.0181 секунд.
+INFO 2026-07-08 14:29:03,408 log "GET /catalog/ HTTP/1.1" 200 8307
+INFO 2026-07-08 14:29:04,230 middleware Запит до /14/ зайняв 0.0182 секунд.
+INFO 2026-07-08 14:29:04,231 log "GET /14/ HTTP/1.1" 200 5369
+INFO 2026-07-08 14:29:04,243 middleware Запит до /images/covers/game_of_thrones.jpg зайняв 0.0009 секунд.
+INFO 2026-07-08 14:29:04,244 log "GET /images/covers/game_of_thrones.jpg HTTP/1.1" 304 0
+INFO 2026-07-08 14:29:07,402 middleware Запит до /orders/cart/add/14/ зайняв 0.0119 секунд.
+INFO 2026-07-08 14:29:07,406 log "POST /orders/cart/add/14/ HTTP/1.1" 302 0
+INFO 2026-07-08 14:29:07,426 middleware Запит до /orders/cart/ зайняв 0.0166 секунд.
+INFO 2026-07-08 14:29:07,426 log "GET /orders/cart/ HTTP/1.1" 200 8556
+INFO 2026-07-08 14:29:09,376 middleware Запит до /catalog/ зайняв 0.0170 секунд.
+INFO 2026-07-08 14:29:09,377 log "GET /catalog/ HTTP/1.1" 200 8307
+INFO 2026-07-08 14:29:10,381 middleware Запит до / зайняв 0.0202 секунд.
+INFO 2026-07-08 14:29:10,382 log "GET / HTTP/1.1" 200 9641
+INFO 2026-07-08 14:29:11,425 middleware Запит до /catalog/ зайняв 0.0189 секунд.
+INFO 2026-07-08 14:29:11,426 log "GET /catalog/ HTTP/1.1" 200 8307
+INFO 2026-07-08 14:30:26,870 autoreload /app/shop_app/views.py changed, reloading.
+INFO 2026-07-08 14:30:27,268 autoreload Watching for file changes with StatReloader
+INFO 2026-07-08 14:30:31,275 middleware Запит до /catalog/ зайняв 0.0248 секунд.
+INFO 2026-07-08 14:30:31,277 log "GET /catalog/ HTTP/1.1" 200 8307
+INFO 2026-07-08 14:30:32,579 middleware Запит до / зайняв 0.0223 секунд.
+INFO 2026-07-08 14:30:32,580 log "GET / HTTP/1.1" 200 9641
+INFO 2026-07-08 14:30:33,332 middleware Запит до /catalog/ зайняв 0.0166 секунд.
+INFO 2026-07-08 14:30:33,332 log "GET /catalog/ HTTP/1.1" 200 8307
+INFO 2026-07-08 14:30:34,917 middleware Запит до /catalog/ зайняв 0.0175 секунд.
+INFO 2026-07-08 14:30:34,918 log "GET /catalog/?category=1 HTTP/1.1" 200 6346
+INFO 2026-07-08 14:30:35,482 middleware Запит до /catalog/ зайняв 0.0170 секунд.
+INFO 2026-07-08 14:30:35,483 log "GET /catalog/?category=2 HTTP/1.1" 200 7728
+INFO 2026-07-08 14:30:36,082 middleware Запит до /catalog/ зайняв 0.0163 секунд.
+INFO 2026-07-08 14:30:36,083 log "GET /catalog/?category=4 HTTP/1.1" 200 6972
+INFO 2026-07-08 14:30:36,704 middleware Запит до /catalog/ зайняв 0.0135 секунд.
+INFO 2026-07-08 14:30:36,704 log "GET /catalog/?category=5 HTTP/1.1" 200 6343
+INFO 2026-07-08 14:30:37,543 middleware Запит до /17/ зайняв 0.0200 секунд.
+INFO 2026-07-08 14:30:37,545 log "GET /17/ HTTP/1.1" 200 5121
+INFO 2026-07-08 14:30:37,563 middleware Запит до /images/covers/The_sweet_science.jpg зайняв 0.0009 секунд.
+INFO 2026-07-08 14:30:37,563 log "GET /images/covers/The_sweet_science.jpg HTTP/1.1" 304 0
+INFO 2026-07-08 14:30:39,476 middleware Запит до /catalog/ зайняв 0.0168 секунд.
+INFO 2026-07-08 14:30:39,477 log "GET /catalog/ HTTP/1.1" 200 8307
+INFO 2026-07-08 14:30:40,667 middleware Запит до /3/ зайняв 0.0156 секунд.
+INFO 2026-07-08 14:30:40,668 log "GET /3/ HTTP/1.1" 200 4836
+INFO 2026-07-08 14:30:40,686 middleware Запит до /images/covers/Charlie_and_the_Chocolate_Factory.jpg зайняв 0.0012 секунд.
+INFO 2026-07-08 14:30:40,686 log "GET /images/covers/Charlie_and_the_Chocolate_Factory.jpg HTTP/1.1" 304 0
+INFO 2026-07-08 14:30:42,729 middleware Запит до /14/ зайняв 0.0144 секунд.
+INFO 2026-07-08 14:30:42,729 log "GET /14/ HTTP/1.1" 200 5369
+INFO 2026-07-08 14:58:41,683 middleware Запит до /catalog/ зайняв 0.0252 секунд.
+INFO 2026-07-08 14:58:41,684 log "GET /catalog/ HTTP/1.1" 200 8307
+INFO 2026-07-08 14:58:42,233 middleware Запит до / зайняв 0.0194 секунд.
+INFO 2026-07-08 14:58:42,233 log "GET / HTTP/1.1" 200 9641
+INFO 2026-07-08 14:58:42,872 middleware Запит до /catalog/ зайняв 0.0177 секунд.
+INFO 2026-07-08 14:58:42,873 log "GET /catalog/ HTTP/1.1" 200 8307
+INFO 2026-07-08 14:58:43,600 middleware Запит до /14/ зайняв 0.0135 секунд.
+INFO 2026-07-08 14:58:43,601 log "GET /14/ HTTP/1.1" 200 5369
+INFO 2026-07-08 14:58:45,453 middleware Запит до /orders/cart/add/14/ зайняв 0.0130 секунд.
+INFO 2026-07-08 14:58:45,457 log "POST /orders/cart/add/14/ HTTP/1.1" 302 0
+INFO 2026-07-08 14:58:45,477 middleware Запит до /orders/cart/ зайняв 0.0170 секунд.
+INFO 2026-07-08 14:58:45,478 log "GET /orders/cart/ HTTP/1.1" 200 8556
+INFO 2026-07-08 14:58:46,831 middleware Запит до /orders/cart/remove/14/ зайняв 0.0119 секунд.
+INFO 2026-07-08 14:58:46,833 log "POST /orders/cart/remove/14/ HTTP/1.1" 302 0
+INFO 2026-07-08 14:58:46,846 middleware Запит до /orders/cart/ зайняв 0.0104 секунд.
+INFO 2026-07-08 14:58:46,848 log "GET /orders/cart/ HTTP/1.1" 200 3082
+INFO 2026-07-08 14:58:48,488 middleware Запит до / зайняв 0.0198 секунд.
+INFO 2026-07-08 14:58:48,489 log "GET / HTTP/1.1" 200 9641
+INFO 2026-07-08 14:58:49,635 middleware Запит до /catalog/ зайняв 0.0166 секунд.
+INFO 2026-07-08 14:58:49,636 log "GET /catalog/ HTTP/1.1" 200 8307
+INFO 2026-07-08 14:58:51,014 middleware Запит до / зайняв 0.0205 секунд.
+INFO 2026-07-08 14:58:51,014 log "GET / HTTP/1.1" 200 9641
+INFO 2026-07-08 15:48:52,985 autoreload /app/orders/views.py changed, reloading.
+INFO 2026-07-08 15:48:53,404 autoreload Watching for file changes with StatReloader
+INFO 2026-07-08 15:50:36,203 autoreload /app/orders/views.py changed, reloading.
+INFO 2026-07-08 15:50:36,609 autoreload Watching for file changes with StatReloader
+INFO 2026-07-08 15:50:41,031 middleware Запит до / зайняв 0.0264 секунд.
+INFO 2026-07-08 15:50:41,032 log "GET / HTTP/1.1" 200 9641
+INFO 2026-07-08 15:50:42,004 middleware Запит до / зайняв 0.0218 секунд.
+INFO 2026-07-08 15:50:42,004 log "GET / HTTP/1.1" 200 9641
+INFO 2026-07-08 15:50:42,817 middleware Запит до /catalog/ зайняв 0.0208 секунд.
+INFO 2026-07-08 15:50:42,818 log "GET /catalog/ HTTP/1.1" 200 8307
+INFO 2026-07-08 15:50:43,729 middleware Запит до /3/ зайняв 0.0157 секунд.
+INFO 2026-07-08 15:50:43,730 log "GET /3/ HTTP/1.1" 200 4836
+INFO 2026-07-08 15:50:44,909 middleware Запит до /orders/cart/add/3/ зайняв 0.0124 секунд.
+INFO 2026-07-08 15:50:44,912 log "POST /orders/cart/add/3/ HTTP/1.1" 302 0
+INFO 2026-07-08 15:50:44,930 middleware Запит до /orders/cart/ зайняв 0.0156 секунд.
+INFO 2026-07-08 15:50:44,931 log "GET /orders/cart/ HTTP/1.1" 200 8529
+ERROR 2026-07-08 15:50:46,481 log Internal Server Error: /orders/create/
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.12/site-packages/django/contrib/sessions/backends/base.py", line 246, in _get_session
+    return self._session_cache
+           ^^^^^^^^^^^^^^^^^^^
+AttributeError: 'SessionStore' object has no attribute '_session_cache'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/django/core/handlers/base.py", line 198, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/asgiref/sync.py", line 325, in __call__
+    return call_result.result()
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/concurrent/futures/_base.py", line 449, in result
+    return self.__get_result()
+           ^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/concurrent/futures/_base.py", line 401, in __get_result
+    raise self._exception
+  File "/usr/local/lib/python3.12/site-packages/asgiref/sync.py", line 365, in main_wrap
+    result = await awaitable
+             ^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/django/views/decorators/http.py", line 48, in inner
+    return await func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/orders/views.py", line 110, in order_create
+    cart = Cart(request)
+           ^^^^^^^^^^^^^
+  File "/app/orders/cart.py", line 9, in __init__
+    cart = self.session.get(settings.CART_SESSION_ID)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/django/contrib/sessions/backends/base.py", line 74, in get
+    return self._session.get(key, default)
+           ^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/django/contrib/sessions/backends/base.py", line 251, in _get_session
+    self._session_cache = self.load()
+                          ^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/django/contrib/sessions/backends/db.py", line 55, in load
+    s = self._get_session_from_db()
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/django/contrib/sessions/backends/db.py", line 34, in _get_session_from_db
+    return self.model.objects.get(
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/django/db/models/query.py", line 635, in get
+    num = len(clone)
+          ^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/django/db/models/query.py", line 372, in __len__
+    self._fetch_all()
+  File "/usr/local/lib/python3.12/site-packages/django/db/models/query.py", line 2000, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/django/db/models/query.py", line 95, in __iter__
+    results = compiler.execute_sql(
+              ^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/django/db/models/sql/compiler.py", line 1622, in execute_sql
+    cursor = self.connection.cursor()
+             ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/django/utils/asyncio.py", line 24, in inner
+    raise SynchronousOnlyOperation(message)
+django.core.exceptions.SynchronousOnlyOperation: You cannot call this from an async context - use a thread or sync_to_async.
+INFO 2026-07-08 15:50:46,485 middleware Запит до /orders/create/ зайняв 0.0357 секунд.
+ERROR 2026-07-08 15:50:46,486 log "GET /orders/create/ HTTP/1.1" 500 122567
+INFO 2026-07-08 15:52:49,211 autoreload /app/orders/views.py changed, reloading.
+INFO 2026-07-08 15:52:49,609 autoreload Watching for file changes with StatReloader
+ERROR 2026-07-08 15:52:53,758 log Internal Server Error: /orders/create/
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.12/site-packages/django/contrib/sessions/backends/base.py", line 246, in _get_session
+    return self._session_cache
+           ^^^^^^^^^^^^^^^^^^^
+AttributeError: 'SessionStore' object has no attribute '_session_cache'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/django/core/handlers/base.py", line 198, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/asgiref/sync.py", line 325, in __call__
+    return call_result.result()
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/concurrent/futures/_base.py", line 449, in result
+    return self.__get_result()
+           ^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/concurrent/futures/_base.py", line 401, in __get_result
+    raise self._exception
+  File "/usr/local/lib/python3.12/site-packages/asgiref/sync.py", line 365, in main_wrap
+    result = await awaitable
+             ^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/django/views/decorators/http.py", line 48, in inner
+    return await func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/orders/views.py", line 110, in order_create
+    cart = Cart(request)
+           ^^^^^^^^^^^^^
+  File "/app/orders/cart.py", line 9, in __init__
+    cart = self.session.get(settings.CART_SESSION_ID)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/django/contrib/sessions/backends/base.py", line 74, in get
+    return self._session.get(key, default)
+           ^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/django/contrib/sessions/backends/base.py", line 251, in _get_session
+    self._session_cache = self.load()
+                          ^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/django/contrib/sessions/backends/db.py", line 55, in load
+    s = self._get_session_from_db()
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/django/contrib/sessions/backends/db.py", line 34, in _get_session_from_db
+    return self.model.objects.get(
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/django/db/models/query.py", line 635, in get
+    num = len(clone)
+          ^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/django/db/models/query.py", line 372, in __len__
+    self._fetch_all()
+  File "/usr/local/lib/python3.12/site-packages/django/db/models/query.py", line 2000, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/django/db/models/query.py", line 95, in __iter__
+    results = compiler.execute_sql(
+              ^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/django/db/models/sql/compiler.py", line 1622, in execute_sql
+    cursor = self.connection.cursor()
+             ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/django/utils/asyncio.py", line 24, in inner
+    raise SynchronousOnlyOperation(message)
+django.core.exceptions.SynchronousOnlyOperation: You cannot call this from an async context - use a thread or sync_to_async.
+INFO 2026-07-08 15:52:53,764 middleware Запит до /orders/create/ зайняв 0.0368 секунд.
+ERROR 2026-07-08 15:52:53,764 log "GET /orders/create/ HTTP/1.1" 500 122704
+ERROR 2026-07-08 15:52:56,402 log Internal Server Error: /orders/create/
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.12/site-packages/django/contrib/sessions/backends/base.py", line 246, in _get_session
+    return self._session_cache
+           ^^^^^^^^^^^^^^^^^^^
+AttributeError: 'SessionStore' object has no attribute '_session_cache'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/django/core/handlers/base.py", line 198, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/asgiref/sync.py", line 325, in __call__
+    return call_result.result()
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/concurrent/futures/_base.py", line 449, in result
+    return self.__get_result()
+           ^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/concurrent/futures/_base.py", line 401, in __get_result
+    raise self._exception
+  File "/usr/local/lib/python3.12/site-packages/asgiref/sync.py", line 365, in main_wrap
+    result = await awaitable
+             ^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/django/views/decorators/http.py", line 48, in inner
+    return await func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/orders/views.py", line 110, in order_create
+    cart = Cart(request)
+           ^^^^^^^^^^^^^
+  File "/app/orders/cart.py", line 9, in __init__
+    cart = self.session.get(settings.CART_SESSION_ID)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/django/contrib/sessions/backends/base.py", line 74, in get
+    return self._session.get(key, default)
+           ^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/django/contrib/sessions/backends/base.py", line 251, in _get_session
+    self._session_cache = self.load()
+                          ^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/django/contrib/sessions/backends/db.py", line 55, in load
+    s = self._get_session_from_db()
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/django/contrib/sessions/backends/db.py", line 34, in _get_session_from_db
+    return self.model.objects.get(
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/django/db/models/query.py", line 635, in get
+    num = len(clone)
+          ^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/django/db/models/query.py", line 372, in __len__
+    self._fetch_all()
+  File "/usr/local/lib/python3.12/site-packages/django/db/models/query.py", line 2000, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/django/db/models/query.py", line 95, in __iter__
+    results = compiler.execute_sql(
+              ^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/django/db/models/sql/compiler.py", line 1622, in execute_sql
+    cursor = self.connection.cursor()
+             ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/django/utils/asyncio.py", line 24, in inner
+    raise SynchronousOnlyOperation(message)
+django.core.exceptions.SynchronousOnlyOperation: You cannot call this from an async context - use a thread or sync_to_async.
+INFO 2026-07-08 15:52:56,404 middleware Запит до /orders/create/ зайняв 0.0330 секунд.
+ERROR 2026-07-08 15:52:56,405 log "GET /orders/create/ HTTP/1.1" 500 122567
+INFO 2026-07-08 15:52:59,505 middleware Запит до /catalog/ зайняв 0.0250 секунд.
+INFO 2026-07-08 15:52:59,506 log "GET /catalog/ HTTP/1.1" 200 8307
+INFO 2026-07-08 15:53:00,623 middleware Запит до /5/ зайняв 0.0186 секунд.
+INFO 2026-07-08 15:53:00,623 log "GET /5/ HTTP/1.1" 200 5511
+INFO 2026-07-08 15:53:00,643 middleware Запит до /images/covers/Elon_Musk.webp зайняв 0.0008 секунд.
+INFO 2026-07-08 15:53:00,644 log "GET /images/covers/Elon_Musk.webp HTTP/1.1" 304 0
+INFO 2026-07-08 15:53:02,457 middleware Запит до /orders/cart/add/5/ зайняв 0.0126 секунд.
+INFO 2026-07-08 15:53:02,459 log "POST /orders/cart/add/5/ HTTP/1.1" 302 0
+INFO 2026-07-08 15:53:02,479 middleware Запит до /orders/cart/ зайняв 0.0164 секунд.
+INFO 2026-07-08 15:53:02,480 log "GET /orders/cart/ HTTP/1.1" 200 12245
+ERROR 2026-07-08 15:53:03,610 log Internal Server Error: /orders/create/
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.12/site-packages/django/contrib/sessions/backends/base.py", line 246, in _get_session
+    return self._session_cache
+           ^^^^^^^^^^^^^^^^^^^
+AttributeError: 'SessionStore' object has no attribute '_session_cache'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/django/core/handlers/base.py", line 198, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/asgiref/sync.py", line 325, in __call__
+    return call_result.result()
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/concurrent/futures/_base.py", line 449, in result
+    return self.__get_result()
+           ^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/concurrent/futures/_base.py", line 401, in __get_result
+    raise self._exception
+  File "/usr/local/lib/python3.12/site-packages/asgiref/sync.py", line 365, in main_wrap
+    result = await awaitable
+             ^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/django/views/decorators/http.py", line 48, in inner
+    return await func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/orders/views.py", line 110, in order_create
+    cart = Cart(request)
+           ^^^^^^^^^^^^^
+  File "/app/orders/cart.py", line 9, in __init__
+    cart = self.session.get(settings.CART_SESSION_ID)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/django/contrib/sessions/backends/base.py", line 74, in get
+    return self._session.get(key, default)
+           ^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/django/contrib/sessions/backends/base.py", line 251, in _get_session
+    self._session_cache = self.load()
+                          ^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/django/contrib/sessions/backends/db.py", line 55, in load
+    s = self._get_session_from_db()
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/django/contrib/sessions/backends/db.py", line 34, in _get_session_from_db
+    return self.model.objects.get(
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/django/db/models/query.py", line 635, in get
+    num = len(clone)
+          ^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/django/db/models/query.py", line 372, in __len__
+    self._fetch_all()
+  File "/usr/local/lib/python3.12/site-packages/django/db/models/query.py", line 2000, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/django/db/models/query.py", line 95, in __iter__
+    results = compiler.execute_sql(
+              ^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/django/db/models/sql/compiler.py", line 1622, in execute_sql
+    cursor = self.connection.cursor()
+             ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/django/utils/asyncio.py", line 24, in inner
+    raise SynchronousOnlyOperation(message)
+django.core.exceptions.SynchronousOnlyOperation: You cannot call this from an async context - use a thread or sync_to_async.
+INFO 2026-07-08 15:53:03,613 middleware Запит до /orders/create/ зайняв 0.0333 секунд.
+ERROR 2026-07-08 15:53:03,613 log "GET /orders/create/ HTTP/1.1" 500 122564
+INFO 2026-07-08 15:54:26,602 autoreload /app/orders/views.py changed, reloading.
+INFO 2026-07-08 15:54:27,009 autoreload Watching for file changes with StatReloader
+INFO 2026-07-08 15:56:25,125 autoreload /app/orders/views.py changed, reloading.
+INFO 2026-07-08 15:56:25,523 autoreload Watching for file changes with StatReloader
+INFO 2026-07-08 15:56:30,176 middleware Запит до /orders/create/ зайняв 0.0228 секунд.
+INFO 2026-07-08 15:56:30,177 log "GET /orders/create/ HTTP/1.1" 200 6693
+INFO 2026-07-08 15:56:31,373 middleware Запит до /catalog/ зайняв 0.0212 секунд.
+INFO 2026-07-08 15:56:31,374 log "GET /catalog/ HTTP/1.1" 200 8307
+INFO 2026-07-08 15:56:32,679 middleware Запит до /5/ зайняв 0.0181 секунд.
+INFO 2026-07-08 15:56:32,679 log "GET /5/ HTTP/1.1" 200 5511
+INFO 2026-07-08 15:56:34,262 middleware Запит до /orders/cart/add/5/ зайняв 0.0134 секунд.
+INFO 2026-07-08 15:56:34,264 log "POST /orders/cart/add/5/ HTTP/1.1" 302 0
+INFO 2026-07-08 15:56:34,283 middleware Запит до /orders/cart/ зайняв 0.0153 секунд.
+INFO 2026-07-08 15:56:34,283 log "GET /orders/cart/ HTTP/1.1" 200 12245
+INFO 2026-07-08 15:56:36,384 middleware Запит до /orders/create/ зайняв 0.0163 секунд.
+INFO 2026-07-08 15:56:36,385 log "GET /orders/create/ HTTP/1.1" 200 6693
+INFO 2026-07-08 15:56:58,602 middleware Запит до /orders/create/ зайняв 0.0479 секунд.
+INFO 2026-07-08 15:56:58,604 log "POST /orders/create/ HTTP/1.1" 302 0
+INFO 2026-07-08 15:56:58,614 middleware Запит до /orders/payment/process/ зайняв 0.0076 секунд.
+INFO 2026-07-08 15:56:58,614 log "GET /orders/payment/process/ HTTP/1.1" 200 3709
+INFO 2026-07-08 15:57:00,364 middleware Запит до /orders/payment/process/ зайняв 0.7604 секунд.
+INFO 2026-07-08 15:57:00,364 log "POST /orders/payment/process/ HTTP/1.1" 302 0
+INFO 2026-07-08 15:59:09,616 middleware Запит до /orders/payment/completed/ зайняв 0.0200 секунд.
+INFO 2026-07-08 15:59:09,616 log "GET /orders/payment/completed/ HTTP/1.1" 200 3106
+INFO 2026-07-08 15:59:12,543 middleware Запит до /catalog/ зайняв 0.0175 секунд.
+INFO 2026-07-08 15:59:12,544 log "GET /catalog/ HTTP/1.1" 200 8307
+INFO 2026-07-08 16:53:52,087 autoreload /app/orders/views.py changed, reloading.
+INFO 2026-07-08 16:53:52,576 autoreload Watching for file changes with StatReloader
+INFO 2026-07-08 16:56:30,287 autoreload /app/orders/views.py changed, reloading.
+INFO 2026-07-08 16:56:30,687 autoreload Watching for file changes with StatReloader
+INFO 2026-07-08 16:56:35,462 middleware Запит до /catalog/ зайняв 0.0234 секунд.
+INFO 2026-07-08 16:56:35,464 log "GET /catalog/ HTTP/1.1" 200 8307
+INFO 2026-07-08 16:56:36,069 middleware Запит до / зайняв 0.0207 секунд.
+INFO 2026-07-08 16:56:36,069 log "GET / HTTP/1.1" 200 9641
+INFO 2026-07-08 16:56:36,599 middleware Запит до /catalog/ зайняв 0.0162 секунд.
+INFO 2026-07-08 16:56:36,599 log "GET /catalog/ HTTP/1.1" 200 8307
+INFO 2026-07-08 16:56:38,140 middleware Запит до /3/ зайняв 0.0170 секунд.
+INFO 2026-07-08 16:56:38,141 log "GET /3/ HTTP/1.1" 200 4836
+INFO 2026-07-08 16:56:49,468 middleware Запит до /orders/cart/add/3/ зайняв 0.0109 секунд.
+INFO 2026-07-08 16:56:49,472 log "POST /orders/cart/add/3/ HTTP/1.1" 302 0
+INFO 2026-07-08 16:56:49,496 middleware Запит до /orders/cart/ зайняв 0.0197 секунд.
+INFO 2026-07-08 16:56:49,497 log "GET /orders/cart/ HTTP/1.1" 200 8529
+INFO 2026-07-08 16:56:50,634 middleware Запит до /orders/create/ зайняв 0.0164 секунд.
+INFO 2026-07-08 16:56:50,635 log "GET /orders/create/ HTTP/1.1" 200 6178
+INFO 2026-07-08 16:57:23,102 middleware Запит до /orders/create/ зайняв 0.0457 секунд.
+INFO 2026-07-08 16:57:23,103 log "POST /orders/create/ HTTP/1.1" 302 0
+INFO 2026-07-08 16:57:23,115 middleware Запит до /orders/payment/process/ зайняв 0.0091 секунд.
+INFO 2026-07-08 16:57:23,115 log "GET /orders/payment/process/ HTTP/1.1" 200 3707
+INFO 2026-07-08 16:57:25,177 middleware Запит до /orders/payment/process/ зайняв 0.7159 секунд.
+INFO 2026-07-08 16:57:25,177 log "POST /orders/payment/process/ HTTP/1.1" 302 0
+INFO 2026-07-08 16:57:53,031 middleware Запит до /orders/payment/completed/ зайняв 0.0213 секунд.
+INFO 2026-07-08 16:57:53,031 log "GET /orders/payment/completed/ HTTP/1.1" 200 3106
+INFO 2026-07-08 17:00:44,465 middleware Запит до /catalog/ зайняв 0.0182 секунд.
+INFO 2026-07-08 17:00:44,466 log "GET /catalog/ HTTP/1.1" 200 8307
+INFO 2026-07-08 17:03:27,890 middleware Запит до /catalog/ зайняв 0.0053 секунд.
+INFO 2026-07-08 17:03:27,892 middleware Запит до /1/ зайняв 0.0019 секунд.
+INFO 2026-07-08 17:03:27,896 middleware Запит до /orders/create/ зайняв 0.0027 секунд.
+INFO 2026-07-08 17:03:27,912 middleware Запит до /orders/create/ зайняв 0.0158 секунд.
+INFO 2026-07-08 17:03:27,918 middleware Запит до /orders/create/ зайняв 0.0016 секунд.
+INFO 2026-07-08 17:03:27,920 middleware Запит до /orders/create/ зайняв 0.0020 секунд.
+INFO 2026-07-08 17:03:27,925 middleware Запит до /orders/create/ зайняв 0.0017 секунд.
+INFO 2026-07-08 17:03:27,936 middleware Запит до /orders/create/ зайняв 0.0014 секунд.
+INFO 2026-07-08 17:03:27,946 middleware Запит до / зайняв 0.0027 секунд.
+INFO 2026-07-08 17:03:27,993 middleware Запит до /catalog/ зайняв 0.0014 секунд.
+INFO 2026-07-08 17:03:28,043 middleware Запит до /14/ зайняв 0.0011 секунд.
+INFO 2026-07-08 17:03:28,091 middleware Запит до /orders/cart/ зайняв 0.0013 секунд.
+INFO 2026-07-08 17:03:28,146 middleware Запит до /9999/ зайняв 0.0009 секунд.
+WARNING 2026-07-08 17:03:28,147 log Not Found: /9999/
+INFO 2026-07-08 17:03:28,192 middleware Запит до /catalog/ зайняв 0.0013 секунд.
+INFO 2026-07-08 17:09:52,162 autoreload /app/bookstore_project/settings.py changed, reloading.
+INFO 2026-07-08 17:09:52,598 autoreload Watching for file changes with StatReloader
+INFO 2026-07-08 17:10:05,814 middleware Запит до /catalog/ зайняв 0.0053 секунд.
+INFO 2026-07-08 17:10:05,816 middleware Запит до /1/ зайняв 0.0019 секунд.
+INFO 2026-07-08 17:10:05,820 middleware Запит до /orders/create/ зайняв 0.0027 секунд.
+INFO 2026-07-08 17:10:05,836 middleware Запит до /orders/create/ зайняв 0.0156 секунд.
+INFO 2026-07-08 17:10:05,841 middleware Запит до /orders/create/ зайняв 0.0017 секунд.
+INFO 2026-07-08 17:10:05,844 middleware Запит до /orders/create/ зайняв 0.0020 секунд.
+INFO 2026-07-08 17:10:05,849 middleware Запит до /orders/create/ зайняв 0.0018 секунд.
+INFO 2026-07-08 17:10:05,860 middleware Запит до /orders/create/ зайняв 0.0014 секунд.
+INFO 2026-07-08 17:10:05,869 middleware Запит до / зайняв 0.0027 секунд.
+INFO 2026-07-08 17:10:05,913 middleware Запит до /catalog/ зайняв 0.0013 секунд.
+INFO 2026-07-08 17:10:05,959 middleware Запит до /14/ зайняв 0.0011 секунд.
+INFO 2026-07-08 17:10:06,004 middleware Запит до /orders/cart/ зайняв 0.0014 секунд.
+INFO 2026-07-08 17:10:06,050 middleware Запит до /9999/ зайняв 0.0008 секунд.
+WARNING 2026-07-08 17:10:06,051 log Not Found: /9999/
+INFO 2026-07-08 17:10:06,098 middleware Запит до /catalog/ зайняв 0.0013 секунд.
+INFO 2026-07-08 17:10:46,619 autoreload /app/bookstore_project/settings.py changed, reloading.
+INFO 2026-07-08 17:10:47,042 autoreload Watching for file changes with StatReloader
+INFO 2026-07-08 17:10:49,311 middleware Запит до /catalog/ зайняв 0.0052 секунд.
+INFO 2026-07-08 17:10:49,313 middleware Запит до /1/ зайняв 0.0019 секунд.
+INFO 2026-07-08 17:10:49,318 middleware Запит до /orders/create/ зайняв 0.0033 секунд.
+INFO 2026-07-08 17:10:49,333 middleware Запит до /orders/create/ зайняв 0.0151 секунд.
+INFO 2026-07-08 17:10:49,339 middleware Запит до /orders/create/ зайняв 0.0016 секунд.
+INFO 2026-07-08 17:10:49,341 middleware Запит до /orders/create/ зайняв 0.0020 секунд.
+INFO 2026-07-08 17:10:49,346 middleware Запит до /orders/create/ зайняв 0.0018 секунд.
+INFO 2026-07-08 17:10:49,357 middleware Запит до /orders/create/ зайняв 0.0014 секунд.
+INFO 2026-07-08 17:10:49,366 middleware Запит до / зайняв 0.0028 секунд.
+INFO 2026-07-08 17:10:49,409 middleware Запит до /catalog/ зайняв 0.0013 секунд.
+INFO 2026-07-08 17:10:49,454 middleware Запит до /14/ зайняв 0.0011 секунд.
+INFO 2026-07-08 17:10:49,500 middleware Запит до /orders/cart/ зайняв 0.0013 секунд.
+INFO 2026-07-08 17:10:49,547 middleware Запит до /9999/ зайняв 0.0010 секунд.
+WARNING 2026-07-08 17:10:49,548 log Not Found: /9999/
+INFO 2026-07-08 17:10:49,595 middleware Запит до /catalog/ зайняв 0.0013 секунд.

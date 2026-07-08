@@ -8,7 +8,12 @@ from django.views.generic import ListView, DetailView, CreateView, UpdateView, D
 from django.urls import reverse_lazy
 from django.contrib.auth.mixins import LoginRequiredMixin, UserPassesTestMixin
 from orders.forms import CartAddBookForm
+from django.core.cache import cache
 
+
+SEARCH_MAX_LENGTH = 100
+CATEGORY_CACHE_KEY = "shop_all_categories"
+CATEGORY_CACHE_TTL = 60 * 15  # 15 хвилин
 
 # Create your views here.
 async def get_as_list(queryset):
@@ -46,47 +51,58 @@ async def store(request):
 
     return render(request, 'shop_app/store.html', context)
 
+
 class BookListView(ListView):
     model = Book
-    template_name = 'shop_app/book_list.html'
-    context_object_name = 'books'
+    template_name = "shop_app/book_list.html"
+    context_object_name = "books"
     paginate_by = 5
 
     def get_queryset(self):
-        queryset = Book.objects.all()
-        category_id = self.request.GET.get('category')
-        search_query = self.request.GET.get('search')
+        queryset = (
+            Book.objects.select_related("category")
+            .order_by("title")
+        )
 
-        if category_id:
+        category_id = self._get_category_id()
+        if category_id is not None:
             queryset = queryset.filter(category_id=category_id)
 
+        search_query = self._get_search_query()
         if search_query:
             queryset = queryset.filter(title__icontains=search_query)
 
         return queryset
 
+    def _get_category_id(self):
+        raw_value = self.request.GET.get("category")
+        if not raw_value:
+            return None
+        try:
+            return int(raw_value)
+        except (TypeError, ValueError):
+            return None
+
+    def _get_search_query(self):
+        raw_value = self.request.GET.get("search", "").strip()
+        return raw_value[:SEARCH_MAX_LENGTH] if raw_value else ""
+
     async def get(self, request, *args, **kwargs):
+        queryset = self.get_queryset()
+        self.object_list = await sync_to_async(list)(queryset)
 
-        def process_context():
-            self.object_list = self.get_queryset()
-            allow_empty = self.get_allow_empty()
+        context = await sync_to_async(self.get_context_data)()
 
-            if not allow_empty:
-                if self.get_paginate_by(self.object_list) is not None and hasattr(self.object_list, 'exists'):
-                    is_empty = not self.object_list.exists()
-                else:
-                    is_empty = not self.object_list
-                if is_empty:
-                    raise Http404("Empty list")
-
-            return self.get_context_data()
-
-        context = await sync_to_async(process_context)()
-
-        categories_qs = Category.objects.all()
-        context['categories'] = [cat async for cat in categories_qs]
+        context["categories"] = await sync_to_async(self._get_cached_categories)()
 
         return self.render_to_response(context)
+
+    def _get_cached_categories(self):
+        return cache.get_or_set(
+            CATEGORY_CACHE_KEY,
+            lambda: list(Category.objects.all()),
+            CATEGORY_CACHE_TTL,
+        )
 
 
 

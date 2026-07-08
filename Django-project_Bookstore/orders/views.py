@@ -3,7 +3,8 @@ from django.db import transaction
 from django.conf import settings
 from django.urls import reverse
 import stripe
-from django.views.decorators.http import require_POST
+from decimal import ROUND_HALF_UP, Decimal
+from django.views.decorators.http import require_POST, require_http_methods
 from asgiref.sync import sync_to_async
 from .cart import Cart
 from .forms import CartAddBookForm, OrderCreateForm
@@ -60,90 +61,172 @@ async def cart_detail(request):
     return render(request, 'orders/cart_detail.html', {'cart': cart, 'cart_items': cart_items})
 
 
+class InsufficientStockError(Exception):
+    """Піднімається, коли на складі недостатньо товару під час checkout."""
+
+
+def _handle_order_get(request):
+    """Синхронна логіка для GET-запиту: безпечно ініціалізує форму та кошик."""
+    cart = Cart(request)
+    form = OrderCreateForm()
+    return render(
+        request,
+        "orders/order_create.html",
+        {"cart": cart, "cart_items": list(cart), "form": form},
+    )
+
+
+def _handle_order_post(request):
+    """Синхронна логіка для POST-запиту: повна обробка транзакції та сесії."""
+    cart = Cart(request)
+    cart_items = list(cart)
+
+    if not cart_items:
+        return render(
+            request,
+            "orders/order_create.html",
+            {
+                "cart": cart,
+                "cart_items": cart_items,
+                "form": OrderCreateForm(request.POST),
+                "error": "Ваш кошик порожній.",
+            },
+        )
+
+    form = OrderCreateForm(request.POST)
+    if not form.is_valid():
+        return render(
+            request,
+            "orders/order_create.html",
+            {"cart": cart, "cart_items": cart_items, "form": form},
+        )
+
+    try:
+        with transaction.atomic():
+            # Зберігаємо замовлення
+            order = form.save()
+
+            for item in cart_items:
+                # Блокуємо рядок книги в БД від race conditions
+                book = Book.objects.select_for_update().get(pk=item["book"].id)
+
+                if book.stock < item["quantity"]:
+                    raise InsufficientStockError(
+                        f'Недостатньо товару "{book.title}" на складі '
+                        f'(доступно: {book.stock}).'
+                    )
+
+                # Створюємо елемент замовлення
+                OrderItem.objects.create(
+                    order=order,
+                    book=book,
+                    price=book.price,  # Ціна з БД
+                    quantity=item["quantity"],
+                )
+
+                # Списуємо залишок
+                book.stock -= item["quantity"]
+                book.save(update_fields=["stock"])
+
+        # Очищуємо кошик та записуємо в сесію всередині синхронного контексту
+        cart.clear()
+        request.session["order_id"] = order.id
+        return redirect("orders:payment_process")
+
+    except InsufficientStockError as exc:
+        return render(
+            request,
+            "orders/order_create.html",
+            {"cart": cart, "cart_items": cart_items, "form": form, "error": str(exc)},
+        )
+    except Book.DoesNotExist:
+        return render(
+            request,
+            "orders/order_create.html",
+            {"cart": cart, "cart_items": cart_items, "form": form, "error": "Один із товарів більше не доступний."},
+        )
+
+
+@require_http_methods(["GET", "POST"])
 async def order_create(request):
-    if request.method == 'POST':
-        def save_order_transaction(post_data, session_items):
-            form = OrderCreateForm(post_data)
-            if form.is_valid():
-                with transaction.atomic():
-                    order = form.save()
-                    for item in session_items:
-                        OrderItem.objects.create(
-                            order=order,
-                            book=item['book'],
-                            price=item['price'],
-                            quantity=item['quantity']
-                        )
-                return order.id
-            return None
+    """Асинхронний диспетчер, який делегує роботу синхронним обробникам."""
+    if request.method == "GET":
+        return await sync_to_async(_handle_order_get)(request)
 
-        def get_cart_data():
-            cart = Cart(request)
-            items = list(cart)
-            return cart, items
-
-        cart, session_items = await sync_to_async(get_cart_data)()
-
-        order_id = await sync_to_async(save_order_transaction)(request.POST, session_items)
-
-        if order_id:
-            def finalize_session(order_id):
-                cart.clear()
-                request.session['order_id'] = order_id
-
-            await sync_to_async(finalize_session)(order_id)
-            return redirect('orders:payment_process')
-
-        def get_invalid_form(post_data):
-            return OrderCreateForm(post_data)
-        form = await sync_to_async(get_invalid_form)(request.POST)
-
-        cart_items = session_items
-
-    else:
-        def prepare_get_data():
-            cart = Cart(request)
-            form = OrderCreateForm()
-            return cart, list(cart), form
-
-        cart, cart_items, form = await sync_to_async(prepare_get_data)()
-
-    return render(request, 'orders/order_create.html', {'cart': cart, 'cart_items': cart_items, 'form': form})
+    return await sync_to_async(_handle_order_post)(request)
 
 
 
+def _to_stripe_amount(price: Decimal) -> int:
+    """Конвертує ціну в мінімальні одиниці валюти (копійки) з коректним округленням."""
+    return int((price * 100).quantize(Decimal("1"), rounding=ROUND_HALF_UP))
+
+
+def _build_line_items(order: Order) -> list[dict]:
+    """Формує line_items для Stripe Checkout Session з оптимізацією SQL через select_related."""
+    return [
+        {
+            "price_data": {
+                "unit_amount": _to_stripe_amount(item.price),
+                "currency": "uah",
+                "product_data": {"name": item.book.title},
+            },
+            "quantity": item.quantity,
+        }
+        for item in order.items.select_related("book").all()
+    ]
+
+
+@require_http_methods(["GET", "POST"])
 def payment_process(request):
-    order_id = request.session.get('order_id')
+    """Синхронна view-функція для ініціалізації та обробки платіжних сесій Stripe."""
+    order_id = request.session.get("order_id")
+
+    if not order_id:
+        return redirect("orders:order_create")
+
     order = get_object_or_404(Order, id=order_id)
 
-    if request.method == 'POST':
-        success_url = request.build_absolute_uri(reverse('orders:payment_completed'))
-        cancel_url = request.build_absolute_uri(reverse('orders:payment_canceled'))
+    if order.paid:
+        return redirect("orders:payment_completed")
 
-        session_data = {
-            'mode': 'payment',
-            'client_reference_id': order.id,
-            'success_url': success_url,
-            'cancel_url': cancel_url,
-            'line_items': []
-        }
+    if request.method == "POST":
+        line_items = _build_line_items(order)
+        if not line_items:
+            return render(
+                request,
+                "orders/payment_process.html",
+                {"order": order, "error": "У замовленні немає товарів."},
+            )
 
-        for item in order.items.all():
-            session_data['line_items'].append({
-                'price_data': {
-                    'unit_amount': int(item.price * 100),
-                    'currency': 'UAH',
-                    'product_data': {
-                        'name': item.book.title,
-                    },
+        success_url = request.build_absolute_uri(reverse("orders:payment_completed"))
+        cancel_url = request.build_absolute_uri(reverse("orders:payment_canceled"))
+
+        try:
+            session = stripe.checkout.Session.create(
+                mode="payment",
+                client_reference_id=order.id,
+                success_url=success_url,
+                cancel_url=cancel_url,
+                line_items=line_items,
+                idempotency_key=f"order-{order.id}-checkout",
+            )
+        except stripe.error.StripeError:
+            return render(
+                request,
+                "orders/payment_process.html",
+                {
+                    "order": order,
+                    "error": "Не вдалося створити сесію оплати. Спробуйте ще раз пізніше.",
                 },
-                'quantity': item.quantity,
-            })
+            )
 
-        session = stripe.checkout.Session.create(**session_data)
+        order.stripe_id = session.id
+        order.save(update_fields=["stripe_id", "updated"])
 
         return redirect(session.url, code=303)
-    return render(request, 'orders/payment_process.html', locals())
+
+    return render(request, "orders/payment_process.html", {"order": order})
 
 
 def payment_completed(request):
