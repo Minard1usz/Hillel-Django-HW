@@ -13,13 +13,22 @@ from shop_app.models import Book
 from django.core.mail import send_mail
 
 
-
 stripe.api_key = settings.STRIPE_SECRET_KEY
 stripe.api_version = settings.STRIPE_API_VERSION
 
 
 @require_POST
 def cart_add(request, book_id):
+    """
+        Синхронна view-функція для додавання книги до кошика або оновлення її кількості.
+
+        Args:
+            request (HttpRequest): Об'єкт HTTP-запиту, що містить POST-дані форми.
+            book_id (int): Первинний ключ (ID) книги, яку потрібно додати.
+
+        Returns:
+            HttpResponseRedirect: Перенаправлення користувача на сторінку детального перегляду кошика.
+        """
     cart = Cart(request)
     book = get_object_or_404(Book, id=book_id)
     form = CartAddBookForm(request.POST)
@@ -36,6 +45,16 @@ def cart_add(request, book_id):
 
 @require_POST
 def cart_remove(request, book_id):
+    """
+        Синхронна view-функція для повного видалення книги з кошика сесії.
+
+        Args:
+            request (HttpRequest): Об'єкт HTTP-запиту.
+            book_id (int): Первинний ключ (ID) книги, яку потрібно видалити.
+
+        Returns:
+            HttpResponseRedirect: Перенаправлення користувача на сторінку детального перегляду кошика.
+        """
     cart = Cart(request)
     book = get_object_or_404(Book, id=book_id)
     cart.remove(book)
@@ -43,6 +62,21 @@ def cart_remove(request, book_id):
 
 
 async def cart_detail(request):
+    """
+        Асинхронна view-функція для відображення вмісту кошика користувача.
+
+        Для безпечної роботи із синхронними сесіями Django (`request.session`)
+        та кошиком логіка виділена у внутрішню ізольовану функцію `prepare_cart_data`,
+        яка викликається асинхронним диспетчером через `sync_to_async`.
+        Для кожного товару ініціалізується форма оновлення кількості.
+
+        Args:
+            request (HttpRequest): Об'єкт HTTP-запиту від користувача.
+
+        Returns:
+            HttpResponse: Зрендерена HTML-сторінка кошика з переданим списком товарів
+            та формами для редагування кількості.
+        """
     def prepare_cart_data():
         cart = Cart(request)
         cart_items = []
@@ -66,7 +100,19 @@ class InsufficientStockError(Exception):
 
 
 def _handle_order_get(request):
-    """Синхронна логіка для GET-запиту: безпечно ініціалізує форму та кошик."""
+    """
+        Синхронна логіка для GET-запиту: безпечно ініціалізує форму та кошик.
+
+        Викликається асинхронним диспетчером `order_create` через `sync_to_async`
+        для ізоляції роботи із синхронною сесією Django (`Cart`).
+
+        Args:
+            request (HttpRequest): Об'єкт HTTP-запиту від користувача.
+
+        Returns:
+            HttpResponse: Зрендерена HTML-сторінка з порожньою формою замовлення
+            та вмістом кошика.
+        """
     cart = Cart(request)
     form = OrderCreateForm()
     return render(
@@ -77,7 +123,22 @@ def _handle_order_get(request):
 
 
 def _handle_order_post(request):
-    """Синхронна логіка для POST-запиту: повна обробка транзакції та сесії."""
+    """
+    Синхронна логіка для POST-запиту: повна обробка транзакції та сесії.
+
+    Виконує атомарну валідацію замовлення всередині блоку `transaction.atomic()`.
+    Захищає базу даних від Race Conditions за допомогою `select_for_update()`,
+    перевіряє реальні залишки на складі (`stock`), списує товари, фіксує актуальну
+    ціну з БД на момент покупки та очищує кошик сесії.
+
+    Args:
+        request (HttpRequest): Об'єкт HTTP-запиту, що містить POST-дані форми.
+
+    Returns:
+        HttpResponse: Редірект на сторінку оплати `orders:payment_process` при успіху,
+        або повернення на сторінку форми з відображенням помилок валідації чи
+        нестачі товару на складі (`InsufficientStockError`).
+    """
     cart = Cart(request)
     cart_items = list(cart)
 
@@ -149,7 +210,20 @@ def _handle_order_post(request):
 
 @require_http_methods(["GET", "POST"])
 async def order_create(request):
-    """Асинхронний диспетчер, який делегує роботу синхронним обробникам."""
+    """
+        Асинхронний диспетчер для ініціалізації та обробки створення замовлення.
+
+        Делегує роботу відповідним синхронним функціям-обробникам (`_handle_order_get` 
+        або `_handle_order_post`) через `sync_to_async`, щоб уникнути конфліктів 
+        асинхронного контексту із синхронними сесіями Django та ORM.
+
+        Args:
+            request (HttpRequest): Об'єкт HTTP-запиту від користувача.
+
+        Returns:
+            HttpResponse: Рендеринг сторінки оформлення замовлення (GET або POST з помилками)
+            або редірект на сторінку ініціалізації оплати Stripe (успішний POST).
+        """
     if request.method == "GET":
         return await sync_to_async(_handle_order_get)(request)
 
@@ -158,12 +232,36 @@ async def order_create(request):
 
 
 def _to_stripe_amount(price: Decimal) -> int:
-    """Конвертує ціну в мінімальні одиниці валюти (копійки) з коректним округленням."""
+    """
+    Конвертує ціну типу Decimal у мінімальні одиниці валюти (копійки) для Stripe API.
+
+    Використовує фінансове округлення `ROUND_HALF_UP` через метод `.quantize()`.
+    Це запобігає класичним багам Python при роботі з типами з плаваючої крапкою
+    (floating-point inaccuracies), гарантуючи точність фінансових транзакцій.
+
+    Args:
+        price (Decimal): Ціна товару або замовлення з копійками (наприклад, 199.90).
+
+    Returns:
+        int: Ціна в копійках, приведена до цілого числа (наприклад, 19990).
+    """
     return int((price * 100).quantize(Decimal("1"), rounding=ROUND_HALF_UP))
 
 
 def _build_line_items(order: Order) -> list[dict]:
-    """Формує line_items для Stripe Checkout Session з оптимізацією SQL через select_related."""
+    """
+        Формує структуру line_items для передачі в Stripe Checkout Session.
+
+        Оптимізує SQL-запити до бази даних за допомогою `select_related("book")`,
+        що дозволяє уникнути проблеми N+1 при завантаженні назв книг для кожного елемента замовлення.
+
+        Args:
+            order (Order): Об'єкт замовлення, для якого формується платіжний чек.
+
+        Returns:
+            list[dict]: Список словників у форматі, який суворо вимагає Stripe API
+            для опису товарних позицій (ціна, валюта в нижньому регістрі, назва, кількість).
+        """
     return [
         {
             "price_data": {
@@ -180,6 +278,21 @@ def _build_line_items(order: Order) -> list[dict]:
 @require_http_methods(["GET", "POST"])
 def payment_process(request):
     """Синхронна view-функція для ініціалізації та обробки платіжних сесій Stripe."""
+    """
+        Синхронна view-функція для ініціалізації платіжної сесії у системі Stripe.
+
+        Перевіряє наявність замовлення в сесії користувача та статус його оплати.
+        При POST-запиті формує кошик товарів із захищеними цінами з БД, інтегрує
+        idempotency_key для захисту від подвійних кліків та перенаправляє користувача
+        на захищену сторінку оплати Stripe Checkout.
+
+        Args:
+            request (HttpRequest): Об'єкт HTTP-запиту від користувача.
+
+        Returns:
+            HttpResponse: Рендеринг сторінки підтвердження оплати (GET) або 
+            тимчасовий редірект (HTTP 303 Redirect) на платіжну форму Stripe (POST).
+        """
     order_id = request.session.get("order_id")
 
     if not order_id:
@@ -230,6 +343,17 @@ def payment_process(request):
 
 
 def payment_completed(request):
+    """
+        Синхронна view-функція для відображення сторінки успішної оплати замовлення.
+
+        Сюди користувача перенаправляє Stripe після успішного списання коштів.
+
+        Args:
+            request (HttpRequest): Об'єкт HTTP-запиту.
+
+        Returns:
+            HttpResponse: HTML-сторінка з підтвердженням успішного оформлення замовлення.
+        """
     order_id = request.session.get('order_id')
     if order_id:
         order = get_object_or_404(Order, id=order_id)
@@ -258,6 +382,17 @@ def payment_completed(request):
 
 
 def payment_canceled(request):
+    """
+        Синхронна view-функція для відображення сторінки скасованої оплати.
+
+        Сюди користувача перенаправляє Stripe, якщо він натиснув "Назад" або скасував сесію.
+
+        Args:
+            request (HttpRequest): Об'єкт HTTP-запиту.
+
+        Returns:
+            HttpResponse: HTML-сторінка з повідомленням про скасування транзакції.
+        """
     return render(request, 'orders/canceled.html')
 
 

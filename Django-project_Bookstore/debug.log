@@ -5428,3 +5428,131 @@ INFO 2026-07-08 17:10:49,500 middleware Запит до /orders/cart/ зайня
 INFO 2026-07-08 17:10:49,547 middleware Запит до /9999/ зайняв 0.0010 секунд.
 WARNING 2026-07-08 17:10:49,548 log Not Found: /9999/
 INFO 2026-07-08 17:10:49,595 middleware Запит до /catalog/ зайняв 0.0013 секунд.
+INFO 2026-07-08 17:14:36,071 middleware Запит до /catalog/ зайняв 0.0243 секунд.
+INFO 2026-07-08 17:14:36,072 log "GET /catalog/?category=1 HTTP/1.1" 200 6346
+INFO 2026-07-08 17:14:36,727 middleware Запит до /catalog/ зайняв 0.0168 секунд.
+INFO 2026-07-08 17:14:36,728 log "GET /catalog/?category=6 HTTP/1.1" 200 6975
+INFO 2026-07-08 17:14:37,635 middleware Запит до / зайняв 0.0233 секунд.
+INFO 2026-07-08 17:14:37,635 log "GET / HTTP/1.1" 200 9641
+INFO 2026-07-08 17:14:38,243 middleware Запит до /catalog/ зайняв 0.0168 секунд.
+INFO 2026-07-08 17:14:38,244 log "GET /catalog/ HTTP/1.1" 200 8307
+INFO 2026-07-08 17:14:40,594 middleware Запит до /catalog/ зайняв 0.0167 секунд.
+INFO 2026-07-08 17:14:40,594 log "GET /catalog/?page=2 HTTP/1.1" 200 8321
+INFO 2026-07-08 17:14:41,481 middleware Запит до /catalog/ зайняв 0.0194 секунд.
+INFO 2026-07-08 17:14:41,482 log "GET /catalog/?page=3 HTTP/1.1" 200 8333
+INFO 2026-07-08 17:14:42,510 middleware Запит до /catalog/ зайняв 0.0164 секунд.
+INFO 2026-07-08 17:14:42,511 log "GET /catalog/?page=4 HTTP/1.1" 200 7575
+INFO 2026-07-08 17:14:44,470 middleware Запит до /catalog/ зайняв 0.0169 секунд.
+INFO 2026-07-08 17:14:44,470 log "GET /catalog/ HTTP/1.1" 200 8307
+INFO 2026-07-08 19:33:20,751 middleware Запит до /catalog/ зайняв 0.0053 секунд.
+INFO 2026-07-08 19:33:20,754 middleware Запит до /1/ зайняв 0.0023 секунд.
+INFO 2026-07-08 19:33:20,758 middleware Запит до /orders/create/ зайняв 0.0027 секунд.
+INFO 2026-07-08 19:33:20,774 middleware Запит до /orders/create/ зайняв 0.0151 секунд.
+INFO 2026-07-08 19:33:20,779 middleware Запит до /orders/create/ зайняв 0.0017 секунд.
+INFO 2026-07-08 19:33:20,781 middleware Запит до /orders/create/ зайняв 0.0021 секунд.
+INFO 2026-07-08 19:33:20,786 middleware Запит до /orders/create/ зайняв 0.0018 секунд.
+INFO 2026-07-08 19:33:20,803 middleware Запит до /orders/create/ зайняв 0.0019 секунд.
+INFO 2026-07-08 19:33:20,856 middleware Запит до / зайняв 0.0035 секунд.
+INFO 2026-07-08 19:33:20,911 middleware Запит до /catalog/ зайняв 0.0016 секунд.
+INFO 2026-07-08 19:33:20,960 middleware Запит до /16/ зайняв 0.0012 секунд.
+INFO 2026-07-08 19:33:21,008 middleware Запит до /orders/cart/ зайняв 0.0015 секунд.
+INFO 2026-07-08 19:33:21,068 middleware Запит до /9999/ зайняв 0.0014 секунд.
+WARNING 2026-07-08 19:33:21,069 log Not Found: /9999/
+INFO 2026-07-08 19:33:21,131 middleware Запит до /catalog/ зайняв 0.0013 секунд.
+INFO 2026-07-09 18:29:13,344 middleware Запит до /catalog/ зайняв 0.0267 секунд.
+INFO 2026-07-09 18:29:13,345 log "GET /catalog/ HTTP/1.1" 200 8307
+INFO 2026-07-09 18:29:13,872 middleware Запит до / зайняв 0.0197 секунд.
+INFO 2026-07-09 18:29:13,873 log "GET / HTTP/1.1" 200 9641
+INFO 2026-07-09 18:29:14,817 middleware Запит до /catalog/ зайняв 0.0160 секунд.
+INFO 2026-07-09 18:29:14,818 log "GET /catalog/ HTTP/1.1" 200 8307
+INFO 2026-07-09 18:29:15,655 middleware Запит до / зайняв 0.0205 секунд.
+INFO 2026-07-09 18:29:15,656 log "GET / HTTP/1.1" 200 9641
+INFO 2026-07-09 18:29:17,958 middleware Запит до /i18n/setlang/ зайняв 0.0013 секунд.
+INFO 2026-07-09 18:29:17,959 log "POST /i18n/setlang/ HTTP/1.1" 302 0
+INFO 2026-07-09 18:29:17,988 middleware Запит до / зайняв 0.0193 секунд.
+INFO 2026-07-09 18:29:17,989 log "GET / HTTP/1.1" 200 9769
+INFO 2026-07-09 18:29:20,482 middleware Запит до /i18n/setlang/ зайняв 0.0008 секунд.
+INFO 2026-07-09 18:29:20,483 log "POST /i18n/setlang/ HTTP/1.1" 302 0
+INFO 2026-07-09 18:29:20,512 middleware Запит до / зайняв 0.0184 секунд.
+INFO 2026-07-09 18:29:20,513 log "GET / HTTP/1.1" 200 9641
+INFO 2026-07-09 18:29:56,699 middleware Запит до /catalog/ зайняв 0.0166 секунд.
+INFO 2026-07-09 18:29:56,700 log "GET /catalog/ HTTP/1.1" 200 8307
+INFO 2026-07-09 18:29:57,310 middleware Запит до / зайняв 0.0150 секунд.
+INFO 2026-07-09 18:29:57,311 log "GET / HTTP/1.1" 200 9641
+INFO 2026-07-09 18:38:07,079 autoreload /app/orders/views.py changed, reloading.
+INFO 2026-07-09 18:38:07,492 autoreload Watching for file changes with StatReloader
+INFO 2026-07-09 18:39:21,866 autoreload /app/orders/views.py changed, reloading.
+INFO 2026-07-09 18:39:22,263 autoreload Watching for file changes with StatReloader
+INFO 2026-07-09 18:44:48,930 autoreload /app/shop_app/views.py changed, reloading.
+INFO 2026-07-09 18:44:49,333 autoreload Watching for file changes with StatReloader
+INFO 2026-07-09 18:45:08,728 autoreload /app/shop_app/views.py changed, reloading.
+INFO 2026-07-09 18:45:09,122 autoreload Watching for file changes with StatReloader
+INFO 2026-07-09 18:45:19,367 autoreload /app/shop_app/views.py changed, reloading.
+INFO 2026-07-09 18:45:19,763 autoreload Watching for file changes with StatReloader
+INFO 2026-07-09 18:45:28,971 autoreload /app/shop_app/views.py changed, reloading.
+INFO 2026-07-09 18:45:29,376 autoreload Watching for file changes with StatReloader
+INFO 2026-07-09 18:45:48,755 autoreload /app/shop_app/views.py changed, reloading.
+INFO 2026-07-09 18:45:49,155 autoreload Watching for file changes with StatReloader
+INFO 2026-07-09 18:45:54,295 autoreload /app/shop_app/views.py changed, reloading.
+INFO 2026-07-09 18:45:54,685 autoreload Watching for file changes with StatReloader
+INFO 2026-07-09 18:48:10,109 autoreload /app/orders/views.py changed, reloading.
+INFO 2026-07-09 18:48:10,519 autoreload Watching for file changes with StatReloader
+INFO 2026-07-09 18:48:17,758 autoreload /app/orders/views.py changed, reloading.
+INFO 2026-07-09 18:48:18,164 autoreload Watching for file changes with StatReloader
+INFO 2026-07-09 18:49:12,158 autoreload /app/orders/views.py changed, reloading.
+INFO 2026-07-09 18:49:12,559 autoreload Watching for file changes with StatReloader
+INFO 2026-07-09 18:49:56,373 autoreload /app/orders/views.py changed, reloading.
+INFO 2026-07-09 18:49:56,770 autoreload Watching for file changes with StatReloader
+INFO 2026-07-09 18:50:11,076 autoreload /app/shop_app/views.py changed, reloading.
+INFO 2026-07-09 18:50:11,474 autoreload Watching for file changes with StatReloader
+INFO 2026-07-09 18:51:15,609 autoreload /app/orders/views.py changed, reloading.
+INFO 2026-07-09 18:51:16,051 autoreload Watching for file changes with StatReloader
+INFO 2026-07-09 19:01:59,228 autoreload /app/orders/views.py changed, reloading.
+INFO 2026-07-09 19:01:59,630 autoreload Watching for file changes with StatReloader
+INFO 2026-07-09 19:02:12,880 autoreload /app/orders/views.py changed, reloading.
+INFO 2026-07-09 19:02:13,280 autoreload Watching for file changes with StatReloader
+INFO 2026-07-09 19:02:20,466 autoreload /app/orders/views.py changed, reloading.
+INFO 2026-07-09 19:02:20,871 autoreload Watching for file changes with StatReloader
+INFO 2026-07-09 19:03:04,701 autoreload /app/orders/views.py changed, reloading.
+INFO 2026-07-09 19:03:05,109 autoreload Watching for file changes with StatReloader
+INFO 2026-07-09 19:03:51,985 autoreload /app/orders/views.py changed, reloading.
+INFO 2026-07-09 19:03:52,508 autoreload Watching for file changes with StatReloader
+INFO 2026-07-09 19:04:09,865 autoreload /app/orders/views.py changed, reloading.
+INFO 2026-07-09 19:04:10,259 autoreload Watching for file changes with StatReloader
+INFO 2026-07-09 20:53:32,210 autoreload /app/orders/views.py changed, reloading.
+INFO 2026-07-09 20:53:32,681 autoreload Watching for file changes with StatReloader
+INFO 2026-07-09 20:56:27,366 autoreload /app/shop_app/views.py changed, reloading.
+INFO 2026-07-09 20:56:27,779 autoreload Watching for file changes with StatReloader
+INFO 2026-07-09 20:56:33,940 autoreload /app/shop_app/views.py changed, reloading.
+INFO 2026-07-09 20:56:34,388 autoreload Watching for file changes with StatReloader
+INFO 2026-07-09 20:56:46,652 autoreload /app/shop_app/views.py changed, reloading.
+INFO 2026-07-09 20:56:47,089 autoreload Watching for file changes with StatReloader
+INFO 2026-07-09 20:59:08,532 autoreload /app/shop_app/views.py changed, reloading.
+INFO 2026-07-09 20:59:08,937 autoreload Watching for file changes with StatReloader
+INFO 2026-07-09 20:59:18,156 autoreload /app/shop_app/views.py changed, reloading.
+INFO 2026-07-09 20:59:18,572 autoreload Watching for file changes with StatReloader
+INFO 2026-07-09 20:59:50,179 autoreload /app/shop_app/views.py changed, reloading.
+INFO 2026-07-09 20:59:50,617 autoreload Watching for file changes with StatReloader
+INFO 2026-07-09 21:00:06,962 autoreload /app/shop_app/views.py changed, reloading.
+INFO 2026-07-09 21:00:07,362 autoreload Watching for file changes with StatReloader
+INFO 2026-07-09 21:00:19,625 autoreload /app/shop_app/views.py changed, reloading.
+INFO 2026-07-09 21:00:20,023 autoreload Watching for file changes with StatReloader
+INFO 2026-07-09 21:01:27,235 autoreload /app/shop_app/views.py changed, reloading.
+INFO 2026-07-09 21:01:27,646 autoreload Watching for file changes with StatReloader
+INFO 2026-07-09 21:02:37,876 autoreload /app/users/views.py changed, reloading.
+INFO 2026-07-09 21:02:38,282 autoreload Watching for file changes with StatReloader
+INFO 2026-07-10 14:36:02,513 middleware Запит до /catalog/ зайняв 0.0053 секунд.
+INFO 2026-07-10 14:36:02,516 middleware Запит до /1/ зайняв 0.0023 секунд.
+INFO 2026-07-10 14:36:02,520 middleware Запит до /orders/create/ зайняв 0.0027 секунд.
+INFO 2026-07-10 14:36:02,535 middleware Запит до /orders/create/ зайняв 0.0146 секунд.
+INFO 2026-07-10 14:36:02,541 middleware Запит до /orders/create/ зайняв 0.0016 секунд.
+INFO 2026-07-10 14:36:02,543 middleware Запит до /orders/create/ зайняв 0.0020 секунд.
+INFO 2026-07-10 14:36:02,548 middleware Запит до /orders/create/ зайняв 0.0018 секунд.
+INFO 2026-07-10 14:36:02,565 middleware Запит до /orders/create/ зайняв 0.0020 секунд.
+INFO 2026-07-10 14:36:02,617 middleware Запит до / зайняв 0.0029 секунд.
+INFO 2026-07-10 14:36:02,664 middleware Запит до /catalog/ зайняв 0.0013 секунд.
+INFO 2026-07-10 14:36:02,709 middleware Запит до /16/ зайняв 0.0011 секунд.
+INFO 2026-07-10 14:36:02,754 middleware Запит до /orders/cart/ зайняв 0.0013 секунд.
+INFO 2026-07-10 14:36:02,797 middleware Запит до /9999/ зайняв 0.0009 секунд.
+WARNING 2026-07-10 14:36:02,797 log Not Found: /9999/
+INFO 2026-07-10 14:36:02,842 middleware Запит до /catalog/ зайняв 0.0013 секунд.
