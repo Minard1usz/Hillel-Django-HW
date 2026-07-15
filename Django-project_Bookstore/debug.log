@@ -5556,3 +5556,971 @@ INFO 2026-07-10 14:36:02,754 middleware Запит до /orders/cart/ зайня
 INFO 2026-07-10 14:36:02,797 middleware Запит до /9999/ зайняв 0.0009 секунд.
 WARNING 2026-07-10 14:36:02,797 log Not Found: /9999/
 INFO 2026-07-10 14:36:02,842 middleware Запит до /catalog/ зайняв 0.0013 секунд.
+INFO 2026-07-10 14:52:51,156 middleware Запит до /catalog/ зайняв 0.0189 секунд.
+INFO 2026-07-10 14:52:51,157 log "GET /catalog/ HTTP/1.1" 200 8307
+INFO 2026-07-10 14:52:51,614 middleware Запит до /catalog/ зайняв 0.0162 секунд.
+INFO 2026-07-10 14:52:51,615 log "GET /catalog/ HTTP/1.1" 200 8307
+INFO 2026-07-10 14:52:53,469 middleware Запит до /i18n/setlang/ зайняв 0.0009 секунд.
+INFO 2026-07-10 14:52:53,470 log "POST /i18n/setlang/ HTTP/1.1" 302 0
+INFO 2026-07-10 14:52:53,493 middleware Запит до /catalog/ зайняв 0.0168 секунд.
+INFO 2026-07-10 14:52:53,494 log "GET /catalog/ HTTP/1.1" 200 8582
+INFO 2026-07-10 14:52:54,960 middleware Запит до /i18n/setlang/ зайняв 0.0007 секунд.
+INFO 2026-07-10 14:52:54,961 log "POST /i18n/setlang/ HTTP/1.1" 302 0
+INFO 2026-07-10 14:52:54,980 middleware Запит до /catalog/ зайняв 0.0148 секунд.
+INFO 2026-07-10 14:52:54,981 log "GET /catalog/ HTTP/1.1" 200 8307
+INFO 2026-07-10 14:52:55,586 middleware Запит до / зайняв 0.0205 секунд.
+INFO 2026-07-10 14:52:55,587 log "GET / HTTP/1.1" 200 9641
+INFO 2026-07-10 14:52:57,833 middleware Запит до /catalog/ зайняв 0.0156 секунд.
+INFO 2026-07-10 14:52:57,833 log "GET /catalog/ HTTP/1.1" 200 8307
+INFO 2026-07-10 14:52:58,999 middleware Запит до /catalog/ зайняв 0.0160 секунд.
+INFO 2026-07-10 14:52:59,000 log "GET /catalog/?category=1 HTTP/1.1" 200 6346
+INFO 2026-07-10 14:52:59,446 middleware Запит до /catalog/ зайняв 0.0131 секунд.
+INFO 2026-07-10 14:52:59,446 log "GET /catalog/?category=6 HTTP/1.1" 200 6975
+INFO 2026-07-10 14:52:59,900 middleware Запит до /catalog/ зайняв 0.0152 секунд.
+INFO 2026-07-10 14:52:59,901 log "GET /catalog/?category=2 HTTP/1.1" 200 7728
+INFO 2026-07-10 14:53:01,063 middleware Запит до / зайняв 0.0196 секунд.
+INFO 2026-07-10 14:53:01,063 log "GET / HTTP/1.1" 200 9641
+INFO 2026-07-11 17:30:04,791 middleware Запит до / зайняв 0.0297 секунд.
+INFO 2026-07-11 17:30:04,793 log "GET / HTTP/1.1" 200 9641
+INFO 2026-07-11 17:30:05,325 middleware Запит до /catalog/ зайняв 0.0169 секунд.
+INFO 2026-07-11 17:30:05,326 log "GET /catalog/ HTTP/1.1" 200 8307
+INFO 2026-07-11 17:30:06,043 middleware Запит до / зайняв 0.0196 секунд.
+INFO 2026-07-11 17:30:06,044 log "GET / HTTP/1.1" 200 9641
+INFO 2026-07-11 18:24:47,683 autoreload /app/bookstore_project/settings.py changed, reloading.
+INFO 2026-07-11 18:24:48,279 autoreload Watching for file changes with StatReloader
+INFO 2026-07-11 18:25:01,491 autoreload /app/bookstore_project/settings.py changed, reloading.
+INFO 2026-07-11 18:25:01,887 autoreload Watching for file changes with StatReloader
+INFO 2026-07-11 18:26:12,545 autoreload /app/bookstore_project/settings.py changed, reloading.
+INFO 2026-07-11 18:26:12,876 autoreload Watching for file changes with StatReloader
+INFO 2026-07-11 18:27:53,791 autoreload /app/bookstore_project/settings.py changed, reloading.
+INFO 2026-07-11 18:27:54,124 autoreload Watching for file changes with StatReloader
+INFO 2026-07-11 18:31:03,654 autoreload /app/bookstore_project/settings.py changed, reloading.
+INFO 2026-07-11 18:31:03,998 autoreload Watching for file changes with StatReloader
+INFO 2026-07-11 18:37:05,783 autoreload /app/bookstore_project/settings.py changed, reloading.
+INFO 2026-07-11 18:37:06,120 autoreload Watching for file changes with StatReloader
+INFO 2026-07-11 18:39:55,444 autoreload /app/bookstore_project/settings.py changed, reloading.
+INFO 2026-07-11 18:39:55,780 autoreload Watching for file changes with StatReloader
+INFO 2026-07-11 18:41:32,600 autoreload /app/bookstore_project/settings.py changed, reloading.
+INFO 2026-07-11 18:41:33,005 autoreload Watching for file changes with StatReloader
+INFO 2026-07-11 18:42:25,475 autoreload /app/bookstore_project/settings.py changed, reloading.
+INFO 2026-07-11 18:42:25,811 autoreload Watching for file changes with StatReloader
+INFO 2026-07-11 18:47:35,444 autoreload /app/bookstore_project/settings.py changed, reloading.
+INFO 2026-07-11 18:47:35,773 autoreload Watching for file changes with StatReloader
+INFO 2026-07-12 19:32:33,230 autoreload Watching for file changes with StatReloader
+INFO 2026-07-12 19:33:16,813 autoreload Watching for file changes with StatReloader
+INFO 2026-07-12 19:40:34,157 autoreload Watching for file changes with StatReloader
+INFO 2026-07-12 19:47:05,024 autoreload Watching for file changes with StatReloader
+INFO 2026-07-12 19:47:08,913 middleware Запит до / зайняв 0.0311 секунд.
+INFO 2026-07-12 19:47:08,914 log "GET / HTTP/1.1" 200 9641
+INFO 2026-07-12 19:47:10,247 middleware Запит до /catalog/ зайняв 0.0226 секунд.
+INFO 2026-07-12 19:47:10,248 log "GET /catalog/ HTTP/1.1" 200 8307
+INFO 2026-07-12 19:47:11,062 middleware Запит до / зайняв 0.0201 секунд.
+INFO 2026-07-12 19:47:11,062 log "GET / HTTP/1.1" 200 9641
+INFO 2026-07-12 19:47:12,678 middleware Запит до /i18n/setlang/ зайняв 0.0007 секунд.
+INFO 2026-07-12 19:47:12,679 log "POST /i18n/setlang/ HTTP/1.1" 302 0
+INFO 2026-07-12 19:47:12,709 middleware Запит до / зайняв 0.0199 секунд.
+INFO 2026-07-12 19:47:12,709 log "GET / HTTP/1.1" 200 9769
+INFO 2026-07-12 19:47:14,477 middleware Запит до /i18n/setlang/ зайняв 0.0005 секунд.
+INFO 2026-07-12 19:47:14,478 log "POST /i18n/setlang/ HTTP/1.1" 302 0
+INFO 2026-07-12 19:47:14,498 middleware Запит до / зайняв 0.0166 секунд.
+INFO 2026-07-12 19:47:14,499 log "GET / HTTP/1.1" 200 9641
+INFO 2026-07-12 19:47:14,928 middleware Запит до / зайняв 0.0184 секунд.
+INFO 2026-07-12 19:47:14,929 log "GET / HTTP/1.1" 200 9641
+INFO 2026-07-12 19:47:15,479 middleware Запит до /catalog/ зайняв 0.0146 секунд.
+INFO 2026-07-12 19:47:15,479 log "GET /catalog/ HTTP/1.1" 200 8307
+INFO 2026-07-12 19:47:17,254 middleware Запит до / зайняв 0.0200 секунд.
+INFO 2026-07-12 19:47:17,255 log "GET / HTTP/1.1" 200 9641
+INFO 2026-07-12 20:25:50,875 autoreload /app/orders/urls.py changed, reloading.
+INFO 2026-07-12 20:25:51,303 autoreload Watching for file changes with StatReloader
+INFO 2026-07-12 20:26:44,705 autoreload /app/orders/urls.py changed, reloading.
+INFO 2026-07-12 20:26:45,116 autoreload Watching for file changes with StatReloader
+INFO 2026-07-12 20:34:18,330 autoreload /app/orders/api_views.py changed, reloading.
+INFO 2026-07-12 20:34:18,758 autoreload Watching for file changes with StatReloader
+INFO 2026-07-12 20:34:33,203 autoreload /app/orders/api_views.py changed, reloading.
+INFO 2026-07-12 20:34:33,618 autoreload Watching for file changes with StatReloader
+INFO 2026-07-12 20:40:57,915 autoreload /app/orders/api_views.py changed, reloading.
+INFO 2026-07-12 20:40:58,329 autoreload Watching for file changes with StatReloader
+INFO 2026-07-12 20:42:21,415 autoreload /app/orders/api_views.py changed, reloading.
+INFO 2026-07-12 20:42:21,826 autoreload Watching for file changes with StatReloader
+INFO 2026-07-12 20:49:44,489 autoreload /app/orders/api_views.py changed, reloading.
+INFO 2026-07-12 20:49:44,950 autoreload Watching for file changes with StatReloader
+INFO 2026-07-12 20:50:48,623 autoreload /app/orders/api_views.py changed, reloading.
+INFO 2026-07-12 20:50:49,060 autoreload Watching for file changes with StatReloader
+INFO 2026-07-12 20:55:38,100 autoreload /app/orders/api_views.py changed, reloading.
+INFO 2026-07-12 20:55:38,554 autoreload Watching for file changes with StatReloader
+INFO 2026-07-12 20:55:57,079 autoreload /app/orders/api_views.py changed, reloading.
+INFO 2026-07-12 20:55:57,498 autoreload Watching for file changes with StatReloader
+INFO 2026-07-13 13:44:51,505 autoreload /app/orders/api_views.py changed, reloading.
+INFO 2026-07-13 13:44:51,933 autoreload Watching for file changes with StatReloader
+INFO 2026-07-13 13:46:55,039 autoreload /app/bookstore_project/settings.py changed, reloading.
+INFO 2026-07-13 13:46:55,441 autoreload Watching for file changes with StatReloader
+INFO 2026-07-13 13:47:09,878 autoreload /app/bookstore_project/settings.py changed, reloading.
+INFO 2026-07-13 13:47:10,293 autoreload Watching for file changes with StatReloader
+INFO 2026-07-13 13:48:16,360 autoreload Watching for file changes with StatReloader
+INFO 2026-07-13 13:52:11,093 autoreload /app/shop_app/urls.py changed, reloading.
+INFO 2026-07-13 13:52:11,509 autoreload Watching for file changes with StatReloader
+INFO 2026-07-13 13:52:13,632 autoreload /app/shop_app/urls.py changed, reloading.
+INFO 2026-07-13 13:52:14,037 autoreload Watching for file changes with StatReloader
+INFO 2026-07-13 13:52:31,517 autoreload /app/shop_app/urls.py changed, reloading.
+INFO 2026-07-13 13:52:31,922 autoreload Watching for file changes with StatReloader
+INFO 2026-07-13 13:52:35,140 middleware Запит до / зайняв 0.0026 секунд.
+WARNING 2026-07-13 13:52:35,140 log Not Found: /
+WARNING 2026-07-13 13:52:35,141 log "GET / HTTP/1.1" 404 3627
+INFO 2026-07-13 13:52:57,706 autoreload /app/shop_app/urls.py changed, reloading.
+INFO 2026-07-13 13:52:58,117 autoreload Watching for file changes with StatReloader
+INFO 2026-07-13 13:53:00,412 middleware Запит до / зайняв 0.0032 секунд.
+WARNING 2026-07-13 13:53:00,413 log Not Found: /
+WARNING 2026-07-13 13:53:00,414 log "GET / HTTP/1.1" 404 3627
+INFO 2026-07-13 13:53:01,630 middleware Запит до /catalog/ зайняв 0.0025 секунд.
+WARNING 2026-07-13 13:53:01,630 log Not Found: /catalog/
+WARNING 2026-07-13 13:53:01,631 log "GET /catalog/ HTTP/1.1" 404 3669
+INFO 2026-07-13 13:54:09,073 autoreload /app/bookstore_project/urls.py changed, reloading.
+INFO 2026-07-13 13:54:09,490 autoreload Watching for file changes with StatReloader
+INFO 2026-07-13 13:54:56,725 autoreload /app/bookstore_project/urls.py changed, reloading.
+INFO 2026-07-13 13:54:57,132 autoreload Watching for file changes with StatReloader
+INFO 2026-07-13 13:56:31,498 autoreload /app/bookstore_project/urls.py changed, reloading.
+INFO 2026-07-13 13:56:31,904 autoreload Watching for file changes with StatReloader
+INFO 2026-07-13 13:56:35,310 middleware Запит до / зайняв 0.0047 секунд.
+WARNING 2026-07-13 13:56:35,311 log Not Found: /
+WARNING 2026-07-13 13:56:35,312 log "GET / HTTP/1.1" 404 3627
+INFO 2026-07-13 13:56:51,492 autoreload /app/bookstore_project/urls.py changed, reloading.
+INFO 2026-07-13 13:56:51,922 autoreload Watching for file changes with StatReloader
+INFO 2026-07-13 13:56:52,659 middleware Запит до / зайняв 0.0037 секунд.
+WARNING 2026-07-13 13:56:52,660 log Not Found: /
+WARNING 2026-07-13 13:56:52,661 log "GET / HTTP/1.1" 404 3627
+INFO 2026-07-13 13:57:29,984 autoreload /app/bookstore_project/urls.py changed, reloading.
+INFO 2026-07-13 13:57:30,394 autoreload Watching for file changes with StatReloader
+INFO 2026-07-13 13:59:41,030 autoreload Watching for file changes with StatReloader
+INFO 2026-07-13 14:00:57,109 autoreload Watching for file changes with StatReloader
+INFO 2026-07-13 14:01:56,631 autoreload /app/orders/urls.py changed, reloading.
+INFO 2026-07-13 14:01:57,037 autoreload Watching for file changes with StatReloader
+INFO 2026-07-13 14:02:06,337 autoreload /app/orders/urls.py changed, reloading.
+INFO 2026-07-13 14:02:06,738 autoreload Watching for file changes with StatReloader
+INFO 2026-07-13 14:02:09,418 middleware Запит до / зайняв 0.0038 секунд.
+WARNING 2026-07-13 14:02:09,419 log Not Found: /
+WARNING 2026-07-13 14:02:09,420 log "GET / HTTP/1.1" 404 3777
+ERROR 2026-07-13 14:07:43,829 log Internal Server Error: /api/v1/books/
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/django/core/handlers/base.py", line 198, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/rest_framework/viewsets.py", line 124, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/usr/local/lib/python3.12/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/usr/local/lib/python3.12/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/rest_framework/mixins.py", line 43, in list
+    return self.get_paginated_response(serializer.data)
+                                       ^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/rest_framework/serializers.py", line 795, in data
+    ret = super().data
+          ^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/rest_framework/serializers.py", line 249, in data
+    self._data = self.to_representation(self.instance)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/rest_framework/serializers.py", line 714, in to_representation
+    self.child.to_representation(item) for item in iterable
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/rest_framework/serializers.py", line 523, in to_representation
+    for field in fields:
+                 ^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/rest_framework/serializers.py", line 384, in _readable_fields
+    for field in self.fields.values():
+                 ^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/django/utils/functional.py", line 47, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+                                         ^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/rest_framework/serializers.py", line 372, in fields
+    for key, value in self.get_fields().items():
+                      ^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/rest_framework/serializers.py", line 1103, in get_fields
+    field_class, field_kwargs = self.build_field(
+                                ^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/rest_framework/serializers.py", line 1249, in build_field
+    return self.build_unknown_field(field_name, model_class)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/rest_framework/serializers.py", line 1367, in build_unknown_field
+    raise ImproperlyConfigured(
+django.core.exceptions.ImproperlyConfigured: Field name `category_detail` is not valid for model `Book` in `shop_app.serializers.BookSerializer`.
+INFO 2026-07-13 14:07:43,830 middleware Запит до /api/v1/books/ зайняв 0.0359 секунд.
+ERROR 2026-07-13 14:07:43,831 log "GET /api/v1/books/ HTTP/1.1" 500 142937
+INFO 2026-07-13 14:07:55,695 middleware Запит до /api/v1/categories/ зайняв 0.0435 секунд.
+INFO 2026-07-13 14:07:55,696 log "GET /api/v1/categories/ HTTP/1.1" 200 12460
+INFO 2026-07-13 14:07:55,719 log "GET /static/rest_framework/css/bootstrap-tweaks.css HTTP/1.1" 200 3426
+INFO 2026-07-13 14:07:55,722 log "GET /static/rest_framework/css/prettify.css HTTP/1.1" 200 817
+INFO 2026-07-13 14:07:55,724 log "GET /static/rest_framework/js/ajax-form.js HTTP/1.1" 200 3796
+INFO 2026-07-13 14:07:55,724 log "GET /static/rest_framework/css/default.css HTTP/1.1" 200 1152
+INFO 2026-07-13 14:07:55,725 log "GET /static/rest_framework/js/csrf.js HTTP/1.1" 200 1793
+INFO 2026-07-13 14:07:55,729 log "GET /static/rest_framework/js/jquery-3.7.1.min.js HTTP/1.1" 200 87533
+INFO 2026-07-13 14:07:55,731 log "GET /static/rest_framework/js/load-ajax-form.js HTTP/1.1" 200 59
+INFO 2026-07-13 14:07:55,731 log "GET /static/rest_framework/js/prettify-min.js HTTP/1.1" 200 13632
+INFO 2026-07-13 14:07:55,733 log "GET /static/rest_framework/js/default.js HTTP/1.1" 200 1268
+INFO 2026-07-13 14:07:55,733 log "GET /static/rest_framework/css/bootstrap.min.css HTTP/1.1" 200 121457
+INFO 2026-07-13 14:07:55,734 log "GET /static/rest_framework/js/bootstrap.min.js HTTP/1.1" 200 39680
+INFO 2026-07-13 14:07:55,741 log "GET /static/rest_framework/img/grid.png HTTP/1.1" 200 1458
+INFO 2026-07-13 14:07:55,748 log "GET /static/rest_framework/fonts/glyphicons-halflings-regular.woff2 HTTP/1.1" 200 18028
+INFO 2026-07-13 14:08:00,173 middleware Запит до /api/v1/categories/ зайняв 0.0133 секунд.
+INFO 2026-07-13 14:08:00,174 log "GET /api/v1/categories/ HTTP/1.1" 200 12460
+INFO 2026-07-13 14:08:07,834 middleware Запит до /api/v1/cart/ зайняв 0.0040 секунд.
+INFO 2026-07-13 14:08:07,847 log "GET /api/v1/cart/ HTTP/1.1" 200 11098
+INFO 2026-07-13 14:08:17,339 middleware Запит до /api/v1/orders/ зайняв 0.0026 секунд.
+WARNING 2026-07-13 14:08:17,340 log Unauthorized: /api/v1/orders/
+WARNING 2026-07-13 14:08:17,340 log "GET /api/v1/orders/ HTTP/1.1" 401 9949
+ERROR 2026-07-13 14:08:31,578 log Internal Server Error: /api/v1/books/
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/django/core/handlers/base.py", line 198, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/rest_framework/viewsets.py", line 124, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/usr/local/lib/python3.12/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/usr/local/lib/python3.12/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/rest_framework/mixins.py", line 43, in list
+    return self.get_paginated_response(serializer.data)
+                                       ^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/rest_framework/serializers.py", line 795, in data
+    ret = super().data
+          ^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/rest_framework/serializers.py", line 249, in data
+    self._data = self.to_representation(self.instance)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/rest_framework/serializers.py", line 714, in to_representation
+    self.child.to_representation(item) for item in iterable
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/rest_framework/serializers.py", line 523, in to_representation
+    for field in fields:
+                 ^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/rest_framework/serializers.py", line 384, in _readable_fields
+    for field in self.fields.values():
+                 ^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/django/utils/functional.py", line 47, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+                                         ^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/rest_framework/serializers.py", line 372, in fields
+    for key, value in self.get_fields().items():
+                      ^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/rest_framework/serializers.py", line 1103, in get_fields
+    field_class, field_kwargs = self.build_field(
+                                ^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/rest_framework/serializers.py", line 1249, in build_field
+    return self.build_unknown_field(field_name, model_class)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/rest_framework/serializers.py", line 1367, in build_unknown_field
+    raise ImproperlyConfigured(
+django.core.exceptions.ImproperlyConfigured: Field name `category_detail` is not valid for model `Book` in `shop_app.serializers.BookSerializer`.
+INFO 2026-07-13 14:08:31,579 middleware Запит до /api/v1/books/ зайняв 0.0378 секунд.
+ERROR 2026-07-13 14:08:31,579 log "GET /api/v1/books/ HTTP/1.1" 500 143086
+INFO 2026-07-13 14:15:46,097 autoreload /app/shop_app/serializers.py changed, reloading.
+INFO 2026-07-13 14:15:46,504 autoreload Watching for file changes with StatReloader
+INFO 2026-07-13 14:15:47,786 middleware Запит до /api/v1/books/ зайняв 0.0420 секунд.
+INFO 2026-07-13 14:15:47,786 log "GET /api/v1/books/ HTTP/1.1" 200 40362
+INFO 2026-07-13 14:17:26,255 middleware Запит до /api/v1/ зайняв 0.0042 секунд.
+INFO 2026-07-13 14:17:26,257 log "GET /api/v1/ HTTP/1.1" 200 10480
+INFO 2026-07-13 14:19:45,632 middleware Запит до /api/docs/ зайняв 0.0028 секунд.
+WARNING 2026-07-13 14:19:45,633 log Not Found: /api/docs/
+WARNING 2026-07-13 14:19:45,633 log "GET /api/docs/ HTTP/1.1" 404 3824
+INFO 2026-07-13 14:20:57,433 autoreload /app/bookstore_project/urls.py changed, reloading.
+INFO 2026-07-13 14:20:57,864 autoreload Watching for file changes with StatReloader
+INFO 2026-07-13 14:21:01,287 middleware Запит до /api/docs/ зайняв 0.0039 секунд.
+WARNING 2026-07-13 14:21:01,288 log Not Found: /api/docs/
+WARNING 2026-07-13 14:21:01,289 log "GET /api/docs/ HTTP/1.1" 404 3824
+INFO 2026-07-13 14:21:02,847 middleware Запит до /api/docs/ зайняв 0.0026 секунд.
+WARNING 2026-07-13 14:21:02,847 log Not Found: /api/docs/
+WARNING 2026-07-13 14:21:02,848 log "GET /api/docs/ HTTP/1.1" 404 3824
+INFO 2026-07-13 14:22:26,276 autoreload /app/bookstore_project/urls.py changed, reloading.
+INFO 2026-07-13 14:22:26,695 autoreload Watching for file changes with StatReloader
+INFO 2026-07-13 14:22:32,297 middleware Запит до /api/docs/ зайняв 0.0067 секунд.
+INFO 2026-07-13 14:22:32,299 log "GET /api/docs/ HTTP/1.1" 200 4646
+INFO 2026-07-13 14:22:32,689 middleware Запит до /api/schema/ зайняв 0.0782 секунд.
+INFO 2026-07-13 14:22:32,689 log "GET /api/schema/ HTTP/1.1" 200 60008
+INFO 2026-07-14 17:20:38,710 autoreload Watching for file changes with StatReloader
+INFO 2026-07-14 17:20:42,685 middleware Запит до /api/v1/books/ зайняв 0.0494 секунд.
+INFO 2026-07-14 17:20:42,686 log "GET /api/v1/books/ HTTP/1.1" 200 40362
+INFO 2026-07-14 17:20:42,707 log "GET /static/rest_framework/js/ajax-form.js HTTP/1.1" 304 0
+INFO 2026-07-14 17:20:42,707 log "GET /static/rest_framework/css/bootstrap.min.css HTTP/1.1" 304 0
+INFO 2026-07-14 17:20:42,709 log "GET /static/rest_framework/css/bootstrap-tweaks.css HTTP/1.1" 304 0
+INFO 2026-07-14 17:20:42,711 log "GET /static/rest_framework/css/prettify.css HTTP/1.1" 304 0
+INFO 2026-07-14 17:20:42,711 log "GET /static/rest_framework/css/default.css HTTP/1.1" 304 0
+INFO 2026-07-14 17:20:42,712 log "GET /static/rest_framework/js/prettify-min.js HTTP/1.1" 304 0
+INFO 2026-07-14 17:20:42,712 log "GET /static/rest_framework/js/jquery-3.7.1.min.js HTTP/1.1" 304 0
+INFO 2026-07-14 17:20:42,713 log "GET /static/rest_framework/js/csrf.js HTTP/1.1" 304 0
+INFO 2026-07-14 17:20:42,714 log "GET /static/rest_framework/js/default.js HTTP/1.1" 304 0
+INFO 2026-07-14 17:20:42,714 log "GET /static/rest_framework/js/bootstrap.min.js HTTP/1.1" 304 0
+INFO 2026-07-14 17:20:42,715 log "GET /static/rest_framework/js/load-ajax-form.js HTTP/1.1" 304 0
+INFO 2026-07-14 17:20:42,716 log "GET /static/rest_framework/img/grid.png HTTP/1.1" 304 0
+INFO 2026-07-14 17:20:42,717 log "GET /static/rest_framework/fonts/glyphicons-halflings-regular.woff2 HTTP/1.1" 304 0
+INFO 2026-07-14 17:20:46,552 middleware Запит до / зайняв 0.0037 секунд.
+WARNING 2026-07-14 17:20:46,553 log Not Found: /
+WARNING 2026-07-14 17:20:46,553 log "GET / HTTP/1.1" 404 4117
+INFO 2026-07-14 17:22:06,085 middleware Запит до /api/docs/ зайняв 0.0025 секунд.
+INFO 2026-07-14 17:22:06,086 log "GET /api/docs/ HTTP/1.1" 200 4646
+INFO 2026-07-14 17:22:06,256 middleware Запит до /api/schema/ зайняв 0.0902 секунд.
+INFO 2026-07-14 17:22:06,257 log "GET /api/schema/ HTTP/1.1" 200 60008
+ERROR 2026-07-15 14:10:43,938 log Internal Server Error: /api/v1/cart/add/
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/django/core/handlers/base.py", line 198, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/rest_framework/viewsets.py", line 124, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/usr/local/lib/python3.12/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/usr/local/lib/python3.12/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/orders/api_views.py", line 54, in add_item
+    return Response({'status': 'Кошик оновлено успішно'}, status=status.HTTP_200_ok)
+                                                                 ^^^^^^^^^^^^^^^^^^
+AttributeError: module 'rest_framework.status' has no attribute 'HTTP_200_ok'. Did you mean: 'HTTP_200_OK'?
+INFO 2026-07-15 14:10:43,942 middleware Запит до /api/v1/cart/add/ зайняв 0.0057 секунд.
+INFO 2026-07-15 14:10:44,310 middleware Запит до /api/v1/cart/add/ зайняв 0.0008 секунд.
+WARNING 2026-07-15 14:10:44,310 log Bad Request: /api/v1/cart/add/
+INFO 2026-07-15 14:10:44,674 middleware Запит до /api/v1/orders/ зайняв 0.0020 секунд.
+ERROR 2026-07-15 14:10:45,038 log Internal Server Error: /api/v1/cart/add/
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/django/core/handlers/base.py", line 198, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/rest_framework/viewsets.py", line 124, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/usr/local/lib/python3.12/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/usr/local/lib/python3.12/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/orders/api_views.py", line 54, in add_item
+    return Response({'status': 'Кошик оновлено успішно'}, status=status.HTTP_200_ok)
+                                                                 ^^^^^^^^^^^^^^^^^^
+AttributeError: module 'rest_framework.status' has no attribute 'HTTP_200_ok'. Did you mean: 'HTTP_200_OK'?
+INFO 2026-07-15 14:10:45,039 middleware Запит до /api/v1/cart/add/ зайняв 0.0012 секунд.
+INFO 2026-07-15 14:10:45,395 middleware Запит до /api/v1/orders/ зайняв 0.0002 секунд.
+WARNING 2026-07-15 14:10:45,396 log Bad Request: /api/v1/orders/
+ERROR 2026-07-15 14:10:45,759 log Internal Server Error: /api/v1/cart/add/
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/django/core/handlers/base.py", line 198, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/rest_framework/viewsets.py", line 124, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/usr/local/lib/python3.12/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/usr/local/lib/python3.12/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/orders/api_views.py", line 54, in add_item
+    return Response({'status': 'Кошик оновлено успішно'}, status=status.HTTP_200_ok)
+                                                                 ^^^^^^^^^^^^^^^^^^
+AttributeError: module 'rest_framework.status' has no attribute 'HTTP_200_ok'. Did you mean: 'HTTP_200_OK'?
+INFO 2026-07-15 14:10:45,759 middleware Запит до /api/v1/cart/add/ зайняв 0.0011 секунд.
+ERROR 2026-07-15 14:10:46,124 log Internal Server Error: /api/v1/cart/add/
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/django/core/handlers/base.py", line 198, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/rest_framework/viewsets.py", line 124, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/usr/local/lib/python3.12/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/usr/local/lib/python3.12/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/orders/api_views.py", line 54, in add_item
+    return Response({'status': 'Кошик оновлено успішно'}, status=status.HTTP_200_ok)
+                                                                 ^^^^^^^^^^^^^^^^^^
+AttributeError: module 'rest_framework.status' has no attribute 'HTTP_200_ok'. Did you mean: 'HTTP_200_OK'?
+INFO 2026-07-15 14:10:46,125 middleware Запит до /api/v1/cart/add/ зайняв 0.0013 секунд.
+INFO 2026-07-15 14:10:46,485 middleware Запит до /api/v1/cart/ зайняв 0.0003 секунд.
+ERROR 2026-07-15 14:10:47,563 log Internal Server Error: /api/v1/cart/add/
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/django/core/handlers/base.py", line 198, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/rest_framework/viewsets.py", line 124, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/usr/local/lib/python3.12/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/usr/local/lib/python3.12/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/orders/api_views.py", line 54, in add_item
+    return Response({'status': 'Кошик оновлено успішно'}, status=status.HTTP_200_ok)
+                                                                 ^^^^^^^^^^^^^^^^^^
+AttributeError: module 'rest_framework.status' has no attribute 'HTTP_200_ok'. Did you mean: 'HTTP_200_OK'?
+INFO 2026-07-15 14:10:47,563 middleware Запит до /api/v1/cart/add/ зайняв 0.0016 секунд.
+ERROR 2026-07-15 14:10:47,924 log Internal Server Error: /api/v1/cart/add/
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/django/core/handlers/base.py", line 198, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/rest_framework/viewsets.py", line 124, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/usr/local/lib/python3.12/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/usr/local/lib/python3.12/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/orders/api_views.py", line 54, in add_item
+    return Response({'status': 'Кошик оновлено успішно'}, status=status.HTTP_200_ok)
+                                                                 ^^^^^^^^^^^^^^^^^^
+AttributeError: module 'rest_framework.status' has no attribute 'HTTP_200_ok'. Did you mean: 'HTTP_200_OK'?
+INFO 2026-07-15 14:10:47,925 middleware Запит до /api/v1/cart/add/ зайняв 0.0010 секунд.
+INFO 2026-07-15 14:10:48,285 middleware Запит до /api/v1/orders/ зайняв 0.0016 секунд.
+INFO 2026-07-15 14:10:49,025 middleware Запит до /api/v1/books/ зайняв 0.0025 секунд.
+INFO 2026-07-15 14:10:49,274 middleware Запит до /api/v1/books/ зайняв 0.0023 секунд.
+INFO 2026-07-15 14:10:49,526 middleware Запит до /api/v1/books/22/ зайняв 0.0127 секунд.
+INFO 2026-07-15 14:10:49,773 middleware Запит до /api/v1/books/ зайняв 0.0015 секунд.
+INFO 2026-07-15 14:10:50,178 middleware Запит до /api/token/ зайняв 0.1369 секунд.
+WARNING 2026-07-15 14:10:50,178 log Unauthorized: /api/token/
+INFO 2026-07-15 14:10:50,587 middleware Запит до /api/token/ зайняв 0.1397 секунд.
+INFO 2026-07-15 14:10:50,993 middleware Запит до /api/token/ зайняв 0.1345 секунд.
+INFO 2026-07-15 14:10:50,994 middleware Запит до /api/token/refresh/ зайняв 0.0010 секунд.
+INFO 2026-07-15 14:10:51,401 middleware Запит до /api/token/ зайняв 0.1346 секунд.
+INFO 2026-07-15 14:10:51,941 middleware Запит до /api/v1/orders/ зайняв 0.0002 секунд.
+WARNING 2026-07-15 14:10:51,941 log Unauthorized: /api/v1/orders/
+INFO 2026-07-15 14:14:49,289 autoreload /app/orders/api_views.py changed, reloading.
+INFO 2026-07-15 14:14:49,699 autoreload Watching for file changes with StatReloader
+INFO 2026-07-15 14:18:07,816 middleware Запит до /api/v1/cart/add/ зайняв 0.0010 секунд.
+INFO 2026-07-15 14:18:07,821 middleware Запит до /api/v1/cart/ зайняв 0.0013 секунд.
+INFO 2026-07-15 14:18:08,168 middleware Запит до /api/v1/cart/add/ зайняв 0.0005 секунд.
+WARNING 2026-07-15 14:18:08,168 log Bad Request: /api/v1/cart/add/
+INFO 2026-07-15 14:18:08,516 middleware Запит до /api/v1/orders/ зайняв 0.0019 секунд.
+INFO 2026-07-15 14:18:08,865 middleware Запит до /api/v1/cart/add/ зайняв 0.0008 секунд.
+INFO 2026-07-15 14:18:08,866 middleware Запит до /api/v1/cart/clear/ зайняв 0.0004 секунд.
+INFO 2026-07-15 14:18:08,867 middleware Запит до /api/v1/cart/ зайняв 0.0004 секунд.
+INFO 2026-07-15 14:18:09,215 middleware Запит до /api/v1/orders/ зайняв 0.0002 секунд.
+WARNING 2026-07-15 14:18:09,216 log Bad Request: /api/v1/orders/
+INFO 2026-07-15 14:18:09,562 middleware Запит до /api/v1/cart/add/ зайняв 0.0007 секунд.
+INFO 2026-07-15 14:18:09,563 middleware Запит до /api/v1/orders/ зайняв 0.0001 секунд.
+WARNING 2026-07-15 14:18:09,563 log Unauthorized: /api/v1/orders/
+INFO 2026-07-15 14:18:09,912 middleware Запит до /api/v1/cart/add/ зайняв 0.0008 секунд.
+INFO 2026-07-15 14:18:10,261 middleware Запит до /api/v1/cart/ зайняв 0.0003 секунд.
+INFO 2026-07-15 14:18:11,303 middleware Запит до /api/v1/cart/add/ зайняв 0.0009 секунд.
+INFO 2026-07-15 14:18:11,304 middleware Запит до /api/v1/cart/remove/ зайняв 0.0006 секунд.
+INFO 2026-07-15 14:18:11,305 middleware Запит до /api/v1/cart/ зайняв 0.0004 секунд.
+INFO 2026-07-15 14:18:11,653 middleware Запит до /api/v1/cart/add/ зайняв 0.0007 секунд.
+INFO 2026-07-15 14:18:11,655 middleware Запит до /api/v1/cart/add/ зайняв 0.0009 секунд.
+INFO 2026-07-15 14:18:11,656 middleware Запит до /api/v1/cart/ зайняв 0.0010 секунд.
+INFO 2026-07-15 14:18:12,006 middleware Запит до /api/v1/orders/ зайняв 0.0014 секунд.
+INFO 2026-07-15 14:18:12,705 middleware Запит до /api/v1/books/ зайняв 0.0026 секунд.
+INFO 2026-07-15 14:18:12,948 middleware Запит до /api/v1/books/ зайняв 0.0129 секунд.
+INFO 2026-07-15 14:18:13,177 middleware Запит до /api/v1/books/22/ зайняв 0.0012 секунд.
+INFO 2026-07-15 14:18:13,408 middleware Запит до /api/v1/books/ зайняв 0.0013 секунд.
+INFO 2026-07-15 14:18:13,755 middleware Запит до /api/token/ зайняв 0.1158 секунд.
+WARNING 2026-07-15 14:18:13,755 log Unauthorized: /api/token/
+INFO 2026-07-15 14:18:14,103 middleware Запит до /api/token/ зайняв 0.1169 секунд.
+INFO 2026-07-15 14:18:14,448 middleware Запит до /api/token/ зайняв 0.1156 секунд.
+INFO 2026-07-15 14:18:14,449 middleware Запит до /api/token/refresh/ зайняв 0.0006 секунд.
+INFO 2026-07-15 14:18:14,812 middleware Запит до /api/token/ зайняв 0.1175 секунд.
+INFO 2026-07-15 14:18:15,044 middleware Запит до /api/v1/books/ зайняв 0.0019 секунд.
+INFO 2026-07-15 14:18:15,275 middleware Запит до /api/v1/orders/ зайняв 0.0001 секунд.
+WARNING 2026-07-15 14:18:15,275 log Unauthorized: /api/v1/orders/
+INFO 2026-07-15 14:21:42,611 middleware Запит до /api/v1/cart/add/ зайняв 0.0012 секунд.
+INFO 2026-07-15 14:21:42,615 middleware Запит до /api/v1/cart/ зайняв 0.0013 секунд.
+INFO 2026-07-15 14:21:42,959 middleware Запит до /api/v1/cart/add/ зайняв 0.0006 секунд.
+WARNING 2026-07-15 14:21:42,959 log Bad Request: /api/v1/cart/add/
+INFO 2026-07-15 14:21:43,308 middleware Запит до /api/v1/orders/ зайняв 0.0018 секунд.
+INFO 2026-07-15 14:21:43,651 middleware Запит до /api/v1/cart/add/ зайняв 0.0007 секунд.
+INFO 2026-07-15 14:21:43,652 middleware Запит до /api/v1/cart/clear/ зайняв 0.0003 секунд.
+INFO 2026-07-15 14:21:43,653 middleware Запит до /api/v1/cart/ зайняв 0.0004 секунд.
+INFO 2026-07-15 14:21:43,993 middleware Запит до /api/v1/orders/ зайняв 0.0002 секунд.
+WARNING 2026-07-15 14:21:43,994 log Bad Request: /api/v1/orders/
+INFO 2026-07-15 14:21:44,337 middleware Запит до /api/v1/cart/add/ зайняв 0.0007 секунд.
+INFO 2026-07-15 14:21:44,352 middleware Запит до /api/v1/orders/ зайняв 0.0142 секунд.
+WARNING 2026-07-15 14:21:44,352 log Bad Request: /api/v1/orders/
+INFO 2026-07-15 14:21:44,692 middleware Запит до /api/v1/cart/add/ зайняв 0.0006 секунд.
+INFO 2026-07-15 14:21:45,067 middleware Запит до /api/v1/cart/ зайняв 0.0003 секунд.
+INFO 2026-07-15 14:21:46,124 middleware Запит до /api/v1/cart/add/ зайняв 0.0008 секунд.
+INFO 2026-07-15 14:21:46,125 middleware Запит до /api/v1/cart/remove/ зайняв 0.0007 секунд.
+INFO 2026-07-15 14:21:46,126 middleware Запит до /api/v1/cart/ зайняв 0.0004 секунд.
+INFO 2026-07-15 14:21:46,473 middleware Запит до /api/v1/cart/add/ зайняв 0.0008 секунд.
+INFO 2026-07-15 14:21:46,475 middleware Запит до /api/v1/cart/add/ зайняв 0.0008 секунд.
+INFO 2026-07-15 14:21:46,476 middleware Запит до /api/v1/cart/ зайняв 0.0011 секунд.
+INFO 2026-07-15 14:21:46,822 middleware Запит до /api/v1/orders/ зайняв 0.0013 секунд.
+INFO 2026-07-15 14:21:47,519 middleware Запит до /api/v1/books/ зайняв 0.0024 секунд.
+INFO 2026-07-15 14:21:47,761 middleware Запит до /api/v1/books/ зайняв 0.0019 секунд.
+INFO 2026-07-15 14:21:47,993 middleware Запит до /api/v1/books/22/ зайняв 0.0013 секунд.
+INFO 2026-07-15 14:21:48,225 middleware Запит до /api/v1/books/ зайняв 0.0012 секунд.
+INFO 2026-07-15 14:21:48,571 middleware Запит до /api/token/ зайняв 0.1152 секунд.
+WARNING 2026-07-15 14:21:48,571 log Unauthorized: /api/token/
+INFO 2026-07-15 14:21:48,917 middleware Запит до /api/token/ зайняв 0.1169 секунд.
+INFO 2026-07-15 14:21:49,262 middleware Запит до /api/token/ зайняв 0.1161 секунд.
+INFO 2026-07-15 14:21:49,263 middleware Запит до /api/token/refresh/ зайняв 0.0007 секунд.
+INFO 2026-07-15 14:21:49,609 middleware Запит до /api/token/ зайняв 0.1149 секунд.
+INFO 2026-07-15 14:21:49,840 middleware Запит до /api/v1/books/ зайняв 0.0017 секунд.
+INFO 2026-07-15 14:21:50,072 middleware Запит до /api/v1/orders/ зайняв 0.0001 секунд.
+WARNING 2026-07-15 14:21:50,072 log Unauthorized: /api/v1/orders/
+INFO 2026-07-15 14:33:40,347 middleware Запит до /api/v1/cart/add/ зайняв 0.0011 секунд.
+INFO 2026-07-15 14:33:40,352 middleware Запит до /api/v1/cart/ зайняв 0.0013 секунд.
+INFO 2026-07-15 14:33:40,702 middleware Запит до /api/v1/cart/add/ зайняв 0.0005 секунд.
+WARNING 2026-07-15 14:33:40,702 log Bad Request: /api/v1/cart/add/
+INFO 2026-07-15 14:33:41,053 middleware Запит до /api/v1/orders/ зайняв 0.0017 секунд.
+INFO 2026-07-15 14:33:41,418 middleware Запит до /api/v1/cart/add/ зайняв 0.0008 секунд.
+INFO 2026-07-15 14:33:41,419 middleware Запит до /api/v1/cart/clear/ зайняв 0.0004 секунд.
+INFO 2026-07-15 14:33:41,420 middleware Запит до /api/v1/cart/ зайняв 0.0004 секунд.
+INFO 2026-07-15 14:33:41,770 middleware Запит до /api/v1/orders/ зайняв 0.0001 секунд.
+WARNING 2026-07-15 14:33:41,770 log Bad Request: /api/v1/orders/
+INFO 2026-07-15 14:33:42,122 middleware Запит до /api/v1/cart/add/ зайняв 0.0007 секунд.
+INFO 2026-07-15 14:33:42,137 middleware Запит до /api/v1/orders/ зайняв 0.0139 секунд.
+WARNING 2026-07-15 14:33:42,137 log Bad Request: /api/v1/orders/
+INFO 2026-07-15 14:33:42,480 middleware Запит до /api/v1/cart/add/ зайняв 0.0008 секунд.
+INFO 2026-07-15 14:33:42,829 middleware Запит до /api/v1/cart/ зайняв 0.0003 секунд.
+INFO 2026-07-15 14:33:43,868 middleware Запит до /api/v1/cart/add/ зайняв 0.0008 секунд.
+INFO 2026-07-15 14:33:43,869 middleware Запит до /api/v1/cart/remove/ зайняв 0.0006 секунд.
+INFO 2026-07-15 14:33:43,870 middleware Запит до /api/v1/cart/ зайняв 0.0004 секунд.
+INFO 2026-07-15 14:33:44,217 middleware Запит до /api/v1/cart/add/ зайняв 0.0008 секунд.
+INFO 2026-07-15 14:33:44,219 middleware Запит до /api/v1/cart/add/ зайняв 0.0008 секунд.
+INFO 2026-07-15 14:33:44,220 middleware Запит до /api/v1/cart/ зайняв 0.0011 секунд.
+INFO 2026-07-15 14:33:44,567 middleware Запит до /api/v1/orders/ зайняв 0.0013 секунд.
+INFO 2026-07-15 14:33:44,803 middleware Запит до /api/v1/books/ зайняв 0.0012 секунд.
+INFO 2026-07-15 14:33:45,034 middleware Запит до /api/v1/books/ зайняв 0.0001 секунд.
+WARNING 2026-07-15 14:33:45,034 log Unauthorized: /api/v1/books/
+INFO 2026-07-15 14:33:45,280 middleware Запит до /api/v1/books/ зайняв 0.0132 секунд.
+INFO 2026-07-15 14:33:45,516 middleware Запит до /api/v1/books/ зайняв 0.0017 секунд.
+INFO 2026-07-15 14:33:45,748 middleware Запит до /api/v1/books/23/ зайняв 0.0010 секунд.
+INFO 2026-07-15 14:33:45,981 middleware Запит до /api/v1/books/ зайняв 0.0012 секунд.
+INFO 2026-07-15 14:33:46,328 middleware Запит до /api/token/ зайняв 0.1152 секунд.
+WARNING 2026-07-15 14:33:46,328 log Unauthorized: /api/token/
+INFO 2026-07-15 14:33:46,675 middleware Запит до /api/token/ зайняв 0.1176 секунд.
+INFO 2026-07-15 14:33:47,022 middleware Запит до /api/token/ зайняв 0.1149 секунд.
+INFO 2026-07-15 14:33:47,377 middleware Запит до /api/token/ зайняв 0.1173 секунд.
+INFO 2026-07-15 14:33:47,378 middleware Запит до /api/token/verify/ зайняв 0.0002 секунд.
+INFO 2026-07-15 14:33:47,612 middleware Запит до /api/v1/books/ зайняв 0.0017 секунд.
+INFO 2026-07-15 14:33:47,845 middleware Запит до /api/v1/orders/ зайняв 0.0001 секунд.
+WARNING 2026-07-15 14:33:47,845 log Unauthorized: /api/v1/orders/
+INFO 2026-07-15 14:55:57,889 middleware Запит до /api/v1/cart/add/ зайняв 0.0010 секунд.
+INFO 2026-07-15 14:55:57,891 middleware Запит до /api/v1/cart/ зайняв 0.0013 секунд.
+INFO 2026-07-15 14:55:58,245 middleware Запит до /api/v1/cart/add/ зайняв 0.0006 секунд.
+WARNING 2026-07-15 14:55:58,245 log Bad Request: /api/v1/cart/add/
+INFO 2026-07-15 14:55:58,598 middleware Запит до /api/v1/orders/ зайняв 0.0021 секунд.
+INFO 2026-07-15 14:55:58,954 middleware Запит до /api/v1/cart/add/ зайняв 0.0007 секунд.
+INFO 2026-07-15 14:55:58,956 middleware Запит до /api/v1/cart/clear/ зайняв 0.0004 секунд.
+INFO 2026-07-15 14:55:58,956 middleware Запит до /api/v1/cart/ зайняв 0.0004 секунд.
+INFO 2026-07-15 14:55:59,313 middleware Запит до /api/v1/orders/ зайняв 0.0003 секунд.
+WARNING 2026-07-15 14:55:59,314 log Bad Request: /api/v1/orders/
+INFO 2026-07-15 14:55:59,668 middleware Запит до /api/v1/cart/add/ зайняв 0.0008 секунд.
+INFO 2026-07-15 14:55:59,682 middleware Запит до /api/v1/orders/ зайняв 0.0139 секунд.
+WARNING 2026-07-15 14:55:59,682 log Bad Request: /api/v1/orders/
+INFO 2026-07-15 14:56:00,032 middleware Запит до /api/v1/cart/add/ зайняв 0.0007 секунд.
+INFO 2026-07-15 14:56:00,384 middleware Запит до /api/v1/cart/ зайняв 0.0004 секунд.
+INFO 2026-07-15 14:56:00,733 middleware Запит до /api/v1/orders/4/ зайняв 0.0005 секунд.
+WARNING 2026-07-15 14:56:00,733 log Not Found: /api/v1/orders/4/
+INFO 2026-07-15 14:56:01,086 middleware Запит до /api/v1/cart/add/ зайняв 0.0007 секунд.
+INFO 2026-07-15 14:56:01,088 middleware Запит до /api/v1/orders/ зайняв 0.0007 секунд.
+WARNING 2026-07-15 14:56:01,088 log Bad Request: /api/v1/orders/
+INFO 2026-07-15 14:56:01,435 middleware Запит до /api/v1/cart/add/ зайняв 0.0007 секунд.
+INFO 2026-07-15 14:56:01,437 middleware Запит до /api/v1/cart/remove/ зайняв 0.0006 секунд.
+INFO 2026-07-15 14:56:01,437 middleware Запит до /api/v1/cart/ зайняв 0.0004 секунд.
+INFO 2026-07-15 14:56:01,793 middleware Запит до /api/v1/cart/add/ зайняв 0.0009 секунд.
+INFO 2026-07-15 14:56:01,795 middleware Запит до /api/v1/cart/add/ зайняв 0.0007 секунд.
+INFO 2026-07-15 14:56:01,797 middleware Запит до /api/v1/cart/ зайняв 0.0015 секунд.
+INFO 2026-07-15 14:56:02,150 middleware Запит до /api/v1/orders/ зайняв 0.0012 секунд.
+INFO 2026-07-15 14:56:02,404 middleware Запит до /api/v1/books/ зайняв 0.0012 секунд.
+INFO 2026-07-15 14:56:02,643 middleware Запит до /api/v1/books/ зайняв 0.0001 секунд.
+WARNING 2026-07-15 14:56:02,643 log Unauthorized: /api/v1/books/
+INFO 2026-07-15 14:56:02,883 middleware Запит до /api/v1/books/ зайняв 0.0022 секунд.
+INFO 2026-07-15 14:56:03,124 middleware Запит до /api/v1/books/ зайняв 0.0015 секунд.
+INFO 2026-07-15 14:56:03,365 middleware Запит до /api/v1/books/23/ зайняв 0.0010 секунд.
+INFO 2026-07-15 14:56:03,603 middleware Запит до /api/v1/books/ зайняв 0.0012 секунд.
+INFO 2026-07-15 14:56:03,965 middleware Запит до /api/token/ зайняв 0.1224 секунд.
+WARNING 2026-07-15 14:56:03,965 log Unauthorized: /api/token/
+INFO 2026-07-15 14:56:04,325 middleware Запит до /api/token/ зайняв 0.1178 секунд.
+INFO 2026-07-15 14:56:04,684 middleware Запит до /api/token/ зайняв 0.1216 секунд.
+INFO 2026-07-15 14:56:05,039 middleware Запит до /api/token/ зайняв 0.1170 секунд.
+INFO 2026-07-15 14:56:05,040 middleware Запит до /api/token/verify/ зайняв 0.0003 секунд.
+INFO 2026-07-15 14:56:05,280 middleware Запит до /api/v1/books/ зайняв 0.0016 секунд.
+INFO 2026-07-15 14:56:05,517 middleware Запит до /api/v1/orders/ зайняв 0.0001 секунд.
+WARNING 2026-07-15 14:56:05,517 log Unauthorized: /api/v1/orders/
+INFO 2026-07-15 14:57:49,583 middleware Запит до /api/v1/cart/add/ зайняв 0.0011 секунд.
+INFO 2026-07-15 14:57:49,586 middleware Запит до /api/v1/cart/ зайняв 0.0013 секунд.
+INFO 2026-07-15 14:57:49,937 middleware Запит до /api/v1/cart/add/ зайняв 0.0006 секунд.
+WARNING 2026-07-15 14:57:49,938 log Bad Request: /api/v1/cart/add/
+INFO 2026-07-15 14:57:50,290 middleware Запит до /api/v1/orders/ зайняв 0.0023 секунд.
+INFO 2026-07-15 14:57:50,658 middleware Запит до /api/v1/cart/add/ зайняв 0.0008 секунд.
+INFO 2026-07-15 14:57:50,659 middleware Запит до /api/v1/cart/clear/ зайняв 0.0004 секунд.
+INFO 2026-07-15 14:57:50,660 middleware Запит до /api/v1/cart/ зайняв 0.0004 секунд.
+INFO 2026-07-15 14:57:51,010 middleware Запит до /api/v1/orders/ зайняв 0.0002 секунд.
+WARNING 2026-07-15 14:57:51,010 log Bad Request: /api/v1/orders/
+INFO 2026-07-15 14:57:51,357 middleware Запит до /api/v1/cart/add/ зайняв 0.0007 секунд.
+INFO 2026-07-15 14:57:51,371 middleware Запит до /api/v1/orders/ зайняв 0.0139 секунд.
+WARNING 2026-07-15 14:57:51,372 log Bad Request: /api/v1/orders/
+INFO 2026-07-15 14:57:51,719 middleware Запит до /api/v1/cart/add/ зайняв 0.0010 секунд.
+INFO 2026-07-15 14:57:52,069 middleware Запит до /api/v1/cart/ зайняв 0.0003 секунд.
+INFO 2026-07-15 14:57:52,415 middleware Запит до /api/v1/orders/4/ зайняв 0.0005 секунд.
+WARNING 2026-07-15 14:57:52,416 log Not Found: /api/v1/orders/4/
+INFO 2026-07-15 14:57:52,762 middleware Запит до /api/v1/cart/add/ зайняв 0.0008 секунд.
+INFO 2026-07-15 14:57:52,764 middleware Запит до /api/v1/orders/ зайняв 0.0008 секунд.
+WARNING 2026-07-15 14:57:52,764 log Bad Request: /api/v1/orders/
+INFO 2026-07-15 14:57:53,115 middleware Запит до /api/v1/cart/add/ зайняв 0.0007 секунд.
+INFO 2026-07-15 14:57:53,117 middleware Запит до /api/v1/cart/remove/ зайняв 0.0007 секунд.
+INFO 2026-07-15 14:57:53,118 middleware Запит до /api/v1/cart/ зайняв 0.0004 секунд.
+INFO 2026-07-15 14:57:53,467 middleware Запит до /api/v1/cart/add/ зайняв 0.0007 секунд.
+INFO 2026-07-15 14:57:53,469 middleware Запит до /api/v1/cart/add/ зайняв 0.0008 секунд.
+INFO 2026-07-15 14:57:53,471 middleware Запит до /api/v1/cart/ зайняв 0.0014 секунд.
+INFO 2026-07-15 14:57:53,821 middleware Запит до /api/v1/orders/ зайняв 0.0013 секунд.
+INFO 2026-07-15 14:57:54,071 middleware Запит до /api/v1/books/ зайняв 0.0012 секунд.
+INFO 2026-07-15 14:57:54,304 middleware Запит до /api/v1/books/ зайняв 0.0001 секунд.
+WARNING 2026-07-15 14:57:54,304 log Unauthorized: /api/v1/books/
+INFO 2026-07-15 14:57:54,550 middleware Запит до /api/v1/books/ зайняв 0.0021 секунд.
+INFO 2026-07-15 14:57:54,787 middleware Запит до /api/v1/books/ зайняв 0.0018 секунд.
+INFO 2026-07-15 14:57:55,025 middleware Запит до /api/v1/books/23/ зайняв 0.0011 секунд.
+INFO 2026-07-15 14:57:55,259 middleware Запит до /api/v1/books/ зайняв 0.0013 секунд.
+INFO 2026-07-15 14:57:55,623 middleware Запит до /api/token/ зайняв 0.1326 секунд.
+WARNING 2026-07-15 14:57:55,624 log Unauthorized: /api/token/
+INFO 2026-07-15 14:57:55,975 middleware Запит до /api/token/ зайняв 0.1187 секунд.
+INFO 2026-07-15 14:57:56,323 middleware Запит до /api/token/ зайняв 0.1162 секунд.
+INFO 2026-07-15 14:57:56,324 middleware Запит до /api/token/refresh/ зайняв 0.0006 секунд.
+INFO 2026-07-15 14:57:56,672 middleware Запит до /api/token/ зайняв 0.1165 секунд.
+INFO 2026-07-15 14:57:56,673 middleware Запит до /api/token/verify/ зайняв 0.0003 секунд.
+INFO 2026-07-15 14:57:56,909 middleware Запит до /api/v1/books/ зайняв 0.0016 секунд.
+INFO 2026-07-15 14:57:57,144 middleware Запит до /api/v1/orders/ зайняв 0.0002 секунд.
+WARNING 2026-07-15 14:57:57,144 log Unauthorized: /api/v1/orders/
+INFO 2026-07-15 15:01:46,125 middleware Запит до /api/v1/cart/add/ зайняв 0.0010 секунд.
+INFO 2026-07-15 15:01:46,128 middleware Запит до /api/v1/cart/ зайняв 0.0013 секунд.
+INFO 2026-07-15 15:01:46,505 middleware Запит до /api/v1/cart/add/ зайняв 0.0005 секунд.
+WARNING 2026-07-15 15:01:46,505 log Bad Request: /api/v1/cart/add/
+INFO 2026-07-15 15:01:46,881 middleware Запит до /api/v1/orders/ зайняв 0.0019 секунд.
+INFO 2026-07-15 15:01:47,258 middleware Запит до /api/v1/cart/add/ зайняв 0.0009 секунд.
+INFO 2026-07-15 15:01:47,259 middleware Запит до /api/v1/cart/clear/ зайняв 0.0004 секунд.
+INFO 2026-07-15 15:01:47,260 middleware Запит до /api/v1/cart/ зайняв 0.0004 секунд.
+INFO 2026-07-15 15:01:47,639 middleware Запит до /api/v1/orders/ зайняв 0.0001 секунд.
+WARNING 2026-07-15 15:01:47,639 log Bad Request: /api/v1/orders/
+INFO 2026-07-15 15:01:48,019 middleware Запит до /api/v1/cart/add/ зайняв 0.0007 секунд.
+INFO 2026-07-15 15:01:48,033 middleware Запит до /api/v1/orders/ зайняв 0.0140 секунд.
+WARNING 2026-07-15 15:01:48,033 log Bad Request: /api/v1/orders/
+INFO 2026-07-15 15:01:48,411 middleware Запит до /api/v1/cart/add/ зайняв 0.0007 секунд.
+INFO 2026-07-15 15:01:48,787 middleware Запит до /api/v1/cart/ зайняв 0.0003 секунд.
+INFO 2026-07-15 15:01:49,166 middleware Запит до /api/v1/orders/4/ зайняв 0.0006 секунд.
+WARNING 2026-07-15 15:01:49,166 log Not Found: /api/v1/orders/4/
+INFO 2026-07-15 15:01:49,544 middleware Запит до /api/v1/cart/add/ зайняв 0.0007 секунд.
+INFO 2026-07-15 15:01:49,545 middleware Запит до /api/v1/orders/ зайняв 0.0008 секунд.
+WARNING 2026-07-15 15:01:49,546 log Bad Request: /api/v1/orders/
+INFO 2026-07-15 15:01:49,920 middleware Запит до /api/v1/cart/add/ зайняв 0.0006 секунд.
+INFO 2026-07-15 15:01:49,921 middleware Запит до /api/v1/cart/remove/ зайняв 0.0006 секунд.
+INFO 2026-07-15 15:01:49,922 middleware Запит до /api/v1/cart/ зайняв 0.0004 секунд.
+INFO 2026-07-15 15:01:50,299 middleware Запит до /api/v1/cart/add/ зайняв 0.0008 секунд.
+INFO 2026-07-15 15:01:50,300 middleware Запит до /api/v1/cart/add/ зайняв 0.0008 секунд.
+INFO 2026-07-15 15:01:50,302 middleware Запит до /api/v1/cart/ зайняв 0.0015 секунд.
+INFO 2026-07-15 15:01:50,678 middleware Запит до /api/v1/orders/ зайняв 0.0012 секунд.
+INFO 2026-07-15 15:01:50,943 middleware Запит до /api/v1/books/ зайняв 0.0012 секунд.
+INFO 2026-07-15 15:01:51,197 middleware Запит до /api/v1/books/ зайняв 0.0001 секунд.
+WARNING 2026-07-15 15:01:51,197 log Unauthorized: /api/v1/books/
+INFO 2026-07-15 15:01:51,447 middleware Запит до /api/v1/books/ зайняв 0.0018 секунд.
+INFO 2026-07-15 15:01:51,701 middleware Запит до /api/v1/books/ зайняв 0.0016 секунд.
+INFO 2026-07-15 15:01:51,952 middleware Запит до /api/v1/books/23/ зайняв 0.0010 секунд.
+INFO 2026-07-15 15:01:52,212 middleware Запит до /api/v1/books/ зайняв 0.0015 секунд.
+INFO 2026-07-15 15:01:52,582 middleware Запит до /api/token/ зайняв 0.1183 секунд.
+WARNING 2026-07-15 15:01:52,582 log Unauthorized: /api/token/
+INFO 2026-07-15 15:01:52,954 middleware Запит до /api/token/ зайняв 0.1190 секунд.
+INFO 2026-07-15 15:01:53,339 middleware Запит до /api/token/ зайняв 0.1171 секунд.
+INFO 2026-07-15 15:01:53,340 middleware Запит до /api/token/refresh/ зайняв 0.0006 секунд.
+INFO 2026-07-15 15:01:53,709 middleware Запит до /api/token/ зайняв 0.1173 секунд.
+INFO 2026-07-15 15:01:53,710 middleware Запит до /api/token/verify/ зайняв 0.0003 секунд.
+INFO 2026-07-15 15:01:53,966 middleware Запит до /api/v1/books/ зайняв 0.0017 секунд.
+INFO 2026-07-15 15:01:54,220 middleware Запит до /api/v1/orders/ зайняв 0.0002 секунд.
+WARNING 2026-07-15 15:01:54,220 log Unauthorized: /api/v1/orders/
+INFO 2026-07-15 15:16:05,289 middleware Запит до /api/v1/cart/add/ зайняв 0.0009 секунд.
+INFO 2026-07-15 15:16:05,293 middleware Запит до /api/v1/cart/ зайняв 0.0012 секунд.
+INFO 2026-07-15 15:16:05,641 middleware Запит до /api/v1/cart/add/ зайняв 0.0005 секунд.
+WARNING 2026-07-15 15:16:05,642 log Bad Request: /api/v1/cart/add/
+INFO 2026-07-15 15:16:05,991 middleware Запит до /api/v1/orders/ зайняв 0.0019 секунд.
+INFO 2026-07-15 15:16:06,339 middleware Запит до /api/v1/cart/add/ зайняв 0.0007 секунд.
+INFO 2026-07-15 15:16:06,340 middleware Запит до /api/v1/cart/clear/ зайняв 0.0003 секунд.
+INFO 2026-07-15 15:16:06,341 middleware Запит до /api/v1/cart/ зайняв 0.0004 секунд.
+INFO 2026-07-15 15:16:06,685 middleware Запит до /api/v1/orders/ зайняв 0.0001 секунд.
+WARNING 2026-07-15 15:16:06,685 log Bad Request: /api/v1/orders/
+INFO 2026-07-15 15:16:07,029 middleware Запит до /api/v1/cart/add/ зайняв 0.0007 секунд.
+INFO 2026-07-15 15:16:07,043 middleware Запит до /api/v1/orders/ зайняв 0.0141 секунд.
+WARNING 2026-07-15 15:16:07,043 log Bad Request: /api/v1/orders/
+INFO 2026-07-15 15:16:07,393 middleware Запит до /api/v1/cart/add/ зайняв 0.0008 секунд.
+INFO 2026-07-15 15:16:07,396 middleware Запит до /api/v1/orders/ зайняв 0.0031 секунд.
+INFO 2026-07-15 15:16:07,397 middleware Запит до /api/v1/cart/ зайняв 0.0003 секунд.
+INFO 2026-07-15 15:16:07,741 middleware Запит до /api/v1/cart/ зайняв 0.0002 секунд.
+INFO 2026-07-15 15:16:08,087 middleware Запит до /api/v1/orders/5/ зайняв 0.0005 секунд.
+WARNING 2026-07-15 15:16:08,087 log Not Found: /api/v1/orders/5/
+INFO 2026-07-15 15:16:08,433 middleware Запит до /api/v1/cart/add/ зайняв 0.0007 секунд.
+INFO 2026-07-15 15:16:08,434 middleware Запит до /api/v1/orders/ зайняв 0.0007 секунд.
+WARNING 2026-07-15 15:16:08,434 log Bad Request: /api/v1/orders/
+INFO 2026-07-15 15:16:08,782 middleware Запит до /api/v1/cart/add/ зайняв 0.0007 секунд.
+INFO 2026-07-15 15:16:08,783 middleware Запит до /api/v1/cart/remove/ зайняв 0.0005 секунд.
+INFO 2026-07-15 15:16:08,784 middleware Запит до /api/v1/cart/ зайняв 0.0004 секунд.
+INFO 2026-07-15 15:16:09,130 middleware Запит до /api/v1/cart/add/ зайняв 0.0006 секунд.
+INFO 2026-07-15 15:16:09,143 middleware Запит до /api/v1/cart/add/ зайняв 0.0120 секунд.
+INFO 2026-07-15 15:16:09,145 middleware Запит до /api/v1/cart/ зайняв 0.0010 секунд.
+INFO 2026-07-15 15:16:09,494 middleware Запит до /api/v1/orders/ зайняв 0.0013 секунд.
+INFO 2026-07-15 15:16:09,734 middleware Запит до /api/v1/books/ зайняв 0.0015 секунд.
+INFO 2026-07-15 15:16:09,969 middleware Запит до /api/v1/books/ зайняв 0.0002 секунд.
+WARNING 2026-07-15 15:16:09,969 log Unauthorized: /api/v1/books/
+INFO 2026-07-15 15:16:10,202 middleware Запит до /api/v1/books/ зайняв 0.0020 секунд.
+INFO 2026-07-15 15:16:10,436 middleware Запит до /api/v1/books/ зайняв 0.0017 секунд.
+INFO 2026-07-15 15:16:10,671 middleware Запит до /api/v1/books/23/ зайняв 0.0010 секунд.
+INFO 2026-07-15 15:16:10,904 middleware Запит до /api/v1/books/ зайняв 0.0012 секунд.
+INFO 2026-07-15 15:16:11,250 middleware Запит до /api/token/ зайняв 0.1171 секунд.
+WARNING 2026-07-15 15:16:11,250 log Unauthorized: /api/token/
+INFO 2026-07-15 15:16:11,599 middleware Запит до /api/token/ зайняв 0.1165 секунд.
+INFO 2026-07-15 15:16:11,946 middleware Запит до /api/token/ зайняв 0.1155 секунд.
+INFO 2026-07-15 15:16:11,947 middleware Запит до /api/token/refresh/ зайняв 0.0006 секунд.
+INFO 2026-07-15 15:16:12,294 middleware Запит до /api/token/ зайняв 0.1164 секунд.
+INFO 2026-07-15 15:16:12,295 middleware Запит до /api/token/verify/ зайняв 0.0002 секунд.
+INFO 2026-07-15 15:16:12,529 middleware Запит до /api/v1/books/ зайняв 0.0018 секунд.
+INFO 2026-07-15 15:16:12,759 middleware Запит до /api/v1/orders/ зайняв 0.0001 секунд.
+WARNING 2026-07-15 15:16:12,759 log Unauthorized: /api/v1/orders/
+INFO 2026-07-15 15:30:23,926 middleware Запит до /api/v1/books/ зайняв 0.0514 секунд.
+INFO 2026-07-15 15:30:23,927 log "GET /api/v1/books/ HTTP/1.1" 200 40362
+INFO 2026-07-15 15:30:23,948 log "GET /static/rest_framework/js/jquery-3.7.1.min.js HTTP/1.1" 200 87533
+INFO 2026-07-15 15:30:23,952 log "GET /static/rest_framework/css/bootstrap-tweaks.css HTTP/1.1" 304 0
+INFO 2026-07-15 15:30:23,953 log "GET /static/rest_framework/js/csrf.js HTTP/1.1" 304 0
+INFO 2026-07-15 15:30:23,954 log "GET /static/rest_framework/css/prettify.css HTTP/1.1" 304 0
+INFO 2026-07-15 15:30:23,955 log "GET /static/rest_framework/css/default.css HTTP/1.1" 304 0
+INFO 2026-07-15 15:30:23,955 log "GET /static/rest_framework/js/ajax-form.js HTTP/1.1" 304 0
+INFO 2026-07-15 15:30:23,956 log "GET /static/rest_framework/js/bootstrap.min.js HTTP/1.1" 304 0
+INFO 2026-07-15 15:30:23,956 log "GET /static/rest_framework/js/default.js HTTP/1.1" 304 0
+INFO 2026-07-15 15:30:23,957 log "GET /static/rest_framework/js/prettify-min.js HTTP/1.1" 304 0
+INFO 2026-07-15 15:30:23,957 log "GET /static/rest_framework/js/load-ajax-form.js HTTP/1.1" 304 0
+INFO 2026-07-15 15:30:23,958 log "GET /static/rest_framework/css/bootstrap.min.css HTTP/1.1" 200 121457
+INFO 2026-07-15 15:30:23,969 log "GET /static/rest_framework/img/grid.png HTTP/1.1" 304 0
+INFO 2026-07-15 15:30:23,971 log "GET /static/rest_framework/fonts/glyphicons-halflings-regular.woff2 HTTP/1.1" 304 0
+INFO 2026-07-15 15:30:32,172 middleware Запит до /api/v1/ зайняв 0.0036 секунд.
+INFO 2026-07-15 15:30:32,173 log "GET /api/v1/ HTTP/1.1" 200 10480
+INFO 2026-07-15 15:31:15,399 middleware Запит до / зайняв 0.0027 секунд.
+WARNING 2026-07-15 15:31:15,399 log Not Found: /
+WARNING 2026-07-15 15:31:15,400 log "GET / HTTP/1.1" 404 4119
+INFO 2026-07-15 15:31:15,667 middleware Запит до / зайняв 0.0033 секунд.
+WARNING 2026-07-15 15:31:15,667 log Not Found: /
+WARNING 2026-07-15 15:31:15,667 log "GET / HTTP/1.1" 404 4119
+INFO 2026-07-15 15:37:13,732 middleware Запит до / зайняв 0.0023 секунд.
+WARNING 2026-07-15 15:37:13,733 log Not Found: /
+WARNING 2026-07-15 15:37:13,733 log "GET / HTTP/1.1" 404 4119
+INFO 2026-07-15 15:37:14,021 middleware Запит до / зайняв 0.0032 секунд.
+WARNING 2026-07-15 15:37:14,022 log Not Found: /
+WARNING 2026-07-15 15:37:14,022 log "GET / HTTP/1.1" 404 4119
+INFO 2026-07-15 15:44:14,668 autoreload /app/bookstore_project/urls.py changed, reloading.
+INFO 2026-07-15 15:44:15,097 autoreload Watching for file changes with StatReloader
+INFO 2026-07-15 15:45:02,351 autoreload /app/bookstore_project/urls.py changed, reloading.
+INFO 2026-07-15 15:45:02,767 autoreload Watching for file changes with StatReloader
+INFO 2026-07-15 15:45:04,253 middleware Запит до / зайняв 0.0002 секунд.
+INFO 2026-07-15 15:45:04,254 log "GET / HTTP/1.1" 301 0
+INFO 2026-07-15 15:45:04,282 middleware Запит до /shop/ зайняв 0.0250 секунд.
+INFO 2026-07-15 15:45:04,282 log "GET /shop/ HTTP/1.1" 200 9656
+INFO 2026-07-15 15:45:05,983 middleware Запит до /shop/ зайняв 0.0256 секунд.
+INFO 2026-07-15 15:45:05,984 log "GET /shop/ HTTP/1.1" 200 9656
+INFO 2026-07-15 15:45:06,779 middleware Запит до /shop/catalog/ зайняв 0.0205 секунд.
+INFO 2026-07-15 15:45:06,780 log "GET /shop/catalog/ HTTP/1.1" 200 8352
+INFO 2026-07-15 15:45:08,326 middleware Запит до /shop/catalog/ зайняв 0.0170 секунд.
+INFO 2026-07-15 15:45:08,326 log "GET /shop/catalog/ HTTP/1.1" 200 8352
+INFO 2026-07-15 15:45:09,276 middleware Запит до /shop/catalog/ зайняв 0.0174 секунд.
+INFO 2026-07-15 15:45:09,277 log "GET /shop/catalog/ HTTP/1.1" 200 8352
+INFO 2026-07-15 15:45:10,973 middleware Запит до /shop/ зайняв 0.0092 секунд.
+INFO 2026-07-15 15:45:10,974 log "GET /shop/ HTTP/1.1" 200 9656
+INFO 2026-07-15 15:45:13,893 middleware Запит до /i18n/setlang/ зайняв 0.0009 секунд.
+INFO 2026-07-15 15:45:13,894 log "POST /i18n/setlang/ HTTP/1.1" 302 0
+INFO 2026-07-15 15:45:13,926 middleware Запит до /shop/ зайняв 0.0195 секунд.
+INFO 2026-07-15 15:45:13,927 log "GET /shop/ HTTP/1.1" 200 9784
+INFO 2026-07-15 15:45:14,922 middleware Запит до /shop/ зайняв 0.0207 секунд.
+INFO 2026-07-15 15:45:14,922 log "GET /shop/ HTTP/1.1" 200 9784
+INFO 2026-07-15 15:45:15,550 middleware Запит до /shop/catalog/ зайняв 0.0177 секунд.
+INFO 2026-07-15 15:45:15,551 log "GET /shop/catalog/ HTTP/1.1" 200 8627
+INFO 2026-07-15 15:45:29,471 middleware Запит до /shop/ зайняв 0.0193 секунд.
+INFO 2026-07-15 15:45:29,475 log "GET /shop/ HTTP/1.1" 200 9784
+INFO 2026-07-15 15:45:30,169 middleware Запит до /shop/catalog/ зайняв 0.0176 секунд.
+INFO 2026-07-15 15:45:30,170 log "GET /shop/catalog/ HTTP/1.1" 200 8627
+INFO 2026-07-15 15:45:30,902 middleware Запит до /shop/ зайняв 0.0173 секунд.
+INFO 2026-07-15 15:45:30,903 log "GET /shop/ HTTP/1.1" 200 9784
+INFO 2026-07-15 15:45:34,500 middleware Запит до /shop/catalog/ зайняв 0.0160 секунд.
+INFO 2026-07-15 15:45:34,500 log "GET /shop/catalog/ HTTP/1.1" 200 8627
+INFO 2026-07-15 15:45:35,581 middleware Запит до /shop/catalog/ зайняв 0.0175 секунд.
+INFO 2026-07-15 15:45:35,582 log "GET /shop/catalog/ HTTP/1.1" 200 8627
+INFO 2026-07-15 15:45:35,987 middleware Запит до /shop/catalog/ зайняв 0.0193 секунд.
+INFO 2026-07-15 15:45:35,987 log "GET /shop/catalog/ HTTP/1.1" 200 8627
+INFO 2026-07-15 15:45:36,770 middleware Запит до /shop/ зайняв 0.0192 секунд.
+INFO 2026-07-15 15:45:36,771 log "GET /shop/ HTTP/1.1" 200 9784
+INFO 2026-07-15 15:45:37,579 middleware Запит до /shop/catalog/ зайняв 0.0157 секунд.
+INFO 2026-07-15 15:45:37,580 log "GET /shop/catalog/ HTTP/1.1" 200 8627
+INFO 2026-07-15 15:45:40,378 middleware Запит до /shop/catalog/ зайняв 0.0172 секунд.
+INFO 2026-07-15 15:45:40,379 log "GET /shop/catalog/?page=2 HTTP/1.1" 200 8641
+INFO 2026-07-15 15:45:41,072 middleware Запит до /shop/catalog/ зайняв 0.0141 секунд.
+INFO 2026-07-15 15:45:41,072 log "GET /shop/catalog/?page=3 HTTP/1.1" 200 8653
+INFO 2026-07-15 15:45:41,758 middleware Запит до /shop/catalog/ зайняв 0.0155 секунд.
+INFO 2026-07-15 15:45:41,758 log "GET /shop/catalog/?page=4 HTTP/1.1" 200 7861
+INFO 2026-07-15 15:45:43,905 middleware Запит до /shop/catalog/ зайняв 0.0174 секунд.
+INFO 2026-07-15 15:45:43,906 log "GET /shop/catalog/?page=3 HTTP/1.1" 200 8653
+INFO 2026-07-15 15:45:44,604 middleware Запит до /shop/catalog/ зайняв 0.0159 секунд.
+INFO 2026-07-15 15:45:44,605 log "GET /shop/catalog/?page=2 HTTP/1.1" 200 8641
+INFO 2026-07-15 15:45:45,690 middleware Запит до /shop/catalog/ зайняв 0.0169 секунд.
+INFO 2026-07-15 15:45:45,691 log "GET /shop/catalog/?page=1 HTTP/1.1" 200 8627
+INFO 2026-07-15 15:55:01,796 middleware Запит до /api/docs/ зайняв 0.0034 секунд.
+INFO 2026-07-15 15:55:01,797 log "GET /api/docs/ HTTP/1.1" 200 4646
+INFO 2026-07-15 15:55:02,105 middleware Запит до /api/schema/ зайняв 0.0949 секунд.
+INFO 2026-07-15 15:55:02,106 log "GET /api/schema/ HTTP/1.1" 200 61342
+INFO 2026-07-15 16:30:51,332 autoreload /app/bookstore_project/settings.py changed, reloading.
+INFO 2026-07-15 16:30:51,755 autoreload Watching for file changes with StatReloader
+INFO 2026-07-15 16:31:04,007 autoreload /app/bookstore_project/settings.py changed, reloading.
+INFO 2026-07-15 16:31:04,396 autoreload Watching for file changes with StatReloader
+INFO 2026-07-15 16:31:07,323 middleware Запит до /api/v1/cart/add/ зайняв 0.0011 секунд.
+INFO 2026-07-15 16:31:07,325 middleware Запит до /api/v1/cart/ зайняв 0.0013 секунд.
+INFO 2026-07-15 16:31:07,670 middleware Запит до /api/v1/cart/add/ зайняв 0.0006 секунд.
+WARNING 2026-07-15 16:31:07,671 log Bad Request: /api/v1/cart/add/
+INFO 2026-07-15 16:31:08,017 middleware Запит до /api/v1/orders/ зайняв 0.0019 секунд.
+INFO 2026-07-15 16:31:08,360 middleware Запит до /api/v1/cart/add/ зайняв 0.0007 секунд.
+INFO 2026-07-15 16:31:08,361 middleware Запит до /api/v1/cart/clear/ зайняв 0.0004 секунд.
+INFO 2026-07-15 16:31:08,362 middleware Запит до /api/v1/cart/ зайняв 0.0004 секунд.
+INFO 2026-07-15 16:31:08,707 middleware Запит до /api/v1/orders/ зайняв 0.0002 секунд.
+WARNING 2026-07-15 16:31:08,708 log Bad Request: /api/v1/orders/
+INFO 2026-07-15 16:31:09,053 middleware Запит до /api/v1/cart/add/ зайняв 0.0008 секунд.
+INFO 2026-07-15 16:31:09,068 middleware Запит до /api/v1/orders/ зайняв 0.0138 секунд.
+WARNING 2026-07-15 16:31:09,068 log Bad Request: /api/v1/orders/
+INFO 2026-07-15 16:31:09,411 middleware Запит до /api/v1/cart/add/ зайняв 0.0006 секунд.
+INFO 2026-07-15 16:31:09,415 middleware Запит до /api/v1/orders/ зайняв 0.0034 секунд.
+INFO 2026-07-15 16:31:09,416 middleware Запит до /api/v1/cart/ зайняв 0.0004 секунд.
+INFO 2026-07-15 16:31:09,761 middleware Запит до /api/v1/cart/ зайняв 0.0003 секунд.
+INFO 2026-07-15 16:31:10,106 middleware Запит до /api/v1/orders/5/ зайняв 0.0005 секунд.
+WARNING 2026-07-15 16:31:10,107 log Not Found: /api/v1/orders/5/
+INFO 2026-07-15 16:31:10,451 middleware Запит до /api/v1/cart/add/ зайняв 0.0007 секунд.
+INFO 2026-07-15 16:31:10,452 middleware Запит до /api/v1/orders/ зайняв 0.0007 секунд.
+WARNING 2026-07-15 16:31:10,452 log Bad Request: /api/v1/orders/
+INFO 2026-07-15 16:31:10,801 middleware Запит до /api/v1/cart/add/ зайняв 0.0008 секунд.
+INFO 2026-07-15 16:31:10,803 middleware Запит до /api/v1/cart/remove/ зайняв 0.0011 секунд.
+INFO 2026-07-15 16:31:10,804 middleware Запит до /api/v1/cart/ зайняв 0.0004 секунд.
+INFO 2026-07-15 16:31:11,148 middleware Запит до /api/v1/cart/add/ зайняв 0.0006 секунд.
+INFO 2026-07-15 16:31:11,150 middleware Запит до /api/v1/cart/add/ зайняв 0.0007 секунд.
+INFO 2026-07-15 16:31:11,163 middleware Запит до /api/v1/cart/ зайняв 0.0124 секунд.
+INFO 2026-07-15 16:31:11,506 middleware Запит до /api/v1/orders/ зайняв 0.0013 секунд.
+INFO 2026-07-15 16:31:11,742 middleware Запит до /api/v1/books/ зайняв 0.0012 секунд.
+INFO 2026-07-15 16:31:11,971 middleware Запит до /api/v1/books/ зайняв 0.0001 секунд.
+WARNING 2026-07-15 16:31:11,971 log Unauthorized: /api/v1/books/
+INFO 2026-07-15 16:31:12,202 middleware Запит до /api/v1/books/ зайняв 0.0020 секунд.
+INFO 2026-07-15 16:31:12,431 middleware Запит до /api/v1/books/ зайняв 0.0016 секунд.
+INFO 2026-07-15 16:31:12,663 middleware Запит до /api/v1/books/23/ зайняв 0.0010 секунд.
+INFO 2026-07-15 16:31:12,892 middleware Запит до /api/v1/books/ зайняв 0.0012 секунд.
+INFO 2026-07-15 16:31:13,236 middleware Запит до /api/token/ зайняв 0.1152 секунд.
+WARNING 2026-07-15 16:31:13,236 log Unauthorized: /api/token/
+INFO 2026-07-15 16:31:13,582 middleware Запит до /api/token/ зайняв 0.1167 секунд.
+INFO 2026-07-15 16:31:13,927 middleware Запит до /api/token/ зайняв 0.1149 секунд.
+INFO 2026-07-15 16:31:13,928 middleware Запит до /api/token/refresh/ зайняв 0.0005 секунд.
+INFO 2026-07-15 16:31:14,272 middleware Запит до /api/token/ зайняв 0.1146 секунд.
+INFO 2026-07-15 16:31:14,273 middleware Запит до /api/token/verify/ зайняв 0.0002 секунд.
+INFO 2026-07-15 16:31:14,506 middleware Запит до /api/v1/books/ зайняв 0.0017 секунд.
+INFO 2026-07-15 16:31:14,737 middleware Запит до /api/v1/orders/ зайняв 0.0001 секунд.
+WARNING 2026-07-15 16:31:14,737 log Unauthorized: /api/v1/orders/
+INFO 2026-07-15 16:31:24,200 middleware Запит до /shop/ зайняв 0.0254 секунд.
+INFO 2026-07-15 16:31:24,202 log "GET /shop/ HTTP/1.1" 200 9784
+INFO 2026-07-15 16:31:24,705 middleware Запит до /shop/catalog/ зайняв 0.0204 секунд.
+INFO 2026-07-15 16:31:24,705 log "GET /shop/catalog/ HTTP/1.1" 200 8627
+INFO 2026-07-15 16:31:26,080 middleware Запит до /shop/catalog/ зайняв 0.0171 секунд.
+INFO 2026-07-15 16:31:26,081 log "GET /shop/catalog/?category=1 HTTP/1.1" 200 6589
+INFO 2026-07-15 16:31:26,574 middleware Запит до /shop/catalog/ зайняв 0.0158 секунд.
+INFO 2026-07-15 16:31:26,575 log "GET /shop/catalog/?category=6 HTTP/1.1" 200 7252
+INFO 2026-07-15 16:31:27,030 middleware Запит до /shop/catalog/ зайняв 0.0165 секунд.
+INFO 2026-07-15 16:31:27,031 log "GET /shop/catalog/?category=5 HTTP/1.1" 200 6586
+INFO 2026-07-15 16:31:27,591 middleware Запит до /shop/catalog/ зайняв 0.0159 секунд.
+INFO 2026-07-15 16:31:27,592 log "GET /shop/catalog/?category=2 HTTP/1.1" 200 8039
+INFO 2026-07-15 16:31:28,169 middleware Запит до /shop/catalog/ зайняв 0.0157 секунд.
+INFO 2026-07-15 16:31:28,169 log "GET /shop/catalog/?category=4 HTTP/1.1" 200 7249
+INFO 2026-07-15 16:31:29,063 middleware Запит до /shop/catalog/ зайняв 0.0176 секунд.
+INFO 2026-07-15 16:31:29,064 log "GET /shop/catalog/?category=6 HTTP/1.1" 200 7252
+INFO 2026-07-15 16:31:29,557 middleware Запит до /shop/catalog/ зайняв 0.0163 секунд.
+INFO 2026-07-15 16:31:29,558 log "GET /shop/catalog/?category=5 HTTP/1.1" 200 6586
+INFO 2026-07-15 16:31:29,978 middleware Запит до /shop/catalog/ зайняв 0.0164 секунд.
+INFO 2026-07-15 16:31:29,979 log "GET /shop/catalog/ HTTP/1.1" 200 8627
+INFO 2026-07-15 16:31:32,083 middleware Запит до /shop/ зайняв 0.0214 секунд.
+INFO 2026-07-15 16:31:32,084 log "GET /shop/ HTTP/1.1" 200 9784
