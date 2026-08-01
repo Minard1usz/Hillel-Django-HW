@@ -2,6 +2,19 @@
 
 # Якщо база даних ще не піднялася, ми чекаємо її, щоб Django не впав з помилкою
 echo "Waiting for postgres..."
+while ! python -c "import socket; s = socket.socket(); s.connect(('$DB_HOST', int('$DB_PORT')))" 2>/dev/null; do
+  sleep 0.1
+done
+echo "PostgreSQL started"
+
+echo "Apply database migrations"
+python manage.py migrate --noinput
+
+echo "Collect static files"
+python manage.py collectstatic --no-input --clear
+
+# Запуск Gunicorn замість runserver
+exec gunicorn bookstore_project.wsgi:application --bind 0.0.0.0:8000 --workers 3
 
 # Проста перевірка доступності порту бази за допомогою python
 python -c "

@@ -27,6 +27,19 @@ services:
       timeout: 3s
       retries: 5
 
+  # NGINX Reverse Proxy
+  nginx:
+    image: nginx:1.25-alpine
+    container_name: bookstore_nginx
+    ports:
+      - "80:80"
+    volumes:
+      - ./nginx/default.conf:/etc/nginx/conf.d/default.conf:ro
+      - static_volume:/app/staticfiles:ro
+    depends_on:
+      - web
+
+
   web:
     build: .
     container_name: bookstore_web
@@ -34,8 +47,8 @@ services:
     volumes:
       - .:/app
       - static_volume:/app/staticfiles  # якщо є прописаний STATIC_ROOT = BASE_DIR / 'staticfiles'
-    ports:
-      - "8000:8000"
+    expose:
+      - "8000"
     env_file:
       - .env
     depends_on:
@@ -43,6 +56,42 @@ services:
         condition: service_healthy
       redis:
         condition: service_healthy
+
+# Celery Worker (Фонові таски)
+  celery:
+      build: .
+      container_name: bookstore_celery
+      entrypoint: []
+      command: celery -A bookstore_project worker --loglevel=info
+      volumes:
+        - .:/app
+      env_file:
+        - .env
+      depends_on:
+        db:
+          condition: service_healthy
+        redis:
+          condition: service_healthy
+        web:
+          condition: service_started
+
+# Celery Beat (Планувальник періодичних тасок)
+  celery_beat:
+      build: .
+      container_name: bookstore_celery_beat
+      entrypoint: []
+      command: celery -A bookstore_project beat --loglevel=info
+      volumes:
+        - .:/app
+      env_file:
+        - .env
+      depends_on:
+        db:
+          condition: service_healthy
+        redis:
+          condition: service_healthy
+        web:
+          condition: service_started
 
 volumes:
   postgres_data:

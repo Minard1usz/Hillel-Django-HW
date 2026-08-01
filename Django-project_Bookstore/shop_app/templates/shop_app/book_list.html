@@ -1,5 +1,6 @@
 {% extends 'shop_app/base.html' %}
 {% load i18n %}
+{% load cache %}
 {% block content %}
 <h2 class="mb-4">📚 {% translate "Каталог книг" %} </h2>
 <div class="row g-4">
@@ -19,8 +20,8 @@
                 {% endif %}
             </form>
         </div>
-
         <div class="col-md-6 mb-3">
+            {% cache 3600 categories_buttons request.GET.category request.GET.search request.LANGUAGE_CODE %}
             <div class="d-flex flex-wrap gap-2">
                 <a href="{% url 'shop_app:book_list' %}{% if request.GET.search %}?search={{ request.GET.search }}{% endif %}"
                    class="btn {% if not request.GET.category %}btn-dark{% else %}btn-outline-dark{% endif %}">{% translate "Всі книги" %}</a>
@@ -32,10 +33,12 @@
                     </a>
                 {% endfor %}
             </div>
+            {% endcache %}
         </div>
     </div>
 </div>
   {% for book in books %}
+    {% cache 1800 book_card book.id request.LANGUAGE_CODE %}
     <div class="col-md-4">
       <div class="card h-100 shadow-sm">
         <div class="card-body">
@@ -50,6 +53,7 @@
         </div>
       </div>
     </div>
+    {% endcache %}
   {% empty %}
     <div class="col-12">
         <p class="alert alert-info">{% translate "Книг у каталозі поки що немає." %}</p>

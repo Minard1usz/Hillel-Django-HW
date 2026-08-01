@@ -1,5 +1,6 @@
 {% extends 'shop_app/base.html' %}
 {% load i18n %}
+{% load cache %}
 {% block title %}{% translate "Головна — Книгарня" %}{% endblock %}
 
 {% block content %}
@@ -9,6 +10,8 @@
             <div class="card-header bg-dark text-white">
                 <h5 class="mb-0">📊 {% translate "Статистика категорій" %}</h5>
             </div>
+
+            {% cache 3600 store_categories_stat request.LANGUAGE_CODE %}
             <ul class="list-group list-group-flush">
                 {% for cat in categories %}
                 <li class="list-group-item d-flex justify-content-between align-items-center">
@@ -17,6 +20,7 @@
                 </li>
                 {% endfor %}
             </ul>
+            {% endcache %}
         </div>
     </div>
 
@@ -27,6 +31,7 @@
                 <h5 class="mb-0">💴 {% translate "Спеціальні пропозиції (до 300 грн)" %}</h5>
             </div>
             <div class="card-body">
+                {% cache 900 store_special_offers request.LANGUAGE_CODE %}
                 <div class="row">
                     {% for book in special_offers %}
                     <div class="col-sm-6 mb-2">
@@ -38,6 +43,7 @@
                     <p class="text-muted mb-0">{% translate "Акційних пропозицій поки що немає." %}</p>
                     {% endfor %}
                 </div>
+                {% endcache %}
             </div>
         </div>
 
@@ -46,6 +52,7 @@
                 <h5 class="mb-0">🔥 {% translate "Гарячі знижки" %}</h5>
             </div>
             <div class="card-body">
+            {% cache 900 store_discount_books request.LANGUAGE_CODE %}
                 <ul class="list-style-none ps-0 mb-0">
                     {% for book in discount_books %}
                     <li class="mb-3 pb-3 border-bottom last-border-0">
@@ -57,6 +64,7 @@
                     <p class="text-muted mb-0">{% translate "Книг зі знижкою наразі немає." %}</p>
                     {% endfor %}
                 </ul>
+                {% endcache %}
             </div>
         </div>
 

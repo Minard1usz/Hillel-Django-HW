@@ -9,6 +9,7 @@ from django.urls import reverse_lazy
 from django.contrib.auth.mixins import LoginRequiredMixin, UserPassesTestMixin
 from orders.forms import CartAddBookForm
 from django.core.cache import cache
+from django.http import HttpResponse
 
 
 SEARCH_MAX_LENGTH = 100
@@ -50,6 +51,10 @@ def prefetch_user_status(user):
         _ = user.is_superuser
     return user
 
+@sync_to_async
+def render_to_response(request, template_name, context):
+    return render(request, template_name, context)
+
 async def store(request):
     """
         Асинхронна view-функція для відображення головної сторінки магазину (Store).
@@ -65,30 +70,41 @@ async def store(request):
             HttpResponse: Зрендерена HTML-сторінка головного магазину `shop_app/store.html`
             із повним набором паралельно оброблених даних у контексті.
         """
-    special_offers_qs = Book.objects.filter(Q(price__lt=300) | Q(description__icontains='discount'))
-    premium_offers_qs = Book.objects.filter(Q(price__gt=300))
-    categories_with_counts_qs = Category.objects.annotate(total_books=Count('books'))
-    available_books_qs = Book.objects.filter(stock__gt=0)
-    discount_books_qs = Book.objects.filter(description__icontains='discount')
+    cache_key= "store_page_context"
+    # Отримання контексту
+    # Використання acache замість cache для Django 4.2+ / sync_to_async(cache.get)(cache_key)
+    context = await cache.aget(cache_key)
 
-    special_offers, premium_offers, categories, available_books, discount_books, _ = await asyncio.gather(
-        get_as_list(special_offers_qs),
-        get_as_list(premium_offers_qs),
-        get_as_list(categories_with_counts_qs),
-        get_as_list(available_books_qs),
-        get_as_list(discount_books_qs),
-        sync_to_async(prefetch_user_status)(request.user)
-    )
+    if not context:
+        special_offers_qs = Book.objects.filter(Q(price__lt=300) | Q(description__icontains='discount'))
+        premium_offers_qs = Book.objects.filter(Q(price__gt=300))
+        categories_with_counts_qs = Category.objects.annotate(total_books=Count('books'))
+        available_books_qs = Book.objects.filter(stock__gt=0)
+        discount_books_qs = Book.objects.filter(description__icontains='discount')
 
-    context = {
-        'special_offers': special_offers,
-        'premium_offers': premium_offers,
-        'categories': categories,
-        'available_books': available_books,
-        'discount_books': discount_books,
-    }
+        # Отримання асинхронного статусу користувача + асинхронного user: await.request.auser()
+        user = await request.auser()
 
-    return render(request, 'shop_app/store.html', context)
+        special_offers, premium_offers, categories, available_books, discount_books, _ = await asyncio.gather(
+            get_as_list(special_offers_qs),
+            get_as_list(premium_offers_qs),
+            get_as_list(categories_with_counts_qs),
+            get_as_list(available_books_qs),
+            get_as_list(discount_books_qs),
+            sync_to_async(prefetch_user_status)(request.user)
+        )
+
+        context = {
+            'special_offers': special_offers,
+            'premium_offers': premium_offers,
+            'categories': categories,
+            'available_books': available_books,
+            'discount_books': discount_books,
+        }
+        # Зберігання контексту на 15 хв, запис в кеш асинхронно
+        await cache.aset(cache_key, context, 900)
+
+    return await render_to_response(request, 'shop_app/store.html', context)
 
 
 class BookListView(ListView):
@@ -189,15 +205,29 @@ class BookDetailView(DetailView):
     template_name = 'shop_app/book_detail.html'
 
     async def get(self, request, *args, **kwargs):
-        def process_context():
-            self.object = self.get_object()
-            context = self.get_context_data(object=self.object)
+        book_id = kwargs.get('pk')
+        cache_key = f"book_detail_{book_id}"
 
+        # Беремо книгу з кешу
+        book = cache.get(cache_key)
+
+        if not book:
+            # Якщо в кеші немає, створюємо запит до БД синхронно через sync_to_async
+            def fetch_book():
+                return self.get_object()
+
+            book = await sync_to_async(fetch_book)()
+            # Записується об'єкт у кеш на 30 хв
+            cache.set(cache_key, book, 1800)
+
+        self.object = book
+
+        def process_context():
+            context = self.get_context_data(object=self.object)
             context['cart_book_form'] = CartAddBookForm()
             return context
 
         context = await sync_to_async(process_context)()
-
         return self.render_to_response(context)
 
 
@@ -268,3 +298,7 @@ class BookDeleteView(LoginRequiredMixin, UserPassesTestMixin, DeleteView):
                     bool: True для staff/superuser, інакше False.
                 """
         return self.request.user.is_staff or self.request.user.is_superuser
+
+# def trigger_error(request):
+#     division_by_zero = 1 / 0
+#     return HttpResponse("Не досягнеться")

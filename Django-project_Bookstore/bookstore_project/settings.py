@@ -9,17 +9,35 @@ https://docs.djangoproject.com/en/6.0/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/6.0/ref/settings/
 """
-
-from pathlib import Path, os
+import os
+from pathlib import Path
 from dotenv import load_dotenv
 from django.utils.translation import gettext_lazy as _
 from datetime import timedelta
+from celery.schedules import crontab
+import sentry_sdk
+from sentry_sdk.integrations.django import DjangoIntegration
+from sentry_sdk.integrations.celery import CeleryIntegration
+from sentry_sdk.integrations.redis import RedisIntegration
+
 
 # Завантажуємо змінні з .env
 load_dotenv()
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
+
+# Static files (CSS, JavaScript, Images)
+# https://docs.djangoproject.com/en/6.0/howto/static-files/
+
+STATIC_URL = 'static/'
+
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+
+PROJECT_STATIC_DIR = os.path.join(BASE_DIR, 'static')
+if os.path.exists(PROJECT_STATIC_DIR):
+    STATICFILES_DIRS = [PROJECT_STATIC_DIR]
+
 
 
 # Quick-start development settings - unsuitable for production
@@ -53,6 +71,20 @@ INSTALLED_APPS = [
     'rest_framework_simplejwt',
     'drf_spectacular',
 ]
+
+REDIS_URL = os.environ.get("REDIS_URL", "redis://127.0.0.1:6379/1")
+
+CACHES = {
+    "default": {
+        "BACKEND": "django_redis.cache.RedisCache",
+        "LOCATION": os.environ.get("REDIS_URL", "redis://redis:6379/1"),
+        "OPTIONS": {
+            "CLIENT_CLASS": "django_redis.client.DefaultClient",
+        },
+        "KEY_PREFIX": "bookstore",
+    }
+}
+
 
 SIMPLE_JWT = {
     'ACCESS_TOKEN_LIFETIME': timedelta(minutes=15),
@@ -219,14 +251,8 @@ LOCALE_PATHS = (
     BASE_DIR / 'locale',
 )
 
-# Static files (CSS, JavaScript, Images)
-# https://docs.djangoproject.com/en/6.0/howto/static-files/
 
-STATIC_URL = 'static/'
-#
-# STATICFILES_DIRS = [
-#     BASE_DIR / 'static',
-# ]
+
 
 MEDIA_URL = '/images/'
 
@@ -278,3 +304,39 @@ STRIPE_PUBLISHABLE_KEY = os.environ.get('STRIPE_PUBLISHABLE_KEY')
 STRIPE_SECRET_KEY = os.environ.get('STRIPE_SECRET_KEY')
 STRIPE_API_VERSION = os.environ.get('STRIPE_API_VERSION')
 EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+
+# Налаштування Redis
+# Використання Redis бази #0 для брокера Celery (кеш знаходиться у #1)
+CELERY_BROKER_URL = os.environ.get("CELERY_BROKER_URL", "redis://redis:6379/0")
+CELERY_RESULT_BACKEND = os.environ.get("CELERY_RESULT_BACKEND", "redis://redis:6379/0")
+
+CELERY_ACCEPT_CONTENT = ["json"]
+CELERY_TASK_SERIALIZER = "json"
+CELERY_RESULT_SERIALIZER = "json"
+CELERY_TIMEZONE = TIME_ZONE
+
+# Налаштування Celery Beat (періодичні задачі)
+CELERY_BEAT_SCHEDULE = {
+    'clear-expired-sessions-every-night':
+        {
+            'task': 'shop_app.task.clear_expired_sessions_task',
+            'schedule': crontab(hour=0, minute=0),
+        }
+}
+
+# Налаштування Sentry
+SENTRY_DSN = os.environ.get("SENTRY_DSN")
+
+if SENTRY_DSN:
+    sentry_sdk.init(
+        dsn=SENTRY_DSN,
+        integrations=[
+            DjangoIntegration(),
+            CeleryIntegration(),
+            RedisIntegration(),
+        ],
+        # Відсоток транзакцій для моніторингу продуктивності (Traces)
+        traces_sample_rate=1.0,
+        # Відправляти дані про користувача (IP, username) дл контексту
+        send_default_pii=True,
+    )
