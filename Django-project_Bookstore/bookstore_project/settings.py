@@ -319,7 +319,7 @@ CELERY_TIMEZONE = TIME_ZONE
 CELERY_BEAT_SCHEDULE = {
     'clear-expired-sessions-every-night':
         {
-            'task': 'shop_app.task.clear_expired_sessions_task',
+            'task': 'shop_app.tasks.clear_expired_sessions_task',
             'schedule': crontab(hour=0, minute=0),
         }
 }

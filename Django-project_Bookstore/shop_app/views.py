@@ -10,6 +10,7 @@ from django.contrib.auth.mixins import LoginRequiredMixin, UserPassesTestMixin
 from orders.forms import CartAddBookForm
 from django.core.cache import cache
 from django.http import HttpResponse
+from shop_app.tasks import generate_report_task
 
 
 SEARCH_MAX_LENGTH = 100
@@ -302,3 +303,7 @@ class BookDeleteView(LoginRequiredMixin, UserPassesTestMixin, DeleteView):
 # def trigger_error(request):
 #     division_by_zero = 1 / 0
 #     return HttpResponse("Не досягнеться")
+
+def trigger_report_generation(request):
+    generate_report_task.delay()
+    return HttpResponse("Генерацію звіту успішно запущено у фоні!")

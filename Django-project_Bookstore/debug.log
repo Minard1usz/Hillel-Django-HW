@@ -8042,3 +8042,64 @@ INFO 2026-08-01 14:08:02,438 middleware Запит до /shop/ зайняв 0.02
 INFO 2026-08-01 14:08:02,779 middleware Запит до /shop/ зайняв 0.0159 секунд.
 INFO 2026-08-01 14:08:03,350 middleware Запит до /shop/ зайняв 0.0181 секунд.
 INFO 2026-08-01 14:08:03,695 middleware Запит до /shop/catalog/ зайняв 0.0156 секунд.
+INFO 2026-08-03 12:59:44,105 middleware Запит до /shop/ зайняв 0.0420 секунд.
+INFO 2026-08-03 12:59:44,669 middleware Запит до /shop/catalog/ зайняв 0.0204 секунд.
+INFO 2026-08-03 12:59:45,536 middleware Запит до /shop/catalog/ зайняв 0.0208 секунд.
+INFO 2026-08-03 12:59:46,288 middleware Запит до /shop/ зайняв 0.0301 секунд.
+INFO 2026-08-03 12:59:57,710 middleware Запит до /users/register/ зайняв 0.0277 секунд.
+INFO 2026-08-03 13:00:29,083 middleware Запит до /users/register/ зайняв 0.0393 секунд.
+INFO 2026-08-03 13:00:38,354 middleware Запит до /users/register/ зайняв 0.0596 секунд.
+INFO 2026-08-03 13:00:56,723 middleware Запит до /users/register/ зайняв 0.2225 секунд.
+INFO 2026-08-03 13:00:56,739 middleware Запит до /users/login/ зайняв 0.0107 секунд.
+INFO 2026-08-03 13:12:22,359 middleware Запит до /shop/generate-report/ зайняв 0.0071 секунд.
+WARNING 2026-08-03 13:12:22,361 log Not Found: /shop/generate-report/
+ERROR 2026-08-03 13:15:27,101 log Internal Server Error: /shop/generate-report/
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/django/core/handlers/base.py", line 198, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/sentry_sdk/integrations/django/views.py", line 110, in sentry_wrapped_callback
+    return callback(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/shop_app/views.py", line 308, in trigger_report_generation
+    generate_repor_task.delay()
+    ^^^^^^^^^^^^^^^^^^^
+NameError: name 'generate_repor_task' is not defined. Did you mean: 'generate_report_task'?
+INFO 2026-08-03 13:15:27,102 middleware Запит до /shop/generate-report/ зайняв 0.0158 секунд.
+ERROR 2026-08-03 13:16:47,679 log Internal Server Error: /shop/generate-report/
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/django/core/handlers/base.py", line 198, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/sentry_sdk/integrations/django/views.py", line 110, in sentry_wrapped_callback
+    return callback(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/shop_app/views.py", line 308, in trigger_report_generation
+    generate_repor_task.delay()
+    ^^^^^^^^^^^^^^^^^^^
+NameError: name 'generate_repor_task' is not defined. Did you mean: 'generate_report_task'?
+INFO 2026-08-03 13:16:47,680 middleware Запит до /shop/generate-report/ зайняв 0.0170 секунд.
+ERROR 2026-08-03 13:17:18,575 log Internal Server Error: /shop/generate-report/
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/django/core/handlers/base.py", line 198, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/sentry_sdk/integrations/django/views.py", line 110, in sentry_wrapped_callback
+    return callback(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/shop_app/views.py", line 308, in trigger_report_generation
+    generate_report_task.delay()
+    ^^^^^^^^^^^^^^^^^^^
+NameError: name 'generate_repor_task' is not defined. Did you mean: 'generate_report_task'?
+INFO 2026-08-03 13:17:18,576 middleware Запит до /shop/generate-report/ зайняв 0.0274 секунд.
+INFO 2026-08-03 13:17:27,020 middleware Запит до /shop/generate-report/ зайняв 0.0146 секунд.
+INFO 2026-08-03 13:19:01,632 middleware Запит до /shop/generate-report/ зайняв 0.0193 секунд.

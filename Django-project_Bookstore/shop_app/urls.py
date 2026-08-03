@@ -1,5 +1,5 @@
 from django.urls import path, include
-from .views import store, BookListView, BookDetailView, BookCreateView, BookUpdateView, BookDeleteView, trigger_error
+from .views import store, BookListView, BookDetailView, BookCreateView, BookUpdateView, BookDeleteView, trigger_report_generation
 
 
 app_name = 'shop_app'
@@ -11,5 +11,5 @@ urlpatterns = [
     path('book/create/', BookCreateView.as_view(), name='book_create'),
     path('book/<int:pk>/update/', BookUpdateView.as_view(), name='book_update'),
     path('book/<int:pk>/delete/', BookDeleteView.as_view(), name='book_delete'),
-    # path('sentry-debug/', trigger_error, name='sentry_debug'), # test route
+    path('generate-report/', trigger_report_generation, name='generate_report')
 ]
