@@ -48,8 +48,8 @@ jobs:
       - name: Install dependencies
         run: |
           python -m pip install --upgrade pip
-          pip install django flake8 black pytest pytest-django pytest-cov
           if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
+          pip install Django flake8 black pytest pytest-django pytest-cov
 
       - name: Code Linting (Black & Flake8)
         run: |
