@@ -6,22 +6,32 @@ from django.db import migrations, models
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('users', '0001_initial'),
+        ("users", "0001_initial"),
     ]
 
     operations = [
         migrations.AlterModelOptions(
-            name='customuser',
-            options={'verbose_name': 'Користувач', 'verbose_name_plural': 'Користувачі'},
+            name="customuser",
+            options={
+                "verbose_name": "Користувач",
+                "verbose_name_plural": "Користувачі",
+            },
         ),
         migrations.AlterField(
-            model_name='customuser',
-            name='email',
-            field=models.EmailField(max_length=254, unique=True, verbose_name='Електронна пошта'),
+            model_name="customuser",
+            name="email",
+            field=models.EmailField(
+                max_length=254, unique=True, verbose_name="Електронна пошта"
+            ),
         ),
         migrations.AlterField(
-            model_name='customuser',
-            name='username',
-            field=models.CharField(help_text="Обов'язкове поле. Не більше 150 символів.", max_length=150, unique=True, verbose_name="Ім'я користувача"),
+            model_name="customuser",
+            name="username",
+            field=models.CharField(
+                help_text="Обов'язкове поле. Не більше 150 символів.",
+                max_length=150,
+                unique=True,
+                verbose_name="Ім'я користувача",
+            ),
         ),
     ]

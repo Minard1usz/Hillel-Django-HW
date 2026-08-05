@@ -1,6 +1,7 @@
 import pytest
 from unittest.mock import MagicMock
 
+
 @pytest.fixture(autouse=True)
 def mock_stripe(monkeypatch):
     mock_session = MagicMock()
@@ -9,7 +10,10 @@ def mock_stripe(monkeypatch):
 
     try:
         import stripe
-        monkeypatch.setattr(stripe.checkout.Session, 'create', MagicMock(return_value=mock_session))
+
+        monkeypatch.setattr(
+            stripe.checkout.Session, "create", MagicMock(return_value=mock_session)
+        )
     except ImportError:
         pass
 

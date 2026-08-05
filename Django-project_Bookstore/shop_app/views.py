@@ -4,7 +4,13 @@ from django.db.models import Q, Count
 from .models import Book, Category
 from asgiref.sync import sync_to_async
 from django.http import Http404
-from django.views.generic import ListView, DetailView, CreateView, UpdateView, DeleteView
+from django.views.generic import (
+    ListView,
+    DetailView,
+    CreateView,
+    UpdateView,
+    DeleteView,
+)
 from django.urls import reverse_lazy
 from django.contrib.auth.mixins import LoginRequiredMixin, UserPassesTestMixin
 from orders.forms import CartAddBookForm
@@ -13,110 +19,125 @@ from django.http import HttpResponse
 from shop_app.tasks import generate_report_task
 from django.http import JsonResponse
 
-
 SEARCH_MAX_LENGTH = 100
 CATEGORY_CACHE_KEY = "shop_all_categories"
 CATEGORY_CACHE_TTL = 60 * 15  # 15 хвилин
 
+
 # Create your views here.
 async def get_as_list(queryset):
     """
-        Асинхронно приводить Django QuerySet до звичайного списку Python.
+    Асинхронно приводить Django QuerySet до звичайного списку Python.
 
-        Використовує асинхронний генератор списків (`async for`) для неблокувального
-        зчитування рядків із бази даних, запобігаючи заморожуванню асинхронного event loop.
+    Використовує асинхронний генератор списків (`async for`) для неблокувального
+    зчитування рядків із бази даних, запобігаючи заморожуванню асинхронного event loop.
 
-        Args:
-            queryset (QuerySet): Початковий запит Django ORM.
+    Args:
+        queryset (QuerySet): Початковий запит Django ORM.
 
-        Returns:
-            list: Список об'єктів моделей, завантажених із бази даних.
-        """
+    Returns:
+        list: Список об'єктів моделей, завантажених із бази даних.
+    """
     return [item async for item in queryset]
+
 
 def prefetch_user_status(user):
     """
-        Синхронно підвантажує (кешує) службові атрибути користувача.
+    Синхронно підвантажує (кешує) службові атрибути користувача.
 
-        Примусово звертається до атрибутів `is_staff` та `is_superuser` для автентифікованого
-        користувача. Це дозволяє уникнути відкладених (lazy) синхронних запитів до БД
-        під час подальшого рендерингу шаблону в асинхронному контексті.
+    Примусово звертається до атрибутів `is_staff` та `is_superuser` для автентифікованого
+    користувача. Це дозволяє уникнути відкладених (lazy) синхронних запитів до БД
+    під час подальшого рендерингу шаблону в асинхронному контексті.
 
-        Args:
-            user (AbstractBaseUser): Об'єкт користувача з `request.user`.
+    Args:
+        user (AbstractBaseUser): Об'єкт користувача з `request.user`.
 
-        Returns:
-            AbstractBaseUser: Об'єкт користувача з уже завантаженими правами доступу.
-        """
+    Returns:
+        AbstractBaseUser: Об'єкт користувача з уже завантаженими правами доступу.
+    """
     if user.is_authenticated:
         _ = user.is_staff
         _ = user.is_superuser
     return user
 
+
 @sync_to_async
 def render_to_response(request, template_name, context):
     return render(request, template_name, context)
 
+
 async def store(request):
     """
-        Асинхронна view-функція для відображення головної сторінки магазину (Store).
+    Асинхронна view-функція для відображення головної сторінки магазину (Store).
 
-        Оптимізує час відгуку сторінки за допомогою паралельного виконання запитів через `asyncio.gather`.
-        Одночасно збирає списки спеціальних пропозицій, преміум-товарів, категорій із підрахунком книг,
-        доступних товарів та акційних позицій, а також асинхронно готує статус користувача.
+    Оптимізує час відгуку сторінки за допомогою паралельного виконання запитів через `asyncio.gather`.
+    Одночасно збирає списки спеціальних пропозицій, преміум-товарів, категорій із підрахунком книг,
+    доступних товарів та акційних позицій, а також асинхронно готує статус користувача.
 
-        Args:
-            request (HttpRequest): Об'єкт HTTP-запиту від користувача.
+    Args:
+        request (HttpRequest): Об'єкт HTTP-запиту від користувача.
 
-        Returns:
-            HttpResponse: Зрендерена HTML-сторінка головного магазину `shop_app/store.html`
-            із повним набором паралельно оброблених даних у контексті.
-        """
-    cache_key= "store_page_context"
+    Returns:
+        HttpResponse: Зрендерена HTML-сторінка головного магазину `shop_app/store.html`
+        із повним набором паралельно оброблених даних у контексті.
+    """
+    cache_key = "store_page_context"
     # Отримання контексту
     # Використання acache замість cache для Django 4.2+ / sync_to_async(cache.get)(cache_key)
     context = await cache.aget(cache_key)
 
     if not context:
-        special_offers_qs = Book.objects.filter(Q(price__lt=300) | Q(description__icontains='discount'))
+        special_offers_qs = Book.objects.filter(
+            Q(price__lt=300) | Q(description__icontains="discount")
+        )
         premium_offers_qs = Book.objects.filter(Q(price__gt=300))
-        categories_with_counts_qs = Category.objects.annotate(total_books=Count('books'))
+        categories_with_counts_qs = Category.objects.annotate(
+            total_books=Count("books")
+        )
         available_books_qs = Book.objects.filter(stock__gt=0)
-        discount_books_qs = Book.objects.filter(description__icontains='discount')
+        discount_books_qs = Book.objects.filter(description__icontains="discount")
 
         # Отримання асинхронного статусу користувача + асинхронного user: await.request.auser()
         user = await request.auser()
 
-        special_offers, premium_offers, categories, available_books, discount_books, _ = await asyncio.gather(
+        (
+            special_offers,
+            premium_offers,
+            categories,
+            available_books,
+            discount_books,
+            _,
+        ) = await asyncio.gather(
             get_as_list(special_offers_qs),
             get_as_list(premium_offers_qs),
             get_as_list(categories_with_counts_qs),
             get_as_list(available_books_qs),
             get_as_list(discount_books_qs),
-            sync_to_async(prefetch_user_status)(request.user)
+            sync_to_async(prefetch_user_status)(request.user),
         )
 
         context = {
-            'special_offers': special_offers,
-            'premium_offers': premium_offers,
-            'categories': categories,
-            'available_books': available_books,
-            'discount_books': discount_books,
+            "special_offers": special_offers,
+            "premium_offers": premium_offers,
+            "categories": categories,
+            "available_books": available_books,
+            "discount_books": discount_books,
         }
         # Зберігання контексту на 15 хв, запис в кеш асинхронно
         await cache.aset(cache_key, context, 900)
 
-    return await render_to_response(request, 'shop_app/store.html', context)
+    return await render_to_response(request, "shop_app/store.html", context)
 
 
 class BookListView(ListView):
     """
-        Асинхронний Class-Based View для відображення списку книг.
+    Асинхронний Class-Based View для відображення списку книг.
 
-        Підтримує пагінацію, фільтрацію за категоріями, пошук за назвою,
-        оптимізацію SQL-запитів через `select_related` та кешування списку
-        категорій у Redis/Memcached для зниження навантаження на БД.
-        """
+    Підтримує пагінацію, фільтрацію за категоріями, пошук за назвою,
+    оптимізацію SQL-запитів через `select_related` та кешування списку
+    категорій у Redis/Memcached для зниження навантаження на БД.
+    """
+
     model = Book
     template_name = "shop_app/book_list.html"
     context_object_name = "books"
@@ -124,17 +145,14 @@ class BookListView(ListView):
 
     def get_queryset(self):
         """
-                Формує оптимізований набір даних (QuerySet) книг з урахуванням фільтрів.
+        Формує оптимізований набір даних (QuerySet) книг з урахуванням фільтрів.
 
-                Використовує `select_related('category')` для уникнення проблеми N+1.
+        Використовує `select_related('category')` для уникнення проблеми N+1.
 
-                Returns:
-                    QuerySet: Відфільтрований та відсортований список книг.
-                """
-        queryset = (
-            Book.objects.select_related("category")
-            .order_by("title")
-        )
+        Returns:
+            QuerySet: Відфільтрований та відсортований список книг.
+        """
+        queryset = Book.objects.select_related("category").order_by("title")
 
         category_id = self._get_category_id()
         if category_id is not None:
@@ -163,17 +181,17 @@ class BookListView(ListView):
 
     async def get(self, request, *args, **kwargs):
         """
-                Обробляє асинхронний GET-запит для відображення сторінки.
+        Обробляє асинхронний GET-запит для відображення сторінки.
 
-                Асинхронно приводить QuerySet до списку, формує контекст та
-                додає туди закешовані категорії, використовуючи обгортку `sync_to_async`.
+        Асинхронно приводить QuerySet до списку, формує контекст та
+        додає туди закешовані категорії, використовуючи обгортку `sync_to_async`.
 
-                Args:
-                    request (HttpRequest): Об'єкт HTTP-запиту.
+        Args:
+            request (HttpRequest): Об'єкт HTTP-запиту.
 
-                Returns:
-                    HttpResponse: Зрендерена HTML-сторінка зі списком книг.
-                """
+        Returns:
+            HttpResponse: Зрендерена HTML-сторінка зі списком книг.
+        """
         queryset = self.get_queryset()
         self.object_list = await sync_to_async(list)(queryset)
 
@@ -185,10 +203,10 @@ class BookListView(ListView):
 
     def _get_cached_categories(self):
         """
-                Повертає список усіх категорій з кешу.
+        Повертає список усіх категорій з кешу.
 
-                Якщо кеш порожній, робить запит до БД, зберігає результат у кеш і повертає його.
-                """
+        Якщо кеш порожній, робить запит до БД, зберігає результат у кеш і повертає його.
+        """
         return cache.get_or_set(
             CATEGORY_CACHE_KEY,
             lambda: list(Category.objects.all()),
@@ -196,18 +214,18 @@ class BookListView(ListView):
         )
 
 
-
 class BookDetailView(DetailView):
     """
-        Class-Based View для відображення детальної інформації про конкретну книгу.
+    Class-Based View для відображення детальної інформації про конкретну книгу.
 
-        Виводить опис, автора, ціну, залишок на складі та форму для додавання в кошик.
-        """
+    Виводить опис, автора, ціну, залишок на складі та форму для додавання в кошик.
+    """
+
     model = Book
-    template_name = 'shop_app/book_detail.html'
+    template_name = "shop_app/book_detail.html"
 
     async def get(self, request, *args, **kwargs):
-        book_id = kwargs.get('pk')
+        book_id = kwargs.get("pk")
         cache_key = f"book_detail_{book_id}"
 
         # Беремо книгу з кешу
@@ -226,7 +244,7 @@ class BookDetailView(DetailView):
 
         def process_context():
             context = self.get_context_data(object=self.object)
-            context['cart_book_form'] = CartAddBookForm()
+            context["cart_book_form"] = CartAddBookForm()
             return context
 
         context = await sync_to_async(process_context)()
@@ -235,79 +253,87 @@ class BookDetailView(DetailView):
 
 class BookCreateView(CreateView):
     """
-        Class-Based View для додавання нової книги в каталог магазину.
+    Class-Based View для додавання нової книги в каталог магазину.
 
-        Надає форму створення об'єкта `Book`. Доступ до в'юхи обмежений:
-        створювати записи можуть лише користувачі зі статусом персоналу (is_staff)
-        або суперкористувачі (is_superuser).
-        """
+    Надає форму створення об'єкта `Book`. Доступ до в'юхи обмежений:
+    створювати записи можуть лише користувачі зі статусом персоналу (is_staff)
+    або суперкористувачі (is_superuser).
+    """
+
     model = Book
-    template_name = 'shop_app/book_form.html'
-    fields = ['title', 'author', 'category', 'description', 'price', 'stock', 'cover']
-    success_url = reverse_lazy('shop_app:book_list')
+    template_name = "shop_app/book_form.html"
+    fields = ["title", "author", "category", "description", "price", "stock", "cover"]
+    success_url = reverse_lazy("shop_app:book_list")
 
     def test_func(self):
         """
-                Перевіряє, чи має користувач права для створення книги.
+        Перевіряє, чи має користувач права для створення книги.
 
-                Returns:
-                    bool: True, якщо користувач є staff або superuser, інакше False.
-                """
+        Returns:
+            bool: True, якщо користувач є staff або superuser, інакше False.
+        """
         return self.request.user.is_staff or self.request.user.is_superuser
+
 
 class BookUpdateView(LoginRequiredMixin, UserPassesTestMixin, UpdateView):
     """
-        Class-Based View для редагування інформації про наявну книгу.
+    Class-Based View для редагування інформації про наявну книгу.
 
-        Вимагає обов'язкової автентифікації користувача. Дозволяє змінювати
-        будь-які атрибути книги лише модераторам або адміністраторам.
-        У разі відсутності прав генерує HTTP 403 Forbidden.
-        """
+    Вимагає обов'язкової автентифікації користувача. Дозволяє змінювати
+    будь-які атрибути книги лише модераторам або адміністраторам.
+    У разі відсутності прав генерує HTTP 403 Forbidden.
+    """
+
     model = Book
-    template_name = 'shop_app/book_form.html'
-    fields = ['title', 'author', 'category', 'description', 'price', 'stock', 'cover']
-    success_url = reverse_lazy('shop_app:book_list')
+    template_name = "shop_app/book_form.html"
+    fields = ["title", "author", "category", "description", "price", "stock", "cover"]
+    success_url = reverse_lazy("shop_app:book_list")
 
     raise_exception = True
 
     def test_func(self):
         """
-                Перевіряє, чи має користувач права для редагування книги.
+        Перевіряє, чи має користувач права для редагування книги.
 
-                Returns:
-                    bool: True для staff/superuser, інакше False.
-                """
+        Returns:
+            bool: True для staff/superuser, інакше False.
+        """
         return self.request.user.is_staff or self.request.user.is_superuser
+
 
 class BookDeleteView(LoginRequiredMixin, UserPassesTestMixin, DeleteView):
     """
-        Class-Based View для видалення книги з каталогу магазину.
+    Class-Based View для видалення книги з каталогу магазину.
 
-        Запитує підтвердження видалення через HTML-шаблон `book_delete.html`.
-        Доступний суворо для користувачів зі статусом staff або superuser.
-        """
+    Запитує підтвердження видалення через HTML-шаблон `book_delete.html`.
+    Доступний суворо для користувачів зі статусом staff або superuser.
+    """
+
     model = Book
-    template_name = 'shop_app/book_delete.html'
-    success_url = reverse_lazy('shop_app:book_list')
+    template_name = "shop_app/book_delete.html"
+    success_url = reverse_lazy("shop_app:book_list")
 
     raise_exception = True
 
     def test_func(self):
         """
-                Перевіряє, чи має користувач права для видалення книги.
+        Перевіряє, чи має користувач права для видалення книги.
 
-                Returns:
-                    bool: True для staff/superuser, інакше False.
-                """
+        Returns:
+            bool: True для staff/superuser, інакше False.
+        """
         return self.request.user.is_staff or self.request.user.is_superuser
+
 
 # def trigger_error(request):
 #     division_by_zero = 1 / 0
 #     return HttpResponse("Не досягнеться")
 
+
 def trigger_report_generation(request):
     generate_report_task.delay()
     return HttpResponse("Генерацію звіту успішно запущено у фоні!")
 
+
 def health_check(request):
-    return JsonResponse({'status': 'ok', "database": "online"})
+    return JsonResponse({"status": "ok", "database": "online"})

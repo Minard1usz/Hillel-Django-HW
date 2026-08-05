@@ -1,7 +1,8 @@
 import time
 import logging
 
-logger = logging.getLogger('shop_logger')
+logger = logging.getLogger("shop_logger")
+
 
 class PerformanceTimingMiddleware:
     def __init__(self, get_response):

@@ -1,16 +1,20 @@
 from rest_framework import serializers
 from .models import Category, Book
 
+
 class CategorySerializer(serializers.ModelSerializer):
     """Серіалізатор для моделі Category"""
+
     class Meta:
         model = Category
-        fields = ['id', 'name', 'slug']
+        fields = ["id", "name", "slug"]
+
 
 class BookSerializer(serializers.ModelSerializer):
     """Серіалізатор для моделі Book. Використовує вкладений (nested) серіалізатор для відображення категорії на GET-запитах."""
+
     # Виведення об'єкта категорії
-    category_detail = CategorySerializer(source='category', read_only=True)
+    category_detail = CategorySerializer(source="category", read_only=True)
 
     # PrimaryKeyRelatedField очікує ID категорії
     category = serializers.PrimaryKeyRelatedField(
@@ -21,7 +25,15 @@ class BookSerializer(serializers.ModelSerializer):
     class Meta:
         model = Book
         fields = [
-            'id', 'title', 'author', 'description', 'price', 'stock', 'cover', 'category', 'category_detail'
+            "id",
+            "title",
+            "author",
+            "description",
+            "price",
+            "stock",
+            "cover",
+            "category",
+            "category_detail",
         ]
 
     def validate_price(self, value):

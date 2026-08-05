@@ -16,15 +16,12 @@ class Cart:
         book_id = str(book.id)
 
         if book_id not in self.cart:
-            self.cart[book_id] = {
-                'quantity': 0,
-                'price': str(book.price)
-            }
+            self.cart[book_id] = {"quantity": 0, "price": str(book.price)}
 
         if override_quantity:
-            self.cart[book_id]['quantity'] = quantity
+            self.cart[book_id]["quantity"] = quantity
         else:
-            self.cart[book_id]['quantity'] += quantity
+            self.cart[book_id]["quantity"] += quantity
 
         self.save()
 
@@ -43,18 +40,20 @@ class Cart:
 
         cart = self.cart.copy()
         for book in books:
-            cart[str(book.id)]['book'] = book
+            cart[str(book.id)]["book"] = book
 
         for item in cart.values():
-            item['price'] = Decimal(item['price'])
-            item['total_price'] = item['price'] * item['quantity']
+            item["price"] = Decimal(item["price"])
+            item["total_price"] = item["price"] * item["quantity"]
             yield item
 
     def __len__(self):
-        return sum(item['quantity'] for item in self.cart.values())
+        return sum(item["quantity"] for item in self.cart.values())
 
     def get_total_price(self):
-        return sum(Decimal(item['price']) * item['quantity'] for item in self.cart.values())
+        return sum(
+            Decimal(item["price"]) * item["quantity"] for item in self.cart.values()
+        )
 
     def clear(self):
         del self.session[settings.CART_SESSION_ID]

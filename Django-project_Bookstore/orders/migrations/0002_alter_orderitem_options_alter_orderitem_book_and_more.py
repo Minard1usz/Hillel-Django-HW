@@ -7,23 +7,36 @@ from django.db import migrations, models
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('orders', '0001_initial'),
-        ('shop_app', '0003_alter_book_options_alter_category_options_and_more'),
+        ("orders", "0001_initial"),
+        ("shop_app", "0003_alter_book_options_alter_category_options_and_more"),
     ]
 
     operations = [
         migrations.AlterModelOptions(
-            name='orderitem',
-            options={'verbose_name': 'Елемент замовлення', 'verbose_name_plural': 'Елементи замовлення'},
+            name="orderitem",
+            options={
+                "verbose_name": "Елемент замовлення",
+                "verbose_name_plural": "Елементи замовлення",
+            },
         ),
         migrations.AlterField(
-            model_name='orderitem',
-            name='book',
-            field=models.ForeignKey(on_delete=django.db.models.deletion.PROTECT, related_name='order_items', to='shop_app.book', verbose_name='Книга'),
+            model_name="orderitem",
+            name="book",
+            field=models.ForeignKey(
+                on_delete=django.db.models.deletion.PROTECT,
+                related_name="order_items",
+                to="shop_app.book",
+                verbose_name="Книга",
+            ),
         ),
         migrations.AlterField(
-            model_name='orderitem',
-            name='order',
-            field=models.ForeignKey(on_delete=django.db.models.deletion.PROTECT, related_name='items', to='orders.order', verbose_name='Замовлення'),
+            model_name="orderitem",
+            name="order",
+            field=models.ForeignKey(
+                on_delete=django.db.models.deletion.PROTECT,
+                related_name="items",
+                to="orders.order",
+                verbose_name="Замовлення",
+            ),
         ),
     ]
