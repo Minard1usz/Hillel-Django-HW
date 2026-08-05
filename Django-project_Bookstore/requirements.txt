@@ -20,4 +20,4 @@ celery>=5.3.0
 sentry-sdk>=2.0.0
 gunicorn>=21.2.0
 dj-database-url
-whitenoise
+whitenoisepytest-asyncio
