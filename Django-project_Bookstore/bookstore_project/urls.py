@@ -1,7 +1,7 @@
 from django.contrib import admin
 from django.views.generic import RedirectView
 from django.urls import path, include
-from shop_app.views import store
+from shop_app.views import store, health_check
 from django.conf import settings
 from rest_framework.routers import DefaultRouter
 from django.conf.urls.static import static
@@ -24,7 +24,9 @@ api_router.register(r'cart', CartViewSet, basename='cart')
 api_router.register(r'orders', OrderViewSet, basename='order')
 
 urlpatterns = [
+    path('health/', health_check, name='health_check'),
     path('admin/', admin.site.urls),
+    path('api/v1/', include(api_router.urls)),
     path('', RedirectView.as_view(url='shop/', permanent=True)),
     path('i18n/', include('django.conf.urls.i18n')),
     path('shop/', include('shop_app.urls')),

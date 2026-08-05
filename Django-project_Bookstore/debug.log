@@ -8103,3 +8103,86 @@ NameError: name 'generate_repor_task' is not defined. Did you mean: 'generate_re
 INFO 2026-08-03 13:17:18,576 middleware Запит до /shop/generate-report/ зайняв 0.0274 секунд.
 INFO 2026-08-03 13:17:27,020 middleware Запит до /shop/generate-report/ зайняв 0.0146 секунд.
 INFO 2026-08-03 13:19:01,632 middleware Запит до /shop/generate-report/ зайняв 0.0193 секунд.
+INFO 2026-08-04 17:57:51,621 middleware Запит до /shop/ зайняв 0.0295 секунд.
+INFO 2026-08-04 17:57:52,495 middleware Запит до /shop/catalog/ зайняв 0.0295 секунд.
+INFO 2026-08-04 17:57:53,102 middleware Запит до /shop/ зайняв 0.0446 секунд.
+INFO 2026-08-04 17:57:54,230 middleware Запит до /shop/catalog/ зайняв 0.0243 секунд.
+INFO 2026-08-04 17:57:54,874 middleware Запит до /shop/ зайняв 0.0204 секунд.
+INFO 2026-08-04 18:02:50,850 middleware Запит до /shop/ зайняв 0.0270 секунд.
+INFO 2026-08-04 18:02:53,184 middleware Запит до /shop/catalog/ зайняв 0.0520 секунд.
+INFO 2026-08-04 18:02:54,685 middleware Запит до /shop/ зайняв 0.0170 секунд.
+INFO 2026-08-04 18:03:02,911 middleware Запит до /shop/catalog/ зайняв 0.0211 секунд.
+INFO 2026-08-04 19:00:03,840 middleware Запит до /shop/catalog/ зайняв 0.0293 секунд.
+INFO 2026-08-04 19:00:04,635 middleware Запит до /shop/catalog/ зайняв 0.0208 секунд.
+INFO 2026-08-04 19:00:05,480 middleware Запит до /shop/ зайняв 0.0338 секунд.
+INFO 2026-08-04 19:00:06,325 middleware Запит до /shop/catalog/ зайняв 0.0204 секунд.
+INFO 2026-08-04 19:00:07,179 middleware Запит до /shop/ зайняв 0.0158 секунд.
+INFO 2026-08-05 09:44:26,396 middleware Запит до /shop/catalog/ зайняв 0.0270 секунд.
+INFO 2026-08-05 09:44:27,098 middleware Запит до /shop/ зайняв 0.0258 секунд.
+INFO 2026-08-05 09:59:58,125 middleware Запит до /health/ зайняв 0.0152 секунд.
+WARNING 2026-08-05 09:59:58,126 log Not Found: /health/
+INFO 2026-08-05 10:00:16,018 middleware Запит до /healthcheck зайняв 0.0028 секунд.
+WARNING 2026-08-05 10:00:16,019 log Not Found: /healthcheck
+INFO 2026-08-05 10:00:18,394 middleware Запит до /healthcheck/ зайняв 0.0018 секунд.
+WARNING 2026-08-05 10:00:18,394 log Not Found: /healthcheck/
+INFO 2026-08-05 10:02:31,343 middleware Запит до /health/ зайняв 0.0163 секунд.
+WARNING 2026-08-05 10:02:31,344 log Not Found: /health/
+INFO 2026-08-05 10:04:53,404 middleware Запит до /health/ зайняв 0.0291 секунд.
+WARNING 2026-08-05 10:04:53,405 log Not Found: /health/
+INFO 2026-08-05 10:06:26,308 middleware Запит до /health/ зайняв 0.0087 секунд.
+WARNING 2026-08-05 10:06:26,308 log Not Found: /health/
+INFO 2026-08-05 10:06:38,118 middleware Запит до /health/ зайняв 0.0061 секунд.
+WARNING 2026-08-05 10:06:38,119 log Not Found: /health/
+INFO 2026-08-05 10:07:20,406 middleware Запит до /health/ зайняв 0.0171 секунд.
+WARNING 2026-08-05 10:07:20,407 log Not Found: /health/
+INFO 2026-08-05 10:07:54,938 middleware Запит до /health/ зайняв 0.0300 секунд.
+WARNING 2026-08-05 10:07:54,938 log Not Found: /health/
+ERROR 2026-08-05 10:09:02,546 log Invalid HTTP_HOST header: 'testserver'. You may need to add 'testserver' to ALLOWED_HOSTS.
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/sentry_sdk/integrations/django/middleware.py", line 208, in __call__
+    return f(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/django/utils/deprecation.py", line 308, in __call__
+    response = self.process_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/django/middleware/common.py", line 48, in process_request
+    host = request.get_host()
+           ^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/django/http/request.py", line 206, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: 'testserver'. You may need to add 'testserver' to ALLOWED_HOSTS.
+ERROR 2026-08-05 10:10:34,050 log Invalid HTTP_HOST header: 'testserver'. You may need to add 'testserver' to ALLOWED_HOSTS.
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/sentry_sdk/integrations/django/middleware.py", line 208, in __call__
+    return f(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/django/utils/deprecation.py", line 308, in __call__
+    response = self.process_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/django/middleware/common.py", line 48, in process_request
+    host = request.get_host()
+           ^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/django/http/request.py", line 206, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: 'testserver'. You may need to add 'testserver' to ALLOWED_HOSTS.
+INFO 2026-08-05 10:12:06,528 middleware Запит до /health/ зайняв 0.0158 секунд.
+WARNING 2026-08-05 10:12:06,529 log Not Found: /health/
+INFO 2026-08-05 10:14:15,590 middleware Запит до /health/ зайняв 0.0116 секунд.
+WARNING 2026-08-05 10:14:15,591 log Not Found: /health/
+INFO 2026-08-05 10:18:03,696 middleware Запит до /health зайняв 0.0135 секунд.
+INFO 2026-08-05 10:19:01,476 middleware Запит до /health/ зайняв 0.0123 секунд.
+INFO 2026-08-05 10:19:07,446 middleware Запит до /health/ зайняв 0.0120 секунд.
+WARNING 2026-08-05 10:19:07,446 log Not Found: /health/
+INFO 2026-08-05 10:19:37,126 middleware Запит до /health/ зайняв 0.0092 секунд.
+INFO 2026-08-05 10:20:46,199 middleware Запит до /health/ зайняв 0.0122 секунд.
+INFO 2026-08-05 10:42:18,984 middleware Запит до /healthcheck/ зайняв 0.0021 секунд.
+WARNING 2026-08-05 10:42:18,985 log Not Found: /healthcheck/
+INFO 2026-08-05 10:42:22,255 middleware Запит до /shop/ зайняв 0.0510 секунд.
+INFO 2026-08-05 10:42:22,759 middleware Запит до /shop/catalog/ зайняв 0.0772 секунд.
+INFO 2026-08-05 10:42:23,528 middleware Запит до /shop/ зайняв 0.0205 секунд.

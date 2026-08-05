@@ -11,6 +11,7 @@ from orders.forms import CartAddBookForm
 from django.core.cache import cache
 from django.http import HttpResponse
 from shop_app.tasks import generate_report_task
+from django.http import JsonResponse
 
 
 SEARCH_MAX_LENGTH = 100
@@ -307,3 +308,6 @@ class BookDeleteView(LoginRequiredMixin, UserPassesTestMixin, DeleteView):
 def trigger_report_generation(request):
     generate_report_task.delay()
     return HttpResponse("Генерацію звіту успішно запущено у фоні!")
+
+def health_check(request):
+    return JsonResponse({'status': 'ok', "database": "online"})
