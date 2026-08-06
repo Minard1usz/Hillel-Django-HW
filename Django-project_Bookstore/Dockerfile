@@ -27,4 +27,4 @@ COPY . /app/
 RUN chmod +x /app/docker-entrypoint.sh
 
 # Вказуємо точку входу
-ENTRYPOINT ["/app/docker-entrypoint.sh"]
+CMD python manage.py migrate && gunicorn bookstore_project.wsgi:application --bind 0.0.0.0:8000
