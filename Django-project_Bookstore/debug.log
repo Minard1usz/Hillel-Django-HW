@@ -8186,3 +8186,6 @@ WARNING 2026-08-05 10:42:18,985 log Not Found: /healthcheck/
 INFO 2026-08-05 10:42:22,255 middleware Запит до /shop/ зайняв 0.0510 секунд.
 INFO 2026-08-05 10:42:22,759 middleware Запит до /shop/catalog/ зайняв 0.0772 секунд.
 INFO 2026-08-05 10:42:23,528 middleware Запит до /shop/ зайняв 0.0205 секунд.
+INFO 2026-08-06 09:57:47,234 middleware Запит до /shop/ зайняв 0.0887 секунд.
+INFO 2026-08-06 09:57:47,623 middleware Запит до /shop/catalog/ зайняв 0.0250 секунд.
+INFO 2026-08-06 09:57:48,512 middleware Запит до /shop/ зайняв 0.0311 секунд.

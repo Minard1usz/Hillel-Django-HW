@@ -1,50 +1,33 @@
 #!/bin/sh
 
-# Якщо база даних ще не піднялася, ми чекаємо її, щоб Django не впав з помилкою
-echo "Waiting for postgres..."
-while ! python -c "import socket; s = socket.socket(); s.connect(('$DB_HOST', int('$DB_PORT')))" 2>/dev/null; do
-  sleep 0.1
-done
-echo "PostgreSQL started"
+# Якщо DB_HOST або DB_PORT не задані у змінних оточення, беремо дефолтні значення
+DB_HOST=${DB_HOST:-db}
+DB_PORT=${DB_PORT:-5432}
 
-echo "Apply database migrations"
+echo "Waiting for postgres at $DB_HOST:$DB_PORT..."
+
+# Чекаємо підключення до сокета бази даних
+while ! python -c "
+import socket, os, sys
+try:
+    s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+    s.connect(('$DB_HOST', int('$DB_PORT')))
+    s.close()
+    sys.exit(0)
+except Exception:
+    sys.exit(1)
+" 2>/dev/null; do
+  sleep 1
+done
+
+echo "PostgreSQL started successfully!"
+
+echo "Apply database migrations..."
 python manage.py migrate --noinput
 
-echo "Collect static files"
-python manage.py collectstatic --no-input --clear
+echo "Collect static files..."
+python manage.py collectstatic --noinput --clear
 
-# Запуск Gunicorn замість runserver
-exec gunicorn bookstore_project.wsgi:application --bind 0.0.0.0:8000 --workers 3
-
-# Проста перевірка доступності порту бази за допомогою python
-python -c "
-import socket
-import time
-import os
-
-port = int(os.environ.get('DB_PORT', 5432))
-host = os.environ.get('DB_HOST', 'db')
-
-s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-while True:
-    try:
-        s.connect((host, port))
-        s.close()
-        break
-    except socket.error:
-        time.sleep(0.1)
-"
-
-echo "PostgreSQL started"
-
-# Автоматично застосовуємо міграції
-echo "Apply database migrations"
-python manage.py migrate
-
-# Збираємо статичні файли (якщо налаштовано STATIC_ROOT)
-echo "Collect static files"
-python manage.py collectstatic --noinput
-
-# Запускаємо вбудований сервер Django (для розробки)
-echo "Starting server"
-python manage.py runserver 0.0.0.0:8000
+echo "Starting Gunicorn server..."
+# exec ОБОВ'ЯЗКОВО має бути ОСТАННЬОЮ командою в скрипті!
+exec gunicorn bookstore_project.wsgi:application --bind 0.0.0.0:${PORT:-8000} --workers 3
