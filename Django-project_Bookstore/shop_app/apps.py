@@ -1,3 +1,4 @@
+import os
 import sys
 from django.apps import AppConfig
 
@@ -10,10 +11,14 @@ class ShopAppConfig(AppConfig):
     name = "shop_app"
 
     def ready(self):
-        if "gunicorn" in sys.argv or "runserver" in sys.argv:
+        is_server = any(cmd in sys.argv[0] for cmd in ["gunicorn", "runserver"])
+
+        if is_server and os.environ.get("RUN_MAIN") != "true":
             from django.core.management import call_command
 
             try:
+                print("==> Auto-running migrations on server startup...")
                 call_command("migrate", interactive=False)
+                print("==> Migrations completed successfully!")
             except Exception as e:
-                print(f"Migration error on startup: {e}")
+                print(f"==> Migration failed: {e}")
