@@ -6,6 +6,7 @@ from django.apps import AppConfig
 class ShopConfig(AppConfig):
     name = "shop_app"
 
+
 class ShopAppConfig(AppConfig):
     default_auto_field = "django.db.models.BigAutoField"
     name = "shop_app"

@@ -104,9 +104,7 @@ async def store(request):
             total_books=Count("books")
         )
         available_books_qs = Book.objects.filter(stock__gt=0)
-        discount_books_qs = Book.objects.filter(
-            description__icontains="discount"
-        )
+        discount_books_qs = Book.objects.filter(description__icontains="discount")
 
         user = await request.auser()
 
