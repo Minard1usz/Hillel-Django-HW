@@ -18,6 +18,7 @@ from django.core.cache import cache
 from django.http import HttpResponse
 from shop_app.tasks import generate_report_task
 from django.http import JsonResponse
+from django.core.management import call_command
 
 SEARCH_MAX_LENGTH = 100
 CATEGORY_CACHE_KEY = "shop_all_categories"
@@ -81,6 +82,14 @@ async def store(request):
         HttpResponse: Зрендерена HTML-сторінка головного магазину `shop_app/store.html`
         із повним набором паралельно оброблених даних у контексті.
     """
+    if not Book.objects.exists():
+        try:
+            print("===> Base is empty! Loading books_data.json...")
+            call_command("loaddata", "shop_app/fixtures/books_data.json")
+            print("===> Successfully loaded!")
+        except Exception as e:
+            print(f"===> Error: {e}")
+
     cache_key = "store_page_context"
     # Отримання контексту
     # Використання acache замість cache для Django 4.2+ / sync_to_async(cache.get)(cache_key)
