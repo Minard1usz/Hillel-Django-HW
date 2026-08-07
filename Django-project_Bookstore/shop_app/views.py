@@ -82,19 +82,19 @@ async def store(request):
         HttpResponse: Зрендерена HTML-сторінка головного магазину `shop_app/store.html`
         із повним набором паралельно оброблених даних у контексті.
     """
-    if not Book.objects.exists():
+    if not await Book.objects.aexists():
         try:
             print("===> Base is empty! Loading books_data.json...")
-            call_command("loaddata", "shop_app/fixtures/books_data.json")
+            await sync_to_async(call_command)(
+                "loaddata", "shop_app/fixtures/books_data.json"
+            )
             print("===> Successfully loaded!")
         except Exception as e:
-            print(f"===> Error: {e}")
+            print(f"===> Error loading fixtures: {e}")
 
     cache_key = "store_page_context"
     # Отримання контексту
-    # Використання acache замість cache для Django 4.2+ / sync_to_async(cache.get)(cache_key)
     context = await cache.aget(cache_key)
-
     if not context:
         special_offers_qs = Book.objects.filter(
             Q(price__lt=300) | Q(description__icontains="discount")
@@ -104,9 +104,10 @@ async def store(request):
             total_books=Count("books")
         )
         available_books_qs = Book.objects.filter(stock__gt=0)
-        discount_books_qs = Book.objects.filter(description__icontains="discount")
+        discount_books_qs = Book.objects.filter(
+            description__icontains="discount"
+        )
 
-        # Отримання асинхронного статусу користувача + асинхронного user: await.request.auser()
         user = await request.auser()
 
         (
@@ -122,7 +123,7 @@ async def store(request):
             get_as_list(categories_with_counts_qs),
             get_as_list(available_books_qs),
             get_as_list(discount_books_qs),
-            sync_to_async(prefetch_user_status)(request.user),
+            sync_to_async(prefetch_user_status)(user),
         )
 
         context = {
@@ -133,9 +134,12 @@ async def store(request):
             "discount_books": discount_books,
         }
         # Зберігання контексту на 15 хв, запис в кеш асинхронно
-        await cache.aset(cache_key, context, 900)
+        try:
+            await cache.aset(cache_key, context, 900)
+        except Exception as e:
+            print(f"Cache write error: {e}")
 
-    return await render_to_response(request, "shop_app/store.html", context)
+        return await render_to_response(request, "shop_app/store.html", context)
 
 
 class BookListView(ListView):
