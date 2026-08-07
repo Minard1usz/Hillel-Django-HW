@@ -70,18 +70,8 @@ def render_to_response(request, template_name, context):
 async def store(request):
     """
     Асинхронна view-функція для відображення головної сторінки магазину (Store).
-
-    Оптимізує час відгуку сторінки за допомогою паралельного виконання запитів через `asyncio.gather`.
-    Одночасно збирає списки спеціальних пропозицій, преміум-товарів, категорій із підрахунком книг,
-    доступних товарів та акційних позицій, а також асинхронно готує статус користувача.
-
-    Args:
-        request (HttpRequest): Об'єкт HTTP-запиту від користувача.
-
-    Returns:
-        HttpResponse: Зрендерена HTML-сторінка головного магазину `shop_app/store.html`
-        із повним набором паралельно оброблених даних у контексті.
     """
+    # 1. Завантажуємо фікстури, якщо база порожня
     if not await Book.objects.aexists():
         try:
             print("===> Base is empty! Loading books_data.json...")
@@ -93,8 +83,11 @@ async def store(request):
             print(f"===> Error loading fixtures: {e}")
 
     cache_key = "store_page_context"
-    # Отримання контексту
+
+    # 2. Перевіряємо кеш
     context = await cache.aget(cache_key)
+
+    # 3. Якщо контексту немає в кеші — збираємо його
     if not context:
         special_offers_qs = Book.objects.filter(
             Q(price__lt=300) | Q(description__icontains="discount")
@@ -131,13 +124,14 @@ async def store(request):
             "available_books": available_books,
             "discount_books": discount_books,
         }
-        # Зберігання контексту на 15 хв, запис в кеш асинхронно
+
         try:
             await cache.aset(cache_key, context, 900)
         except Exception as e:
             print(f"Cache write error: {e}")
 
-        return await render_to_response(request, "shop_app/store.html", context)
+    # 4. ОБОВ'ЯЗКОВИЙ RETURN НАПРЯМУ ПОЗА БЛОКАМИ IF (гарантує повернення HttpResponse)
+    return render(request, "shop_app/store.html", context)
 
 
 class BookListView(ListView):
