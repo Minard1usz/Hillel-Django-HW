@@ -13,6 +13,7 @@ from django.core.wsgi import get_wsgi_application
 
 os.environ.setdefault(
     "DJANGO_SETTINGS_MODULE",
-    os.getenv("DJANGO_SETTINGS_MODULE", "bookstore_project.settings.production"))
+    os.getenv("DJANGO_SETTINGS_MODULE", "bookstore_project.settings.production"),
+)
 
 application = get_wsgi_application()
