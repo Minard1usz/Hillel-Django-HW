@@ -8,7 +8,8 @@ import sys
 def main():
     """Run administrative tasks."""
     os.environ.setdefault(
-        "DJANGO_SETTINGS_MODULE", "bookstore_project.settings.development"
+        "DJANGO_SETTINGS_MODULE",
+        os.getenv("DJANGO_SETTINGS_MODULE", "bookstore_project.settings.base")
     )
     try:
         from django.core.management import execute_from_command_line
