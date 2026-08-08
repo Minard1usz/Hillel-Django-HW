@@ -153,7 +153,8 @@ PROJECT_STATIC_DIR = os.path.join(BASE_DIR, "static")
 if os.path.exists(PROJECT_STATIC_DIR):
     STATICFILES_DIRS = [PROJECT_STATIC_DIR]
 
-MEDIA_URL = "/images/"
+MEDIA_URL = "/media/"
+MEDIA_ROOT = BASE_DIR / "media"
 
 AUTH_USER_MODEL = "users.CustomUser"
 
