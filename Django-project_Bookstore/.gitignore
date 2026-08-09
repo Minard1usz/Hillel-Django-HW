@@ -1,8 +1,8 @@
 # Секретні змінні оточення (паролі від бази)
-.env
+project_a_bookstore/.env
 
 # Локальний дамп даних, який ми знімали
-datadump.json
+project_a_bookstore/datadump.json
 
 # Локальне віртуальне оточення (те саме, що на твоєму Mac)
 .venv/
@@ -11,7 +11,7 @@ env/
 
 # Стара база SQLite (вона нам більше не потрібна в Git, тепер у нас Postgres)
 *.sqlite3
-db.sqlite3
+project_a_bookstore/db.sqlite3
 
 # Кеш Python
 __pycache__/
@@ -26,9 +26,9 @@ __pycache__/
 staticfiles/
 
 # Тестування та покриття
-.coverage
+project_a_bookstore/.coverage
 htmlcov/
 
 # Ігноруємо завантаження користувачів, але зберігаємо тестові обкладинки
-media/*
-!media/covers/
+project_a_bookstore/media/*
+!project_a_bookstore/media/covers/

@@ -21,7 +21,7 @@ COPY requirements.txt /app/
 RUN pip install --upgrade pip && pip install -r requirements.txt
 
 # Копіюємо весь код проєкту в контейнер
-COPY . /app/
+COPY .. /app/
 
 # Робимо наш майбутній скрипт запуску виконуваним
 RUN chmod +x /app/docker-entrypoint.sh
