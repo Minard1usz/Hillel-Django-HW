@@ -19,6 +19,14 @@ SECRET_KEY = os.getenv(
     "SECRET_KEY", "django-insecure-^8#7r)u$)q#m&7mt#t9^@_)3gf3+fc)=u2vgs#)qayr-tsb53-"
 )
 
+# Default конфігурація бази даних за замовчуванням (SQLite), якщо не завантажено dev/prod конфіги
+DATABASES = {
+    "default": {
+        "ENGINE": "django.db.backends.sqlite3",
+        "NAME": BASE_DIR / "db.sqlite3",
+    }
+}
+
 # Спільні додатки (без debug_toolbar, його перенесемо в dev)
 INSTALLED_APPS = [
     "django.contrib.admin",
