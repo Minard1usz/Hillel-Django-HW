@@ -16,11 +16,15 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
+from django.views.generic import RedirectView
 from drf_spectacular.views import SpectacularAPIView, SpectacularSwaggerView
 
 urlpatterns = [
+    # Перенаправлення з головної сторінки на Swagger UI
+    path('', RedirectView.as_view(url='/api/docs/', permanent=False)),
+
     path('admin/', admin.site.urls),
-    path('apu/v1/', include('stocks.urls')),
+    path('api/v1/', include('stocks.urls')),
 
     # Swagger docs
     path('api/schema/', SpectacularAPIView.as_view(), name='schema'),
