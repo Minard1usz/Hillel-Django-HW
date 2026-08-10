@@ -8192,3 +8192,1460 @@ INFO 2026-08-06 09:57:48,512 middleware Запит до /shop/ зайняв 0.03
 INFO 2026-08-06 18:46:52,809 middleware Запит до /shop/ зайняв 0.0457 секунд.
 INFO 2026-08-06 18:46:54,417 middleware Запит до /shop/catalog/ зайняв 0.0375 секунд.
 INFO 2026-08-06 18:46:55,025 middleware Запит до /shop/ зайняв 0.0298 секунд.
+INFO 2026-08-10 11:16:13,463 autoreload Watching for file changes with StatReloader
+INFO 2026-08-10 11:17:42,750 autoreload Watching for file changes with StatReloader
+INFO 2026-08-10 11:19:00,615 autoreload Watching for file changes with StatReloader
+INFO 2026-08-10 11:19:57,249 autoreload /Users/yevhen21/PycharmProjects/Hillel-Django-HW/Django-project_Bookstore/project_a_bookstore/bookstore_project/settings/development.py changed, reloading.
+INFO 2026-08-10 11:19:57,590 autoreload Watching for file changes with StatReloader
+ERROR 2026-08-10 11:19:59,852 log Internal Server Error: /
+Traceback (most recent call last):
+  File "/Users/yevhen21/PycharmProjects/Hillel-Django-HW/Django-project_Bookstore/.venv/lib/python3.14/site-packages/django/urls/base.py", line 81, in reverse
+    extra, resolver = resolver.namespace_dict[ns]
+                      ~~~~~~~~~~~~~~~~~~~~~~~^^^^
+KeyError: 'djdt'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/yevhen21/PycharmProjects/Hillel-Django-HW/Django-project_Bookstore/.venv/lib/python3.14/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Users/yevhen21/PycharmProjects/Hillel-Django-HW/Django-project_Bookstore/.venv/lib/python3.14/site-packages/sentry_sdk/integrations/django/middleware.py", line 208, in __call__
+    return f(*args, **kwargs)
+  File "/Users/yevhen21/PycharmProjects/Hillel-Django-HW/Django-project_Bookstore/.venv/lib/python3.14/site-packages/debug_toolbar/middleware.py", line 151, in __call__
+    return self._postprocess(request, response, toolbar)
+           ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/yevhen21/PycharmProjects/Hillel-Django-HW/Django-project_Bookstore/.venv/lib/python3.14/site-packages/debug_toolbar/middleware.py", line 195, in _postprocess
+    rendered = toolbar.render_toolbar()
+  File "/Users/yevhen21/PycharmProjects/Hillel-Django-HW/Django-project_Bookstore/.venv/lib/python3.14/site-packages/debug_toolbar/toolbar.py", line 103, in render_toolbar
+    return render_to_string("debug_toolbar/base.html", context)
+  File "/Users/yevhen21/PycharmProjects/Hillel-Django-HW/Django-project_Bookstore/.venv/lib/python3.14/site-packages/django/template/loader.py", line 62, in render_to_string
+    return template.render(context, request)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+  File "/Users/yevhen21/PycharmProjects/Hillel-Django-HW/Django-project_Bookstore/.venv/lib/python3.14/site-packages/django/template/backends/django.py", line 107, in render
+    return self.template.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "/Users/yevhen21/PycharmProjects/Hillel-Django-HW/Django-project_Bookstore/.venv/lib/python3.14/site-packages/django/template/base.py", line 174, in render
+    return self._render(context)
+           ~~~~~~~~~~~~^^^^^^^^^
+  File "/Users/yevhen21/PycharmProjects/Hillel-Django-HW/Django-project_Bookstore/.venv/lib/python3.14/site-packages/django/test/utils.py", line 114, in instrumented_test_render
+    return self.nodelist.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "/Users/yevhen21/PycharmProjects/Hillel-Django-HW/Django-project_Bookstore/.venv/lib/python3.14/site-packages/django/template/base.py", line 1091, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "/Users/yevhen21/PycharmProjects/Hillel-Django-HW/Django-project_Bookstore/.venv/lib/python3.14/site-packages/django/template/base.py", line 1052, in render_annotated
+    return self.render(context)
+           ~~~~~~~~~~~^^^^^^^^^
+  File "/Users/yevhen21/PycharmProjects/Hillel-Django-HW/Django-project_Bookstore/.venv/lib/python3.14/site-packages/django/template/defaulttags.py", line 333, in render
+    return nodelist.render(context)
+           ~~~~~~~~~~~~~~~^^^^^^^^^
+  File "/Users/yevhen21/PycharmProjects/Hillel-Django-HW/Django-project_Bookstore/.venv/lib/python3.14/site-packages/django/template/base.py", line 1091, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "/Users/yevhen21/PycharmProjects/Hillel-Django-HW/Django-project_Bookstore/.venv/lib/python3.14/site-packages/django/template/base.py", line 1052, in render_annotated
+    return self.render(context)
+           ~~~~~~~~~~~^^^^^^^^^
+  File "/Users/yevhen21/PycharmProjects/Hillel-Django-HW/Django-project_Bookstore/.venv/lib/python3.14/site-packages/django/template/defaulttags.py", line 511, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "/Users/yevhen21/PycharmProjects/Hillel-Django-HW/Django-project_Bookstore/.venv/lib/python3.14/site-packages/django/urls/base.py", line 92, in reverse
+    raise NoReverseMatch("%s is not a registered namespace" % key)
+django.urls.exceptions.NoReverseMatch: 'djdt' is not a registered namespace
+INFO 2026-08-10 11:19:59,854 middleware Запит до / зайняв 0.0403 секунд.
+ERROR 2026-08-10 11:19:59,855 log "GET / HTTP/1.1" 500 142447
+ERROR 2026-08-10 11:19:59,929 log Internal Server Error: /favicon.ico
+Traceback (most recent call last):
+  File "/Users/yevhen21/PycharmProjects/Hillel-Django-HW/Django-project_Bookstore/.venv/lib/python3.14/site-packages/django/urls/base.py", line 81, in reverse
+    extra, resolver = resolver.namespace_dict[ns]
+                      ~~~~~~~~~~~~~~~~~~~~~~~^^^^
+KeyError: 'djdt'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/yevhen21/PycharmProjects/Hillel-Django-HW/Django-project_Bookstore/.venv/lib/python3.14/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Users/yevhen21/PycharmProjects/Hillel-Django-HW/Django-project_Bookstore/.venv/lib/python3.14/site-packages/sentry_sdk/integrations/django/middleware.py", line 208, in __call__
+    return f(*args, **kwargs)
+  File "/Users/yevhen21/PycharmProjects/Hillel-Django-HW/Django-project_Bookstore/.venv/lib/python3.14/site-packages/debug_toolbar/middleware.py", line 151, in __call__
+    return self._postprocess(request, response, toolbar)
+           ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/yevhen21/PycharmProjects/Hillel-Django-HW/Django-project_Bookstore/.venv/lib/python3.14/site-packages/debug_toolbar/middleware.py", line 195, in _postprocess
+    rendered = toolbar.render_toolbar()
+  File "/Users/yevhen21/PycharmProjects/Hillel-Django-HW/Django-project_Bookstore/.venv/lib/python3.14/site-packages/debug_toolbar/toolbar.py", line 103, in render_toolbar
+    return render_to_string("debug_toolbar/base.html", context)
+  File "/Users/yevhen21/PycharmProjects/Hillel-Django-HW/Django-project_Bookstore/.venv/lib/python3.14/site-packages/django/template/loader.py", line 62, in render_to_string
+    return template.render(context, request)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+  File "/Users/yevhen21/PycharmProjects/Hillel-Django-HW/Django-project_Bookstore/.venv/lib/python3.14/site-packages/django/template/backends/django.py", line 107, in render
+    return self.template.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "/Users/yevhen21/PycharmProjects/Hillel-Django-HW/Django-project_Bookstore/.venv/lib/python3.14/site-packages/django/template/base.py", line 174, in render
+    return self._render(context)
+           ~~~~~~~~~~~~^^^^^^^^^
+  File "/Users/yevhen21/PycharmProjects/Hillel-Django-HW/Django-project_Bookstore/.venv/lib/python3.14/site-packages/django/test/utils.py", line 114, in instrumented_test_render
+    return self.nodelist.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "/Users/yevhen21/PycharmProjects/Hillel-Django-HW/Django-project_Bookstore/.venv/lib/python3.14/site-packages/django/template/base.py", line 1091, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "/Users/yevhen21/PycharmProjects/Hillel-Django-HW/Django-project_Bookstore/.venv/lib/python3.14/site-packages/django/template/base.py", line 1052, in render_annotated
+    return self.render(context)
+           ~~~~~~~~~~~^^^^^^^^^
+  File "/Users/yevhen21/PycharmProjects/Hillel-Django-HW/Django-project_Bookstore/.venv/lib/python3.14/site-packages/django/template/defaulttags.py", line 333, in render
+    return nodelist.render(context)
+           ~~~~~~~~~~~~~~~^^^^^^^^^
+  File "/Users/yevhen21/PycharmProjects/Hillel-Django-HW/Django-project_Bookstore/.venv/lib/python3.14/site-packages/django/template/base.py", line 1091, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "/Users/yevhen21/PycharmProjects/Hillel-Django-HW/Django-project_Bookstore/.venv/lib/python3.14/site-packages/django/template/base.py", line 1052, in render_annotated
+    return self.render(context)
+           ~~~~~~~~~~~^^^^^^^^^
+  File "/Users/yevhen21/PycharmProjects/Hillel-Django-HW/Django-project_Bookstore/.venv/lib/python3.14/site-packages/django/template/defaulttags.py", line 511, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "/Users/yevhen21/PycharmProjects/Hillel-Django-HW/Django-project_Bookstore/.venv/lib/python3.14/site-packages/django/urls/base.py", line 92, in reverse
+    raise NoReverseMatch("%s is not a registered namespace" % key)
+django.urls.exceptions.NoReverseMatch: 'djdt' is not a registered namespace
+INFO 2026-08-10 11:19:59,930 middleware Запит до /favicon.ico зайняв 0.0220 секунд.
+ERROR 2026-08-10 11:19:59,930 log "GET /favicon.ico HTTP/1.1" 500 142043
+ERROR 2026-08-10 11:24:47,317 log Internal Server Error: /
+Traceback (most recent call last):
+  File "/Users/yevhen21/PycharmProjects/Hillel-Django-HW/Django-project_Bookstore/.venv/lib/python3.14/site-packages/django/urls/base.py", line 81, in reverse
+    extra, resolver = resolver.namespace_dict[ns]
+                      ~~~~~~~~~~~~~~~~~~~~~~~^^^^
+KeyError: 'djdt'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/yevhen21/PycharmProjects/Hillel-Django-HW/Django-project_Bookstore/.venv/lib/python3.14/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Users/yevhen21/PycharmProjects/Hillel-Django-HW/Django-project_Bookstore/.venv/lib/python3.14/site-packages/sentry_sdk/integrations/django/middleware.py", line 208, in __call__
+    return f(*args, **kwargs)
+  File "/Users/yevhen21/PycharmProjects/Hillel-Django-HW/Django-project_Bookstore/.venv/lib/python3.14/site-packages/debug_toolbar/middleware.py", line 151, in __call__
+    return self._postprocess(request, response, toolbar)
+           ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/yevhen21/PycharmProjects/Hillel-Django-HW/Django-project_Bookstore/.venv/lib/python3.14/site-packages/debug_toolbar/middleware.py", line 195, in _postprocess
+    rendered = toolbar.render_toolbar()
+  File "/Users/yevhen21/PycharmProjects/Hillel-Django-HW/Django-project_Bookstore/.venv/lib/python3.14/site-packages/debug_toolbar/toolbar.py", line 103, in render_toolbar
+    return render_to_string("debug_toolbar/base.html", context)
+  File "/Users/yevhen21/PycharmProjects/Hillel-Django-HW/Django-project_Bookstore/.venv/lib/python3.14/site-packages/django/template/loader.py", line 62, in render_to_string
+    return template.render(context, request)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+  File "/Users/yevhen21/PycharmProjects/Hillel-Django-HW/Django-project_Bookstore/.venv/lib/python3.14/site-packages/django/template/backends/django.py", line 107, in render
+    return self.template.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "/Users/yevhen21/PycharmProjects/Hillel-Django-HW/Django-project_Bookstore/.venv/lib/python3.14/site-packages/django/template/base.py", line 174, in render
+    return self._render(context)
+           ~~~~~~~~~~~~^^^^^^^^^
+  File "/Users/yevhen21/PycharmProjects/Hillel-Django-HW/Django-project_Bookstore/.venv/lib/python3.14/site-packages/django/test/utils.py", line 114, in instrumented_test_render
+    return self.nodelist.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "/Users/yevhen21/PycharmProjects/Hillel-Django-HW/Django-project_Bookstore/.venv/lib/python3.14/site-packages/django/template/base.py", line 1091, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "/Users/yevhen21/PycharmProjects/Hillel-Django-HW/Django-project_Bookstore/.venv/lib/python3.14/site-packages/django/template/base.py", line 1052, in render_annotated
+    return self.render(context)
+           ~~~~~~~~~~~^^^^^^^^^
+  File "/Users/yevhen21/PycharmProjects/Hillel-Django-HW/Django-project_Bookstore/.venv/lib/python3.14/site-packages/django/template/defaulttags.py", line 333, in render
+    return nodelist.render(context)
+           ~~~~~~~~~~~~~~~^^^^^^^^^
+  File "/Users/yevhen21/PycharmProjects/Hillel-Django-HW/Django-project_Bookstore/.venv/lib/python3.14/site-packages/django/template/base.py", line 1091, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "/Users/yevhen21/PycharmProjects/Hillel-Django-HW/Django-project_Bookstore/.venv/lib/python3.14/site-packages/django/template/base.py", line 1052, in render_annotated
+    return self.render(context)
+           ~~~~~~~~~~~^^^^^^^^^
+  File "/Users/yevhen21/PycharmProjects/Hillel-Django-HW/Django-project_Bookstore/.venv/lib/python3.14/site-packages/django/template/defaulttags.py", line 511, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "/Users/yevhen21/PycharmProjects/Hillel-Django-HW/Django-project_Bookstore/.venv/lib/python3.14/site-packages/django/urls/base.py", line 92, in reverse
+    raise NoReverseMatch("%s is not a registered namespace" % key)
+django.urls.exceptions.NoReverseMatch: 'djdt' is not a registered namespace
+INFO 2026-08-10 11:24:47,318 middleware Запит до / зайняв 0.0292 секунд.
+ERROR 2026-08-10 11:24:47,319 log "GET / HTTP/1.1" 500 142435
+ERROR 2026-08-10 11:24:47,375 log Internal Server Error: /favicon.ico
+Traceback (most recent call last):
+  File "/Users/yevhen21/PycharmProjects/Hillel-Django-HW/Django-project_Bookstore/.venv/lib/python3.14/site-packages/django/urls/base.py", line 81, in reverse
+    extra, resolver = resolver.namespace_dict[ns]
+                      ~~~~~~~~~~~~~~~~~~~~~~~^^^^
+KeyError: 'djdt'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/yevhen21/PycharmProjects/Hillel-Django-HW/Django-project_Bookstore/.venv/lib/python3.14/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Users/yevhen21/PycharmProjects/Hillel-Django-HW/Django-project_Bookstore/.venv/lib/python3.14/site-packages/sentry_sdk/integrations/django/middleware.py", line 208, in __call__
+    return f(*args, **kwargs)
+  File "/Users/yevhen21/PycharmProjects/Hillel-Django-HW/Django-project_Bookstore/.venv/lib/python3.14/site-packages/debug_toolbar/middleware.py", line 151, in __call__
+    return self._postprocess(request, response, toolbar)
+           ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/yevhen21/PycharmProjects/Hillel-Django-HW/Django-project_Bookstore/.venv/lib/python3.14/site-packages/debug_toolbar/middleware.py", line 195, in _postprocess
+    rendered = toolbar.render_toolbar()
+  File "/Users/yevhen21/PycharmProjects/Hillel-Django-HW/Django-project_Bookstore/.venv/lib/python3.14/site-packages/debug_toolbar/toolbar.py", line 103, in render_toolbar
+    return render_to_string("debug_toolbar/base.html", context)
+  File "/Users/yevhen21/PycharmProjects/Hillel-Django-HW/Django-project_Bookstore/.venv/lib/python3.14/site-packages/django/template/loader.py", line 62, in render_to_string
+    return template.render(context, request)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+  File "/Users/yevhen21/PycharmProjects/Hillel-Django-HW/Django-project_Bookstore/.venv/lib/python3.14/site-packages/django/template/backends/django.py", line 107, in render
+    return self.template.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "/Users/yevhen21/PycharmProjects/Hillel-Django-HW/Django-project_Bookstore/.venv/lib/python3.14/site-packages/django/template/base.py", line 174, in render
+    return self._render(context)
+           ~~~~~~~~~~~~^^^^^^^^^
+  File "/Users/yevhen21/PycharmProjects/Hillel-Django-HW/Django-project_Bookstore/.venv/lib/python3.14/site-packages/django/test/utils.py", line 114, in instrumented_test_render
+    return self.nodelist.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "/Users/yevhen21/PycharmProjects/Hillel-Django-HW/Django-project_Bookstore/.venv/lib/python3.14/site-packages/django/template/base.py", line 1091, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "/Users/yevhen21/PycharmProjects/Hillel-Django-HW/Django-project_Bookstore/.venv/lib/python3.14/site-packages/django/template/base.py", line 1052, in render_annotated
+    return self.render(context)
+           ~~~~~~~~~~~^^^^^^^^^
+  File "/Users/yevhen21/PycharmProjects/Hillel-Django-HW/Django-project_Bookstore/.venv/lib/python3.14/site-packages/django/template/defaulttags.py", line 333, in render
+    return nodelist.render(context)
+           ~~~~~~~~~~~~~~~^^^^^^^^^
+  File "/Users/yevhen21/PycharmProjects/Hillel-Django-HW/Django-project_Bookstore/.venv/lib/python3.14/site-packages/django/template/base.py", line 1091, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "/Users/yevhen21/PycharmProjects/Hillel-Django-HW/Django-project_Bookstore/.venv/lib/python3.14/site-packages/django/template/base.py", line 1052, in render_annotated
+    return self.render(context)
+           ~~~~~~~~~~~^^^^^^^^^
+  File "/Users/yevhen21/PycharmProjects/Hillel-Django-HW/Django-project_Bookstore/.venv/lib/python3.14/site-packages/django/template/defaulttags.py", line 511, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "/Users/yevhen21/PycharmProjects/Hillel-Django-HW/Django-project_Bookstore/.venv/lib/python3.14/site-packages/django/urls/base.py", line 92, in reverse
+    raise NoReverseMatch("%s is not a registered namespace" % key)
+django.urls.exceptions.NoReverseMatch: 'djdt' is not a registered namespace
+INFO 2026-08-10 11:24:47,376 middleware Запит до /favicon.ico зайняв 0.0200 секунд.
+ERROR 2026-08-10 11:24:47,376 log "GET /favicon.ico HTTP/1.1" 500 142043
+INFO 2026-08-10 11:26:28,100 autoreload /Users/yevhen21/PycharmProjects/Hillel-Django-HW/Django-project_Bookstore/project_a_bookstore/bookstore_project/urls.py changed, reloading.
+INFO 2026-08-10 11:26:28,433 autoreload Watching for file changes with StatReloader
+INFO 2026-08-10 11:26:49,481 autoreload /Users/yevhen21/PycharmProjects/Hillel-Django-HW/Django-project_Bookstore/project_a_bookstore/bookstore_project/urls.py changed, reloading.
+INFO 2026-08-10 11:26:49,854 autoreload Watching for file changes with StatReloader
+INFO 2026-08-10 11:26:52,887 middleware Запит до / зайняв 0.0173 секунд.
+INFO 2026-08-10 11:26:52,890 log "GET / HTTP/1.1" 301 0
+ERROR 2026-08-10 11:26:52,965 log Internal Server Error: /shop/
+Traceback (most recent call last):
+  File "/Users/yevhen21/PycharmProjects/Hillel-Django-HW/Django-project_Bookstore/.venv/lib/python3.14/site-packages/django_redis/cache.py", line 48, in _decorator
+    return method(self, *args, **kwargs)
+  File "/Users/yevhen21/PycharmProjects/Hillel-Django-HW/Django-project_Bookstore/.venv/lib/python3.14/site-packages/django_redis/cache.py", line 124, in _get
+    return self.client.get(key, default=default, version=version, client=client)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/yevhen21/PycharmProjects/Hillel-Django-HW/Django-project_Bookstore/.venv/lib/python3.14/site-packages/django_redis/client/default.py", line 362, in get
+    raise ConnectionInterrupted(connection=client) from e
+django_redis.exceptions.ConnectionInterrupted: Redis ConnectionError: Error 8 connecting to redis:6379. nodename nor servname provided, or not known.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/yevhen21/PycharmProjects/Hillel-Django-HW/Django-project_Bookstore/.venv/lib/python3.14/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Users/yevhen21/PycharmProjects/Hillel-Django-HW/Django-project_Bookstore/.venv/lib/python3.14/site-packages/django/core/handlers/base.py", line 198, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/yevhen21/PycharmProjects/Hillel-Django-HW/Django-project_Bookstore/.venv/lib/python3.14/site-packages/asgiref/sync.py", line 325, in __call__
+    return call_result.result()
+           ~~~~~~~~~~~~~~~~~~^^
+  File "/opt/homebrew/Cellar/python@3.14/3.14.3_1/Frameworks/Python.framework/Versions/3.14/lib/python3.14/concurrent/futures/_base.py", line 443, in result
+    return self.__get_result()
+           ~~~~~~~~~~~~~~~~~^^
+  File "/opt/homebrew/Cellar/python@3.14/3.14.3_1/Frameworks/Python.framework/Versions/3.14/lib/python3.14/concurrent/futures/_base.py", line 395, in __get_result
+    raise self._exception
+  File "/Users/yevhen21/PycharmProjects/Hillel-Django-HW/Django-project_Bookstore/.venv/lib/python3.14/site-packages/asgiref/sync.py", line 365, in main_wrap
+    result = await awaitable
+             ^^^^^^^^^^^^^^^
+  File "/Users/yevhen21/PycharmProjects/Hillel-Django-HW/Django-project_Bookstore/.venv/lib/python3.14/site-packages/sentry_sdk/integrations/django/asgi.py", line 191, in sentry_wrapped_callback
+    return await callback(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/yevhen21/PycharmProjects/Hillel-Django-HW/Django-project_Bookstore/project_a_bookstore/shop_app/views.py", line 88, in store
+    context = await cache.aget(cache_key)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/yevhen21/PycharmProjects/Hillel-Django-HW/Django-project_Bookstore/.venv/lib/python3.14/site-packages/django/core/cache/backends/base.py", line 152, in aget
+    return await sync_to_async(self.get, thread_sensitive=True)(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        key, default, version
+        ^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/Users/yevhen21/PycharmProjects/Hillel-Django-HW/Django-project_Bookstore/.venv/lib/python3.14/site-packages/asgiref/sync.py", line 506, in __call__
+    ret = await asyncio.shield(exec_coro)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/yevhen21/PycharmProjects/Hillel-Django-HW/Django-project_Bookstore/.venv/lib/python3.14/site-packages/asgiref/current_thread_executor.py", line 40, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/Users/yevhen21/PycharmProjects/Hillel-Django-HW/Django-project_Bookstore/.venv/lib/python3.14/site-packages/asgiref/sync.py", line 561, in thread_handler
+    return func(*args, **kwargs)
+  File "/Users/yevhen21/PycharmProjects/Hillel-Django-HW/Django-project_Bookstore/.venv/lib/python3.14/site-packages/debug_toolbar/panels/cache.py", line 42, in wrapper
+    return panel._record_call(cache, alias, name, original_method, args, kwargs)
+           ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/yevhen21/PycharmProjects/Hillel-Django-HW/Django-project_Bookstore/.venv/lib/python3.14/site-packages/debug_toolbar/panels/cache.py", line 154, in _record_call
+    value = original_method(*args, **kwargs)
+  File "/Users/yevhen21/PycharmProjects/Hillel-Django-HW/Django-project_Bookstore/.venv/lib/python3.14/site-packages/django_redis/cache.py", line 117, in get
+    value = self._get(key, default, version, client)
+  File "/Users/yevhen21/PycharmProjects/Hillel-Django-HW/Django-project_Bookstore/.venv/lib/python3.14/site-packages/django_redis/cache.py", line 55, in _decorator
+    raise e.__cause__  # type: ignore[misc] # noqa: B904
+    ^^^^^^^^^^^^^^^^^
+  File "/Users/yevhen21/PycharmProjects/Hillel-Django-HW/Django-project_Bookstore/.venv/lib/python3.14/site-packages/django_redis/client/default.py", line 360, in get
+    value = client.get(key)
+  File "/Users/yevhen21/PycharmProjects/Hillel-Django-HW/Django-project_Bookstore/.venv/lib/python3.14/site-packages/redis/commands/core.py", line 3200, in get
+    return self.execute_command("GET", name, keys=[name])
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/yevhen21/PycharmProjects/Hillel-Django-HW/Django-project_Bookstore/.venv/lib/python3.14/site-packages/sentry_sdk/integrations/redis/_sync_common.py", line 171, in sentry_patched_execute_command
+    value = old_execute_command(self, name, *args, **kwargs)
+  File "/Users/yevhen21/PycharmProjects/Hillel-Django-HW/Django-project_Bookstore/.venv/lib/python3.14/site-packages/redis/client.py", line 867, in execute_command
+    return self._execute_command(*args, **options)
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+  File "/Users/yevhen21/PycharmProjects/Hillel-Django-HW/Django-project_Bookstore/.venv/lib/python3.14/site-packages/redis/client.py", line 873, in _execute_command
+    conn = self.connection or pool.get_connection()
+                              ~~~~~~~~~~~~~~~~~~~^^
+  File "/Users/yevhen21/PycharmProjects/Hillel-Django-HW/Django-project_Bookstore/.venv/lib/python3.14/site-packages/redis/utils.py", line 258, in wrapper
+    return func(*args, **kwargs)
+  File "/Users/yevhen21/PycharmProjects/Hillel-Django-HW/Django-project_Bookstore/.venv/lib/python3.14/site-packages/redis/connection.py", line 3273, in get_connection
+    connection.connect()
+    ~~~~~~~~~~~~~~~~~~^^
+  File "/Users/yevhen21/PycharmProjects/Hillel-Django-HW/Django-project_Bookstore/.venv/lib/python3.14/site-packages/redis/connection.py", line 1028, in connect
+    self.retry.call_with_retry(
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        lambda: self.connect_check_health(
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<2 lines>...
+        lambda error: self.disconnect(error),
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/Users/yevhen21/PycharmProjects/Hillel-Django-HW/Django-project_Bookstore/.venv/lib/python3.14/site-packages/redis/retry.py", line 132, in call_with_retry
+    raise error
+  File "/Users/yevhen21/PycharmProjects/Hillel-Django-HW/Django-project_Bookstore/.venv/lib/python3.14/site-packages/redis/retry.py", line 120, in call_with_retry
+    return do()
+  File "/Users/yevhen21/PycharmProjects/Hillel-Django-HW/Django-project_Bookstore/.venv/lib/python3.14/site-packages/redis/connection.py", line 1029, in <lambda>
+    lambda: self.connect_check_health(
+            ~~~~~~~~~~~~~~~~~~~~~~~~~^
+        check_health=True, retry_socket_connect=False
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ),
+    ^
+  File "/Users/yevhen21/PycharmProjects/Hillel-Django-HW/Django-project_Bookstore/.venv/lib/python3.14/site-packages/redis/connection.py", line 1077, in connect_check_health
+    raise e
+redis.exceptions.ConnectionError: Error 8 connecting to redis:6379. nodename nor servname provided, or not known.
+INFO 2026-08-10 11:26:52,984 middleware Запит до /shop/ зайняв 0.0919 секунд.
+ERROR 2026-08-10 11:26:52,985 log "GET /shop/ HTTP/1.1" 500 192948
+INFO 2026-08-10 11:26:53,007 log "GET /static/debug_toolbar/js/toolbar.js HTTP/1.1" 200 14879
+INFO 2026-08-10 11:26:53,008 log "GET /static/debug_toolbar/css/toolbar.css HTTP/1.1" 200 30587
+INFO 2026-08-10 11:26:53,009 log "GET /static/debug_toolbar/css/print.css HTTP/1.1" 200 43
+INFO 2026-08-10 11:26:53,021 log "GET /static/debug_toolbar/js/utils.js HTTP/1.1" 200 4700
+INFO 2026-08-10 11:26:53,046 middleware Запит до /favicon.ico зайняв 0.0117 секунд.
+WARNING 2026-08-10 11:26:53,046 log Not Found: /favicon.ico
+WARNING 2026-08-10 11:26:53,047 log "GET /favicon.ico HTTP/1.1" 404 20016
+ERROR 2026-08-10 11:27:15,769 log Internal Server Error: /shop/
+Traceback (most recent call last):
+  File "/Users/yevhen21/PycharmProjects/Hillel-Django-HW/Django-project_Bookstore/.venv/lib/python3.14/site-packages/django_redis/cache.py", line 48, in _decorator
+    return method(self, *args, **kwargs)
+  File "/Users/yevhen21/PycharmProjects/Hillel-Django-HW/Django-project_Bookstore/.venv/lib/python3.14/site-packages/django_redis/cache.py", line 124, in _get
+    return self.client.get(key, default=default, version=version, client=client)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/yevhen21/PycharmProjects/Hillel-Django-HW/Django-project_Bookstore/.venv/lib/python3.14/site-packages/django_redis/client/default.py", line 362, in get
+    raise ConnectionInterrupted(connection=client) from e
+django_redis.exceptions.ConnectionInterrupted: Redis ConnectionError: Error 8 connecting to redis:6379. nodename nor servname provided, or not known.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/yevhen21/PycharmProjects/Hillel-Django-HW/Django-project_Bookstore/.venv/lib/python3.14/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Users/yevhen21/PycharmProjects/Hillel-Django-HW/Django-project_Bookstore/.venv/lib/python3.14/site-packages/django/core/handlers/base.py", line 198, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/yevhen21/PycharmProjects/Hillel-Django-HW/Django-project_Bookstore/.venv/lib/python3.14/site-packages/asgiref/sync.py", line 325, in __call__
+    return call_result.result()
+           ~~~~~~~~~~~~~~~~~~^^
+  File "/opt/homebrew/Cellar/python@3.14/3.14.3_1/Frameworks/Python.framework/Versions/3.14/lib/python3.14/concurrent/futures/_base.py", line 443, in result
+    return self.__get_result()
+           ~~~~~~~~~~~~~~~~~^^
+  File "/opt/homebrew/Cellar/python@3.14/3.14.3_1/Frameworks/Python.framework/Versions/3.14/lib/python3.14/concurrent/futures/_base.py", line 395, in __get_result
+    raise self._exception
+  File "/Users/yevhen21/PycharmProjects/Hillel-Django-HW/Django-project_Bookstore/.venv/lib/python3.14/site-packages/asgiref/sync.py", line 365, in main_wrap
+    result = await awaitable
+             ^^^^^^^^^^^^^^^
+  File "/Users/yevhen21/PycharmProjects/Hillel-Django-HW/Django-project_Bookstore/.venv/lib/python3.14/site-packages/sentry_sdk/integrations/django/asgi.py", line 191, in sentry_wrapped_callback
+    return await callback(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/yevhen21/PycharmProjects/Hillel-Django-HW/Django-project_Bookstore/project_a_bookstore/shop_app/views.py", line 88, in store
+    context = await cache.aget(cache_key)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/yevhen21/PycharmProjects/Hillel-Django-HW/Django-project_Bookstore/.venv/lib/python3.14/site-packages/django/core/cache/backends/base.py", line 152, in aget
+    return await sync_to_async(self.get, thread_sensitive=True)(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        key, default, version
+        ^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/Users/yevhen21/PycharmProjects/Hillel-Django-HW/Django-project_Bookstore/.venv/lib/python3.14/site-packages/asgiref/sync.py", line 506, in __call__
+    ret = await asyncio.shield(exec_coro)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/yevhen21/PycharmProjects/Hillel-Django-HW/Django-project_Bookstore/.venv/lib/python3.14/site-packages/asgiref/current_thread_executor.py", line 40, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/Users/yevhen21/PycharmProjects/Hillel-Django-HW/Django-project_Bookstore/.venv/lib/python3.14/site-packages/asgiref/sync.py", line 561, in thread_handler
+    return func(*args, **kwargs)
+  File "/Users/yevhen21/PycharmProjects/Hillel-Django-HW/Django-project_Bookstore/.venv/lib/python3.14/site-packages/debug_toolbar/panels/cache.py", line 42, in wrapper
+    return panel._record_call(cache, alias, name, original_method, args, kwargs)
+           ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/yevhen21/PycharmProjects/Hillel-Django-HW/Django-project_Bookstore/.venv/lib/python3.14/site-packages/debug_toolbar/panels/cache.py", line 154, in _record_call
+    value = original_method(*args, **kwargs)
+  File "/Users/yevhen21/PycharmProjects/Hillel-Django-HW/Django-project_Bookstore/.venv/lib/python3.14/site-packages/django_redis/cache.py", line 117, in get
+    value = self._get(key, default, version, client)
+  File "/Users/yevhen21/PycharmProjects/Hillel-Django-HW/Django-project_Bookstore/.venv/lib/python3.14/site-packages/django_redis/cache.py", line 55, in _decorator
+    raise e.__cause__  # type: ignore[misc] # noqa: B904
+    ^^^^^^^^^^^^^^^^^
+  File "/Users/yevhen21/PycharmProjects/Hillel-Django-HW/Django-project_Bookstore/.venv/lib/python3.14/site-packages/django_redis/client/default.py", line 360, in get
+    value = client.get(key)
+  File "/Users/yevhen21/PycharmProjects/Hillel-Django-HW/Django-project_Bookstore/.venv/lib/python3.14/site-packages/redis/commands/core.py", line 3200, in get
+    return self.execute_command("GET", name, keys=[name])
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/yevhen21/PycharmProjects/Hillel-Django-HW/Django-project_Bookstore/.venv/lib/python3.14/site-packages/sentry_sdk/integrations/redis/_sync_common.py", line 171, in sentry_patched_execute_command
+    value = old_execute_command(self, name, *args, **kwargs)
+  File "/Users/yevhen21/PycharmProjects/Hillel-Django-HW/Django-project_Bookstore/.venv/lib/python3.14/site-packages/redis/client.py", line 867, in execute_command
+    return self._execute_command(*args, **options)
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+  File "/Users/yevhen21/PycharmProjects/Hillel-Django-HW/Django-project_Bookstore/.venv/lib/python3.14/site-packages/redis/client.py", line 873, in _execute_command
+    conn = self.connection or pool.get_connection()
+                              ~~~~~~~~~~~~~~~~~~~^^
+  File "/Users/yevhen21/PycharmProjects/Hillel-Django-HW/Django-project_Bookstore/.venv/lib/python3.14/site-packages/redis/utils.py", line 258, in wrapper
+    return func(*args, **kwargs)
+  File "/Users/yevhen21/PycharmProjects/Hillel-Django-HW/Django-project_Bookstore/.venv/lib/python3.14/site-packages/redis/connection.py", line 3273, in get_connection
+    connection.connect()
+    ~~~~~~~~~~~~~~~~~~^^
+  File "/Users/yevhen21/PycharmProjects/Hillel-Django-HW/Django-project_Bookstore/.venv/lib/python3.14/site-packages/redis/connection.py", line 1028, in connect
+    self.retry.call_with_retry(
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        lambda: self.connect_check_health(
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<2 lines>...
+        lambda error: self.disconnect(error),
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/Users/yevhen21/PycharmProjects/Hillel-Django-HW/Django-project_Bookstore/.venv/lib/python3.14/site-packages/redis/retry.py", line 132, in call_with_retry
+    raise error
+  File "/Users/yevhen21/PycharmProjects/Hillel-Django-HW/Django-project_Bookstore/.venv/lib/python3.14/site-packages/redis/retry.py", line 120, in call_with_retry
+    return do()
+  File "/Users/yevhen21/PycharmProjects/Hillel-Django-HW/Django-project_Bookstore/.venv/lib/python3.14/site-packages/redis/connection.py", line 1029, in <lambda>
+    lambda: self.connect_check_health(
+            ~~~~~~~~~~~~~~~~~~~~~~~~~^
+        check_health=True, retry_socket_connect=False
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ),
+    ^
+  File "/Users/yevhen21/PycharmProjects/Hillel-Django-HW/Django-project_Bookstore/.venv/lib/python3.14/site-packages/redis/connection.py", line 1077, in connect_check_health
+    raise e
+redis.exceptions.ConnectionError: Error 8 connecting to redis:6379. nodename nor servname provided, or not known.
+INFO 2026-08-10 11:27:15,797 middleware Запит до /shop/ зайняв 0.0679 секунд.
+ERROR 2026-08-10 11:27:15,798 log "GET /shop/ HTTP/1.1" 500 192774
+ERROR 2026-08-10 11:27:15,900 log Internal Server Error: /shop/
+Traceback (most recent call last):
+  File "/Users/yevhen21/PycharmProjects/Hillel-Django-HW/Django-project_Bookstore/.venv/lib/python3.14/site-packages/django_redis/cache.py", line 48, in _decorator
+    return method(self, *args, **kwargs)
+  File "/Users/yevhen21/PycharmProjects/Hillel-Django-HW/Django-project_Bookstore/.venv/lib/python3.14/site-packages/django_redis/cache.py", line 124, in _get
+    return self.client.get(key, default=default, version=version, client=client)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/yevhen21/PycharmProjects/Hillel-Django-HW/Django-project_Bookstore/.venv/lib/python3.14/site-packages/django_redis/client/default.py", line 362, in get
+    raise ConnectionInterrupted(connection=client) from e
+django_redis.exceptions.ConnectionInterrupted: Redis ConnectionError: Error 8 connecting to redis:6379. nodename nor servname provided, or not known.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/yevhen21/PycharmProjects/Hillel-Django-HW/Django-project_Bookstore/.venv/lib/python3.14/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Users/yevhen21/PycharmProjects/Hillel-Django-HW/Django-project_Bookstore/.venv/lib/python3.14/site-packages/django/core/handlers/base.py", line 198, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/yevhen21/PycharmProjects/Hillel-Django-HW/Django-project_Bookstore/.venv/lib/python3.14/site-packages/asgiref/sync.py", line 325, in __call__
+    return call_result.result()
+           ~~~~~~~~~~~~~~~~~~^^
+  File "/opt/homebrew/Cellar/python@3.14/3.14.3_1/Frameworks/Python.framework/Versions/3.14/lib/python3.14/concurrent/futures/_base.py", line 443, in result
+    return self.__get_result()
+           ~~~~~~~~~~~~~~~~~^^
+  File "/opt/homebrew/Cellar/python@3.14/3.14.3_1/Frameworks/Python.framework/Versions/3.14/lib/python3.14/concurrent/futures/_base.py", line 395, in __get_result
+    raise self._exception
+  File "/Users/yevhen21/PycharmProjects/Hillel-Django-HW/Django-project_Bookstore/.venv/lib/python3.14/site-packages/asgiref/sync.py", line 365, in main_wrap
+    result = await awaitable
+             ^^^^^^^^^^^^^^^
+  File "/Users/yevhen21/PycharmProjects/Hillel-Django-HW/Django-project_Bookstore/.venv/lib/python3.14/site-packages/sentry_sdk/integrations/django/asgi.py", line 191, in sentry_wrapped_callback
+    return await callback(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/yevhen21/PycharmProjects/Hillel-Django-HW/Django-project_Bookstore/project_a_bookstore/shop_app/views.py", line 88, in store
+    context = await cache.aget(cache_key)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/yevhen21/PycharmProjects/Hillel-Django-HW/Django-project_Bookstore/.venv/lib/python3.14/site-packages/django/core/cache/backends/base.py", line 152, in aget
+    return await sync_to_async(self.get, thread_sensitive=True)(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        key, default, version
+        ^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/Users/yevhen21/PycharmProjects/Hillel-Django-HW/Django-project_Bookstore/.venv/lib/python3.14/site-packages/asgiref/sync.py", line 506, in __call__
+    ret = await asyncio.shield(exec_coro)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/yevhen21/PycharmProjects/Hillel-Django-HW/Django-project_Bookstore/.venv/lib/python3.14/site-packages/asgiref/current_thread_executor.py", line 40, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/Users/yevhen21/PycharmProjects/Hillel-Django-HW/Django-project_Bookstore/.venv/lib/python3.14/site-packages/asgiref/sync.py", line 561, in thread_handler
+    return func(*args, **kwargs)
+  File "/Users/yevhen21/PycharmProjects/Hillel-Django-HW/Django-project_Bookstore/.venv/lib/python3.14/site-packages/debug_toolbar/panels/cache.py", line 42, in wrapper
+    return panel._record_call(cache, alias, name, original_method, args, kwargs)
+           ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/yevhen21/PycharmProjects/Hillel-Django-HW/Django-project_Bookstore/.venv/lib/python3.14/site-packages/debug_toolbar/panels/cache.py", line 154, in _record_call
+    value = original_method(*args, **kwargs)
+  File "/Users/yevhen21/PycharmProjects/Hillel-Django-HW/Django-project_Bookstore/.venv/lib/python3.14/site-packages/django_redis/cache.py", line 117, in get
+    value = self._get(key, default, version, client)
+  File "/Users/yevhen21/PycharmProjects/Hillel-Django-HW/Django-project_Bookstore/.venv/lib/python3.14/site-packages/django_redis/cache.py", line 55, in _decorator
+    raise e.__cause__  # type: ignore[misc] # noqa: B904
+    ^^^^^^^^^^^^^^^^^
+  File "/Users/yevhen21/PycharmProjects/Hillel-Django-HW/Django-project_Bookstore/.venv/lib/python3.14/site-packages/django_redis/client/default.py", line 360, in get
+    value = client.get(key)
+  File "/Users/yevhen21/PycharmProjects/Hillel-Django-HW/Django-project_Bookstore/.venv/lib/python3.14/site-packages/redis/commands/core.py", line 3200, in get
+    return self.execute_command("GET", name, keys=[name])
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/yevhen21/PycharmProjects/Hillel-Django-HW/Django-project_Bookstore/.venv/lib/python3.14/site-packages/sentry_sdk/integrations/redis/_sync_common.py", line 171, in sentry_patched_execute_command
+    value = old_execute_command(self, name, *args, **kwargs)
+  File "/Users/yevhen21/PycharmProjects/Hillel-Django-HW/Django-project_Bookstore/.venv/lib/python3.14/site-packages/redis/client.py", line 867, in execute_command
+    return self._execute_command(*args, **options)
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+  File "/Users/yevhen21/PycharmProjects/Hillel-Django-HW/Django-project_Bookstore/.venv/lib/python3.14/site-packages/redis/client.py", line 873, in _execute_command
+    conn = self.connection or pool.get_connection()
+                              ~~~~~~~~~~~~~~~~~~~^^
+  File "/Users/yevhen21/PycharmProjects/Hillel-Django-HW/Django-project_Bookstore/.venv/lib/python3.14/site-packages/redis/utils.py", line 258, in wrapper
+    return func(*args, **kwargs)
+  File "/Users/yevhen21/PycharmProjects/Hillel-Django-HW/Django-project_Bookstore/.venv/lib/python3.14/site-packages/redis/connection.py", line 3273, in get_connection
+    connection.connect()
+    ~~~~~~~~~~~~~~~~~~^^
+  File "/Users/yevhen21/PycharmProjects/Hillel-Django-HW/Django-project_Bookstore/.venv/lib/python3.14/site-packages/redis/connection.py", line 1028, in connect
+    self.retry.call_with_retry(
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        lambda: self.connect_check_health(
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<2 lines>...
+        lambda error: self.disconnect(error),
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/Users/yevhen21/PycharmProjects/Hillel-Django-HW/Django-project_Bookstore/.venv/lib/python3.14/site-packages/redis/retry.py", line 132, in call_with_retry
+    raise error
+  File "/Users/yevhen21/PycharmProjects/Hillel-Django-HW/Django-project_Bookstore/.venv/lib/python3.14/site-packages/redis/retry.py", line 120, in call_with_retry
+    return do()
+  File "/Users/yevhen21/PycharmProjects/Hillel-Django-HW/Django-project_Bookstore/.venv/lib/python3.14/site-packages/redis/connection.py", line 1029, in <lambda>
+    lambda: self.connect_check_health(
+            ~~~~~~~~~~~~~~~~~~~~~~~~~^
+        check_health=True, retry_socket_connect=False
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ),
+    ^
+  File "/Users/yevhen21/PycharmProjects/Hillel-Django-HW/Django-project_Bookstore/.venv/lib/python3.14/site-packages/redis/connection.py", line 1077, in connect_check_health
+    raise e
+redis.exceptions.ConnectionError: Error 8 connecting to redis:6379. nodename nor servname provided, or not known.
+INFO 2026-08-10 11:27:15,924 middleware Запит до /shop/ зайняв 0.0486 секунд.
+ERROR 2026-08-10 11:27:15,925 log "GET /shop/ HTTP/1.1" 500 192630
+ERROR 2026-08-10 11:28:05,267 log Internal Server Error: /shop/
+Traceback (most recent call last):
+  File "/Users/yevhen21/PycharmProjects/Hillel-Django-HW/Django-project_Bookstore/.venv/lib/python3.14/site-packages/django_redis/cache.py", line 48, in _decorator
+    return method(self, *args, **kwargs)
+  File "/Users/yevhen21/PycharmProjects/Hillel-Django-HW/Django-project_Bookstore/.venv/lib/python3.14/site-packages/django_redis/cache.py", line 124, in _get
+    return self.client.get(key, default=default, version=version, client=client)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/yevhen21/PycharmProjects/Hillel-Django-HW/Django-project_Bookstore/.venv/lib/python3.14/site-packages/django_redis/client/default.py", line 362, in get
+    raise ConnectionInterrupted(connection=client) from e
+django_redis.exceptions.ConnectionInterrupted: Redis ConnectionError: Error 8 connecting to redis:6379. nodename nor servname provided, or not known.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/yevhen21/PycharmProjects/Hillel-Django-HW/Django-project_Bookstore/.venv/lib/python3.14/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Users/yevhen21/PycharmProjects/Hillel-Django-HW/Django-project_Bookstore/.venv/lib/python3.14/site-packages/django/core/handlers/base.py", line 198, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/yevhen21/PycharmProjects/Hillel-Django-HW/Django-project_Bookstore/.venv/lib/python3.14/site-packages/asgiref/sync.py", line 325, in __call__
+    return call_result.result()
+           ~~~~~~~~~~~~~~~~~~^^
+  File "/opt/homebrew/Cellar/python@3.14/3.14.3_1/Frameworks/Python.framework/Versions/3.14/lib/python3.14/concurrent/futures/_base.py", line 443, in result
+    return self.__get_result()
+           ~~~~~~~~~~~~~~~~~^^
+  File "/opt/homebrew/Cellar/python@3.14/3.14.3_1/Frameworks/Python.framework/Versions/3.14/lib/python3.14/concurrent/futures/_base.py", line 395, in __get_result
+    raise self._exception
+  File "/Users/yevhen21/PycharmProjects/Hillel-Django-HW/Django-project_Bookstore/.venv/lib/python3.14/site-packages/asgiref/sync.py", line 365, in main_wrap
+    result = await awaitable
+             ^^^^^^^^^^^^^^^
+  File "/Users/yevhen21/PycharmProjects/Hillel-Django-HW/Django-project_Bookstore/.venv/lib/python3.14/site-packages/sentry_sdk/integrations/django/asgi.py", line 191, in sentry_wrapped_callback
+    return await callback(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/yevhen21/PycharmProjects/Hillel-Django-HW/Django-project_Bookstore/project_a_bookstore/shop_app/views.py", line 88, in store
+    context = await cache.aget(cache_key)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/yevhen21/PycharmProjects/Hillel-Django-HW/Django-project_Bookstore/.venv/lib/python3.14/site-packages/django/core/cache/backends/base.py", line 152, in aget
+    return await sync_to_async(self.get, thread_sensitive=True)(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        key, default, version
+        ^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/Users/yevhen21/PycharmProjects/Hillel-Django-HW/Django-project_Bookstore/.venv/lib/python3.14/site-packages/asgiref/sync.py", line 506, in __call__
+    ret = await asyncio.shield(exec_coro)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/yevhen21/PycharmProjects/Hillel-Django-HW/Django-project_Bookstore/.venv/lib/python3.14/site-packages/asgiref/current_thread_executor.py", line 40, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/Users/yevhen21/PycharmProjects/Hillel-Django-HW/Django-project_Bookstore/.venv/lib/python3.14/site-packages/asgiref/sync.py", line 561, in thread_handler
+    return func(*args, **kwargs)
+  File "/Users/yevhen21/PycharmProjects/Hillel-Django-HW/Django-project_Bookstore/.venv/lib/python3.14/site-packages/debug_toolbar/panels/cache.py", line 42, in wrapper
+    return panel._record_call(cache, alias, name, original_method, args, kwargs)
+           ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/yevhen21/PycharmProjects/Hillel-Django-HW/Django-project_Bookstore/.venv/lib/python3.14/site-packages/debug_toolbar/panels/cache.py", line 154, in _record_call
+    value = original_method(*args, **kwargs)
+  File "/Users/yevhen21/PycharmProjects/Hillel-Django-HW/Django-project_Bookstore/.venv/lib/python3.14/site-packages/django_redis/cache.py", line 117, in get
+    value = self._get(key, default, version, client)
+  File "/Users/yevhen21/PycharmProjects/Hillel-Django-HW/Django-project_Bookstore/.venv/lib/python3.14/site-packages/django_redis/cache.py", line 55, in _decorator
+    raise e.__cause__  # type: ignore[misc] # noqa: B904
+    ^^^^^^^^^^^^^^^^^
+  File "/Users/yevhen21/PycharmProjects/Hillel-Django-HW/Django-project_Bookstore/.venv/lib/python3.14/site-packages/django_redis/client/default.py", line 360, in get
+    value = client.get(key)
+  File "/Users/yevhen21/PycharmProjects/Hillel-Django-HW/Django-project_Bookstore/.venv/lib/python3.14/site-packages/redis/commands/core.py", line 3200, in get
+    return self.execute_command("GET", name, keys=[name])
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/yevhen21/PycharmProjects/Hillel-Django-HW/Django-project_Bookstore/.venv/lib/python3.14/site-packages/sentry_sdk/integrations/redis/_sync_common.py", line 171, in sentry_patched_execute_command
+    value = old_execute_command(self, name, *args, **kwargs)
+  File "/Users/yevhen21/PycharmProjects/Hillel-Django-HW/Django-project_Bookstore/.venv/lib/python3.14/site-packages/redis/client.py", line 867, in execute_command
+    return self._execute_command(*args, **options)
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+  File "/Users/yevhen21/PycharmProjects/Hillel-Django-HW/Django-project_Bookstore/.venv/lib/python3.14/site-packages/redis/client.py", line 873, in _execute_command
+    conn = self.connection or pool.get_connection()
+                              ~~~~~~~~~~~~~~~~~~~^^
+  File "/Users/yevhen21/PycharmProjects/Hillel-Django-HW/Django-project_Bookstore/.venv/lib/python3.14/site-packages/redis/utils.py", line 258, in wrapper
+    return func(*args, **kwargs)
+  File "/Users/yevhen21/PycharmProjects/Hillel-Django-HW/Django-project_Bookstore/.venv/lib/python3.14/site-packages/redis/connection.py", line 3273, in get_connection
+    connection.connect()
+    ~~~~~~~~~~~~~~~~~~^^
+  File "/Users/yevhen21/PycharmProjects/Hillel-Django-HW/Django-project_Bookstore/.venv/lib/python3.14/site-packages/redis/connection.py", line 1028, in connect
+    self.retry.call_with_retry(
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        lambda: self.connect_check_health(
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<2 lines>...
+        lambda error: self.disconnect(error),
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/Users/yevhen21/PycharmProjects/Hillel-Django-HW/Django-project_Bookstore/.venv/lib/python3.14/site-packages/redis/retry.py", line 132, in call_with_retry
+    raise error
+  File "/Users/yevhen21/PycharmProjects/Hillel-Django-HW/Django-project_Bookstore/.venv/lib/python3.14/site-packages/redis/retry.py", line 120, in call_with_retry
+    return do()
+  File "/Users/yevhen21/PycharmProjects/Hillel-Django-HW/Django-project_Bookstore/.venv/lib/python3.14/site-packages/redis/connection.py", line 1029, in <lambda>
+    lambda: self.connect_check_health(
+            ~~~~~~~~~~~~~~~~~~~~~~~~~^
+        check_health=True, retry_socket_connect=False
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ),
+    ^
+  File "/Users/yevhen21/PycharmProjects/Hillel-Django-HW/Django-project_Bookstore/.venv/lib/python3.14/site-packages/redis/connection.py", line 1077, in connect_check_health
+    raise e
+redis.exceptions.ConnectionError: Error 8 connecting to redis:6379. nodename nor servname provided, or not known.
+INFO 2026-08-10 11:28:05,296 middleware Запит до /shop/ зайняв 0.0659 секунд.
+ERROR 2026-08-10 11:28:05,296 log "GET /shop/ HTTP/1.1" 500 192765
+INFO 2026-08-10 11:28:51,411 autoreload Watching for file changes with StatReloader
+INFO 2026-08-10 11:28:53,086 middleware Запит до /shop/ зайняв 0.0686 секунд.
+INFO 2026-08-10 11:28:53,089 log "GET /shop/ HTTP/1.1" 200 23805
+INFO 2026-08-10 11:28:56,513 middleware Запит до /shop/ зайняв 0.0257 секунд.
+INFO 2026-08-10 11:28:56,516 log "GET /shop/ HTTP/1.1" 200 23801
+INFO 2026-08-10 11:28:58,475 middleware Запит до /i18n/setlang/ зайняв 0.0258 секунд.
+INFO 2026-08-10 11:28:58,476 log "POST /i18n/setlang/ HTTP/1.1" 302 0
+INFO 2026-08-10 11:28:58,498 middleware Запит до /shop/ зайняв 0.0196 секунд.
+INFO 2026-08-10 11:28:58,499 log "GET /shop/ HTTP/1.1" 200 22531
+INFO 2026-08-10 11:29:00,397 middleware Запит до /shop/catalog/ зайняв 0.0446 секунд.
+INFO 2026-08-10 11:29:00,400 log "GET /shop/catalog/ HTTP/1.1" 200 22348
+INFO 2026-08-10 11:29:01,238 middleware Запит до /shop/ зайняв 0.0231 секунд.
+INFO 2026-08-10 11:29:01,241 log "GET /shop/ HTTP/1.1" 200 22531
+INFO 2026-08-10 11:29:02,780 middleware Запит до /shop/catalog/ зайняв 0.0277 секунд.
+INFO 2026-08-10 11:29:02,783 log "GET /shop/catalog/ HTTP/1.1" 200 22344
+INFO 2026-08-10 11:29:03,470 middleware Запит до /shop/3/ зайняв 0.0217 секунд.
+INFO 2026-08-10 11:29:03,472 log "GET /shop/3/ HTTP/1.1" 200 19102
+INFO 2026-08-10 11:29:03,490 middleware Запит до /media/covers/Charlie_and_the_Chocolate_Factory.jpg зайняв 0.0077 секунд.
+INFO 2026-08-10 11:29:03,492 log "GET /media/covers/Charlie_and_the_Chocolate_Factory.jpg HTTP/1.1" 200 201838
+INFO 2026-08-10 11:29:05,736 middleware Запит до /shop/13/ зайняв 0.0187 секунд.
+INFO 2026-08-10 11:29:05,737 log "GET /shop/13/ HTTP/1.1" 200 19431
+INFO 2026-08-10 11:29:05,756 middleware Запит до /media/covers/Frida_Kahlo_Id85I6s.jpg зайняв 0.0084 секунд.
+INFO 2026-08-10 11:29:05,758 log "GET /media/covers/Frida_Kahlo_Id85I6s.jpg HTTP/1.1" 200 21128
+ERROR 2026-08-10 11:30:09,791 log Internal Server Error: /shop/
+Traceback (most recent call last):
+  File "/Users/yevhen21/PycharmProjects/Hillel-Django-HW/Django-project_Bookstore/.venv/lib/python3.14/site-packages/django/contrib/sessions/backends/base.py", line 246, in _get_session
+    return self._session_cache
+           ^^^^^^^^^^^^^^^^^^^
+AttributeError: 'SessionStore' object has no attribute '_session_cache'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/yevhen21/PycharmProjects/Hillel-Django-HW/Django-project_Bookstore/.venv/lib/python3.14/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Users/yevhen21/PycharmProjects/Hillel-Django-HW/Django-project_Bookstore/.venv/lib/python3.14/site-packages/django/core/handlers/base.py", line 198, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/yevhen21/PycharmProjects/Hillel-Django-HW/Django-project_Bookstore/.venv/lib/python3.14/site-packages/asgiref/sync.py", line 325, in __call__
+    return call_result.result()
+           ~~~~~~~~~~~~~~~~~~^^
+  File "/opt/homebrew/Cellar/python@3.14/3.14.3_1/Frameworks/Python.framework/Versions/3.14/lib/python3.14/concurrent/futures/_base.py", line 443, in result
+    return self.__get_result()
+           ~~~~~~~~~~~~~~~~~^^
+  File "/opt/homebrew/Cellar/python@3.14/3.14.3_1/Frameworks/Python.framework/Versions/3.14/lib/python3.14/concurrent/futures/_base.py", line 395, in __get_result
+    raise self._exception
+  File "/Users/yevhen21/PycharmProjects/Hillel-Django-HW/Django-project_Bookstore/.venv/lib/python3.14/site-packages/asgiref/sync.py", line 365, in main_wrap
+    result = await awaitable
+             ^^^^^^^^^^^^^^^
+  File "/Users/yevhen21/PycharmProjects/Hillel-Django-HW/Django-project_Bookstore/.venv/lib/python3.14/site-packages/sentry_sdk/integrations/django/asgi.py", line 191, in sentry_wrapped_callback
+    return await callback(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/yevhen21/PycharmProjects/Hillel-Django-HW/Django-project_Bookstore/project_a_bookstore/shop_app/views.py", line 134, in store
+    return render(request, "shop_app/store.html", context)
+  File "/Users/yevhen21/PycharmProjects/Hillel-Django-HW/Django-project_Bookstore/.venv/lib/python3.14/site-packages/sentry_sdk/utils.py", line 1886, in runner
+    return sentry_patched_function(*args, **kwargs)
+  File "/Users/yevhen21/PycharmProjects/Hillel-Django-HW/Django-project_Bookstore/.venv/lib/python3.14/site-packages/sentry_sdk/integrations/django/templates.py", line 131, in render
+    return real_render(request, template_name, context, *args, **kwargs)
+  File "/Users/yevhen21/PycharmProjects/Hillel-Django-HW/Django-project_Bookstore/.venv/lib/python3.14/site-packages/django/shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/Users/yevhen21/PycharmProjects/Hillel-Django-HW/Django-project_Bookstore/.venv/lib/python3.14/site-packages/django/template/loader.py", line 62, in render_to_string
+    return template.render(context, request)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+  File "/Users/yevhen21/PycharmProjects/Hillel-Django-HW/Django-project_Bookstore/.venv/lib/python3.14/site-packages/django/template/backends/django.py", line 107, in render
+    return self.template.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "/Users/yevhen21/PycharmProjects/Hillel-Django-HW/Django-project_Bookstore/.venv/lib/python3.14/site-packages/django/template/base.py", line 174, in render
+    return self._render(context)
+           ~~~~~~~~~~~~^^^^^^^^^
+  File "/Users/yevhen21/PycharmProjects/Hillel-Django-HW/Django-project_Bookstore/.venv/lib/python3.14/site-packages/django/test/utils.py", line 114, in instrumented_test_render
+    return self.nodelist.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "/Users/yevhen21/PycharmProjects/Hillel-Django-HW/Django-project_Bookstore/.venv/lib/python3.14/site-packages/django/template/base.py", line 1091, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "/Users/yevhen21/PycharmProjects/Hillel-Django-HW/Django-project_Bookstore/.venv/lib/python3.14/site-packages/django/template/base.py", line 1052, in render_annotated
+    return self.render(context)
+           ~~~~~~~~~~~^^^^^^^^^
+  File "/Users/yevhen21/PycharmProjects/Hillel-Django-HW/Django-project_Bookstore/.venv/lib/python3.14/site-packages/django/template/loader_tags.py", line 160, in render
+    return compiled_parent._render(context)
+           ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "/Users/yevhen21/PycharmProjects/Hillel-Django-HW/Django-project_Bookstore/.venv/lib/python3.14/site-packages/django/test/utils.py", line 114, in instrumented_test_render
+    return self.nodelist.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "/Users/yevhen21/PycharmProjects/Hillel-Django-HW/Django-project_Bookstore/.venv/lib/python3.14/site-packages/django/template/base.py", line 1091, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "/Users/yevhen21/PycharmProjects/Hillel-Django-HW/Django-project_Bookstore/.venv/lib/python3.14/site-packages/django/template/base.py", line 1052, in render_annotated
+    return self.render(context)
+           ~~~~~~~~~~~^^^^^^^^^
+  File "/Users/yevhen21/PycharmProjects/Hillel-Django-HW/Django-project_Bookstore/.venv/lib/python3.14/site-packages/django/template/defaulttags.py", line 326, in render
+    match = condition.eval(context)
+  File "/Users/yevhen21/PycharmProjects/Hillel-Django-HW/Django-project_Bookstore/.venv/lib/python3.14/site-packages/django/template/defaulttags.py", line 918, in eval
+    return self.value.resolve(context, ignore_failures=True)
+           ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/yevhen21/PycharmProjects/Hillel-Django-HW/Django-project_Bookstore/.venv/lib/python3.14/site-packages/django/template/base.py", line 788, in resolve
+    obj = self.var.resolve(context)
+  File "/Users/yevhen21/PycharmProjects/Hillel-Django-HW/Django-project_Bookstore/.venv/lib/python3.14/site-packages/django/template/base.py", line 928, in resolve
+    value = self._resolve_lookup(context)
+  File "/Users/yevhen21/PycharmProjects/Hillel-Django-HW/Django-project_Bookstore/.venv/lib/python3.14/site-packages/django/template/base.py", line 965, in _resolve_lookup
+    current = current[bit]
+              ~~~~~~~^^^^^
+  File "/Users/yevhen21/PycharmProjects/Hillel-Django-HW/Django-project_Bookstore/.venv/lib/python3.14/site-packages/django/utils/functional.py", line 251, in inner
+    self._setup()
+    ~~~~~~~~~~~^^
+  File "/Users/yevhen21/PycharmProjects/Hillel-Django-HW/Django-project_Bookstore/.venv/lib/python3.14/site-packages/django/utils/functional.py", line 404, in _setup
+    self._wrapped = self._setupfunc()
+                    ~~~~~~~~~~~~~~~^^
+  File "/Users/yevhen21/PycharmProjects/Hillel-Django-HW/Django-project_Bookstore/.venv/lib/python3.14/site-packages/django/contrib/auth/middleware.py", line 40, in <lambda>
+    request.user = SimpleLazyObject(lambda: get_user(request))
+                                            ~~~~~~~~^^^^^^^^^
+  File "/Users/yevhen21/PycharmProjects/Hillel-Django-HW/Django-project_Bookstore/.venv/lib/python3.14/site-packages/django/contrib/auth/middleware.py", line 20, in get_user
+    request._cached_user = auth.get_user(request)
+                           ~~~~~~~~~~~~~^^^^^^^^^
+  File "/Users/yevhen21/PycharmProjects/Hillel-Django-HW/Django-project_Bookstore/.venv/lib/python3.14/site-packages/django/contrib/auth/__init__.py", line 321, in get_user
+    user_id = _get_user_session_key(request)
+  File "/Users/yevhen21/PycharmProjects/Hillel-Django-HW/Django-project_Bookstore/.venv/lib/python3.14/site-packages/django/contrib/auth/__init__.py", line 95, in _get_user_session_key
+    return get_user_model()._meta.pk.to_python(request.session[SESSION_KEY])
+                                               ~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "/Users/yevhen21/PycharmProjects/Hillel-Django-HW/Django-project_Bookstore/.venv/lib/python3.14/site-packages/django/contrib/sessions/backends/base.py", line 55, in __getitem__
+    return self._session[key]
+           ^^^^^^^^^^^^^
+  File "/Users/yevhen21/PycharmProjects/Hillel-Django-HW/Django-project_Bookstore/.venv/lib/python3.14/site-packages/django/contrib/sessions/backends/base.py", line 251, in _get_session
+    self._session_cache = self.load()
+                          ~~~~~~~~~^^
+  File "/Users/yevhen21/PycharmProjects/Hillel-Django-HW/Django-project_Bookstore/.venv/lib/python3.14/site-packages/django/contrib/sessions/backends/db.py", line 55, in load
+    s = self._get_session_from_db()
+  File "/Users/yevhen21/PycharmProjects/Hillel-Django-HW/Django-project_Bookstore/.venv/lib/python3.14/site-packages/django/contrib/sessions/backends/db.py", line 34, in _get_session_from_db
+    return self.model.objects.get(
+           ~~~~~~~~~~~~~~~~~~~~~~^
+        session_key=self.session_key, expire_date__gt=timezone.now()
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/Users/yevhen21/PycharmProjects/Hillel-Django-HW/Django-project_Bookstore/.venv/lib/python3.14/site-packages/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/Users/yevhen21/PycharmProjects/Hillel-Django-HW/Django-project_Bookstore/.venv/lib/python3.14/site-packages/django/db/models/query.py", line 635, in get
+    num = len(clone)
+  File "/Users/yevhen21/PycharmProjects/Hillel-Django-HW/Django-project_Bookstore/.venv/lib/python3.14/site-packages/django/db/models/query.py", line 372, in __len__
+    self._fetch_all()
+    ~~~~~~~~~~~~~~~^^
+  File "/Users/yevhen21/PycharmProjects/Hillel-Django-HW/Django-project_Bookstore/.venv/lib/python3.14/site-packages/django/db/models/query.py", line 2000, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+                         ~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/yevhen21/PycharmProjects/Hillel-Django-HW/Django-project_Bookstore/.venv/lib/python3.14/site-packages/django/db/models/query.py", line 95, in __iter__
+    results = compiler.execute_sql(
+        chunked_fetch=self.chunked_fetch, chunk_size=self.chunk_size
+    )
+  File "/Users/yevhen21/PycharmProjects/Hillel-Django-HW/Django-project_Bookstore/.venv/lib/python3.14/site-packages/django/db/models/sql/compiler.py", line 1622, in execute_sql
+    cursor = self.connection.cursor()
+  File "/Users/yevhen21/PycharmProjects/Hillel-Django-HW/Django-project_Bookstore/.venv/lib/python3.14/site-packages/django/utils/asyncio.py", line 24, in inner
+    raise SynchronousOnlyOperation(message)
+django.core.exceptions.SynchronousOnlyOperation: You cannot call this from an async context - use a thread or sync_to_async.
+INFO 2026-08-10 11:30:09,822 middleware Запит до /shop/ зайняв 0.0956 секунд.
+ERROR 2026-08-10 11:30:09,823 log "GET /shop/ HTTP/1.1" 500 308425
+INFO 2026-08-10 11:30:12,008 middleware Запит до /shop/catalog/ зайняв 0.0312 секунд.
+INFO 2026-08-10 11:30:12,010 log "GET /shop/catalog/ HTTP/1.1" 200 22344
+INFO 2026-08-10 11:30:13,627 middleware Запит до /shop/3/ зайняв 0.0172 секунд.
+INFO 2026-08-10 11:30:13,629 log "GET /shop/3/ HTTP/1.1" 200 19099
+INFO 2026-08-10 11:30:15,415 middleware Запит до /shop/catalog/ зайняв 0.0267 секунд.
+INFO 2026-08-10 11:30:15,417 log "GET /shop/catalog/ HTTP/1.1" 200 22344
+INFO 2026-08-10 11:30:16,348 middleware Запит до /shop/ зайняв 0.0205 секунд.
+INFO 2026-08-10 11:30:16,350 log "GET /shop/ HTTP/1.1" 200 22531
+INFO 2026-08-10 11:30:17,537 middleware Запит до /shop/catalog/ зайняв 0.0283 секунд.
+INFO 2026-08-10 11:30:17,540 log "GET /shop/catalog/ HTTP/1.1" 200 22344
+INFO 2026-08-10 11:30:18,125 middleware Запит до /shop/ зайняв 0.0230 секунд.
+INFO 2026-08-10 11:30:18,127 log "GET /shop/ HTTP/1.1" 200 22531
+INFO 2026-08-10 11:30:18,893 middleware Запит до /shop/catalog/ зайняв 0.0257 секунд.
+INFO 2026-08-10 11:30:18,896 log "GET /shop/catalog/ HTTP/1.1" 200 22344
+INFO 2026-08-10 11:30:19,349 middleware Запит до /shop/ зайняв 0.0198 секунд.
+INFO 2026-08-10 11:30:19,352 log "GET /shop/ HTTP/1.1" 200 22531
+INFO 2026-08-10 11:30:20,425 middleware Запит до /shop/catalog/ зайняв 0.0286 секунд.
+INFO 2026-08-10 11:30:20,428 log "GET /shop/catalog/ HTTP/1.1" 200 22344
+INFO 2026-08-10 11:30:21,343 middleware Запит до /shop/catalog/ зайняв 0.0258 секунд.
+INFO 2026-08-10 11:30:21,345 log "GET /shop/catalog/?category=1 HTTP/1.1" 200 20362
+INFO 2026-08-10 11:30:22,306 middleware Запит до /shop/1/ зайняв 0.0198 секунд.
+INFO 2026-08-10 11:30:22,308 log "GET /shop/1/ HTTP/1.1" 200 19066
+INFO 2026-08-10 11:30:22,354 middleware Запит до /media/covers/Pride_and_prejudice.webp зайняв 0.0086 секунд.
+INFO 2026-08-10 11:30:22,356 log "GET /media/covers/Pride_and_prejudice.webp HTTP/1.1" 200 120978
+INFO 2026-08-10 11:30:23,062 middleware Запит до /shop/ зайняв 0.0264 секунд.
+INFO 2026-08-10 11:30:23,064 log "GET /shop/ HTTP/1.1" 200 22531
+INFO 2026-08-10 11:30:45,707 middleware Запит до /shop/ зайняв 0.0218 секунд.
+INFO 2026-08-10 11:30:45,709 log "GET /shop/ HTTP/1.1" 200 22531
+INFO 2026-08-10 11:30:46,378 middleware Запит до /shop/catalog/ зайняв 0.0289 секунд.
+INFO 2026-08-10 11:30:46,381 log "GET /shop/catalog/ HTTP/1.1" 200 22344
+INFO 2026-08-10 11:30:57,107 middleware Запит до /shop/14/ зайняв 0.0204 секунд.
+INFO 2026-08-10 11:30:57,109 log "GET /shop/14/ HTTP/1.1" 200 19636
+INFO 2026-08-10 11:30:57,131 middleware Запит до /media/covers/game_of_thrones.jpg зайняв 0.0076 секунд.
+INFO 2026-08-10 11:30:57,133 log "GET /media/covers/game_of_thrones.jpg HTTP/1.1" 200 321639
+INFO 2026-08-10 11:31:03,053 middleware Запит до /shop/14/ зайняв 0.0175 секунд.
+INFO 2026-08-10 11:31:03,055 log "GET /shop/14/ HTTP/1.1" 200 19633
+INFO 2026-08-10 11:31:19,904 middleware Запит до /shop/14/ зайняв 0.0186 секунд.
+INFO 2026-08-10 11:31:19,906 log "GET /shop/14/ HTTP/1.1" 200 19633
+INFO 2026-08-10 11:31:21,728 middleware Запит до /orders/cart/add/14/ зайняв 0.0100 секунд.
+INFO 2026-08-10 11:31:21,731 log "POST /orders/cart/add/14/ HTTP/1.1" 302 0
+INFO 2026-08-10 11:31:21,752 middleware Запит до /orders/cart/ зайняв 0.0186 секунд.
+INFO 2026-08-10 11:31:21,754 log "GET /orders/cart/ HTTP/1.1" 200 22822
+INFO 2026-08-10 11:31:31,315 middleware Запит до /orders/create/ зайняв 0.0220 секунд.
+INFO 2026-08-10 11:31:31,318 log "GET /orders/create/ HTTP/1.1" 200 20461
+ERROR 2026-08-10 11:32:04,530 log Internal Server Error: /orders/create/
+Traceback (most recent call last):
+  File "/Users/yevhen21/PycharmProjects/Hillel-Django-HW/Django-project_Bookstore/.venv/lib/python3.14/site-packages/django/db/backends/utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "/Users/yevhen21/PycharmProjects/Hillel-Django-HW/Django-project_Bookstore/.venv/lib/python3.14/site-packages/django/db/backends/sqlite3/base.py", line 359, in execute
+    return super().execute(query, params)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+sqlite3.OperationalError: no such table: orders_order
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/yevhen21/PycharmProjects/Hillel-Django-HW/Django-project_Bookstore/.venv/lib/python3.14/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Users/yevhen21/PycharmProjects/Hillel-Django-HW/Django-project_Bookstore/.venv/lib/python3.14/site-packages/django/core/handlers/base.py", line 198, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/yevhen21/PycharmProjects/Hillel-Django-HW/Django-project_Bookstore/.venv/lib/python3.14/site-packages/asgiref/sync.py", line 325, in __call__
+    return call_result.result()
+           ~~~~~~~~~~~~~~~~~~^^
+  File "/opt/homebrew/Cellar/python@3.14/3.14.3_1/Frameworks/Python.framework/Versions/3.14/lib/python3.14/concurrent/futures/_base.py", line 443, in result
+    return self.__get_result()
+           ~~~~~~~~~~~~~~~~~^^
+  File "/opt/homebrew/Cellar/python@3.14/3.14.3_1/Frameworks/Python.framework/Versions/3.14/lib/python3.14/concurrent/futures/_base.py", line 395, in __get_result
+    raise self._exception
+  File "/Users/yevhen21/PycharmProjects/Hillel-Django-HW/Django-project_Bookstore/.venv/lib/python3.14/site-packages/asgiref/sync.py", line 365, in main_wrap
+    result = await awaitable
+             ^^^^^^^^^^^^^^^
+  File "/Users/yevhen21/PycharmProjects/Hillel-Django-HW/Django-project_Bookstore/.venv/lib/python3.14/site-packages/sentry_sdk/integrations/django/asgi.py", line 191, in sentry_wrapped_callback
+    return await callback(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/yevhen21/PycharmProjects/Hillel-Django-HW/Django-project_Bookstore/.venv/lib/python3.14/site-packages/django/views/decorators/http.py", line 48, in inner
+    return await func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/yevhen21/PycharmProjects/Hillel-Django-HW/Django-project_Bookstore/project_a_bookstore/orders/views.py", line 232, in order_create
+    return await sync_to_async(_handle_order_post)(request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/yevhen21/PycharmProjects/Hillel-Django-HW/Django-project_Bookstore/.venv/lib/python3.14/site-packages/asgiref/sync.py", line 506, in __call__
+    ret = await asyncio.shield(exec_coro)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/yevhen21/PycharmProjects/Hillel-Django-HW/Django-project_Bookstore/.venv/lib/python3.14/site-packages/asgiref/current_thread_executor.py", line 40, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/Users/yevhen21/PycharmProjects/Hillel-Django-HW/Django-project_Bookstore/.venv/lib/python3.14/site-packages/asgiref/sync.py", line 561, in thread_handler
+    return func(*args, **kwargs)
+  File "/Users/yevhen21/PycharmProjects/Hillel-Django-HW/Django-project_Bookstore/project_a_bookstore/orders/views.py", line 154, in _handle_order_post
+    order = form.save()
+  File "/Users/yevhen21/PycharmProjects/Hillel-Django-HW/Django-project_Bookstore/.venv/lib/python3.14/site-packages/django/forms/models.py", line 574, in save
+    self.instance.save()
+    ~~~~~~~~~~~~~~~~~~^^
+  File "/Users/yevhen21/PycharmProjects/Hillel-Django-HW/Django-project_Bookstore/.venv/lib/python3.14/site-packages/django/db/models/base.py", line 874, in save
+    self.save_base(
+    ~~~~~~~~~~~~~~^
+        using=using,
+        ^^^^^^^^^^^^
+    ...<2 lines>...
+        update_fields=update_fields,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/Users/yevhen21/PycharmProjects/Hillel-Django-HW/Django-project_Bookstore/.venv/lib/python3.14/site-packages/django/db/models/base.py", line 966, in save_base
+    updated = self._save_table(
+        raw,
+    ...<4 lines>...
+        update_fields,
+    )
+  File "/Users/yevhen21/PycharmProjects/Hillel-Django-HW/Django-project_Bookstore/.venv/lib/python3.14/site-packages/django/db/models/base.py", line 1169, in _save_table
+    results = self._do_insert(
+        cls._base_manager, using, insert_fields, returning_fields, raw
+    )
+  File "/Users/yevhen21/PycharmProjects/Hillel-Django-HW/Django-project_Bookstore/.venv/lib/python3.14/site-packages/django/db/models/base.py", line 1220, in _do_insert
+    return manager._insert(
+           ~~~~~~~~~~~~~~~^
+        [self],
+        ^^^^^^^
+    ...<3 lines>...
+        raw=raw,
+        ^^^^^^^^
+    )
+    ^
+  File "/Users/yevhen21/PycharmProjects/Hillel-Django-HW/Django-project_Bookstore/.venv/lib/python3.14/site-packages/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/Users/yevhen21/PycharmProjects/Hillel-Django-HW/Django-project_Bookstore/.venv/lib/python3.14/site-packages/django/db/models/query.py", line 1918, in _insert
+    return query.get_compiler(using=using).execute_sql(returning_fields)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+  File "/Users/yevhen21/PycharmProjects/Hillel-Django-HW/Django-project_Bookstore/.venv/lib/python3.14/site-packages/django/db/models/sql/compiler.py", line 1925, in execute_sql
+    cursor.execute(sql, params)
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "/Users/yevhen21/PycharmProjects/Hillel-Django-HW/Django-project_Bookstore/.venv/lib/python3.14/site-packages/debug_toolbar/panels/sql/tracking.py", line 243, in execute
+    return self._record(super().execute, sql, params)
+           ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/yevhen21/PycharmProjects/Hillel-Django-HW/Django-project_Bookstore/.venv/lib/python3.14/site-packages/debug_toolbar/panels/sql/tracking.py", line 164, in _record
+    return method(sql, params)
+  File "/Users/yevhen21/PycharmProjects/Hillel-Django-HW/Django-project_Bookstore/.venv/lib/python3.14/site-packages/django/db/backends/utils.py", line 122, in execute
+    return super().execute(sql, params)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "/Users/yevhen21/PycharmProjects/Hillel-Django-HW/Django-project_Bookstore/.venv/lib/python3.14/site-packages/sentry_sdk/utils.py", line 1886, in runner
+    return sentry_patched_function(*args, **kwargs)
+  File "/Users/yevhen21/PycharmProjects/Hillel-Django-HW/Django-project_Bookstore/.venv/lib/python3.14/site-packages/sentry_sdk/integrations/django/__init__.py", line 682, in execute
+    result = real_execute(self, sql, params)
+  File "/Users/yevhen21/PycharmProjects/Hillel-Django-HW/Django-project_Bookstore/.venv/lib/python3.14/site-packages/django/db/backends/utils.py", line 79, in execute
+    return self._execute_with_wrappers(
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        sql, params, many=False, executor=self._execute
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/Users/yevhen21/PycharmProjects/Hillel-Django-HW/Django-project_Bookstore/.venv/lib/python3.14/site-packages/django/db/backends/utils.py", line 92, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "/Users/yevhen21/PycharmProjects/Hillel-Django-HW/Django-project_Bookstore/.venv/lib/python3.14/site-packages/django/db/backends/utils.py", line 100, in _execute
+    with self.db.wrap_database_errors:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/yevhen21/PycharmProjects/Hillel-Django-HW/Django-project_Bookstore/.venv/lib/python3.14/site-packages/django/db/utils.py", line 94, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "/Users/yevhen21/PycharmProjects/Hillel-Django-HW/Django-project_Bookstore/.venv/lib/python3.14/site-packages/django/db/backends/utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "/Users/yevhen21/PycharmProjects/Hillel-Django-HW/Django-project_Bookstore/.venv/lib/python3.14/site-packages/django/db/backends/sqlite3/base.py", line 359, in execute
+    return super().execute(query, params)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+django.db.utils.OperationalError: no such table: orders_order
+INFO 2026-08-10 11:32:04,555 middleware Запит до /orders/create/ зайняв 0.0839 секунд.
+ERROR 2026-08-10 11:32:04,555 log "POST /orders/create/ HTTP/1.1" 500 224715
+INFO 2026-08-10 11:33:15,520 autoreload Watching for file changes with StatReloader
+INFO 2026-08-10 11:33:21,226 middleware Запит до /orders/create/ зайняв 0.0822 секунд.
+INFO 2026-08-10 11:33:21,228 log "POST /orders/create/ HTTP/1.1" 200 20562
+INFO 2026-08-10 11:33:23,712 middleware Запит до /orders/create/ зайняв 0.0268 секунд.
+INFO 2026-08-10 11:33:23,715 log "POST /orders/create/ HTTP/1.1" 200 20562
+INFO 2026-08-10 11:33:28,459 middleware Запит до /shop/catalog/ зайняв 0.0335 секунд.
+INFO 2026-08-10 11:33:28,461 log "GET /shop/catalog/ HTTP/1.1" 200 22347
+ERROR 2026-08-10 11:33:29,804 log Internal Server Error: /shop/
+Traceback (most recent call last):
+  File "/Users/yevhen21/PycharmProjects/Hillel-Django-HW/Django-project_Bookstore/.venv/lib/python3.14/site-packages/django/contrib/sessions/backends/base.py", line 246, in _get_session
+    return self._session_cache
+           ^^^^^^^^^^^^^^^^^^^
+AttributeError: 'SessionStore' object has no attribute '_session_cache'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/yevhen21/PycharmProjects/Hillel-Django-HW/Django-project_Bookstore/.venv/lib/python3.14/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Users/yevhen21/PycharmProjects/Hillel-Django-HW/Django-project_Bookstore/.venv/lib/python3.14/site-packages/django/core/handlers/base.py", line 198, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/yevhen21/PycharmProjects/Hillel-Django-HW/Django-project_Bookstore/.venv/lib/python3.14/site-packages/asgiref/sync.py", line 325, in __call__
+    return call_result.result()
+           ~~~~~~~~~~~~~~~~~~^^
+  File "/opt/homebrew/Cellar/python@3.14/3.14.3_1/Frameworks/Python.framework/Versions/3.14/lib/python3.14/concurrent/futures/_base.py", line 443, in result
+    return self.__get_result()
+           ~~~~~~~~~~~~~~~~~^^
+  File "/opt/homebrew/Cellar/python@3.14/3.14.3_1/Frameworks/Python.framework/Versions/3.14/lib/python3.14/concurrent/futures/_base.py", line 395, in __get_result
+    raise self._exception
+  File "/Users/yevhen21/PycharmProjects/Hillel-Django-HW/Django-project_Bookstore/.venv/lib/python3.14/site-packages/asgiref/sync.py", line 365, in main_wrap
+    result = await awaitable
+             ^^^^^^^^^^^^^^^
+  File "/Users/yevhen21/PycharmProjects/Hillel-Django-HW/Django-project_Bookstore/.venv/lib/python3.14/site-packages/sentry_sdk/integrations/django/asgi.py", line 191, in sentry_wrapped_callback
+    return await callback(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/yevhen21/PycharmProjects/Hillel-Django-HW/Django-project_Bookstore/project_a_bookstore/shop_app/views.py", line 134, in store
+    return render(request, "shop_app/store.html", context)
+  File "/Users/yevhen21/PycharmProjects/Hillel-Django-HW/Django-project_Bookstore/.venv/lib/python3.14/site-packages/sentry_sdk/utils.py", line 1886, in runner
+    return sentry_patched_function(*args, **kwargs)
+  File "/Users/yevhen21/PycharmProjects/Hillel-Django-HW/Django-project_Bookstore/.venv/lib/python3.14/site-packages/sentry_sdk/integrations/django/templates.py", line 131, in render
+    return real_render(request, template_name, context, *args, **kwargs)
+  File "/Users/yevhen21/PycharmProjects/Hillel-Django-HW/Django-project_Bookstore/.venv/lib/python3.14/site-packages/django/shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/Users/yevhen21/PycharmProjects/Hillel-Django-HW/Django-project_Bookstore/.venv/lib/python3.14/site-packages/django/template/loader.py", line 62, in render_to_string
+    return template.render(context, request)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+  File "/Users/yevhen21/PycharmProjects/Hillel-Django-HW/Django-project_Bookstore/.venv/lib/python3.14/site-packages/django/template/backends/django.py", line 107, in render
+    return self.template.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "/Users/yevhen21/PycharmProjects/Hillel-Django-HW/Django-project_Bookstore/.venv/lib/python3.14/site-packages/django/template/base.py", line 174, in render
+    return self._render(context)
+           ~~~~~~~~~~~~^^^^^^^^^
+  File "/Users/yevhen21/PycharmProjects/Hillel-Django-HW/Django-project_Bookstore/.venv/lib/python3.14/site-packages/django/test/utils.py", line 114, in instrumented_test_render
+    return self.nodelist.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "/Users/yevhen21/PycharmProjects/Hillel-Django-HW/Django-project_Bookstore/.venv/lib/python3.14/site-packages/django/template/base.py", line 1091, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "/Users/yevhen21/PycharmProjects/Hillel-Django-HW/Django-project_Bookstore/.venv/lib/python3.14/site-packages/django/template/base.py", line 1052, in render_annotated
+    return self.render(context)
+           ~~~~~~~~~~~^^^^^^^^^
+  File "/Users/yevhen21/PycharmProjects/Hillel-Django-HW/Django-project_Bookstore/.venv/lib/python3.14/site-packages/django/template/loader_tags.py", line 160, in render
+    return compiled_parent._render(context)
+           ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "/Users/yevhen21/PycharmProjects/Hillel-Django-HW/Django-project_Bookstore/.venv/lib/python3.14/site-packages/django/test/utils.py", line 114, in instrumented_test_render
+    return self.nodelist.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "/Users/yevhen21/PycharmProjects/Hillel-Django-HW/Django-project_Bookstore/.venv/lib/python3.14/site-packages/django/template/base.py", line 1091, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "/Users/yevhen21/PycharmProjects/Hillel-Django-HW/Django-project_Bookstore/.venv/lib/python3.14/site-packages/django/template/base.py", line 1052, in render_annotated
+    return self.render(context)
+           ~~~~~~~~~~~^^^^^^^^^
+  File "/Users/yevhen21/PycharmProjects/Hillel-Django-HW/Django-project_Bookstore/.venv/lib/python3.14/site-packages/django/template/defaulttags.py", line 326, in render
+    match = condition.eval(context)
+  File "/Users/yevhen21/PycharmProjects/Hillel-Django-HW/Django-project_Bookstore/.venv/lib/python3.14/site-packages/django/template/defaulttags.py", line 918, in eval
+    return self.value.resolve(context, ignore_failures=True)
+           ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/yevhen21/PycharmProjects/Hillel-Django-HW/Django-project_Bookstore/.venv/lib/python3.14/site-packages/django/template/base.py", line 788, in resolve
+    obj = self.var.resolve(context)
+  File "/Users/yevhen21/PycharmProjects/Hillel-Django-HW/Django-project_Bookstore/.venv/lib/python3.14/site-packages/django/template/base.py", line 928, in resolve
+    value = self._resolve_lookup(context)
+  File "/Users/yevhen21/PycharmProjects/Hillel-Django-HW/Django-project_Bookstore/.venv/lib/python3.14/site-packages/django/template/base.py", line 965, in _resolve_lookup
+    current = current[bit]
+              ~~~~~~~^^^^^
+  File "/Users/yevhen21/PycharmProjects/Hillel-Django-HW/Django-project_Bookstore/.venv/lib/python3.14/site-packages/django/utils/functional.py", line 251, in inner
+    self._setup()
+    ~~~~~~~~~~~^^
+  File "/Users/yevhen21/PycharmProjects/Hillel-Django-HW/Django-project_Bookstore/.venv/lib/python3.14/site-packages/django/utils/functional.py", line 404, in _setup
+    self._wrapped = self._setupfunc()
+                    ~~~~~~~~~~~~~~~^^
+  File "/Users/yevhen21/PycharmProjects/Hillel-Django-HW/Django-project_Bookstore/.venv/lib/python3.14/site-packages/django/contrib/auth/middleware.py", line 40, in <lambda>
+    request.user = SimpleLazyObject(lambda: get_user(request))
+                                            ~~~~~~~~^^^^^^^^^
+  File "/Users/yevhen21/PycharmProjects/Hillel-Django-HW/Django-project_Bookstore/.venv/lib/python3.14/site-packages/django/contrib/auth/middleware.py", line 20, in get_user
+    request._cached_user = auth.get_user(request)
+                           ~~~~~~~~~~~~~^^^^^^^^^
+  File "/Users/yevhen21/PycharmProjects/Hillel-Django-HW/Django-project_Bookstore/.venv/lib/python3.14/site-packages/django/contrib/auth/__init__.py", line 321, in get_user
+    user_id = _get_user_session_key(request)
+  File "/Users/yevhen21/PycharmProjects/Hillel-Django-HW/Django-project_Bookstore/.venv/lib/python3.14/site-packages/django/contrib/auth/__init__.py", line 95, in _get_user_session_key
+    return get_user_model()._meta.pk.to_python(request.session[SESSION_KEY])
+                                               ~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "/Users/yevhen21/PycharmProjects/Hillel-Django-HW/Django-project_Bookstore/.venv/lib/python3.14/site-packages/django/contrib/sessions/backends/base.py", line 55, in __getitem__
+    return self._session[key]
+           ^^^^^^^^^^^^^
+  File "/Users/yevhen21/PycharmProjects/Hillel-Django-HW/Django-project_Bookstore/.venv/lib/python3.14/site-packages/django/contrib/sessions/backends/base.py", line 251, in _get_session
+    self._session_cache = self.load()
+                          ~~~~~~~~~^^
+  File "/Users/yevhen21/PycharmProjects/Hillel-Django-HW/Django-project_Bookstore/.venv/lib/python3.14/site-packages/django/contrib/sessions/backends/db.py", line 55, in load
+    s = self._get_session_from_db()
+  File "/Users/yevhen21/PycharmProjects/Hillel-Django-HW/Django-project_Bookstore/.venv/lib/python3.14/site-packages/django/contrib/sessions/backends/db.py", line 34, in _get_session_from_db
+    return self.model.objects.get(
+           ~~~~~~~~~~~~~~~~~~~~~~^
+        session_key=self.session_key, expire_date__gt=timezone.now()
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/Users/yevhen21/PycharmProjects/Hillel-Django-HW/Django-project_Bookstore/.venv/lib/python3.14/site-packages/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/Users/yevhen21/PycharmProjects/Hillel-Django-HW/Django-project_Bookstore/.venv/lib/python3.14/site-packages/django/db/models/query.py", line 635, in get
+    num = len(clone)
+  File "/Users/yevhen21/PycharmProjects/Hillel-Django-HW/Django-project_Bookstore/.venv/lib/python3.14/site-packages/django/db/models/query.py", line 372, in __len__
+    self._fetch_all()
+    ~~~~~~~~~~~~~~~^^
+  File "/Users/yevhen21/PycharmProjects/Hillel-Django-HW/Django-project_Bookstore/.venv/lib/python3.14/site-packages/django/db/models/query.py", line 2000, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+                         ~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/yevhen21/PycharmProjects/Hillel-Django-HW/Django-project_Bookstore/.venv/lib/python3.14/site-packages/django/db/models/query.py", line 95, in __iter__
+    results = compiler.execute_sql(
+        chunked_fetch=self.chunked_fetch, chunk_size=self.chunk_size
+    )
+  File "/Users/yevhen21/PycharmProjects/Hillel-Django-HW/Django-project_Bookstore/.venv/lib/python3.14/site-packages/django/db/models/sql/compiler.py", line 1622, in execute_sql
+    cursor = self.connection.cursor()
+  File "/Users/yevhen21/PycharmProjects/Hillel-Django-HW/Django-project_Bookstore/.venv/lib/python3.14/site-packages/django/utils/asyncio.py", line 24, in inner
+    raise SynchronousOnlyOperation(message)
+django.core.exceptions.SynchronousOnlyOperation: You cannot call this from an async context - use a thread or sync_to_async.
+INFO 2026-08-10 11:33:29,835 middleware Запит до /shop/ зайняв 0.0911 секунд.
+ERROR 2026-08-10 11:33:29,836 log "GET /shop/ HTTP/1.1" 500 308674
+INFO 2026-08-10 11:33:32,838 middleware Запит до /shop/catalog/ зайняв 0.0286 секунд.
+INFO 2026-08-10 11:33:32,840 log "GET /shop/catalog/ HTTP/1.1" 200 22346
+INFO 2026-08-10 11:33:33,668 middleware Запит до /shop/catalog/ зайняв 0.0272 секунд.
+INFO 2026-08-10 11:33:33,670 log "GET /shop/catalog/ HTTP/1.1" 200 22346
+INFO 2026-08-10 11:33:35,871 middleware Запит до /shop/catalog/ зайняв 0.0281 секунд.
+INFO 2026-08-10 11:33:35,873 log "GET /shop/catalog/ HTTP/1.1" 200 22346
+ERROR 2026-08-10 11:33:36,611 log Internal Server Error: /shop/
+Traceback (most recent call last):
+  File "/Users/yevhen21/PycharmProjects/Hillel-Django-HW/Django-project_Bookstore/.venv/lib/python3.14/site-packages/django/contrib/sessions/backends/base.py", line 246, in _get_session
+    return self._session_cache
+           ^^^^^^^^^^^^^^^^^^^
+AttributeError: 'SessionStore' object has no attribute '_session_cache'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/yevhen21/PycharmProjects/Hillel-Django-HW/Django-project_Bookstore/.venv/lib/python3.14/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Users/yevhen21/PycharmProjects/Hillel-Django-HW/Django-project_Bookstore/.venv/lib/python3.14/site-packages/django/core/handlers/base.py", line 198, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/yevhen21/PycharmProjects/Hillel-Django-HW/Django-project_Bookstore/.venv/lib/python3.14/site-packages/asgiref/sync.py", line 325, in __call__
+    return call_result.result()
+           ~~~~~~~~~~~~~~~~~~^^
+  File "/opt/homebrew/Cellar/python@3.14/3.14.3_1/Frameworks/Python.framework/Versions/3.14/lib/python3.14/concurrent/futures/_base.py", line 443, in result
+    return self.__get_result()
+           ~~~~~~~~~~~~~~~~~^^
+  File "/opt/homebrew/Cellar/python@3.14/3.14.3_1/Frameworks/Python.framework/Versions/3.14/lib/python3.14/concurrent/futures/_base.py", line 395, in __get_result
+    raise self._exception
+  File "/Users/yevhen21/PycharmProjects/Hillel-Django-HW/Django-project_Bookstore/.venv/lib/python3.14/site-packages/asgiref/sync.py", line 365, in main_wrap
+    result = await awaitable
+             ^^^^^^^^^^^^^^^
+  File "/Users/yevhen21/PycharmProjects/Hillel-Django-HW/Django-project_Bookstore/.venv/lib/python3.14/site-packages/sentry_sdk/integrations/django/asgi.py", line 191, in sentry_wrapped_callback
+    return await callback(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/yevhen21/PycharmProjects/Hillel-Django-HW/Django-project_Bookstore/project_a_bookstore/shop_app/views.py", line 134, in store
+    return render(request, "shop_app/store.html", context)
+  File "/Users/yevhen21/PycharmProjects/Hillel-Django-HW/Django-project_Bookstore/.venv/lib/python3.14/site-packages/sentry_sdk/utils.py", line 1886, in runner
+    return sentry_patched_function(*args, **kwargs)
+  File "/Users/yevhen21/PycharmProjects/Hillel-Django-HW/Django-project_Bookstore/.venv/lib/python3.14/site-packages/sentry_sdk/integrations/django/templates.py", line 131, in render
+    return real_render(request, template_name, context, *args, **kwargs)
+  File "/Users/yevhen21/PycharmProjects/Hillel-Django-HW/Django-project_Bookstore/.venv/lib/python3.14/site-packages/django/shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/Users/yevhen21/PycharmProjects/Hillel-Django-HW/Django-project_Bookstore/.venv/lib/python3.14/site-packages/django/template/loader.py", line 62, in render_to_string
+    return template.render(context, request)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+  File "/Users/yevhen21/PycharmProjects/Hillel-Django-HW/Django-project_Bookstore/.venv/lib/python3.14/site-packages/django/template/backends/django.py", line 107, in render
+    return self.template.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "/Users/yevhen21/PycharmProjects/Hillel-Django-HW/Django-project_Bookstore/.venv/lib/python3.14/site-packages/django/template/base.py", line 174, in render
+    return self._render(context)
+           ~~~~~~~~~~~~^^^^^^^^^
+  File "/Users/yevhen21/PycharmProjects/Hillel-Django-HW/Django-project_Bookstore/.venv/lib/python3.14/site-packages/django/test/utils.py", line 114, in instrumented_test_render
+    return self.nodelist.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "/Users/yevhen21/PycharmProjects/Hillel-Django-HW/Django-project_Bookstore/.venv/lib/python3.14/site-packages/django/template/base.py", line 1091, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "/Users/yevhen21/PycharmProjects/Hillel-Django-HW/Django-project_Bookstore/.venv/lib/python3.14/site-packages/django/template/base.py", line 1052, in render_annotated
+    return self.render(context)
+           ~~~~~~~~~~~^^^^^^^^^
+  File "/Users/yevhen21/PycharmProjects/Hillel-Django-HW/Django-project_Bookstore/.venv/lib/python3.14/site-packages/django/template/loader_tags.py", line 160, in render
+    return compiled_parent._render(context)
+           ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "/Users/yevhen21/PycharmProjects/Hillel-Django-HW/Django-project_Bookstore/.venv/lib/python3.14/site-packages/django/test/utils.py", line 114, in instrumented_test_render
+    return self.nodelist.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "/Users/yevhen21/PycharmProjects/Hillel-Django-HW/Django-project_Bookstore/.venv/lib/python3.14/site-packages/django/template/base.py", line 1091, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "/Users/yevhen21/PycharmProjects/Hillel-Django-HW/Django-project_Bookstore/.venv/lib/python3.14/site-packages/django/template/base.py", line 1052, in render_annotated
+    return self.render(context)
+           ~~~~~~~~~~~^^^^^^^^^
+  File "/Users/yevhen21/PycharmProjects/Hillel-Django-HW/Django-project_Bookstore/.venv/lib/python3.14/site-packages/django/template/defaulttags.py", line 326, in render
+    match = condition.eval(context)
+  File "/Users/yevhen21/PycharmProjects/Hillel-Django-HW/Django-project_Bookstore/.venv/lib/python3.14/site-packages/django/template/defaulttags.py", line 918, in eval
+    return self.value.resolve(context, ignore_failures=True)
+           ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/yevhen21/PycharmProjects/Hillel-Django-HW/Django-project_Bookstore/.venv/lib/python3.14/site-packages/django/template/base.py", line 788, in resolve
+    obj = self.var.resolve(context)
+  File "/Users/yevhen21/PycharmProjects/Hillel-Django-HW/Django-project_Bookstore/.venv/lib/python3.14/site-packages/django/template/base.py", line 928, in resolve
+    value = self._resolve_lookup(context)
+  File "/Users/yevhen21/PycharmProjects/Hillel-Django-HW/Django-project_Bookstore/.venv/lib/python3.14/site-packages/django/template/base.py", line 965, in _resolve_lookup
+    current = current[bit]
+              ~~~~~~~^^^^^
+  File "/Users/yevhen21/PycharmProjects/Hillel-Django-HW/Django-project_Bookstore/.venv/lib/python3.14/site-packages/django/utils/functional.py", line 251, in inner
+    self._setup()
+    ~~~~~~~~~~~^^
+  File "/Users/yevhen21/PycharmProjects/Hillel-Django-HW/Django-project_Bookstore/.venv/lib/python3.14/site-packages/django/utils/functional.py", line 404, in _setup
+    self._wrapped = self._setupfunc()
+                    ~~~~~~~~~~~~~~~^^
+  File "/Users/yevhen21/PycharmProjects/Hillel-Django-HW/Django-project_Bookstore/.venv/lib/python3.14/site-packages/django/contrib/auth/middleware.py", line 40, in <lambda>
+    request.user = SimpleLazyObject(lambda: get_user(request))
+                                            ~~~~~~~~^^^^^^^^^
+  File "/Users/yevhen21/PycharmProjects/Hillel-Django-HW/Django-project_Bookstore/.venv/lib/python3.14/site-packages/django/contrib/auth/middleware.py", line 20, in get_user
+    request._cached_user = auth.get_user(request)
+                           ~~~~~~~~~~~~~^^^^^^^^^
+  File "/Users/yevhen21/PycharmProjects/Hillel-Django-HW/Django-project_Bookstore/.venv/lib/python3.14/site-packages/django/contrib/auth/__init__.py", line 321, in get_user
+    user_id = _get_user_session_key(request)
+  File "/Users/yevhen21/PycharmProjects/Hillel-Django-HW/Django-project_Bookstore/.venv/lib/python3.14/site-packages/django/contrib/auth/__init__.py", line 95, in _get_user_session_key
+    return get_user_model()._meta.pk.to_python(request.session[SESSION_KEY])
+                                               ~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "/Users/yevhen21/PycharmProjects/Hillel-Django-HW/Django-project_Bookstore/.venv/lib/python3.14/site-packages/django/contrib/sessions/backends/base.py", line 55, in __getitem__
+    return self._session[key]
+           ^^^^^^^^^^^^^
+  File "/Users/yevhen21/PycharmProjects/Hillel-Django-HW/Django-project_Bookstore/.venv/lib/python3.14/site-packages/django/contrib/sessions/backends/base.py", line 251, in _get_session
+    self._session_cache = self.load()
+                          ~~~~~~~~~^^
+  File "/Users/yevhen21/PycharmProjects/Hillel-Django-HW/Django-project_Bookstore/.venv/lib/python3.14/site-packages/django/contrib/sessions/backends/db.py", line 55, in load
+    s = self._get_session_from_db()
+  File "/Users/yevhen21/PycharmProjects/Hillel-Django-HW/Django-project_Bookstore/.venv/lib/python3.14/site-packages/django/contrib/sessions/backends/db.py", line 34, in _get_session_from_db
+    return self.model.objects.get(
+           ~~~~~~~~~~~~~~~~~~~~~~^
+        session_key=self.session_key, expire_date__gt=timezone.now()
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/Users/yevhen21/PycharmProjects/Hillel-Django-HW/Django-project_Bookstore/.venv/lib/python3.14/site-packages/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/Users/yevhen21/PycharmProjects/Hillel-Django-HW/Django-project_Bookstore/.venv/lib/python3.14/site-packages/django/db/models/query.py", line 635, in get
+    num = len(clone)
+  File "/Users/yevhen21/PycharmProjects/Hillel-Django-HW/Django-project_Bookstore/.venv/lib/python3.14/site-packages/django/db/models/query.py", line 372, in __len__
+    self._fetch_all()
+    ~~~~~~~~~~~~~~~^^
+  File "/Users/yevhen21/PycharmProjects/Hillel-Django-HW/Django-project_Bookstore/.venv/lib/python3.14/site-packages/django/db/models/query.py", line 2000, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+                         ~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/yevhen21/PycharmProjects/Hillel-Django-HW/Django-project_Bookstore/.venv/lib/python3.14/site-packages/django/db/models/query.py", line 95, in __iter__
+    results = compiler.execute_sql(
+        chunked_fetch=self.chunked_fetch, chunk_size=self.chunk_size
+    )
+  File "/Users/yevhen21/PycharmProjects/Hillel-Django-HW/Django-project_Bookstore/.venv/lib/python3.14/site-packages/django/db/models/sql/compiler.py", line 1622, in execute_sql
+    cursor = self.connection.cursor()
+  File "/Users/yevhen21/PycharmProjects/Hillel-Django-HW/Django-project_Bookstore/.venv/lib/python3.14/site-packages/django/utils/asyncio.py", line 24, in inner
+    raise SynchronousOnlyOperation(message)
+django.core.exceptions.SynchronousOnlyOperation: You cannot call this from an async context - use a thread or sync_to_async.
+INFO 2026-08-10 11:33:36,659 middleware Запит до /shop/ зайняв 0.0998 секунд.
+ERROR 2026-08-10 11:33:36,660 log "GET /shop/ HTTP/1.1" 500 308674
+ERROR 2026-08-10 11:33:40,990 log Internal Server Error: /shop/
+Traceback (most recent call last):
+  File "/Users/yevhen21/PycharmProjects/Hillel-Django-HW/Django-project_Bookstore/.venv/lib/python3.14/site-packages/django/contrib/sessions/backends/base.py", line 246, in _get_session
+    return self._session_cache
+           ^^^^^^^^^^^^^^^^^^^
+AttributeError: 'SessionStore' object has no attribute '_session_cache'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/yevhen21/PycharmProjects/Hillel-Django-HW/Django-project_Bookstore/.venv/lib/python3.14/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Users/yevhen21/PycharmProjects/Hillel-Django-HW/Django-project_Bookstore/.venv/lib/python3.14/site-packages/django/core/handlers/base.py", line 198, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/yevhen21/PycharmProjects/Hillel-Django-HW/Django-project_Bookstore/.venv/lib/python3.14/site-packages/asgiref/sync.py", line 325, in __call__
+    return call_result.result()
+           ~~~~~~~~~~~~~~~~~~^^
+  File "/opt/homebrew/Cellar/python@3.14/3.14.3_1/Frameworks/Python.framework/Versions/3.14/lib/python3.14/concurrent/futures/_base.py", line 443, in result
+    return self.__get_result()
+           ~~~~~~~~~~~~~~~~~^^
+  File "/opt/homebrew/Cellar/python@3.14/3.14.3_1/Frameworks/Python.framework/Versions/3.14/lib/python3.14/concurrent/futures/_base.py", line 395, in __get_result
+    raise self._exception
+  File "/Users/yevhen21/PycharmProjects/Hillel-Django-HW/Django-project_Bookstore/.venv/lib/python3.14/site-packages/asgiref/sync.py", line 365, in main_wrap
+    result = await awaitable
+             ^^^^^^^^^^^^^^^
+  File "/Users/yevhen21/PycharmProjects/Hillel-Django-HW/Django-project_Bookstore/.venv/lib/python3.14/site-packages/sentry_sdk/integrations/django/asgi.py", line 191, in sentry_wrapped_callback
+    return await callback(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/yevhen21/PycharmProjects/Hillel-Django-HW/Django-project_Bookstore/project_a_bookstore/shop_app/views.py", line 134, in store
+    return render(request, "shop_app/store.html", context)
+  File "/Users/yevhen21/PycharmProjects/Hillel-Django-HW/Django-project_Bookstore/.venv/lib/python3.14/site-packages/sentry_sdk/utils.py", line 1886, in runner
+    return sentry_patched_function(*args, **kwargs)
+  File "/Users/yevhen21/PycharmProjects/Hillel-Django-HW/Django-project_Bookstore/.venv/lib/python3.14/site-packages/sentry_sdk/integrations/django/templates.py", line 131, in render
+    return real_render(request, template_name, context, *args, **kwargs)
+  File "/Users/yevhen21/PycharmProjects/Hillel-Django-HW/Django-project_Bookstore/.venv/lib/python3.14/site-packages/django/shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/Users/yevhen21/PycharmProjects/Hillel-Django-HW/Django-project_Bookstore/.venv/lib/python3.14/site-packages/django/template/loader.py", line 62, in render_to_string
+    return template.render(context, request)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+  File "/Users/yevhen21/PycharmProjects/Hillel-Django-HW/Django-project_Bookstore/.venv/lib/python3.14/site-packages/django/template/backends/django.py", line 107, in render
+    return self.template.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "/Users/yevhen21/PycharmProjects/Hillel-Django-HW/Django-project_Bookstore/.venv/lib/python3.14/site-packages/django/template/base.py", line 174, in render
+    return self._render(context)
+           ~~~~~~~~~~~~^^^^^^^^^
+  File "/Users/yevhen21/PycharmProjects/Hillel-Django-HW/Django-project_Bookstore/.venv/lib/python3.14/site-packages/django/test/utils.py", line 114, in instrumented_test_render
+    return self.nodelist.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "/Users/yevhen21/PycharmProjects/Hillel-Django-HW/Django-project_Bookstore/.venv/lib/python3.14/site-packages/django/template/base.py", line 1091, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "/Users/yevhen21/PycharmProjects/Hillel-Django-HW/Django-project_Bookstore/.venv/lib/python3.14/site-packages/django/template/base.py", line 1052, in render_annotated
+    return self.render(context)
+           ~~~~~~~~~~~^^^^^^^^^
+  File "/Users/yevhen21/PycharmProjects/Hillel-Django-HW/Django-project_Bookstore/.venv/lib/python3.14/site-packages/django/template/loader_tags.py", line 160, in render
+    return compiled_parent._render(context)
+           ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "/Users/yevhen21/PycharmProjects/Hillel-Django-HW/Django-project_Bookstore/.venv/lib/python3.14/site-packages/django/test/utils.py", line 114, in instrumented_test_render
+    return self.nodelist.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "/Users/yevhen21/PycharmProjects/Hillel-Django-HW/Django-project_Bookstore/.venv/lib/python3.14/site-packages/django/template/base.py", line 1091, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "/Users/yevhen21/PycharmProjects/Hillel-Django-HW/Django-project_Bookstore/.venv/lib/python3.14/site-packages/django/template/base.py", line 1052, in render_annotated
+    return self.render(context)
+           ~~~~~~~~~~~^^^^^^^^^
+  File "/Users/yevhen21/PycharmProjects/Hillel-Django-HW/Django-project_Bookstore/.venv/lib/python3.14/site-packages/django/template/defaulttags.py", line 326, in render
+    match = condition.eval(context)
+  File "/Users/yevhen21/PycharmProjects/Hillel-Django-HW/Django-project_Bookstore/.venv/lib/python3.14/site-packages/django/template/defaulttags.py", line 918, in eval
+    return self.value.resolve(context, ignore_failures=True)
+           ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/yevhen21/PycharmProjects/Hillel-Django-HW/Django-project_Bookstore/.venv/lib/python3.14/site-packages/django/template/base.py", line 788, in resolve
+    obj = self.var.resolve(context)
+  File "/Users/yevhen21/PycharmProjects/Hillel-Django-HW/Django-project_Bookstore/.venv/lib/python3.14/site-packages/django/template/base.py", line 928, in resolve
+    value = self._resolve_lookup(context)
+  File "/Users/yevhen21/PycharmProjects/Hillel-Django-HW/Django-project_Bookstore/.venv/lib/python3.14/site-packages/django/template/base.py", line 965, in _resolve_lookup
+    current = current[bit]
+              ~~~~~~~^^^^^
+  File "/Users/yevhen21/PycharmProjects/Hillel-Django-HW/Django-project_Bookstore/.venv/lib/python3.14/site-packages/django/utils/functional.py", line 251, in inner
+    self._setup()
+    ~~~~~~~~~~~^^
+  File "/Users/yevhen21/PycharmProjects/Hillel-Django-HW/Django-project_Bookstore/.venv/lib/python3.14/site-packages/django/utils/functional.py", line 404, in _setup
+    self._wrapped = self._setupfunc()
+                    ~~~~~~~~~~~~~~~^^
+  File "/Users/yevhen21/PycharmProjects/Hillel-Django-HW/Django-project_Bookstore/.venv/lib/python3.14/site-packages/django/contrib/auth/middleware.py", line 40, in <lambda>
+    request.user = SimpleLazyObject(lambda: get_user(request))
+                                            ~~~~~~~~^^^^^^^^^
+  File "/Users/yevhen21/PycharmProjects/Hillel-Django-HW/Django-project_Bookstore/.venv/lib/python3.14/site-packages/django/contrib/auth/middleware.py", line 20, in get_user
+    request._cached_user = auth.get_user(request)
+                           ~~~~~~~~~~~~~^^^^^^^^^
+  File "/Users/yevhen21/PycharmProjects/Hillel-Django-HW/Django-project_Bookstore/.venv/lib/python3.14/site-packages/django/contrib/auth/__init__.py", line 321, in get_user
+    user_id = _get_user_session_key(request)
+  File "/Users/yevhen21/PycharmProjects/Hillel-Django-HW/Django-project_Bookstore/.venv/lib/python3.14/site-packages/django/contrib/auth/__init__.py", line 95, in _get_user_session_key
+    return get_user_model()._meta.pk.to_python(request.session[SESSION_KEY])
+                                               ~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "/Users/yevhen21/PycharmProjects/Hillel-Django-HW/Django-project_Bookstore/.venv/lib/python3.14/site-packages/django/contrib/sessions/backends/base.py", line 55, in __getitem__
+    return self._session[key]
+           ^^^^^^^^^^^^^
+  File "/Users/yevhen21/PycharmProjects/Hillel-Django-HW/Django-project_Bookstore/.venv/lib/python3.14/site-packages/django/contrib/sessions/backends/base.py", line 251, in _get_session
+    self._session_cache = self.load()
+                          ~~~~~~~~~^^
+  File "/Users/yevhen21/PycharmProjects/Hillel-Django-HW/Django-project_Bookstore/.venv/lib/python3.14/site-packages/django/contrib/sessions/backends/db.py", line 55, in load
+    s = self._get_session_from_db()
+  File "/Users/yevhen21/PycharmProjects/Hillel-Django-HW/Django-project_Bookstore/.venv/lib/python3.14/site-packages/django/contrib/sessions/backends/db.py", line 34, in _get_session_from_db
+    return self.model.objects.get(
+           ~~~~~~~~~~~~~~~~~~~~~~^
+        session_key=self.session_key, expire_date__gt=timezone.now()
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/Users/yevhen21/PycharmProjects/Hillel-Django-HW/Django-project_Bookstore/.venv/lib/python3.14/site-packages/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/Users/yevhen21/PycharmProjects/Hillel-Django-HW/Django-project_Bookstore/.venv/lib/python3.14/site-packages/django/db/models/query.py", line 635, in get
+    num = len(clone)
+  File "/Users/yevhen21/PycharmProjects/Hillel-Django-HW/Django-project_Bookstore/.venv/lib/python3.14/site-packages/django/db/models/query.py", line 372, in __len__
+    self._fetch_all()
+    ~~~~~~~~~~~~~~~^^
+  File "/Users/yevhen21/PycharmProjects/Hillel-Django-HW/Django-project_Bookstore/.venv/lib/python3.14/site-packages/django/db/models/query.py", line 2000, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+                         ~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/yevhen21/PycharmProjects/Hillel-Django-HW/Django-project_Bookstore/.venv/lib/python3.14/site-packages/django/db/models/query.py", line 95, in __iter__
+    results = compiler.execute_sql(
+        chunked_fetch=self.chunked_fetch, chunk_size=self.chunk_size
+    )
+  File "/Users/yevhen21/PycharmProjects/Hillel-Django-HW/Django-project_Bookstore/.venv/lib/python3.14/site-packages/django/db/models/sql/compiler.py", line 1622, in execute_sql
+    cursor = self.connection.cursor()
+  File "/Users/yevhen21/PycharmProjects/Hillel-Django-HW/Django-project_Bookstore/.venv/lib/python3.14/site-packages/django/utils/asyncio.py", line 24, in inner
+    raise SynchronousOnlyOperation(message)
+django.core.exceptions.SynchronousOnlyOperation: You cannot call this from an async context - use a thread or sync_to_async.
+INFO 2026-08-10 11:33:41,021 middleware Запит до /shop/ зайняв 0.0858 секунд.
+ERROR 2026-08-10 11:33:41,022 log "GET /shop/ HTTP/1.1" 500 308674
+INFO 2026-08-10 11:33:42,709 middleware Запит до /shop/14/ зайняв 0.0258 секунд.
+INFO 2026-08-10 11:33:42,711 log "GET /shop/14/ HTTP/1.1" 200 19635
+INFO 2026-08-10 11:33:42,731 middleware Запит до /media/covers/game_of_thrones.jpg зайняв 0.0088 секунд.
+INFO 2026-08-10 11:33:42,733 log "GET /media/covers/game_of_thrones.jpg HTTP/1.1" 200 321639
+INFO 2026-08-10 11:33:44,119 middleware Запит до /orders/cart/add/14/ зайняв 0.0155 секунд.
+INFO 2026-08-10 11:33:44,123 log "POST /orders/cart/add/14/ HTTP/1.1" 302 0
+INFO 2026-08-10 11:33:44,149 middleware Запит до /orders/cart/ зайняв 0.0224 секунд.
+INFO 2026-08-10 11:33:44,151 log "GET /orders/cart/ HTTP/1.1" 200 22822
+INFO 2026-08-10 11:33:53,511 middleware Запит до /orders/create/ зайняв 0.0225 секунд.
+INFO 2026-08-10 11:33:53,513 log "GET /orders/create/ HTTP/1.1" 200 20461
+INFO 2026-08-10 11:33:58,441 middleware Запит до /orders/cart/ зайняв 0.0235 секунд.
+INFO 2026-08-10 11:33:58,445 log "GET /orders/cart/ HTTP/1.1" 200 22822
+INFO 2026-08-10 11:34:02,415 middleware Запит до /orders/cart/add/14/ зайняв 0.0119 секунд.
+INFO 2026-08-10 11:34:02,418 log "POST /orders/cart/add/14/ HTTP/1.1" 302 0
+INFO 2026-08-10 11:34:02,435 middleware Запит до /orders/cart/ зайняв 0.0140 секунд.
+INFO 2026-08-10 11:34:02,437 log "GET /orders/cart/ HTTP/1.1" 200 22822
+INFO 2026-08-10 11:34:04,418 middleware Запит до /orders/create/ зайняв 0.0181 секунд.
+INFO 2026-08-10 11:34:04,421 log "GET /orders/create/ HTTP/1.1" 200 20461
+INFO 2026-08-10 11:34:29,600 middleware Запит до /orders/create/ зайняв 0.0252 секунд.
+INFO 2026-08-10 11:34:29,603 log "POST /orders/create/ HTTP/1.1" 200 20565
+INFO 2026-08-10 11:35:30,706 middleware Запит до /shop/catalog/ зайняв 0.0292 секунд.
+INFO 2026-08-10 11:35:30,708 log "GET /shop/catalog/ HTTP/1.1" 200 22346
+INFO 2026-08-10 11:35:31,844 middleware Запит до /shop/3/ зайняв 0.0183 секунд.
+INFO 2026-08-10 11:35:31,846 log "GET /shop/3/ HTTP/1.1" 200 19101
+INFO 2026-08-10 11:35:31,871 middleware Запит до /media/covers/Charlie_and_the_Chocolate_Factory.jpg зайняв 0.0098 секунд.
+INFO 2026-08-10 11:35:31,873 log "GET /media/covers/Charlie_and_the_Chocolate_Factory.jpg HTTP/1.1" 200 201838
+INFO 2026-08-10 11:35:33,357 middleware Запит до /orders/cart/add/3/ зайняв 0.0120 секунд.
+INFO 2026-08-10 11:35:33,361 log "POST /orders/cart/add/3/ HTTP/1.1" 302 0
+INFO 2026-08-10 11:35:33,386 middleware Запит до /orders/cart/ зайняв 0.0226 секунд.
+INFO 2026-08-10 11:35:33,390 log "GET /orders/cart/ HTTP/1.1" 200 26500
+INFO 2026-08-10 11:35:36,112 middleware Запит до /orders/cart/remove/14/ зайняв 0.0121 секунд.
+INFO 2026-08-10 11:35:36,116 log "POST /orders/cart/remove/14/ HTTP/1.1" 302 0
+INFO 2026-08-10 11:35:36,136 middleware Запит до /orders/cart/ зайняв 0.0178 секунд.
+INFO 2026-08-10 11:35:36,139 log "GET /orders/cart/ HTTP/1.1" 200 22795
+INFO 2026-08-10 11:35:37,603 middleware Запит до /orders/create/ зайняв 0.0196 секунд.
+INFO 2026-08-10 11:35:37,606 log "GET /orders/create/ HTTP/1.1" 200 20444
+INFO 2026-08-10 11:36:02,245 middleware Запит до /orders/create/ зайняв 0.0245 секунд.
+INFO 2026-08-10 11:36:02,247 log "POST /orders/create/ HTTP/1.1" 200 20547
+INFO 2026-08-10 11:37:16,213 middleware Запит до /admin/ зайняв 0.0178 секунд.
+INFO 2026-08-10 11:37:16,215 log "GET /admin/ HTTP/1.1" 302 0
+INFO 2026-08-10 11:37:16,232 middleware Запит до /admin/login/ зайняв 0.0152 секунд.
+INFO 2026-08-10 11:37:16,233 log "GET /admin/login/?next=/admin/ HTTP/1.1" 200 18325
+INFO 2026-08-10 11:37:16,252 log "GET /static/admin/css/nav_sidebar.css HTTP/1.1" 200 2810
+INFO 2026-08-10 11:37:16,252 log "GET /static/admin/css/base.css HTTP/1.1" 200 23100
+INFO 2026-08-10 11:37:16,254 log "GET /static/admin/css/dark_mode.css HTTP/1.1" 200 3538
+INFO 2026-08-10 11:37:16,255 log "GET /static/admin/css/login.css HTTP/1.1" 200 951
+INFO 2026-08-10 11:37:16,257 log "GET /static/admin/css/responsive.css HTTP/1.1" 200 16273
+INFO 2026-08-10 11:37:16,257 log "GET /static/admin/js/theme.js HTTP/1.1" 200 1653
+INFO 2026-08-10 11:37:16,259 log "GET /static/admin/js/nav_sidebar.js HTTP/1.1" 200 3063
+WARNING 2026-08-10 11:39:51,813 log Forbidden (CSRF token from POST incorrect.): /orders/create/
+INFO 2026-08-10 11:39:51,824 middleware Запит до /orders/create/ зайняв 0.0169 секунд.
+WARNING 2026-08-10 11:39:51,826 log "POST /orders/create/ HTTP/1.1" 403 16713
+INFO 2026-08-10 11:39:55,463 middleware Запит до /orders/create/ зайняв 0.0169 секунд.
+INFO 2026-08-10 11:39:55,469 log "GET /orders/create/ HTTP/1.1" 200 19955
+INFO 2026-08-10 11:39:56,178 middleware Запит до /orders/cart/ зайняв 0.0147 секунд.
+INFO 2026-08-10 11:39:56,182 log "GET /orders/cart/ HTTP/1.1" 200 17347
+INFO 2026-08-10 11:39:57,262 middleware Запит до /shop/catalog/ зайняв 0.0292 секунд.
+INFO 2026-08-10 11:39:57,264 log "GET /shop/catalog/ HTTP/1.1" 200 22346
+INFO 2026-08-10 11:40:00,035 middleware Запит до /shop/3/ зайняв 0.0201 секунд.
+INFO 2026-08-10 11:40:00,037 log "GET /shop/3/ HTTP/1.1" 200 19101
+INFO 2026-08-10 11:40:00,065 middleware Запит до /media/covers/Charlie_and_the_Chocolate_Factory.jpg зайняв 0.0110 секунд.
+INFO 2026-08-10 11:40:00,066 log "GET /media/covers/Charlie_and_the_Chocolate_Factory.jpg HTTP/1.1" 200 201838
+INFO 2026-08-10 11:40:01,683 middleware Запит до /orders/cart/add/3/ зайняв 0.0168 секунд.
+INFO 2026-08-10 11:40:01,687 log "POST /orders/cart/add/3/ HTTP/1.1" 302 0
+INFO 2026-08-10 11:40:01,706 middleware Запит до /orders/cart/ зайняв 0.0162 секунд.
+INFO 2026-08-10 11:40:01,709 log "GET /orders/cart/ HTTP/1.1" 200 22795
+INFO 2026-08-10 11:40:03,268 middleware Запит до /orders/create/ зайняв 0.0190 секунд.
+INFO 2026-08-10 11:40:03,271 log "GET /orders/create/ HTTP/1.1" 200 20444
+INFO 2026-08-10 11:40:26,480 middleware Запит до /orders/create/ зайняв 0.0274 секунд.
+INFO 2026-08-10 11:40:26,484 log "POST /orders/create/ HTTP/1.1" 302 0
+INFO 2026-08-10 11:40:26,499 middleware Запит до /orders/payment/process/ зайняв 0.0119 секунд.
+INFO 2026-08-10 11:40:26,500 log "GET /orders/payment/process/ HTTP/1.1" 200 17990
+INFO 2026-08-10 11:40:29,055 middleware Запит до /orders/payment/process/ зайняв 0.8108 секунд.
+INFO 2026-08-10 11:40:29,058 log "POST /orders/payment/process/ HTTP/1.1" 302 0
+INFO 2026-08-10 11:40:32,396 middleware Запит до /shop/catalog/ зайняв 0.0286 секунд.
+INFO 2026-08-10 11:40:32,398 log "GET /shop/catalog/ HTTP/1.1" 200 22346

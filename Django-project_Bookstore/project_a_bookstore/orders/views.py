@@ -11,6 +11,7 @@ from .forms import CartAddBookForm, OrderCreateForm
 from .models import OrderItem, Order
 from shop_app.models import Book
 from django.core.mail import send_mail
+from .services import WarehouseService, WarehouseServiceError
 
 stripe.api_key = settings.STRIPE_SECRET_KEY
 stripe.api_version = settings.STRIPE_API_VERSION
@@ -121,20 +122,8 @@ def _handle_order_get(request):
 
 def _handle_order_post(request):
     """
-    Синхронна логіка для POST-запиту: повна обробка транзакції та сесії.
-
-    Виконує атомарну валідацію замовлення всередині блоку `transaction.atomic()`.
-    Захищає базу даних від Race Conditions за допомогою `select_for_update()`,
-    перевіряє реальні залишки на складі (`stock`), списує товари, фіксує актуальну
-    ціну з БД на момент покупки та очищує кошик сесії.
-
-    Args:
-        request (HttpRequest): Об'єкт HTTP-запиту, що містить POST-дані форми.
-
-    Returns:
-        HttpResponse: Редірект на сторінку оплати `orders:payment_process` при успіху,
-        або повернення на сторінку форми з відображенням помилок валідації чи
-        нестачі товару на складі (`InsufficientStockError`).
+    Синхронна логіка для POST-запиту: обробка транзакції, створення замовлення
+    та міжсервісне резервування товарів у ProjectB (Warehouse Service).
     """
     cart = Cart(request)
     cart_items = list(cart)
@@ -161,20 +150,30 @@ def _handle_order_post(request):
 
     try:
         with transaction.atomic():
-            # Зберігаємо замовлення
+            # 1. Зберігаємо замовлення
             order = form.save()
 
             for item in cart_items:
                 # Блокуємо рядок книги в БД від race conditions
                 book = Book.objects.select_for_update().get(pk=item["book"].id)
 
+                # Локальна перевірка наявності товару (1 етап)
                 if book.stock < item["quantity"]:
                     raise InsufficientStockError(
                         f'Недостатньо товару "{book.title}" на складі '
                         f"(доступно: {book.stock})."
                     )
 
-                # Створюємо елемент замовлення
+                # 2. Міжсервісний запит до ProjectB (Warehouse Service)
+                # Якщо повертає помилку, raise підніме WarehouseServiceError
+                # аби відкотити транзакцію в БД через transaction.atomic()
+                WarehouseService.reserve_stock(
+                    book_id=book.id,
+                    quantity=item["quantity"],
+                    order_id=order.id,
+                )
+
+                # 3. Створюємо елемент замовлення
                 OrderItem.objects.create(
                     order=order,
                     book=book,
@@ -182,20 +181,21 @@ def _handle_order_post(request):
                     quantity=item["quantity"],
                 )
 
-                # Списуємо залишок
+                # 4. Списуємо залишок (локально)
                 book.stock -= item["quantity"]
                 book.save(update_fields=["stock"])
 
-        # Очищуємо кошик та записуємо в сесію всередині синхронного контексту
+        # Очищуємо кошик та записуємо order_id в сесії
         cart.clear()
         request.session["order_id"] = order.id
         return redirect("orders:payment_process")
 
-    except InsufficientStockError as exc:
+    except (InsufficientStockError, WarehouseServiceError) as exc:
+        # Якщо є помилка резерву на складі чи нестачі товару
         return render(
             request,
             "orders/order_create.html",
-            {"cart": cart, "cart_items": cart_items, "form": form, "error": str(exc)},
+            {"cart": cart, "cart_items": cart_items, "form": form, "error": f"Помилка створення замовлення: {exc}"},
         )
     except Book.DoesNotExist:
         return render(
