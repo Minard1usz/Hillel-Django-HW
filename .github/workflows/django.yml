@@ -61,7 +61,7 @@ jobs:
 
       - name: Run Tests with Coverage
         env:
-          PYTHONPATH: ./Django-project_Bookstore/project_a_bookstore
+          PYTHONPATH: ./Django-project_Bookstore
           DB_NAME: test_bookstore_db
           DB_USER: postgres
           DB_PASSWORD: postgres
@@ -71,8 +71,8 @@ jobs:
           SECRET_KEY: 'test-secret-key-for-ci'
           DJANGO_SETTINGS_MODULE: bookstore_project.settings.development
         run: |
-          cd Django-project_Bookstore/project_a_bookstore
-          pytest --cov=. --cov-report=xml:../../coverage.xml
+          cd Django-project_Bookstore
+          pytest --cov=. --cov-report=xml:../coverage.xml
 
       - name: Upload Coverage Artifact
         uses: actions/upload-artifact@v4
