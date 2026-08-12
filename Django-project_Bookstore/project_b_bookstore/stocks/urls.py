@@ -7,6 +7,6 @@ router.register(r'stocks', StockViewSet, basename='stock')
 
 urlpatterns = [
     path('', include(router.urls)),
-    path('reserve/', ReserveStockView.as_view(), name='stock-reserve'),
-    path('release/', ReleaseStockView.as_view(), name='stock-release'),
+    path('reserve/', ReserveStockView.as_view(), name='reserve-stock'),
+    path('release/', ReleaseStockView.as_view(), name='release-stock'),
 ]

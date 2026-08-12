@@ -1,4 +1,65 @@
 # Hillel-Python-HW
+## 📐 Архітектура системи (ProjectA + ProjectB)
++-------------------+
+                   |   NGINX / Reverse |
+                   |       Proxy       |
+                   +---------+---------+
+                             |
+       +---------------------+---------------------+
+       |                                           |
+       v                                           v
++-----------------------+                   +-----------------------+
+|       ProjectA        | --(HTTP / REST)-->|       ProjectB        |
+|   (Bookstore Main)    |                   |  (Warehouse Service)  |
++-----------+-----------+                   +-----------+-----------+
+| Postgres  | Redis     |                   | Postgres  | Redis     |
+| DB (A)    | Cache/MQ  |                   | DB (B)    | Cache/MQ  |
++-----------+-----------+                   +-----------+-----------+
+|                                           |
+v                                           v
++---------------+                           +---------------+
+| Celery Worker |                           | Celery Worker |
++---------------+                           +---------------+
+
+---
+## 🚀 Швидкий запуск проєкту (Docker Compose)
+
+### 1. Клонування репозиторію
+### bash
+git clone [https://github.com/ЮЗЕРНЕЙМ/РЕПОЗИТОРІЙ.git](https://github.com/ЮЗЕРНЕЙМ/РЕПОЗИТОРІЙ.git)
+cd РЕПОЗИТОРІЙ
+
+### 2. Налаштування змінних оточення
+SECRET_KEY=your_secret_key
+DEBUG=True
+ALLOWED_HOSTS=localhost,127.0.0.1
+
+DB_NAME=bookstore_db
+DB_USER=postgres
+DB_PASSWORD=postgres
+DB_HOST=db
+DB_PORT=5432
+
+REDIS_URL=redis://redis:6379/1
+STRIPE_PUBLIC_KEY=pk_test_...
+STRIPE_SECRET_KEY=sk_test_...
+SENTRY_DSN=https://...
+
+### 3. Запуск усіх контейнерів
+docker-compose up --build -d
+
+### 4. Застосування міграцій та створення суперкористувача
+docker-compose exec web python manage.py migrate
+docker-compose exec web python manage.py createsuperuser
+
+### 5. Доступ до сервісів:
+Головний сайт (ProjectA): http://localhost:8000/
+Swagger API Docs (ProjectA): http://localhost:8000/api/docs/
+Warehouse Service (ProjectB): http://localhost:8001/
+Swagger API Docs (ProjectB): http://localhost:8001/api/docs/
+---
+
+
 [![CI/CD Pipeline](https://github.com/ЮЗЕРНЕЙМ/РЕПОЗИТОРІЙ/actions/workflows/django.yml/badge.svg)](https://github.com/ЮЗЕРНЕЙМ/РЕПОЗИТОРІЙ/actions)
 ![Coverage](https://img.shields.io/badge/coverage-100%25-brightgreen)
 

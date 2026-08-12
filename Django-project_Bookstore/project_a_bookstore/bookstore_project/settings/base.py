@@ -16,6 +16,18 @@ SECRET_KEY = os.getenv(
     "SECRET_KEY", "django-insecure-^8#7r)u$)q#m&7mt#t9^@_)3gf3+fc)=u2vgs#)qayr-tsb53-"
 )
 
+# Default конфігурація бази даних за замовчуванням (SQLite), якщо не завантажено dev/prod конфіги
+DATABASES = {
+    "default": {
+        "ENGINE": "django.db.backends.postgresql",
+        "NAME": os.environ.get("DB_NAME", "bookstore_db"),
+        "USER": os.environ.get("DB_USER", "postgres"),
+        "PASSWORD": os.environ.get("DB_PASSWORD", "postgres"),
+        "HOST": os.environ.get("DB_HOST", "db"),
+        "PORT": os.environ.get("DB_PORT", "5432"),
+    }
+}
+
 # Спільні додатки (без debug_toolbar, його перенесемо в dev)
 INSTALLED_APPS = [
     "django.contrib.admin",
