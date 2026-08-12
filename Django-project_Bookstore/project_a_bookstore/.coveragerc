@@ -1,0 +1,8 @@
+[run]
+omit =
+    # Виключаємо самі тести та міграції зі звіту coverage
+    */tests/*
+    */test_*.py
+    */migrations/*
+    manage.py
+    bookstore_project/*

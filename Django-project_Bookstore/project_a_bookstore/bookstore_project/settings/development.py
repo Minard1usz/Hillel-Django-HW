@@ -1,5 +1,6 @@
 import os
 from .base import *
+import sys
 
 DEBUG = True
 
@@ -8,20 +9,25 @@ ALLOWED_HOSTS = os.getenv("ALLOWED_HOSTS", "127.0.0.1,localhost,testserver,*").s
 )
 
 # База даних для розробки (зі змінних оточення Docker/Env)
-DATABASES = {
-    "default": {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
-        "USER": os.getenv("DB_USER", "postgres"),
-        "PASSWORD": os.getenv("DB_PASSWORD", "postgres"),
-        "HOST": os.getenv("DB_HOST", "db"),
-        "PORT": os.getenv("DB_PORT", "5432"),
-        "TEST": {
-            "NAME": "test_bookstore_db",
-            "MIRROR": None,
-        },
+if "test" in sys.argv:
+    DATABASES = {
+        "default": {
+            "ENGINE": "django.db.backends.sqlite3",
+            "NAME": BASE_DIR / "db.sqlite3",
+        }
     }
-}
+else:
+    # Основна конфігурація для розробки (PostgreSQL)
+    DATABASES = {
+        "default": {
+            "ENGINE": "django.db.backends.postgresql",
+            "NAME": "your_db_name",
+            "USER": "your_db_user",
+            "PASSWORD": "your_password",
+            "HOST": "localhost",
+            "PORT": "5432",
+        }
+    }
 
 # Debug Toolbar тільки для локалки
 INSTALLED_APPS += ["debug_toolbar"]

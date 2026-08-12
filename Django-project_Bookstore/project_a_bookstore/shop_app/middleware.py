@@ -1,5 +1,4 @@
-import time
-import logging
+import time, logging
 
 logger = logging.getLogger("shop_logger")
 

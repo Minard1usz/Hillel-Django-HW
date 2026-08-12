@@ -12,6 +12,9 @@ from .models import OrderItem, Order
 from shop_app.models import Book
 from django.core.mail import send_mail
 from .services import WarehouseService, WarehouseServiceError
+import logging
+
+logger = logging.getLogger(__name__)
 
 stripe.api_key = settings.STRIPE_SECRET_KEY
 stripe.api_version = settings.STRIPE_API_VERSION
@@ -88,7 +91,7 @@ async def cart_detail(request):
 
     cart, cart_items = await sync_to_async(prepare_cart_data)()
 
-    return render(
+    return await sync_to_async(render)(
         request, "orders/cart_detail.html", {"cart": cart, "cart_items": cart_items}
     )
 
@@ -195,7 +198,12 @@ def _handle_order_post(request):
         return render(
             request,
             "orders/order_create.html",
-            {"cart": cart, "cart_items": cart_items, "form": form, "error": f"Помилка створення замовлення: {exc}"},
+            {
+                "cart": cart,
+                "cart_items": cart_items,
+                "form": form,
+                "error": f"Помилка створення замовлення: {exc}",
+            },
         )
     except Book.DoesNotExist:
         return render(
@@ -393,4 +401,37 @@ def payment_canceled(request):
     Returns:
         HttpResponse: HTML-сторінка з повідомленням про скасування транзакції.
     """
-    return render(request, "orders/canceled.html")
+    order_id = request.session.get("order_id")
+
+    if order_id:
+        try:
+            # Пошук неоплаченого замовлення
+            order = Order.objects.filter(id=order_id, paid=False).first()
+
+            if order:
+                with transaction.atomic():
+                    for item in order.items.select_related("book").all():
+                        # 1. Повернення локального залишку у ProjectA
+                        book = Book.objects.select_for_update().get(pk=item.book.id)
+                        book.stock += item.quantity
+                        book.save(update_fields=["stock"])
+
+                        # 2. Викликаємо WarehouseService.release_stock()
+                        try:
+                            WarehouseService.release_stock(
+                                book_id=book.id,
+                                quantity=item.quantity,
+                                order_id=order_id,
+                            )
+                        except WarehouseServiceError as exc:
+                            logger.error(
+                                f"Не вдалося зняти резерв у ProjectB для book_id={book.id}: {exc}"
+                            )
+
+                # Очищення ID з сесії, щоб повторно не скасовувати при перезавантаженні
+                request.session.pop("order_id", None)
+
+        except Exception as exc:
+            logger.error(f"Помилка при скасуванні замовлення №{order_id}: {exc}")
+
+    return render(request, "orders/payment_canceled.html")

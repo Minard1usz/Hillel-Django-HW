@@ -1,4 +1,5 @@
 import asyncio
+import logging
 from django.shortcuts import render, get_object_or_404
 from django.db.models import Q, Count
 from .models import Book, Category
@@ -19,6 +20,8 @@ from django.http import HttpResponse
 from shop_app.tasks import generate_report_task
 from django.http import JsonResponse
 from django.core.management import call_command
+
+logger = logging.getLogger(__name__)
 
 SEARCH_MAX_LENGTH = 100
 CATEGORY_CACHE_KEY = "shop_all_categories"
@@ -67,6 +70,10 @@ def render_to_response(request, template_name, context):
     return render(request, template_name, context)
 
 
+async def get_as_list(queryset):
+    return await sync_to_async(list)(queryset)
+
+
 async def store(request):
     """
     Асинхронна view-функція для відображення головної сторінки магазину (Store).
@@ -80,12 +87,17 @@ async def store(request):
             )
             print("===> Successfully loaded!")
         except Exception as e:
-            print(f"===> Error loading fixtures: {e}")
+            logger.error(f"===> Error loading fixtures: {e}")
 
     cache_key = "store_page_context"
 
     # 2. Перевіряємо кеш
-    context = await cache.aget(cache_key)
+    context = None
+
+    try:
+        context = await cache.aget(cache_key)
+    except Exception as e:
+        logger.warning(f"Cache read error: {e}")
 
     # 3. Якщо контексту немає в кеші — збираємо його
     if not context:
@@ -131,7 +143,7 @@ async def store(request):
             print(f"Cache write error: {e}")
 
     # 4. ОБОВ'ЯЗКОВИЙ RETURN НАПРЯМУ ПОЗА БЛОКАМИ IF (гарантує повернення HttpResponse)
-    return render(request, "shop_app/store.html", context)
+    return await sync_to_async(render)(request, "shop_app/store.html", context)
 
 
 class BookListView(ListView):

@@ -4,28 +4,31 @@ from django.conf import settings
 
 logger = logging.getLogger(__name__)
 
-WAREHOUSE_URL = getattr(settings, 'WAREHOUSE_SERVICE_URL', 'http://127.0.0.1:8001')
+WAREHOUSE_URL = getattr(
+    settings, "WAREHOUSE_SERVICE_URL", "http://127.0.0.1:8001"
+).rstrip("/")
+
 
 class WarehouseServiceError(Exception):
     """Кастомний виняток для помилок сервісу склада"""
+
     pass
+
 
 class WarehouseService:
     @staticmethod
     def reserve_stock(book_id: int, quantity: int, order_id: int) -> dict:
-        """"Відправляємо запит на резервування книги у ProjectB (Warehouse)"""
+        """ "Відправляємо запит на резервування книги у ProjectB (Warehouse)"""
         url = f"{WAREHOUSE_URL}/api/v1/reserve/"
-        payload = {
-            "book_id": book_id,
-            "quantity": quantity,
-            "order_id": order_id
-        }
+        payload = {"book_id": book_id, "quantity": quantity, "order_id": order_id}
 
         try:
             response = requests.post(url, json=payload, timeout=5.0)
 
             if response.status_code == 200:
-                logger.info(f"Успішно зарезервовано book_id={book_id}, qty={quantity} для order_id={order_id}")
+                logger.info(
+                    f"Успішно зарезервовано book_id={book_id}, qty={quantity} для order_id={order_id}"
+                )
                 return response.json()
 
             elif response.status_code == 409:
@@ -39,29 +42,37 @@ class WarehouseService:
                 raise WarehouseServiceError(f"Товар з ID {book_id} відсутній на складі")
 
             else:
-                logger.error(f"Неочікувана відповідь від Warehouse Service: status={response.status_code}")
+                logger.error(
+                    f"Неочікувана відповідь від Warehouse Service: status={response.status_code}"
+                )
                 raise WarehouseServiceError("Сервіс склада тимчасово недоступний.")
 
         except requests.exceptions.RequestException as e:
             logger.error(f"Помилка з'єднання з Warehouse Service: {e}")
-            raise WarehouseServiceError("Не вдалося зв'язатис з сервісом склада. Спробуйте пізніше.")
+            raise WarehouseServiceError(
+                "Не вдалося зв'язатися з сервісом склада. Спробуйте пізніше."
+            )
 
     @staticmethod
     def release_stock(book_id: int, quantity: int, order_id: int) -> dict:
-        """"Відправляємо запит на зняття резерву (при скасуванні або помилці)."""
+        """ "Відправляємо запит на зняття резерву (при скасуванні або помилці)."""
         url = f"{WAREHOUSE_URL}/api/v1/release/"
-        payload = {
-            "book_id": book_id,
-            "quantity": quantity,
-            "order_id": order_id
-        }
+        payload = {"book_id": book_id, "quantity": quantity, "order_id": order_id}
 
         try:
             response = requests.post(url, json=payload, timeout=5.0)
             if response.status_code == 200:
-                logger.info(f"Знято резерв book_id={book_id}, qty={quantity} для order_id={order_id}")
+                logger.info(
+                    f"Знято резерв book_id={book_id}, qty={quantity} для order_id={order_id}"
+                )
                 return response.json()
             else:
                 logger.error(f"Помилка зняття резерву: status={response.status_code}")
+                raise WarehouseServiceError("Помилка при скасуванні резерву.")
         except requests.exceptions.RequestException as e:
-            logger.error(f"Помилка з'єднання з Warehouse Service при знятті резерву: {e}")
+            logger.error(
+                f"Помилка з'єднання з Warehouse Service при знятті резерву: {e}"
+            )
+            raise WarehouseServiceError(
+                "Не вдалося зв'язатися з сервісом склада для зняття резерву."
+            )

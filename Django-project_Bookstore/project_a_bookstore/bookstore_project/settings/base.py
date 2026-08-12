@@ -9,9 +9,6 @@ from sentry_sdk.integrations.django import DjangoIntegration
 from sentry_sdk.integrations.celery import CeleryIntegration
 from sentry_sdk.integrations.redis import RedisIntegration
 
-# Завантажуємо змінні з .env
-load_dotenv()
-
 # Вказуємо шлях до кореня проєкту (3 рази parent)
 BASE_DIR = Path(__file__).resolve().parent.parent.parent
 

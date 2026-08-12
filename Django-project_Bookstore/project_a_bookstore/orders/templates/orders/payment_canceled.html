@@ -1,0 +1,9 @@
+{% extends 'shop_app/base.html' %}
+{% load i18n %}
+{% block content %}
+<div class="container mt-5 text-center">
+    <h1 class="text-danger">Оплату скасовано</h1>
+    <p class="lead">Ваше замовлення було скасовано, а зарезервовані товари повернуто на склад.</p>
+    <a href="{% url 'shop_app:store' %}" class="btn btn-primary mt-3">Повернутися до магазину</a>
+</div>
+{% endblock %}

@@ -4,12 +4,16 @@ from rest_framework import status
 from rest_framework.test import APITestCase
 from shop_app.models import Book, Category
 from orders.models import Order
+from django.test import override_settings
+from django.core.cache import cache
 
 User = get_user_model()
 
 
+@override_settings(REST_FRAMEWORK={"DEFAULT_THROTTLE_CLASSES": []})
 class StoreAPITestCase(APITestCase):
     def setUp(self):
+        cache.clear()
         # Створення користувачів
         self.user = User.objects.create_user(
             username="user", email="user@test.com", password="password123"
@@ -113,6 +117,8 @@ class StoreAPITestCase(APITestCase):
     def test_search_books(self):
         """10. Повнотекстовий пошук за назвою або автором."""
         response = self.client.get(f"{self.books_url}?search=Tolkien")
+        print("\n--- STATUS CODE ---:", response.status_code)
+        print("--- RESPONSE BODY ---:", response.content)
         self.assertEqual(response.status_code, status.HTTP_200_OK)
         self.assertEqual(response.data["results"][0]["title"], "Hobbit")
 

@@ -25,7 +25,7 @@ class RegisterView(CreateView):
 
         if self.object.email:
             send_welcome_email_task.delay(
-                user_email=self.object.mail,
+                user_email=self.object.email,
                 subject="Ласкаво просимо до Bookstore!",
                 message=f"Привіт, {self.object.username}! Дякуємо за реєстрацію!",
             )
