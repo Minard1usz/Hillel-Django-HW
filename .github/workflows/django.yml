@@ -71,8 +71,7 @@ jobs:
           SECRET_KEY: 'test-secret-key-for-ci'
           DJANGO_SETTINGS_MODULE: bookstore_project.settings.development
         run: |
-          cd Django-project_Bookstore
-          pytest --cov=. --cov-report=xml:../coverage.xml
+          pytest Django-project_Bookstore/ --cov=Django-project_Bookstore --cov-report=xml:coverage.xml
 
       - name: Upload Coverage Artifact
         uses: actions/upload-artifact@v4
