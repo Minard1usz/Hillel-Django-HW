@@ -8,47 +8,112 @@ class Migration(migrations.Migration):
 
     initial = True
 
-    dependencies = [
-    ]
+    dependencies = []
 
     operations = [
         migrations.CreateModel(
-            name='Stock',
+            name="Stock",
             fields=[
-                ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('book_id', models.IntegerField(db_index=True, help_text='ID книги з ProjectA (Bookstore)')),
-                ('quantity', models.PositiveIntegerField(default=0, help_text='Загальна кількість на складі')),
-                ('reserved_quantity', models.PositiveIntegerField(default=0, help_text='Зарезервовано під замовлення')),
-                ('updated_at', models.DateTimeField(auto_now=True)),
+                (
+                    "id",
+                    models.BigAutoField(
+                        auto_created=True,
+                        primary_key=True,
+                        serialize=False,
+                        verbose_name="ID",
+                    ),
+                ),
+                (
+                    "book_id",
+                    models.IntegerField(
+                        db_index=True, help_text="ID книги з ProjectA (Bookstore)"
+                    ),
+                ),
+                (
+                    "quantity",
+                    models.PositiveIntegerField(
+                        default=0, help_text="Загальна кількість на складі"
+                    ),
+                ),
+                (
+                    "reserved_quantity",
+                    models.PositiveIntegerField(
+                        default=0, help_text="Зарезервовано під замовлення"
+                    ),
+                ),
+                ("updated_at", models.DateTimeField(auto_now=True)),
             ],
         ),
         migrations.CreateModel(
-            name='Warehouse',
+            name="Warehouse",
             fields=[
-                ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('name', models.CharField(max_length=255)),
-                ('address', models.CharField(blank=True, max_length=500, null=True)),
-                ('is_active', models.BooleanField(default=True)),
+                (
+                    "id",
+                    models.BigAutoField(
+                        auto_created=True,
+                        primary_key=True,
+                        serialize=False,
+                        verbose_name="ID",
+                    ),
+                ),
+                ("name", models.CharField(max_length=255)),
+                ("address", models.CharField(blank=True, max_length=500, null=True)),
+                ("is_active", models.BooleanField(default=True)),
             ],
         ),
         migrations.CreateModel(
-            name='StockMovement',
+            name="StockMovement",
             fields=[
-                ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('movement_type', models.CharField(choices=[('INCOMING', 'Надходження'), ('RESERVE', 'Резервуванння'), ('RELEASE', 'Зняття резерву'), ('DEDUCT', 'Списання (Продаж)')], max_length=20)),
-                ('quantity', models.PositiveIntegerField()),
-                ('order_id', models.IntegerField(blank=True, help_text='ID замовлення з ProjectA', null=True)),
-                ('created_at', models.DateTimeField(auto_now_add=True)),
-                ('stock', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, related_name='movements', to='stocks.stock')),
+                (
+                    "id",
+                    models.BigAutoField(
+                        auto_created=True,
+                        primary_key=True,
+                        serialize=False,
+                        verbose_name="ID",
+                    ),
+                ),
+                (
+                    "movement_type",
+                    models.CharField(
+                        choices=[
+                            ("INCOMING", "Надходження"),
+                            ("RESERVE", "Резервуванння"),
+                            ("RELEASE", "Зняття резерву"),
+                            ("DEDUCT", "Списання (Продаж)"),
+                        ],
+                        max_length=20,
+                    ),
+                ),
+                ("quantity", models.PositiveIntegerField()),
+                (
+                    "order_id",
+                    models.IntegerField(
+                        blank=True, help_text="ID замовлення з ProjectA", null=True
+                    ),
+                ),
+                ("created_at", models.DateTimeField(auto_now_add=True)),
+                (
+                    "stock",
+                    models.ForeignKey(
+                        on_delete=django.db.models.deletion.CASCADE,
+                        related_name="movements",
+                        to="stocks.stock",
+                    ),
+                ),
             ],
         ),
         migrations.AddField(
-            model_name='stock',
-            name='warehouse',
-            field=models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, related_name='stocks', to='stocks.warehouse'),
+            model_name="stock",
+            name="warehouse",
+            field=models.ForeignKey(
+                on_delete=django.db.models.deletion.CASCADE,
+                related_name="stocks",
+                to="stocks.warehouse",
+            ),
         ),
         migrations.AlterUniqueTogether(
-            name='stock',
-            unique_together={('warehouse', 'book_id')},
+            name="stock",
+            unique_together={("warehouse", "book_id")},
         ),
     ]
