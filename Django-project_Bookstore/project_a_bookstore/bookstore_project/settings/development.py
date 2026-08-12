@@ -58,3 +58,6 @@ LOGGING = {
         "shop_logger": {"handlers": ["file"], "level": "INFO", "propagate": True},
     },
 }
+
+CELERY_TASK_ALWAYS_EAGER = True
+CELERY_TASK_EAGER_PROPAGATES = True
