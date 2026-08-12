@@ -1,6 +1,5 @@
 import pytest
 from unittest.mock import MagicMock
-from django.db import connection
 
 
 @pytest.fixture(autouse=True)
@@ -19,9 +18,3 @@ def mock_stripe(monkeypatch):
         pass
 
     return mock_session
-
-
-@pytest.fixture(autouse=True)
-def close_db_connections():
-    yield
-    connection.close()

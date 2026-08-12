@@ -29,9 +29,8 @@ def test_customer_successful_purchase_flow(client):
 
     # 3. Перевіряємо додавання твоару в кошик (синхронний сесійний клієнт).
     # У разі POST проблеми, імітується заповнення кошика через сесію клієнта
-    session = client.session
-    session["cart"] = {str(book.id): {"quantity": 2, "price": str(book.price)}}
-    session.save()
+    cart_add_url = reverse("cart:cart_add", kwargs={"book_id": book.id})
+    client.post(cart_add_url, data={"quantity": 2, "override": False})
 
     # Перевірка, чи сторінка кошика бачить товар
     response = client.get(reverse("orders:order_create"))
@@ -47,9 +46,9 @@ def test_customer_successful_purchase_flow(client):
         "postal_code": "49000",
     }
     response = client.post(reverse("orders:order_create"), data=order_data)
-    assert response.status_code in [200, 302]
 
     # 5. Перевірка про успішне створення замовлення в бд
+    assert response.status_code == 302
     assert Order.objects.filter(email="alex@example.com").exists()
 
 
@@ -65,12 +64,12 @@ def test_customer_multiple_items_purchase_flow(client):
     book2 = BookFactory(title="Книга 2", price=300.00, stock=5)
 
     # 7. Імітуємо додавання обох книг у кошик сесії
-    session = client.session
-    session["cart"] = {
-        str(book1.id): {"quantity": 1, "price": str(book1.price)},
-        str(book2.id): {"quantity": 2, "price": str(book2.price)},
-    }
-    session.save()
+    client.post(
+        reverse("cart:cart_add", kwargs={"book_id": book1.id}), data={"quantity": 1}
+    )
+    client.post(
+        reverse("cart:cart_add", kwargs={"book_id": book2.id}), data={"quantity": 2}
+    )
 
     # 6,7. Перевірка на успішне створення замовлення
     response = client.get(reverse("orders:order_create"))
@@ -88,7 +87,7 @@ def test_customer_multiple_items_purchase_flow(client):
     response = client.post(reverse("orders:order_create"), data=order_data)
 
     # 8, 9. Успішний редірект після оформлення
-    assert response.status_code in [200, 302]
+    assert response.status_code == 302
 
     # 10. Перевірка, що замовлення з'явилося в бд
     assert Order.objects.filter(email="uri@example.com").exists()
@@ -104,9 +103,9 @@ def test_customer_failed_validation_flow(client):
     book = BookFactory(title="Django для профі", price=500.00, stock=5)
 
     # 11. Додаємо книгу в кошик сесії
-    session = client.session
-    session["cart"] = {str(book.id): {"quantity": 1, "price": str(book.price)}}
-    session.save()
+    client.post(
+        reverse("cart:cart_add", kwargs={"book_id": book.id}), data={"quantity": 1}
+    )
 
     # 12. Сабміт форми з помилковими даними
     bad_order_data = {
