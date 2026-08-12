@@ -74,10 +74,8 @@ jobs:
           ALLOWED_HOSTS: '127.0.0.1,localhost'
           REDIS_URL: redis://localhost:6379/1
           DJANGO_SETTINGS_MODULE: bookstore_project.settings.development
-          CELERY_TASK_ALWAYS_EAGER: 'True'
-          CELERY_TASK_EAGER_PROPAGATES: 'True'
         run: |
-          pytest --cov=. --cov-report=xml:../../coverage.xml
+          pytest --ds=bookstore_project.settings.development --cov=. --cov-report=xml:../../coverage.xml
 
       - name: Upload Coverage Artifact
         uses: actions/upload-artifact@v4
