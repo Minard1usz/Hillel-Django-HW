@@ -60,8 +60,8 @@ jobs:
           flake8 . --count --exit-zero --max-complexity=10 --max-line-length=127 --statistics
 
       - name: Run Tests with Coverage
+        working-directory: Django-project_Bookstore/project_a_bookstore
         env:
-          PYTHONPATH: ./Django-project_Bookstore/project_a_bookstore
           DB_NAME: test_bookstore_db
           DB_USER: postgres
           DB_PASSWORD: postgres
@@ -71,7 +71,7 @@ jobs:
           SECRET_KEY: 'test-secret-key-for-ci'
           DJANGO_SETTINGS_MODULE: bookstore_project.settings.development
         run: |
-          pytest Django-project_Bookstore/project_a_bookstore/ --cov=Django-project_Bookstore/project_a_bookstore --cov-report=xml:coverage.xml
+          pytest --cov=. --cov-report=xml:../../coverage.xml
 
       - name: Upload Coverage Artifact
         uses: actions/upload-artifact@v4
