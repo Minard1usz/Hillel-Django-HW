@@ -64,18 +64,18 @@ jobs:
           POSTGRES_DB: bookstore_db
           POSTGRES_USER: postgres
           POSTGRES_PASSWORD: postgres
-
           DB_NAME: bookstore_db
           DB_USER: postgres
           DB_PASSWORD: postgres
           DB_HOST: 127.0.0.1
           DB_PORT: 5432
-
           SECRET_KEY: django-insecure-local-dev-key
           DEBUG: 'True'
           ALLOWED_HOSTS: '127.0.0.1,localhost'
           REDIS_URL: redis://localhost:6379/1
           DJANGO_SETTINGS_MODULE: bookstore_project.settings.development
+          CELERY_TASK_ALWAYS_EAGER: 'True'
+          CELERY_TASK_EAGER_PROPAGATES: 'True'
         run: |
           pytest --cov=. --cov-report=xml:../../coverage.xml
 
