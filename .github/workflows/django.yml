@@ -61,14 +61,27 @@ jobs:
       - name: Run Tests with Coverage
         working-directory: Django-project_Bookstore/project_a_bookstore
         env:
-          POSTGRES_DB: test_bookstore_db
+          # Змінні для PostgreSQL
+          POSTGRES_DB: postgres
           POSTGRES_USER: postgres
           POSTGRES_PASSWORD: postgres
-          DB_NAME: test_bookstore_db
+          POSTGRES_HOST: 127.0.0.1
+          POSTGRES_PORT: 5432
+
+          # Альтернативні назви, які часто використовуються в settings.py
+          DB_NAME: postgres
           DB_USER: postgres
           DB_PASSWORD: postgres
           DB_HOST: 127.0.0.1
           DB_PORT: 5432
+
+          DATABASE_NAME: postgres
+          DATABASE_USER: postgres
+          DATABASE_PASSWORD: postgres
+          DATABASE_HOST: 127.0.0.1
+          DATABASE_PORT: 5432
+
+          # Додаткові змінні оточення
           REDIS_URL: redis://localhost:6379/1
           SECRET_KEY: 'test-secret-key-for-ci'
           DJANGO_SETTINGS_MODULE: bookstore_project.settings.development
