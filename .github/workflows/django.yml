@@ -104,4 +104,5 @@ jobs:
           context: ./Django-project_Bookstore/project_a_bookstore
           file: ./Django-project_Bookstore/project_a_bookstore/Dockerfile
           push: true
-          tags: ${{ secrets.DOCKER_USERNAME }}/bookstore_project:latest
+          # Заміни YOUR_DOCKERHUB_USERNAME на свій реальний логін на Docker Hub (наприклад: alex123)
+          tags: minardy/bookstore_project:latest
