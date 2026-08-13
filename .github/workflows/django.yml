@@ -101,6 +101,7 @@ jobs:
       - name: Build and push Docker image
         uses: docker/build-push-action@v5
         with:
-          context: ./Django-project_Bookstore
+          context: ./Django-project_Bookstore/project_a_bookstore
+          file: ./Django-project_Bookstore/project_a_bookstore/Dockerfile
           push: true
-          tags: ${{ secrets.DOCKERHUB_USERNAME }}/bookstore_project:latest
+          tags: ${{ steps.meta.outputs.tags }}
