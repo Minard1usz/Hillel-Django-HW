@@ -26,8 +26,8 @@ v                                           v
 
 ### 1. Клонування репозиторію
 ### bash
-git clone [https://github.com/ЮЗЕРНЕЙМ/РЕПОЗИТОРІЙ.git](https://github.com/ЮЗЕРНЕЙМ/РЕПОЗИТОРІЙ.git)
-cd РЕПОЗИТОРІЙ
+git clone https://github.com/Minard1usz/Hillel-Django-HW.git
+cd Hillel-Django-HW
 
 ### 2. Налаштування змінних оточення
 SECRET_KEY=your_secret_key
@@ -59,8 +59,7 @@ Warehouse Service (ProjectB): http://localhost:8001/
 Swagger API Docs (ProjectB): http://localhost:8001/api/docs/
 ---
 
-
-[![CI/CD Pipeline](https://github.com/ЮЗЕРНЕЙМ/РЕПОЗИТОРІЙ/actions/workflows/django.yml/badge.svg)](https://github.com/ЮЗЕРНЕЙМ/РЕПОЗИТОРІЙ/actions)
+[![CI/CD Pipeline](https://github.com/Minard1usz/Hillel-Django-HW/actions/workflows/django.yml/badge.svg)](https://github.com/Minard1usz/Hillel-Django-HW/actions)
 ![Coverage](https://img.shields.io/badge/coverage-100%25-brightgreen)
 
 ## 🏗️ Архітектурні особливості та технологічні рішення
