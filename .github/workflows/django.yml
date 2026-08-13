@@ -104,4 +104,4 @@ jobs:
           context: ./Django-project_Bookstore/project_a_bookstore
           file: ./Django-project_Bookstore/project_a_bookstore/Dockerfile
           push: true
-          tags: ${{ steps.meta.outputs.tags }}
+          tags: ${{ secrets.DOCKER_USERNAME }}/bookstore_project:latest
