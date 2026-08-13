@@ -3,6 +3,12 @@ from unittest.mock import MagicMock
 
 
 @pytest.fixture(autouse=True)
+def force_celery_eager(settings):
+    settings.CELERY_TASK_ALWAYS_EAGER = True
+    settings.CELERY_TASK_EAGER_PROPAGATES = True
+
+
+@pytest.fixture(autouse=True)
 def mock_stripe(monkeypatch):
     mock_session = MagicMock()
     mock_session.id = "cs_test_12345"

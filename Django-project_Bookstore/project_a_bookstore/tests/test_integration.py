@@ -13,7 +13,7 @@ from orders.models import Order
 
 
 # ІНТЕГРАЦІЙНИЙ ТЕСТ 1-5: Повний цикл купівлі книги авторизованим/анонімним користувачем
-@pytest.mark.django_db(transaction=True)
+@pytest.mark.django_db
 def test_customer_successful_purchase_flow(client):
     # Створюємо товар завдяки фабриці
     book = BookFactory(title="Ефективний Python", price=450.00, stock=10)
@@ -59,7 +59,7 @@ def test_customer_successful_purchase_flow(client):
 # 5 тестів / перевірок (6-10)
 # Перевірка повного ланцюжка для багатокомпонентного кошика.
 # -----------------------------------------------------------------------------
-@pytest.mark.django_db(transaction=True)
+@pytest.mark.django_db
 def test_customer_multiple_items_purchase_flow(client):
     # 6. Створюємо дві різні книги
     book1 = BookFactory(title="Книга 1", price=200.00, stock=5)
