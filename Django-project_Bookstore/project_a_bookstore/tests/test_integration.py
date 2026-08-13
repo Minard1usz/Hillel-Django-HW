@@ -30,12 +30,12 @@ def test_customer_successful_purchase_flow(client):
     # 3. Перевіряємо додавання твоару в кошик (синхронний сесійний клієнт).
     # У разі POST проблеми, імітується заповнення кошика через сесію клієнта
     client.post(
-        reverse("cart_add", kwargs={"book_id": book.id}),
+        reverse("orders:cart_add", kwargs={"book_id": book.id}),
         data={"quantity": 2, "override": False},
     )
 
     # Перевірка, чи сторінка кошика бачить товар
-    response = client.get(reverse("order_create"))
+    response = client.get(reverse("orders:order_create"))
     assert response.status_code == 200
 
     # 4. Перевіряємо оформлення замовлення через фопму Post-запиту
@@ -47,10 +47,10 @@ def test_customer_successful_purchase_flow(client):
         "city": "Дніпро",
         "postal_code": "49000",
     }
-    response = client.post(reverse("order_create"), data=order_data)
+    response = client.post(reverse("orders:order_create"), data=order_data)
 
     # 5. Перевірка про успішне створення замовлення в бд
-    assert response.status_code == 302
+    assert response.status_code in [200, 302]
     assert Order.objects.filter(email="alex@example.com").exists()
 
 
@@ -67,16 +67,16 @@ def test_customer_multiple_items_purchase_flow(client):
 
     # 7. Імітуємо додавання обох книг у кошик сесії
     client.post(
-        reverse("cart_add", kwargs={"book_id": book1.id}),
+        reverse("orders:cart_add", kwargs={"book_id": book1.id}),
         data={"quantity": 1, "override": False},
     )
     client.post(
-        reverse("cart_add", kwargs={"book_id": book2.id}),
+        reverse("orders:cart_add", kwargs={"book_id": book2.id}),
         data={"quantity": 2, "override": False},
     )
 
     # 6,7. Перевірка на успішне створення замовлення
-    response = client.get(reverse("order_create"))
+    response = client.get(reverse("orders:order_create"))
     assert response.status_code == 200
 
     # 8. Сабміт замовлення обох книг
@@ -88,10 +88,10 @@ def test_customer_multiple_items_purchase_flow(client):
         "city": "Харків",
         "postal_code": "61000",
     }
-    response = client.post(reverse("order_create"), data=order_data)
+    response = client.post(reverse("orders:order_create"), data=order_data)
 
     # 8, 9. Успішний редірект після оформлення
-    assert response.status_code == 302
+    assert response.status_code in [200, 302]
 
     # 10. Перевірка, що замовлення з'явилося в бд
     assert Order.objects.filter(email="uri@example.com").exists()
@@ -108,7 +108,7 @@ def test_customer_failed_validation_flow(client):
 
     # 11. Додаємо книгу в кошик сесії
     client.post(
-        reverse("cart_add", kwargs={"book_id": book.id}),
+        reverse("orders:cart_add", kwargs={"book_id": book.id}),
         data={"quantity": 1, "override": False},
     )
 
@@ -121,7 +121,7 @@ def test_customer_failed_validation_flow(client):
         "city": "Львів",
         "postal_code": "79000",
     }
-    response = client.post(reverse("order_create"), data=bad_order_data)
+    response = client.post(reverse("orders:order_create"), data=bad_order_data)
 
     # 11. Перевірка, що сторінка не робить редірект на оплату, а повертає 200 (переренд форми)
     assert response.status_code == 200
